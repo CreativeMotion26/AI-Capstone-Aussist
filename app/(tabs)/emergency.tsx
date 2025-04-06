@@ -1,69 +1,172 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
+import React from 'react';
+import { View, Text, ScrollView, TouchableOpacity, StatusBar } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { theme } from '../lib/theme';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+type IconName = React.ComponentProps<typeof Ionicons>['name'];
 
 export default function EmergencyPage() {
-  const [searchQuery, setSearchQuery] = useState('');
+  const insets = useSafeAreaInsets();
 
   const emergencyContacts = [
-    { number: '000', title: 'Emergency Services', description: 'Police, Fire, Ambulance' },
-    { number: '131 444', title: 'Police Assistance', description: 'Non-emergency police assistance' },
-    { number: '1800 022 222', title: 'Health Direct', description: '24/7 health advice' }
+    { 
+      number: '000', 
+      title: 'Emergency Services', 
+      description: 'Police, Fire, Ambulance',
+      icon: 'call' as IconName
+    },
+    { 
+      number: '131 444', 
+      title: 'Police Assistance', 
+      description: 'Non-emergency police assistance',
+      icon: 'shield' as IconName
+    },
+    { 
+      number: '1800 022 222', 
+      title: 'Health Direct', 
+      description: '24/7 health advice and information',
+      icon: 'medical' as IconName
+    }
+  ];
+
+  const symptomCategories = [
+    { name: 'Fever & Flu', icon: 'thermometer-outline' as IconName },
+    { name: 'Injuries', icon: 'bandage-outline' as IconName },
+    { name: 'Chest Pain', icon: 'heart-outline' as IconName },
+    { name: 'Breathing', icon: 'fitness-outline' as IconName },
+    { name: 'Stomach', icon: 'medical-outline' as IconName },
+    { name: 'Mental Health', icon: 'brain-outline' as IconName },
   ];
 
   return (
-    <SafeAreaView className="flex-1 bg-white">
-      <ScrollView className="flex-1">
-        <View className="p-4">
+    <View style={{ flex: 1, backgroundColor: 'white' }}>
+      <StatusBar barStyle="light-content" />
+      {/* Header that extends under the dynamic island */}
+      <View style={{ 
+        paddingTop: insets.top, 
+        paddingBottom: 16, 
+        paddingHorizontal: 16, 
+        backgroundColor: theme.colors.primary 
+      }}>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>Emergency Services</Text>
+      </View>
+
+      <ScrollView>
+        <View style={{ padding: 16 }}>
+          {/* Alert Banner */}
+          <View style={{ 
+            backgroundColor: '#FEF2F2', 
+            borderLeftWidth: 4, 
+            borderLeftColor: '#DC2626', 
+            padding: 16, 
+            borderRadius: 6,
+            marginBottom: 24, 
+            flexDirection: 'row', 
+            alignItems: 'center' 
+          }}>
+            <Ionicons name="warning" size={24} color="#DC2626" style={{ marginRight: 12 }} />
+            <View>
+              <Text style={{ fontWeight: 'bold', color: '#B91C1C', marginBottom: 4 }}>In an emergency, call 000</Text>
+              <Text style={{ color: '#B91C1C' }}>For life-threatening situations, call Triple Zero immediately</Text>
+            </View>
+          </View>
+
           {/* Emergency Numbers Section */}
-          <View className="mb-8">
-            <Text className="text-2xl font-bold mb-4">Emergency Contacts</Text>
+          <View style={{ marginBottom: 24 }}>
+            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>Emergency Contacts</Text>
             {emergencyContacts.map((contact, index) => (
               <TouchableOpacity 
                 key={index}
-                className="bg-red-50 p-4 rounded-xl mb-3 flex-row items-center"
+                style={{ 
+                  backgroundColor: 'white',
+                  borderWidth: 1,
+                  borderColor: '#E5E7EB',
+                  borderRadius: 8,
+                  padding: 16,
+                  marginBottom: 12,
+                  flexDirection: 'row',
+                  alignItems: 'center'
+                }}
               >
-                <View className="bg-red-500 w-12 h-12 rounded-full items-center justify-center mr-4">
-                  <Text className="text-white font-bold">{contact.number}</Text>
+                <View style={{ 
+                  backgroundColor: '#FEE2E2', 
+                  width: 42, 
+                  height: 42, 
+                  borderRadius: 21, 
+                  alignItems: 'center', 
+                  justifyContent: 'center', 
+                  marginRight: 16 
+                }}>
+                  <Ionicons name={contact.icon} size={20} color="#DC2626" />
                 </View>
-                <View className="flex-1">
-                  <Text className="font-semibold text-lg">{contact.title}</Text>
-                  <Text className="text-gray-600">{contact.description}</Text>
+                <View style={{ flex: 1 }}>
+                  <Text style={{ fontWeight: 'bold', marginBottom: 4 }}>{contact.title}</Text>
+                  <Text style={{ color: '#6B7280' }}>{contact.description}</Text>
                 </View>
-                <Ionicons name="call" size={24} color="#EF4444" />
+                <Text style={{ fontWeight: 'bold', fontSize: 16 }}>{contact.number}</Text>
               </TouchableOpacity>
             ))}
           </View>
 
-          {/* Symptom Search Section */}
-          <View>
-            <Text className="text-2xl font-bold mb-4">Check Your Symptoms</Text>
-            <View className="bg-gray-100 rounded-xl p-4 mb-4">
-              <TextInput
-                className="text-lg"
-                placeholder="Search your symptoms..."
-                value={searchQuery}
-                onChangeText={setSearchQuery}
-              />
-              <Text className="text-gray-600 mt-2">
-                Example: "fever", "headache", "cough"
-              </Text>
-            </View>
-
-            {/* Quick Symptom Categories */}
-            <View className="flex-row flex-wrap justify-between">
-              {['Fever & Flu', 'Injuries', 'Stomach Pain', 'Breathing'].map((category, index) => (
+          {/* Symptom Checker */}
+          <View style={{ marginBottom: 24 }}>
+            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>Symptom Checker</Text>
+            
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+              {symptomCategories.map((category, index) => (
                 <TouchableOpacity 
                   key={index}
-                  className="bg-white border border-gray-200 rounded-xl p-4 mb-3 w-[48%]"
+                  style={{ 
+                    width: '30%', 
+                    marginBottom: 16, 
+                    alignItems: 'center' 
+                  }}
                 >
-                  <Text className="font-medium text-center">{category}</Text>
+                  <View style={{ 
+                    backgroundColor: '#F3F4F6', 
+                    width: 56, 
+                    height: 56, 
+                    borderRadius: 28, 
+                    alignItems: 'center', 
+                    justifyContent: 'center', 
+                    marginBottom: 8 
+                  }}>
+                    <Ionicons name={category.icon} size={24} color="#4B5563" />
+                  </View>
+                  <Text style={{ textAlign: 'center' }}>{category.name}</Text>
                 </TouchableOpacity>
               ))}
             </View>
           </View>
+
+          {/* Find Hospital Section */}
+          <TouchableOpacity 
+            style={{ 
+              backgroundColor: '#EFF6FF', 
+              padding: 16, 
+              borderRadius: 8, 
+              marginBottom: 24 
+            }}
+          >
+            <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 12 }}>
+              <Ionicons name="location" size={24} color="#1D4ED8" style={{ marginRight: 12 }} />
+              <View>
+                <Text style={{ fontWeight: 'bold', marginBottom: 4 }}>Find nearest hospital</Text>
+                <Text style={{ color: '#6B7280' }}>Locate emergency rooms and hospitals near you</Text>
+              </View>
+            </View>
+            <View style={{ 
+              backgroundColor: '#2563EB', 
+              alignItems: 'center', 
+              padding: 12, 
+              borderRadius: 6 
+            }}>
+              <Text style={{ color: 'white', fontWeight: '500' }}>Find Hospital</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 } 

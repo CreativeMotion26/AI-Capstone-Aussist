@@ -1,5 +1,8 @@
 import React from 'react';
-import { View, Text, Image, TouchableOpacity, Dimensions } from 'react-native';
+import { View, Text, Image, Dimensions } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { Button } from './ui/Button';
+import { cn } from '../lib/utils';
 
 interface OnboardingPageProps {
   title: string;
@@ -27,7 +30,7 @@ export default function OnboardingPage({
       className="flex-1 items-center justify-between p-5"
       style={{ backgroundColor }}
     >
-      <View className="flex-1 justify-center items-center w-full">
+      <View className="flex-1 justify-center items-center w-full pt-8">
         <Image 
           source={imageSource} 
           className="w-[70%] h-[70%]" 
@@ -40,13 +43,17 @@ export default function OnboardingPage({
         <Text className="text-2xl font-bold text-center mb-2 text-gray-800">{title}</Text>
         <Text className="text-base text-center mb-8 text-gray-600 px-5">{description}</Text>
         
-        <TouchableOpacity 
-          className="w-full py-4 rounded-full items-center justify-center"
+        <Button
+          variant="default"
+          size="lg"
+          className="w-full rounded-full"
           style={{ backgroundColor: buttonColor }}
+          icon={buttonText === 'Get Started' ? <Ionicons name="arrow-forward" size={20} color="white" /> : undefined}
+          iconPosition="right"
           onPress={onPress}
         >
-          <Text className="text-white text-base font-semibold">{buttonText}</Text>
-        </TouchableOpacity>
+          {buttonText}
+        </Button>
       </View>
     </View>
   );

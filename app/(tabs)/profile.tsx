@@ -1,15 +1,17 @@
 import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity, SafeAreaView, Image } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, StatusBar } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { theme } from '../lib/theme';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 type IconName = React.ComponentProps<typeof Ionicons>['name'];
 
-const profileSections = [
+const profileSettings = [
   {
     title: 'Account Settings',
     items: [
       { icon: 'person-outline' as IconName, label: 'Personal Information' },
-      { icon: 'lock-closed-outline' as IconName, label: 'Password' },
+      { icon: 'shield-checkmark-outline' as IconName, label: 'Security' },
       { icon: 'notifications-outline' as IconName, label: 'Notifications' }
     ]
   },
@@ -17,77 +19,194 @@ const profileSections = [
     title: 'Preferences',
     items: [
       { icon: 'language-outline' as IconName, label: 'Language' },
-      { icon: 'moon-outline' as IconName, label: 'Dark Mode' },
-      { icon: 'location-outline' as IconName, label: 'Location' }
+      { icon: 'moon-outline' as IconName, label: 'Theme' },
+      { icon: 'location-outline' as IconName, label: 'Location Services' }
     ]
   },
   {
-    title: 'Support',
+    title: 'Support & Feedback',
     items: [
       { icon: 'help-circle-outline' as IconName, label: 'Help Center' },
-      { icon: 'chatbubble-outline' as IconName, label: 'Contact Us' },
-      { icon: 'star-outline' as IconName, label: 'Rate Us' }
+      { icon: 'chatbubble-outline' as IconName, label: 'Contact Support' },
+      { icon: 'star-outline' as IconName, label: 'Rate the App' }
     ]
   }
 ];
 
+const userDocuments = [
+  { title: 'Visa Information', completed: true },
+  { title: 'Medicare Details', completed: false },
+  { title: 'Identification', completed: true },
+  { title: 'Emergency Contacts', completed: false }
+];
+
 export default function ProfileScreen() {
+  const insets = useSafeAreaInsets();
+
   return (
-    <SafeAreaView className="flex-1 bg-white">
-      <ScrollView className="flex-1">
-        <View className="p-6">
-          {/* Profile Header */}
-          <View className="items-center mb-8">
-            <View className="w-24 h-24 rounded-full bg-gray-200 mb-4 overflow-hidden">
-              <Image 
-                source={{ uri: 'https://randomuser.me/api/portraits/men/32.jpg' }} 
-                className="w-full h-full"
-              />
+    <View style={{ flex: 1, backgroundColor: 'white' }}>
+      <StatusBar barStyle="light-content" />
+      {/* Header that extends under the dynamic island */}
+      <View style={{ 
+        paddingTop: insets.top, 
+        paddingBottom: 16, 
+        paddingHorizontal: 16, 
+        backgroundColor: theme.colors.primary 
+      }}>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>Profile</Text>
+      </View>
+      
+      <ScrollView>
+        <View style={{ padding: 16 }}>
+          {/* User Info */}
+          <View style={{ 
+            alignItems: 'center', 
+            marginBottom: 24
+          }}>
+            <View style={{ 
+              width: 80, 
+              height: 80, 
+              borderRadius: 40, 
+              backgroundColor: '#F3F4F6', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              marginBottom: 12 
+            }}>
+              <Text style={{ fontSize: 24, fontWeight: 'bold', color: theme.colors.primary }}>JS</Text>
             </View>
-            <Text className="text-2xl font-bold">John Smith</Text>
-            <Text className="text-gray-500">john.smith@example.com</Text>
-            
-            <View className="flex-row mt-4">
-              <TouchableOpacity className="bg-blue-500 px-4 py-2 rounded-full mr-2">
-                <Text className="text-white">Edit Profile</Text>
-              </TouchableOpacity>
-              <TouchableOpacity className="bg-gray-200 px-4 py-2 rounded-full">
-                <Text className="text-gray-800">Settings</Text>
-              </TouchableOpacity>
+            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 4 }}>John Smith</Text>
+            <Text style={{ color: '#6B7280' }}>john.smith@example.com</Text>
+            <TouchableOpacity 
+              style={{ 
+                marginTop: 12,
+                backgroundColor: theme.colors.primary,
+                paddingVertical: 8,
+                paddingHorizontal: 16,
+                borderRadius: 20
+              }}
+            >
+              <Text style={{ color: 'white' }}>Edit Profile</Text>
+            </TouchableOpacity>
+          </View>
+          
+          {/* Onboarding */}
+          <View style={{ 
+            marginBottom: 24, 
+            padding: 16, 
+            backgroundColor: '#F3F4F6', 
+            borderRadius: 8 
+          }}>
+            <View style={{ 
+              flexDirection: 'row', 
+              justifyContent: 'space-between', 
+              marginBottom: 8 
+            }}>
+              <Text style={{ fontWeight: 'bold' }}>Onboarding Status</Text>
+              <Text>50% Complete</Text>
+            </View>
+            <View style={{ height: 8, backgroundColor: '#E5E7EB', borderRadius: 4, overflow: 'hidden' }}>
+              <View style={{ 
+                height: '100%', 
+                width: '50%', 
+                backgroundColor: theme.colors.primary 
+              }} />
             </View>
           </View>
           
-          {/* Profile Sections */}
-          {profileSections.map((section, sectionIndex) => (
-            <View key={sectionIndex} className="mb-8">
-              <Text className="text-lg font-bold mb-3">{section.title}</Text>
-              <View className="bg-gray-50 rounded-xl overflow-hidden">
+          {/* Documents */}
+          <View style={{ marginBottom: 24 }}>
+            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>Your Documents</Text>
+            {userDocuments.map((doc, index) => (
+              <View 
+                key={index}
+                style={{ 
+                  flexDirection: 'row', 
+                  alignItems: 'center', 
+                  marginBottom: 12, 
+                  padding: 12,
+                  backgroundColor: 'white',
+                  borderWidth: 1,
+                  borderColor: '#E5E7EB',
+                  borderRadius: 8
+                }}
+              >
+                <Ionicons 
+                  name={doc.completed ? 'checkmark-circle' : 'alert-circle'} 
+                  size={20} 
+                  color={doc.completed ? theme.colors.success : theme.colors.warning} 
+                  style={{ marginRight: 12 }}
+                />
+                <Text style={{ flex: 1 }}>{doc.title}</Text>
+                <Ionicons name="chevron-forward" size={20} color="#9CA3AF" />
+              </View>
+            ))}
+          </View>
+          
+          {/* Settings List */}
+          {profileSettings.map((section, sectionIndex) => (
+            <View key={sectionIndex} style={{ marginBottom: 24 }}>
+              <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>{section.title}</Text>
+              <View style={{ 
+                backgroundColor: 'white',
+                borderWidth: 1,
+                borderColor: '#E5E7EB',
+                borderRadius: 8,
+                overflow: 'hidden'
+              }}>
                 {section.items.map((item, itemIndex) => (
                   <TouchableOpacity 
                     key={itemIndex}
-                    className={`flex-row items-center p-4 border-b border-gray-100 ${
-                      itemIndex === section.items.length - 1 ? 'border-b-0' : ''
-                    }`}
+                    style={{ 
+                      flexDirection: 'row', 
+                      alignItems: 'center', 
+                      padding: 16,
+                      borderBottomWidth: itemIndex < section.items.length - 1 ? 1 : 0,
+                      borderBottomColor: '#E5E7EB'
+                    }}
                   >
-                    <View className="w-8 h-8 bg-blue-100 rounded-full items-center justify-center mr-4">
-                      <Ionicons name={item.icon} size={18} color="#3B82F6" />
+                    <View style={{ 
+                      width: 32, 
+                      height: 32, 
+                      borderRadius: 16, 
+                      backgroundColor: '#F3F4F6', 
+                      alignItems: 'center', 
+                      justifyContent: 'center', 
+                      marginRight: 12 
+                    }}>
+                      <Ionicons name={item.icon} size={16} color="#6B7280" />
                     </View>
-                    <Text className="flex-1 text-gray-800">{item.label}</Text>
-                    <Ionicons name="chevron-forward" size={18} color="#9CA3AF" />
+                    <Text style={{ flex: 1 }}>{item.label}</Text>
+                    <Ionicons name="chevron-forward" size={20} color="#9CA3AF" />
                   </TouchableOpacity>
                 ))}
               </View>
             </View>
           ))}
           
-          <TouchableOpacity className="mt-4 p-4 rounded-xl bg-red-50">
-            <View className="flex-row items-center">
-              <Ionicons name="log-out-outline" size={20} color="#EF4444" />
-              <Text className="ml-3 text-red-500 font-semibold">Log Out</Text>
-            </View>
+          {/* Log Out */}
+          <TouchableOpacity 
+            style={{ 
+              marginBottom: 24,
+              padding: 16,
+              borderWidth: 1,
+              borderColor: '#FEE2E2',
+              borderRadius: 8,
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+          >
+            <Ionicons name="log-out-outline" size={20} color="#DC2626" style={{ marginRight: 8 }} />
+            <Text style={{ color: '#DC2626', fontWeight: '500' }}>Log Out</Text>
           </TouchableOpacity>
+          
+          {/* App Version */}
+          <View style={{ alignItems: 'center', marginBottom: 24 }}>
+            <Text style={{ color: '#9CA3AF', fontSize: 12 }}>Aussist App v1.0.0</Text>
+            <Text style={{ color: '#9CA3AF', fontSize: 12, marginTop: 4 }}>© 2023 Aussist</Text>
+          </View>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 } 

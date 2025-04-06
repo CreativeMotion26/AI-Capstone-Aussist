@@ -1,7 +1,8 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import { theme } from '../lib/theme';
+import { Platform } from 'react-native';
 
 export default function TabLayout() {
   return (
@@ -10,11 +11,21 @@ export default function TabLayout() {
         tabBarStyle: {
           height: 60,
           paddingBottom: 8,
-          paddingTop: 8,
+          paddingTop: 6,
+          backgroundColor: '#FFFFFF',
+          borderTopWidth: 1,
+          borderTopColor: '#E5E7EB',
+          ...(Platform.OS === 'ios' && {
+            height: 86,
+            paddingBottom: 16,
+          }),
         },
         headerShown: false,
-        tabBarActiveTintColor: '#F76B56',
-        tabBarInactiveTintColor: '#9CA3AF',
+        tabBarActiveTintColor: theme.colors.primary,
+        tabBarInactiveTintColor: '#6B7280',
+        tabBarLabelStyle: {
+          fontSize: 12,
+        },
       }}
     >
       <Tabs.Screen
@@ -31,7 +42,7 @@ export default function TabLayout() {
         options={{
           title: 'Emergency',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "medkit" : "medkit-outline"} size={24} color={color} />
+            <Ionicons name={focused ? "alert-circle" : "alert-circle-outline"} size={24} color={color} />
           ),
         }}
       />
@@ -40,7 +51,7 @@ export default function TabLayout() {
         options={{
           title: 'Healthcare',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "heart" : "heart-outline"} size={24} color={color} />
+            <Ionicons name={focused ? "medkit" : "medkit-outline"} size={24} color={color} />
           ),
         }}
       />
@@ -49,7 +60,7 @@ export default function TabLayout() {
         options={{
           title: 'Translate',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "globe" : "globe-outline"} size={24} color={color} />
+            <Ionicons name={focused ? "language" : "language-outline"} size={24} color={color} />
           ),
         }}
       />

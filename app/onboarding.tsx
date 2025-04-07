@@ -64,6 +64,7 @@ export default function OnboardingScreen() {
   return (
     <View className="flex-1 bg-white">
       <FlatList
+        className='flex justify-center items-center bottom-8 w-full'
         ref={flatListRef}
         data={onboardingData}
         horizontal

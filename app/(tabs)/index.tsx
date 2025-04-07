@@ -143,6 +143,16 @@ export default function HomeScreen() {
                 </View>
                 <Text style={{ textAlign: 'center' }}>Translate</Text>
               </TouchableOpacity>
+
+              <TouchableOpacity 
+                style={{ alignItems: 'center', width: '30%' }}
+                onPress={() => router.push('/' as any)}
+              >
+                <View style={{ backgroundColor: '#E3F2FD', width: 56, height: 56, borderRadius: 28, alignItems: 'center', justifyContent: 'center', marginBottom: 8 }}>
+                  <Ionicons name="search-outline" size={24} color="#1976D2" />
+                </View>
+                <Text style={{ textAlign: 'center' }}>Find Service</Text>
+              </TouchableOpacity>
             </View>
           </View>
 

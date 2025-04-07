@@ -1,11 +1,13 @@
+import * as React from 'react';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import 'react-native-reanimated';
 import { useColorScheme } from 'react-native';
+import CustomSplash from './components/CustomSplash';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -25,6 +27,7 @@ export default function RootLayout() {
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
     ...FontAwesome.font,
   });
+  const [splashFinished, setSplashFinished] = useState(false);
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
@@ -32,27 +35,36 @@ export default function RootLayout() {
   }, [error]);
 
   useEffect(() => {
+    // Hide the native splash screen when fonts are loaded
     if (loaded) {
       SplashScreen.hideAsync();
     }
   }, [loaded]);
+
+  // Handle splash screen finish
+  const handleSplashFinish = () => {
+    setSplashFinished(true);
+  };
 
   if (!loaded) {
     return null;
   }
 
   return (
-    <Stack>
-      <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="onboarding" options={{ headerShown: false }} />
-      <Stack.Screen 
-        name="(tabs)" 
-        options={{ 
-          headerShown: false,
-          presentation: 'modal'
-        }} 
-      />
-    </Stack>
+    <>
+      {!splashFinished && <CustomSplash onFinish={handleSplashFinish} />}
+      <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="onboarding" options={{ headerShown: false }} />
+        <Stack.Screen 
+          name="(tabs)" 
+          options={{ 
+            headerShown: false,
+            presentation: 'modal'
+          }} 
+        />
+      </Stack>
+    </>
   );
 }
 

@@ -27,7 +27,7 @@ export default function OnboardingPage({
 }: OnboardingPageProps) {
   return (
     <View 
-      className="flex-1 items-center justify-between p-5"
+      className="flex items-center justify-center p-5"
       style={{ backgroundColor }}
     >
       <View className="flex-1 justify-center items-center w-full pt-8">

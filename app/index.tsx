@@ -1,6 +1,6 @@
 import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 
 export default function MainPage() {
   return (
@@ -22,7 +22,7 @@ export default function MainPage() {
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Services for you</Text>
             <View style={styles.servicesGrid}>
-              <TouchableOpacity style={styles.serviceCard}>
+              <TouchableOpacity style={styles.serviceCard} onPress={() => router.push('/symptoms')}>
                 <Image source={{ uri: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60' }} style={styles.serviceImage} />
                 <Text style={styles.serviceText}>Symptom Checker</Text>
               </TouchableOpacity>

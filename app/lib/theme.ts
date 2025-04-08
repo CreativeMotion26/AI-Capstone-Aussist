@@ -2,7 +2,7 @@
 export const theme = {
   colors: {
     // Primary colors
-    primary: '#F1CF11',
+    primary: '#2AACED',
     secondary: '#62BF5E',
     
     // UI colors

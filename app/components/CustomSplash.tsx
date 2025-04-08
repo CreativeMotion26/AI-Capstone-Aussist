@@ -30,7 +30,7 @@ export default function CustomSplash({ onFinish }: CustomSplashProps) {
         style={styles.backgroundImage}
       />
       <Image
-        source={require('../../assets/images/logo.png')}
+        source={require('../../assets/images/splash-icon.png')}
         style={styles.logo}
         resizeMode="contain"
       />

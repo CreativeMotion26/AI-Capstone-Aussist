@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, View, Text, SafeAreaView, TouchableOpacity, Platform, StatusBar } from 'react-native';
+import { ScrollView, View, Text, SafeAreaView, TouchableOpacity, Platform, StatusBar, Image } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Card, CardContent, CardDescription, CardTitle } from '../components/ui/Card';
 import { theme } from '../lib/theme';
@@ -111,11 +111,15 @@ export default function HomeScreen() {
           </View>
 
           {/* Quick Actions */}
-          <View style={{ marginBottom: 24 }}>
+          <View style={{ marginBottom: 32 }}>
             <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>Quick Actions</Text>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+            <ScrollView 
+              horizontal 
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={{ paddingRight: 16 }}
+            >
               <TouchableOpacity 
-                style={{ alignItems: 'center', width: '30%' }}
+                style={{ alignItems: 'center', width: 80, marginRight: 16 }}
                 onPress={() => router.push('/(tabs)/emergency' as any)}
               >
                 <View style={{ backgroundColor: '#FEE2E2', width: 56, height: 56, borderRadius: 28, alignItems: 'center', justifyContent: 'center', marginBottom: 8 }}>
@@ -125,7 +129,7 @@ export default function HomeScreen() {
               </TouchableOpacity>
               
               <TouchableOpacity 
-                style={{ alignItems: 'center', width: '30%' }}
+                style={{ alignItems: 'center', width: 80, marginRight: 16 }}
                 onPress={() => router.push('/(tabs)/healthcare' as any)}
               >
                 <View style={{ backgroundColor: '#E0F2FE', width: 56, height: 56, borderRadius: 28, alignItems: 'center', justifyContent: 'center', marginBottom: 8 }}>
@@ -145,13 +149,51 @@ export default function HomeScreen() {
               </TouchableOpacity>
 
               <TouchableOpacity 
-                style={{ alignItems: 'center', width: '30%' }}
+                style={{ alignItems: 'center', width: 80 }}
                 onPress={() => router.push('/' as any)}
               >
                 <View style={{ backgroundColor: '#E3F2FD', width: 56, height: 56, borderRadius: 28, alignItems: 'center', justifyContent: 'center', marginBottom: 8 }}>
                   <Ionicons name="search-outline" size={24} color="#1976D2" />
                 </View>
                 <Text style={{ textAlign: 'center' }}>Find Service</Text>
+              </TouchableOpacity>
+            </ScrollView>
+          </View>
+
+          {/* Services Section */}
+          <View style={{ marginBottom: 24 }}>
+            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>Services for you</Text>
+            <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+              <TouchableOpacity 
+                style={{ width: '48%', backgroundColor: 'white', borderRadius: 8, overflow: 'hidden', marginBottom: 16, shadowOpacity: 0.1, shadowRadius: 2, shadowOffset: { width: 0, height: 1 }, elevation: 2, borderWidth: 1, borderColor: '#E5E7EB' }}
+                onPress={() => router.push('/symptoms')}
+              >
+                <Image 
+                  source={{ uri: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&auto=format&fit=crop&q=60' }} 
+                  style={{ width: '100%', height: 100 }} 
+                />
+                <Text style={{ padding: 8, textAlign: 'center', fontWeight: '500' }}>Symptom Checker</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={{ width: '48%', backgroundColor: 'white', borderRadius: 8, overflow: 'hidden', marginBottom: 16, shadowOpacity: 0.1, shadowRadius: 2, shadowOffset: { width: 0, height: 1 }, elevation: 2, borderWidth: 1, borderColor: '#E5E7EB' }}>
+                <Image 
+                  source={{ uri: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=500&auto=format&fit=crop&q=60' }} 
+                  style={{ width: '100%', height: 100 }} 
+                />
+                <Text style={{ padding: 8, textAlign: 'center', fontWeight: '500' }}>Find Hospital</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={{ width: '48%', backgroundColor: 'white', borderRadius: 8, overflow: 'hidden', marginBottom: 16, shadowOpacity: 0.1, shadowRadius: 2, shadowOffset: { width: 0, height: 1 }, elevation: 2, borderWidth: 1, borderColor: '#E5E7EB' }}>
+                <Image 
+                  source={{ uri: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=500&auto=format&fit=crop&q=60' }} 
+                  style={{ width: '100%', height: 100 }} 
+                />
+                <Text style={{ padding: 8, textAlign: 'center', fontWeight: '500' }}>Disease Information</Text>
+              </TouchableOpacity>
+              <TouchableOpacity style={{ width: '48%', backgroundColor: 'white', borderRadius: 8, overflow: 'hidden', marginBottom: 16, shadowOpacity: 0.1, shadowRadius: 2, shadowOffset: { width: 0, height: 1 }, elevation: 2, borderWidth: 1, borderColor: '#E5E7EB' }}>
+                <Image 
+                  source={{ uri: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=500&auto=format&fit=crop&q=60' }} 
+                  style={{ width: '100%', height: 100 }} 
+                />
+                <Text style={{ padding: 8, textAlign: 'center', fontWeight: '500' }}>Healthcare Support</Text>
               </TouchableOpacity>
             </View>
           </View>

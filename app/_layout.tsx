@@ -6,7 +6,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect, useState } from 'react';
 import 'react-native-reanimated';
-import { useColorScheme } from 'react-native';
+import { useColorScheme, Animated, View, StyleSheet } from 'react-native';
 import CustomSplash from './components/CustomSplash';
 
 export {
@@ -28,6 +28,7 @@ export default function RootLayout() {
     ...FontAwesome.font,
   });
   const [splashFinished, setSplashFinished] = useState(false);
+  const fadeAnim = React.useRef(new Animated.Value(0)).current;
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
@@ -41,9 +42,24 @@ export default function RootLayout() {
     }
   }, [loaded]);
 
-  // Handle splash screen finish
+  // Pre-load the main content with 0 opacity
+  useEffect(() => {
+    if (splashFinished) {
+      // Fade in the main content
+      Animated.timing(fadeAnim, {
+        toValue: 1,
+        duration: 150,
+        useNativeDriver: true,
+      }).start();
+    }
+  }, [splashFinished, fadeAnim]);
+
+  // Handle splash screen finish with a smooth transition
   const handleSplashFinish = () => {
-    setSplashFinished(true);
+    // Add a delay before showing the main content
+    setTimeout(() => {
+      setSplashFinished(true);
+    }, 100); // 1.5 seconds delay
   };
 
   if (!loaded) {
@@ -51,22 +67,58 @@ export default function RootLayout() {
   }
 
   return (
-    <>
+    <View style={styles.container}>
       {!splashFinished && <CustomSplash onFinish={handleSplashFinish} />}
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="onboarding" options={{ headerShown: false }} />
-        <Stack.Screen 
-          name="(tabs)" 
-          options={{ 
-            headerShown: false,
-            presentation: 'modal'
-          }} 
-        />
-      </Stack>
-    </>
+      
+      <Animated.View 
+        style={[
+          styles.mainContent,
+          { 
+            opacity: fadeAnim,
+            // Keep it mounted but invisible before splash is finished
+            // This prevents the black flash
+            display: splashFinished ? 'flex' : 'flex',
+            zIndex: splashFinished ? 1 : 0,
+          }
+        ]}
+      >
+        <Stack>
+          {splashFinished && (
+            <Stack.Screen 
+              name="index" 
+              options={{ 
+                headerShown: false,
+                presentation: 'modal',
+                animation: 'fade'
+              }} 
+            />
+          )}
+          <Stack.Screen name="onboarding" options={{ headerShown: false }} />
+          <Stack.Screen 
+            name="(tabs)" 
+            options={{ 
+              headerShown: false
+            }} 
+          />
+        </Stack>
+      </Animated.View>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  mainContent: {
+    flex: 1,
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+  }
+});
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();

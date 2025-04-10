@@ -145,7 +145,7 @@ export default function HomeScreen() {
                 <View style={{ backgroundColor: '#F3E8FF', width: 56, height: 56, borderRadius: 28, alignItems: 'center', justifyContent: 'center', marginBottom: 8 }}>
                   <Ionicons name="language-outline" size={24} color="#7E22CE" />
                 </View>
-                <Text style={{ textAlign: 'center' }}>Translate</Text>
+                <Text style={{ textAlign: 'center' }}>AI Translate</Text>
               </TouchableOpacity>
 
               <TouchableOpacity 

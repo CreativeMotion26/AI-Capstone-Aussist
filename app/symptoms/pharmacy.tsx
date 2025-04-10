@@ -8,7 +8,6 @@ export default function FindPharmacy() {
 
   return (
     <SafeAreaView style={styles.container}>
-      
 
       <ScrollView style={styles.contentContainer}>
         <View style={styles.mapPlaceholder}>

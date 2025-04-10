@@ -45,7 +45,6 @@ export default function SymptomChecker() {
 
   return (
     <SafeAreaView style={styles.container}>
-
       {/* Search Bar */}
       <View style={styles.searchContainer}>
         <Ionicons name="search" size={20} color="#999" style={styles.searchIcon} />

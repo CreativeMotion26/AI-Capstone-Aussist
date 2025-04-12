@@ -202,7 +202,7 @@ export default function ProfileScreen() {
           
           {/* App Version */}
           <View style={{ alignItems: 'center', marginBottom: 24 }}>
-            <Text style={{ color: '#9CA3AF', fontSize: 12 }}>Aussist App v1.0.0</Text>
+            <Text style={{ color: '#9CA3AF', fontSize: 12 }}>Aussist App v1.1.0</Text>
             <Text style={{ color: '#9CA3AF', fontSize: 12, marginTop: 4 }}>© 2025 Aussist</Text>
           </View>
         </View>

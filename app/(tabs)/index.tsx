@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { ScrollView, View, Text, SafeAreaView, TouchableOpacity, Platform, StatusBar, Image } from 'react-native';
+import { ScrollView, View, Text, SafeAreaView, TouchableOpacity, Platform, StatusBar, Image, Button } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { Card, CardContent, CardDescription, CardTitle } from '../components/ui/Card';
 import { theme } from '../lib/theme';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { TranslationProvider, useTranslation } from '.././context/TranslationContext';
 
 const languages = [
   { code: 'en', name: 'English' },
@@ -60,9 +61,27 @@ const serviceCategories = [
   }
 ];
 
-export default function HomeScreen() {
+const App = () => {
+  return (
+    <TranslationProvider>
+      <MainComponent />
+    </TranslationProvider>
+  );
+};
+
+const MainComponent = () => {
+  const { translateAll } = useTranslation();
   const [selectedLanguage, setSelectedLanguage] = useState('en');
   const insets = useSafeAreaInsets();
+
+  const handleTranslateAll = () => {
+    const textsToTranslate = [
+      'Hello, how are you?',
+      'Welcome to the application.',
+      // Add all other texts you want to translate
+    ];
+    translateAll(textsToTranslate, 'ko'); // Example: translating to Korean
+  };
 
   return (
     <View style={{ flex: 1, backgroundColor: 'white' }}>
@@ -230,6 +249,9 @@ export default function HomeScreen() {
           </View>
         </View>
       </ScrollView>
+      <Button title="Translate All" onPress={handleTranslateAll} />
     </View>
   );
-}
+};
+
+export default App;

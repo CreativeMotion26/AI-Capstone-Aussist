@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, Text, ScrollView, TouchableOpacity, SafeAreaView, Button } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import axios from 'axios';
 
 const translationServices = [
   {
@@ -8,56 +9,70 @@ const translationServices = [
     description: 'Free telephone interpreting service',
     phone: '131 450',
     available: '24/7',
-    type: 'Government Service'
+    type: 'Government Service',
   },
   {
     title: 'On-site Interpreter',
     description: 'Book an interpreter for in-person assistance',
-    type: 'Professional Service'
-  }
+    type: 'Professional Service',
+  },
 ];
 
+// Replace with your actual API key
+const API_KEY = 'AIzaSyCrJ08nSLPdTpE6sn2P9x4i8UN80Yd-Gtw';
+const BASE_URL = 'https://translation.googleapis.com/language/translate/v2';
+
+const translateText = async (text: string, targetLanguage: string) => {
+  try {
+    const response = await axios.get(BASE_URL, {
+      params: {
+        q: text,
+        target: targetLanguage,
+        key: API_KEY,
+      },
+    });
+    return response.data.data.translations[0].translatedText;
+  } catch (error) {
+    console.error('Translation error:', error);
+    return text;
+  }
+};
+
 export default function TranslationPage() {
-  const [fromLanguage, setFromLanguage] = useState('English');
-  const [toLanguage, setToLanguage] = useState('Korean');
-  const [text, setText] = useState('');
+  const [translatedHeader, setTranslatedHeader] = useState('Translation Services');
+
+  const handleTranslateKo = async () => {
+    const result = await translateText('Translation Services', 'ko');
+    setTranslatedHeader(result);
+  };
+
+  const handleTranslateEn = async () => {
+    const result = await translateText('Translation Services', 'en');
+    setTranslatedHeader(result);
+  };
+
+  const handleTranslateVe = async () => {
+    const result = await translateText('Translation Services', 'vi');
+    setTranslatedHeader(result);
+  };
 
   return (
     <SafeAreaView className="flex-1 bg-white">
       <ScrollView className="flex-1">
         <View className="p-4">
-          {/* Language Selection */}
-          <View className="flex-row justify-between mb-6">
-            <TouchableOpacity className="flex-1 bg-gray-100 p-4 rounded-xl mr-2">
-              <Text className="text-gray-600">From</Text>
-              <Text className="text-lg font-semibold">{fromLanguage}</Text>
-            </TouchableOpacity>
-            <TouchableOpacity className="w-12 items-center justify-center">
-              <Ionicons name="swap-horizontal" size={24} color="#666" />
-            </TouchableOpacity>
-            <TouchableOpacity className="flex-1 bg-gray-100 p-4 rounded-xl ml-2">
-              <Text className="text-gray-600">To</Text>
-              <Text className="text-lg font-semibold">{toLanguage}</Text>
-            </TouchableOpacity>
-          </View>
+          {/* Static Header (translated when button is pressed) */}
+          <Text className="text-xl font-bold mb-4">{translatedHeader}</Text>
 
-          {/* Translation Input */}
-          <View className="bg-gray-100 rounded-xl p-4 mb-6">
-            <TextInput
-              className="min-h-[100px] text-lg"
-              multiline
-              placeholder="Enter text to translate..."
-              value={text}
-              onChangeText={setText}
-            />
-          </View>
+          {/* Translate Button */}
+          <Button title="Translate to Korean" onPress={handleTranslateKo} />
+          <Button title="Translate to English" onPress={handleTranslateEn} />
+          <Button title="Translate to Viet" onPress={handleTranslateVe} />
 
-          {/* Translation Services */}
-          <Text className="text-xl font-bold mb-4">Translation Services</Text>
+          {/* Services List */}
           {translationServices.map((service, index) => (
-            <TouchableOpacity 
+            <TouchableOpacity
               key={index}
-              className="bg-white border border-gray-200 rounded-xl p-4 mb-3"
+              className="bg-white border border-gray-200 rounded-xl p-4 mt-4"
             >
               <View className="flex-row items-start justify-between">
                 <View className="flex-1">
@@ -83,4 +98,4 @@ export default function TranslationPage() {
       </ScrollView>
     </SafeAreaView>
   );
-} 
+}

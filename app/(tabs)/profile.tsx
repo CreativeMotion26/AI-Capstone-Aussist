@@ -74,7 +74,7 @@ export default function ProfileScreen() {
             }}>
               <Text style={{ fontSize: 24, fontWeight: 'bold', color: theme.colors.primary }}>JS</Text>
             </View>
-            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 4 }}>John Smith</Text>
+            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 4 }}>John Doe</Text>
             <Text style={{ color: '#6B7280' }}>john.smith@example.com</Text>
             <TouchableOpacity 
               style={{ 

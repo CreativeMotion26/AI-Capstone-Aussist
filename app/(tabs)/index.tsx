@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, View, TouchableOpacity, Image, StatusBar } from 'react-native';
+import { ScrollView, View, TouchableOpacity, Image, StatusBar, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -10,7 +10,8 @@ import TText from '../components/TText';
 const languages = [
   { code:'en', name:'English' },
   { code:'ko', name:'한국어' },
-  { code:'vi', name:'Tiếng Việt' }
+  { code:'vi', name:'Tiếng Việt' },
+  { code:'ar', name:'Arabic' }
 ];
 
 const serviceCategories = [
@@ -46,7 +47,7 @@ export default function Home() {
 
         {/* header */}
         <View style={{ paddingTop:insets.top, paddingBottom:16, paddingHorizontal:16, backgroundColor:theme.colors.primary }}>
-          <TText style={{ fontSize:24, fontWeight:'bold', color:'white' }}>Aussist</TText>
+          <Text style={{ fontSize:24, fontWeight:'bold', color:'white' }}>Aussist</Text>
           <TText style={{ fontSize:16, color:'white' }}>Your guide to settling in Australia</TText>
         </View>
 
@@ -63,7 +64,7 @@ export default function Home() {
                   backgroundColor: selectedLanguage===l.code ? theme.colors.primary : 'white',
                   borderWidth:1, borderColor: selectedLanguage===l.code ? theme.colors.primary : '#E5E7EB'
                 }}>
-                <TText style={{ color:selectedLanguage===l.code ? 'white' : '#6B7280' }}>{l.name}</TText>
+                <Text style={{ color:selectedLanguage===l.code ? 'white' : '#6B7280' }}>{l.name}</Text>
               </TouchableOpacity>
             ))}
           </View>

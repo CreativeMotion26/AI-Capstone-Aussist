@@ -2,46 +2,54 @@
 import React, { createContext, useContext, useState } from 'react';
 import axios from 'axios';
 
-// Replace this with your actual API key
 const API_KEY = 'AIzaSyCrJ08nSLPdTpE6sn2P9x4i8UN80Yd-Gtw';
 const BASE_URL = 'https://translation.googleapis.com/language/translate/v2';
 
-const TranslationContext = createContext<any>(null);
+type Map = { [key: string]: string };
 
-export const TranslationProvider = ({ children }: { children: React.ReactNode }) => {
-  const [translatedTexts, setTranslatedTexts] = useState<{ [key: string]: string }>({});
+interface Ctx {
+  translatedTexts : Map;
+  registerText    : (t: string) => void;
+  translateAll    : (lang: string) => Promise<void>;
+  selectedLanguage: string;
+  setSelectedLanguage: (l: string) => void;
+}
 
-  const translateText = async (text: string, targetLanguage: string) => {
-    if (!text || !targetLanguage) return text;
+const TranslationContext = createContext<Ctx>(null as unknown as Ctx);
 
-    try {
-      const response = await axios.get(BASE_URL, {
-        params: {
-          q: text,
-          target: targetLanguage,
-          key: API_KEY,
-        },
-      });
-      return response.data.data.translations[0].translatedText;
-    } catch (error) {
-      console.error('Translation error:', error);
-      return text; // fallback to original
-    }
+export const TranslationProvider: React.FC<{children: React.ReactNode}> = ({ children }) => {
+  const [translatedTexts, setTranslatedTexts]   = useState<Map>({});
+  const [registeredTexts, setRegisteredTexts]   = useState<Set<string>>(new Set());
+  const [selectedLanguage, setSelectedLanguage] = useState<string>('en');
+
+  /** collect every key shown with <TText> */
+  const registerText = (t: string) => {
+    setRegisteredTexts(prev => (prev.has(t) ? prev : new Set(prev).add(t)));
   };
 
-  const translateAll = async (texts: string[], targetLanguage: string) => {
-    const translations = await Promise.all(
-      texts.map(text => translateText(text, targetLanguage))
-    );
-    const translatedMap = texts.reduce((acc, text, index) => {
-      acc[text] = translations[index];
-      return acc;
-    }, {} as { [key: string]: string });
-    setTranslatedTexts(translatedMap);
+  /** Google‑translate ALL collected keys */
+  const translateAll = async (lang: string) => {
+    if (lang === 'en') { setTranslatedTexts({}); return; }
+
+    const arr = Array.from(registeredTexts);
+    if (!arr.length) return;
+
+    const chunks = await Promise.all( arr.map(q =>
+      axios.get(BASE_URL, { params:{ q, target: lang, key: API_KEY } })
+           .then(res => res.data.data.translations[0].translatedText)
+           .catch(() => q)
+    ));
+
+    const map: Map = {};
+    arr.forEach((orig, i) => (map[orig] = chunks[i]));
+    setTranslatedTexts(map);
   };
 
   return (
-    <TranslationContext.Provider value={{ translatedTexts, translateAll }}>
+    <TranslationContext.Provider value={{
+      translatedTexts, registerText, translateAll,
+      selectedLanguage, setSelectedLanguage
+    }}>
       {children}
     </TranslationContext.Provider>
   );

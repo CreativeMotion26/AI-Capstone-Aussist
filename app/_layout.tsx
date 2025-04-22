@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import 'react-native-reanimated';
 import { useColorScheme, Animated, View, StyleSheet } from 'react-native';
 import CustomSplash from './components/CustomSplash';
+import { TranslationProvider } from '../app/context/TranslationContext'; 
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -67,42 +68,44 @@ export default function RootLayout() {
   }
 
   return (
-    <View style={styles.container}>
-      {!splashFinished && <CustomSplash onFinish={handleSplashFinish} />}
-      
-      <Animated.View 
-        style={[
-          styles.mainContent,
-          { 
-            opacity: fadeAnim,
-            // Keep it mounted but invisible before splash is finished
-            // This prevents the black flash
-            display: splashFinished ? 'flex' : 'flex',
-            zIndex: splashFinished ? 1 : 0,
-          }
-        ]}
-      >
-        <Stack>
-          {splashFinished && (
+    <TranslationProvider>
+      <View style={styles.container}>
+        {!splashFinished && <CustomSplash onFinish={handleSplashFinish} />}
+        
+        <Animated.View 
+          style={[
+            styles.mainContent,
+            { 
+              opacity: fadeAnim,
+              // Keep it mounted but invisible before splash is finished
+              // This prevents the black flash
+              display: splashFinished ? 'flex' : 'flex',
+              zIndex: splashFinished ? 1 : 0,
+            }
+          ]}
+        >
+          <Stack>
+            {splashFinished && (
+              <Stack.Screen 
+                name="index" 
+                options={{ 
+                  headerShown: false,
+                  presentation: 'modal',
+                  animation: 'fade'
+                }} 
+              />
+            )}
+            <Stack.Screen name="onboarding" options={{ headerShown: false }} />
             <Stack.Screen 
-              name="index" 
+              name="(tabs)" 
               options={{ 
-                headerShown: false,
-                presentation: 'modal',
-                animation: 'fade'
+                headerShown: false
               }} 
             />
-          )}
-          <Stack.Screen name="onboarding" options={{ headerShown: false }} />
-          <Stack.Screen 
-            name="(tabs)" 
-            options={{ 
-              headerShown: false
-            }} 
-          />
-        </Stack>
-      </Animated.View>
-    </View>
+          </Stack>
+        </Animated.View>
+      </View>
+    </TranslationProvider>
   );
 }
 

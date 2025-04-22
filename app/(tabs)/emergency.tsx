@@ -3,57 +3,49 @@ import { View, Text, ScrollView, TouchableOpacity, StatusBar } from 'react-nativ
 import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../lib/theme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { useTranslation } from '../context/TranslationContext';
 
 type IconName = React.ComponentProps<typeof Ionicons>['name'];
 
 export default function EmergencyPage() {
   const insets = useSafeAreaInsets();
+  const { translatedTexts } = useTranslation();
+  const t = (key: string) => translatedTexts[key] || key;
 
   const emergencyContacts = [
-    { 
-      number: '000', 
-      title: 'Emergency Services', 
-      description: 'Police, Fire, Ambulance',
-      icon: 'call' as IconName
-    },
-    { 
-      number: '131 444', 
-      title: 'Police Assistance', 
-      description: 'Non-emergency police assistance',
-      icon: 'shield' as IconName
-    },
-    { 
-      number: '1800 022 222', 
-      title: 'Health Direct', 
-      description: '24/7 health advice and information',
-      icon: 'medical' as IconName
-    }
+    { number: '000', title: t('Emergency Services'), description: t('Police, Fire, Ambulance'), icon: 'call' as IconName },
+    { number: '131 444', title: t('Police Assistance'), description: t('Non-emergency police assistance'), icon: 'shield' as IconName },
+    { number: '1800 022 222', title: t('Health Direct'), description: t('24/7 health advice and information'), icon: 'medical' as IconName }
   ];
 
   const symptomCategories = [
-    { name: 'Fever & Flu', icon: 'thermometer-outline' as IconName },
-    { name: 'Injuries', icon: 'bandage-outline' as IconName },
-    { name: 'Chest Pain', icon: 'heart-outline' as IconName },
-    { name: 'Breathing', icon: 'fitness-outline' as IconName },
-    { name: 'Stomach', icon: 'medical-outline' as IconName },
-    { name: 'Mental Health', icon: 'brain-outline' as IconName },
+    { name: t('Fever & Flu'), icon: 'thermometer-outline' as IconName },
+    { name: t('Injuries'), icon: 'bandage-outline' as IconName },
+    { name: t('Chest Pain'), icon: 'heart-outline' as IconName },
+    { name: t('Breathing'), icon: 'fitness-outline' as IconName },
+    { name: t('Stomach'), icon: 'medical-outline' as IconName },
+    { name: t('Mental Health'), icon: 'brain-outline' as IconName }
   ];
 
   return (
     <View style={{ flex: 1, backgroundColor: 'white' }}>
       <StatusBar barStyle="light-content" />
-      {/* Header that extends under the dynamic island */}
+      
+      {/* Header */}
       <View style={{ 
         paddingTop: insets.top, 
         paddingBottom: 16, 
         paddingHorizontal: 16, 
         backgroundColor: theme.colors.primary 
       }}>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>Emergency Services</Text>
+        <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>
+          {t('Emergency Services')}
+        </Text>
       </View>
 
       <ScrollView>
         <View style={{ padding: 16 }}>
+
           {/* Alert Banner */}
           <View style={{ 
             backgroundColor: '#FEF2F2', 
@@ -67,14 +59,21 @@ export default function EmergencyPage() {
           }}>
             <Ionicons name="warning" size={24} color="#DC2626" style={{ marginRight: 12 }} />
             <View>
-              <Text style={{ fontWeight: 'bold', color: '#B91C1C', marginBottom: 4 }}>In an emergency, call 000</Text>
-              <Text style={{ color: '#B91C1C' }}>For life-threatening situations, call Triple Zero immediately</Text>
+              <Text style={{ fontWeight: 'bold', color: '#B91C1C', marginBottom: 4 }}>
+                {t('In an emergency, call 000')}
+              </Text>
+              <Text style={{ color: '#B91C1C' }}>
+                {t('For life-threatening situations, call Triple Zero immediately')}
+              </Text>
             </View>
           </View>
 
           {/* Emergency Numbers Section */}
           <View style={{ marginBottom: 24 }}>
-            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>Emergency Contacts</Text>
+            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>
+              {t('Emergency Contacts')}
+            </Text>
+
             {emergencyContacts.map((contact, index) => (
               <TouchableOpacity 
                 key={index}
@@ -111,8 +110,10 @@ export default function EmergencyPage() {
 
           {/* Symptom Checker */}
           <View style={{ marginBottom: 24 }}>
-            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>Symptom Checker</Text>
-            
+            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>
+              {t('Symptom Checker')}
+            </Text>
+
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
               {symptomCategories.map((category, index) => (
                 <TouchableOpacity 
@@ -152,8 +153,12 @@ export default function EmergencyPage() {
             <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 12 }}>
               <Ionicons name="location" size={24} color="#1D4ED8" style={{ marginRight: 12 }} />
               <View>
-                <Text style={{ fontWeight: 'bold', marginBottom: 4 }}>Find nearest hospital</Text>
-                <Text style={{ color: '#6B7280' }}>Locate emergency rooms and hospitals near you</Text>
+                <Text style={{ fontWeight: 'bold', marginBottom: 4 }}>
+                  {t('Find nearest hospital')}
+                </Text>
+                <Text style={{ color: '#6B7280' }}>
+                  {t('Locate emergency rooms and hospitals near you')}
+                </Text>
               </View>
             </View>
             <View style={{ 
@@ -162,11 +167,13 @@ export default function EmergencyPage() {
               padding: 12, 
               borderRadius: 6 
             }}>
-              <Text style={{ color: 'white', fontWeight: '500' }}>Find Hospital</Text>
+              <Text style={{ color: 'white', fontWeight: '500' }}>
+                {t('Find Hospital')}
+              </Text>
             </View>
           </TouchableOpacity>
         </View>
       </ScrollView>
     </View>
   );
-} 
+}

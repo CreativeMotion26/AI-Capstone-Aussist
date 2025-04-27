@@ -90,7 +90,7 @@ export default function HealthcarePage() {
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginBottom: 12 }}>
               <TText style={{ fontSize: 18, fontWeight: 'bold' }}>Nearby Facilities</TText>
               <TouchableOpacity>
-                <TText style={{ color: theme.colors.primary }}>View all</TText>
+                <TText style={{ color: theme.colors.primary }}>View all </TText>
               </TouchableOpacity>
             </View>
 

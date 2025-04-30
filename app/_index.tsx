@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity, SafeAreaView } from 'react-native';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { Link, router } from 'expo-router';
@@ -56,14 +57,18 @@ export default function MainPage() {
             <Text style={styles.sectionTitle}>Service Guide</Text>
             <View style={styles.guideGrid}>
               {[
-                { icon: 'train' as const, color: '#7B68EE', name: 'Transport' },
+                { icon: 'train' as const, color: '#7B68EE', name: 'Transport', route: '/transport' },
                 { icon: 'attach-money' as const, color: '#4CAF50', name: 'Payment' },
                 { icon: 'home' as const, color: '#FFA500', name: 'Benefits' },
                 { icon: 'gavel' as const, color: '#8B4513', name: 'Legal' },
                 { icon: 'translate' as const, color: '#2196F3', name: 'Language' },
                 { icon: 'search' as const, color: '#FF4444', name: 'Search' },
               ].map((item, index) => (
-                <TouchableOpacity key={index} style={styles.guideItem}>
+                <TouchableOpacity 
+                  key={index} 
+                  style={styles.guideItem}
+                  onPress={() => router.push(item.route || '/')}
+                >
                   <View style={[styles.guideIconBox, { backgroundColor: item.color }]}>
                     <MaterialIcons name={item.icon} size={24} color="white" />
                   </View>

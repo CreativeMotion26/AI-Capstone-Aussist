@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     borderBottomColor: '#eee',
   },
   headerText: {
-    fontSize: 14,
+    fontSize: 
     color: '#444',
     marginBottom: 16,
     marginTop: 16,

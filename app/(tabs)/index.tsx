@@ -15,12 +15,14 @@ const languages = [
 ];
 
 const serviceCategories = [
-  { id:'emergency',  title:'Emergency Services', description:'Quick access to emergency contacts and nearby hospitals',       icon:'alert-circle-outline', route:'/(tabs)/emergency'  },
-  { id:'healthcare', title:'Healthcare',        description:'Find hospitals, Medicare information, and medical services',   icon:'medkit-outline',      route:'/(tabs)/healthcare' },
-  { id:'housing',    title:'Housing',           description:'Find accommodation and rental assistance',                     icon:'home-outline',        route:'/(tabs)/housing'    },
-  { id:'translation',title:'Translation',       description:'Language assistance and interpreting services',                icon:'language-outline',    route:'/(tabs)/translation'},
-  { id:'banking',    title:'Banking & Finance', description:'Australian banking systems and financial assistance',           icon:'card-outline',        route:'/(tabs)/banking'    },
-  { id:'education',  title:'Education',         description:'Schools, universities and learning options',                   icon:'school-outline',      route:'/(tabs)/education'  }
+  { id:'transport',  title:'Transport',         description:'Public transport information and services in NSW',             icon:'train-outline',       route:'/transport'         },
+  { id:'banking',    title:'Banking & Finance', description:'Australian banking systems and financial assistance',          icon:'card-outline',        route:'/banking'           },
+  { id:'housing',    title:'Housing',           description:'Find accommodation and rental assistance',                     icon:'home-outline',        route:'/housing'           },
+  { id:'legal',      title:'Legal Assistance',  description:'Legal support and advice for migrants',                       icon:'book-outline',       route:'/legal'             },
+  { id:'english',    title:'Learn English',     description:'English language courses and learning resources',             icon:'school-outline',      route:'/english'           },
+  { id:'jobs',       title:'Job Opportunity',   description:'Find jobs and understand Australian workplace',               icon:'briefcase-outline',   route:'/jobs'              },
+  { id:'emergency',  title:'Emergency',         description:'Quick access to emergency contacts and nearby hospitals',     icon:'alert-circle-outline',route:'/(tabs)/emergency'  },
+  { id:'translation',title:'Translation',       description:'Language assistance and interpreting services',               icon:'language-outline',    route:'/(tabs)/translation'},
 ];
 
 const serviceImgs = [
@@ -46,9 +48,9 @@ export default function Home() {
       <ScrollView>
 
         {/* header */}
-        <View style={{ paddingTop:insets.top, paddingBottom:16, paddingHorizontal:16, backgroundColor:theme.colors.primary }}>
+        <View style={{ paddingTop:insets.top + 10, paddingBottom:16, paddingHorizontal:16, backgroundColor:theme.colors.primary }}>
           <Text style={{ fontSize:24, fontWeight:'bold', color:'white' }}>Aussist</Text>
-          <TText style={{ fontSize:16, color:'white' }}>Your guide to settling in Australia</TText>
+          <TText style={{ fontSize:16, color:'white' }}>Welcome to Australia</TText>
         </View>
 
         <View style={{ padding:16 }}>
@@ -84,7 +86,7 @@ export default function Home() {
                                alignItems:'center', justifyContent:'center', marginBottom:8 }}>
                   <Ionicons name={itm.icon as any} size={24} color={itm.color} />
                 </View>
-                <TText style={{ textAlign:'center' }}>{itm.label}</TText>
+                <TText style={{ textAlign:'center', fontSize: 13 }}>{itm.label}</TText>
               </TouchableOpacity>
             ))}
           </ScrollView>

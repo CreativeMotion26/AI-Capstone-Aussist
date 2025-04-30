@@ -102,6 +102,12 @@ export default function RootLayout() {
                 headerShown: false
               }} 
             />
+            <Stack.Screen name="banking" options={{ headerShown: false }} />
+            <Stack.Screen name="housing" options={{ headerShown: false }} />
+            <Stack.Screen name="legal" options={{ headerShown: false }} />
+            <Stack.Screen name="english" options={{ headerShown: false }} />
+            <Stack.Screen name="jobs" options={{ headerShown: false }} />
+            <Stack.Screen name="transport" options={{ headerShown: false }} />
           </Stack>
         </Animated.View>
       </View>

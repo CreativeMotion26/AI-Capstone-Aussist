@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, ScrollView, TouchableOpacity, SafeAreaView, Button } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import axios from 'axios';
+import { API_KEY } from '@env';
 
 const translationServices = [
   {
@@ -19,7 +20,7 @@ const translationServices = [
 ];
 
 // Replace with your actual API key
-const API_KEY = 'AIzaSyCrJ08nSLPdTpE6sn2P9x4i8UN80Yd-Gtw';
+// const API_KEY = 'AIzaSyCrJ08nSLPdTpE6sn2P9x4i8UN80Yd-Gtw';
 const BASE_URL = 'https://translation.googleapis.com/language/translate/v2';
 
 const translateText = async (text: string, targetLanguage: string) => {

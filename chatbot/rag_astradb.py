@@ -1,10 +1,13 @@
 import os
+import re
+import time
+from typing import Dict, List, Any, Optional
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import PromptTemplate
-from chatbot.astra_db import AstraDB
+from astra_db import AstraDB
 
 # Constants
 MEMORY_KEY = "chat_history"
@@ -23,9 +26,9 @@ Please provide a helpful answer based on the context above:"""
 
 class MultilingualMedicalBot:
     def __init__(self, model_name: str = "gpt-3.5-turbo-0125"):
-
+        
         # Load environment variables
-        load_dotenv(dotenv_path="../.env")
+        load_dotenv()
         
         # Get AstraDB credentials
         astra_token = os.getenv("ASTRA_DB_APP_TOKEN")

@@ -59,9 +59,9 @@ export default function TabLayout() {
       <Tabs.Screen
         name="translation"
         options={{
-          title: 'Translate',
+          title: 'AI Chatbot',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "language" : "language-outline"} size={24} color={color} />
+            <Ionicons name={focused ? "chatbubbles" : "chatbubbles-outline"} size={24} color={color} />
           ),
         }}
       />

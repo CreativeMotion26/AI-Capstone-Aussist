@@ -1,7 +1,5 @@
 import os
-# Set tokenizers parallelism to false before importing any HuggingFace components
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
-
+import argparse
 from typing import List, Optional
 from dotenv import load_dotenv
 from PyPDF2 import PdfReader
@@ -12,7 +10,9 @@ from langchain_openai import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import PromptTemplate
-import argparse
+
+# Set tokenizers parallelism
+os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
 # Constants
 CHUNK_SIZE = 1000
@@ -33,7 +33,7 @@ Please provide a helpful answer based on the context above:"""
 
 class MultilingualRAGBot:
     def __init__(self, model_name: str = "gpt-3.5-turbo-0125"):
-        """Initialize the RAG bot with specified components."""
+
         # Load environment variables
         load_dotenv()
         
@@ -59,8 +59,8 @@ class MultilingualRAGBot:
         self.vectorstore = None
         self.chain = None
 
+    # Process PDF files and create vector store
     def process_pdf(self, pdf_paths: List[str]) -> None:
-        """Process PDF files and create vector store."""
         text = ""
         for pdf_path in pdf_paths:
             if not os.path.exists(pdf_path):
@@ -103,8 +103,8 @@ class MultilingualRAGBot:
 
         print("PDF processing completed. Bot is ready for questions.")
 
+    # Ask a question to the bot
     def ask(self, question: str) -> str:
-        """Ask a question to the bot."""
         if not self.chain:
             return "Please process PDF documents first."
 
@@ -116,16 +116,8 @@ class MultilingualRAGBot:
         except Exception as e:
             return f"Error processing question: {str(e)}"
 
+# Get all PDF files from a folder
 def get_pdf_files_from_folder(folder_path: str) -> List[str]:
-    """
-    Get all PDF files from a folder.
-    
-    Args:
-        folder_path (str): Path to the folder containing PDF files
-        
-    Returns:
-        List[str]: List of paths to PDF files
-    """
     if not os.path.exists(folder_path):
         raise ValueError(f"Folder path does not exist: {folder_path}")
         
@@ -147,6 +139,13 @@ def main():
         help="Path to folder containing PDF files",
         required=True
     )
+    parser.add_argument(
+        "--model",
+        type=str,
+        choices=["gpt-3.5-turbo-0125", "gpt-3.5-turbo", "gpt-4-turbo-preview", "gpt-4"],
+        default="gpt-3.5-turbo-0125",
+        help="OpenAI model to use (default: gpt-3.5-turbo-0125)"
+    )
     args = parser.parse_args()
 
     try:
@@ -154,8 +153,9 @@ def main():
         pdf_files = get_pdf_files_from_folder(args.folder)
         print(f"Found {len(pdf_files)} PDF files in folder.")
         
-        # Initialize bot
-        bot = MultilingualRAGBot()
+        # Initialize bot with specified model
+        bot = MultilingualRAGBot(model_name=args.model)
+        print(f"Using OpenAI model: {args.model}")
         
         # Process PDFs
         print("Processing PDF files...")

@@ -11,13 +11,11 @@ app = FastAPI(
     version="0.1.0",
 )
 
-# Khởi tạo bot (có thể load 1 lần, dùng lại cho mọi request)
 bot = MultilingualMedicalBot()
 
-# Cho phép CORS để frontend/mobile app gọi API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Hoặc chỉ domain app của bạn
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

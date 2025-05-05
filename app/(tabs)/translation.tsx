@@ -19,8 +19,7 @@ const translationServices = [
   },
 ];
 
-// Replace with your actual API key
-// const API_KEY = 'AIzaSyCrJ08nSLPdTpE6sn2P9x4i8UN80Yd-Gtw';
+// Google Cloud Translation API
 const BASE_URL = 'https://translation.googleapis.com/language/translate/v2';
 
 const translateText = async (text: string, targetLanguage: string) => {

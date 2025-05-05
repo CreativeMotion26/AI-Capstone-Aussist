@@ -23,9 +23,9 @@ Please provide a helpful answer based on the context above:"""
 
 class MultilingualMedicalBot:
     def __init__(self, model_name: str = "gpt-3.5-turbo-0125"):
-
+        
         # Load environment variables
-        load_dotenv(dotenv_path="../.env")
+        load_dotenv()
         
         # Get AstraDB credentials
         astra_token = os.getenv("ASTRA_DB_APP_TOKEN")

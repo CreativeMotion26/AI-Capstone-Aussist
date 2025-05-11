@@ -1,7 +1,7 @@
 // app/lib/api.ts
 import Constants from 'expo-constants';
 
-<<<<<<< Updated upstream
+
 function guessLocalHost(): string {
   // e.g. 192.168.0.23:19000 → 192.168.0.23
   const host = (Constants.expoConfig?.hostUri ?? '').split(':')[0];
@@ -14,7 +14,7 @@ export const API_BASE = __DEV__ ? guessLocalHost() : 'https://your-production-ap
 export default {
   API_BASE
 };
-=======
+
 
 export const API_BASE = "http://192.168.1.255:8001";
->>>>>>> Stashed changes
+

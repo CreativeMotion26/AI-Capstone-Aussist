@@ -32,8 +32,21 @@ import { theme } from '../lib/theme';
 import { cn } from '../lib/utils';
 import { useRouter } from 'expo-router';
 //import * as Haptics from 'expo-haptics';
+import { useRouter } from 'expo-router';
+//import * as Haptics from 'expo-haptics';
 //import Clipboard from '@react-native-clipboard/clipboard';
 
+type Action = {
+  type: string;
+  content: string;
+};
+
+type Msg = { 
+  id: string; 
+  role: 'user' | 'assistant'; 
+  text: string;
+  actions?: Action[];
+};
 type Action = {
   type: string;
   content: string;
@@ -49,10 +62,12 @@ type Msg = {
 export default function TranslationChat() {
   const router = useRouter();
   const router = useRouter();
+  const router = useRouter();
   const [messages, setMessages] = useState<Msg[]>([
     {
       id: '0',
       role: 'assistant',
+      text: 'Hello 👋 — I can help you with medical information, emergency services, navigation within the app, and translation. How can I assist you today?',
       text: 'Hello 👋 — I can help you with medical information, emergency services, navigation within the app, and translation. How can I assist you today?',
     },
   ]);
@@ -155,6 +170,7 @@ export default function TranslationChat() {
     if (!input.trim() || loading) return;
 
 
+
     const userMsg: Msg = { id: Date.now().toString(), role: 'user', text: input };
     setMessages(prev => [...prev, userMsg]);
     setInput('');
@@ -179,6 +195,7 @@ export default function TranslationChat() {
           'Accept': 'application/json'
         },
         body: JSON.stringify({ question: userMsg.text }),
+        body: JSON.stringify({ question: userMsg.text }),
         signal: ctrl.signal
       });
       
@@ -198,7 +215,10 @@ export default function TranslationChat() {
         role: 'assistant',
         text: data.answer + (data.sources && data.sources.length > 0 ? '\n\nSources:\n' + data.sources.slice(0, 2).map((s: any) => `- ${s.content} (${s.url || 'No URL available'})`).join('\n') : ''),
         actions: actions,
+        text: data.answer + (data.sources && data.sources.length > 0 ? '\n\nSources:\n' + data.sources.slice(0, 2).map((s: any) => `- ${s.content} (${s.url || 'No URL available'})`).join('\n') : ''),
+        actions: actions,
       };
+      
       
       setMessages(prev => [...prev, botMsg]);
       
@@ -233,7 +253,28 @@ export default function TranslationChat() {
     }
   }
 
-  const renderItem = ({ item }: { item: Msg }) => {
+  const handleSourcePress = async (url: string) => {
+    try {
+      if (!url || url === 'No URL available') {
+        Alert.alert('Error', 'No URL available for this source');
+        return;
+      }
+
+      const formattedUrl = url.startsWith('http') ? url : `https://${url}`;
+      
+      const supported = await Linking.canOpenURL(formattedUrl);
+      if (supported) {
+        await Linking.openURL(formattedUrl);
+      } else {
+        Alert.alert('Error', 'Cannot open this URL. Please check if the URL is valid.');
+      }
+    } catch (error) {
+      console.error('URL opening error:', error);
+      Alert.alert('Error', 'Failed to open URL. Please try again.');
+    }
+  };
+
+  const renderItem = ({ item, index }: { item: Msg; index: number }) => {
     const user = item.role === 'user';
     return (
       <Pressable

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
- 
-=======
 import os
 import re
 import json
@@ -8,8 +5,8 @@ from typing import Dict, List, Any, Optional, Tuple, Union
 
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-from langchain_core.agents import AgentAction
 from langchain.agents import AgentExecutor, create_openai_functions_agent
+from langchain_core.agents import AgentAction
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import MessagesPlaceholder, ChatPromptTemplate
 from langchain.schema import Document
@@ -182,6 +179,7 @@ class AgenticMedicalBot:
             "emergency": "/(tabs)/emergency",
             "healthcare": "/(tabs)/healthcare",
             "symptoms": "/symptoms/index",
+            "symptom_detail": "/symptoms/detail",
             "home": "/(tabs)",
             "profile": "/(tabs)/profile",
             "translation": "/(tabs)/translation",
@@ -350,15 +348,11 @@ def main():
             if response.get('sources'):
                 print("\nSources used:")
                 for i, source_item in enumerate(response['sources'], 1):
-                    url_info = f' (URL: {source_item["url"]})' if source_item.get("url") else ''
                     print(f"\n{i}. From: {source_item['source']}")
-                    print(f"Content: {source_item['content']}{url_info}")
+                    print(f"Content: {source_item['content']}{f' (URL: {source_item["url"]})' if source_item.get('url') else ''}")
             
     except Exception as e:
-        print(f"\nError in main: {str(e)}")
-        import traceback
-        traceback.print_exc()
+        print(f"\nError: {str(e)}")
 
 if __name__ == "__main__":
     main() 
->>>>>>> ade7c50 (update)

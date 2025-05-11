@@ -16,17 +16,6 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { API_BASE } from '../lib/api';
-// app/(tabs)/translation.tsx
-import React, { useState, useRef } from 'react';
-import {
-  View,
-  TextInput,
-  FlatList,
-  TouchableOpacity,
-  ActivityIndicator,
-} from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { API_BASE } from '../lib/api';
 import TText from '../components/TText';
 import { theme } from '../lib/theme';
 import { cn } from '../lib/utils';
@@ -48,8 +37,6 @@ type Msg = {
 
 export default function TranslationChat() {
   const router = useRouter();
-  const router = useRouter();
-  const router = useRouter();
   const [messages, setMessages] = useState<Msg[]>([
     {
       id: '0',
@@ -59,6 +46,7 @@ export default function TranslationChat() {
   ]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [isTyping, setIsTyping] = useState(false);
   const listRef = useRef<FlatList<Msg>>(null);
   const fadeAnim = useRef(new Animated.Value(0)).current;
   const scaleAnim = useRef(new Animated.Value(0.8)).current;
@@ -113,9 +101,6 @@ export default function TranslationChat() {
           home: '/(tabs)',
           profile: '/(tabs)/profile',
           translation: '/(tabs)/translation',
-          hospital: '/symptoms/hospital',
-          banking: '/(tabs)/banking',
-          education: '/(tabs)/education'
         };
         
         const route = routeMap[destination];
@@ -126,9 +111,7 @@ export default function TranslationChat() {
             [
               {
                 text: 'Go',
-                onPress: () => {
-                  router.push(route as any);
-                },
+                onPress: () => router.push(route),
               },
               {
                 text: 'Stay Here',
@@ -136,12 +119,11 @@ export default function TranslationChat() {
               },
             ]
           );
-        } else {
-          Alert.alert('Navigation Error', `Cannot navigate to ${destination} page.`);
         }
       }
     } else if (action.type === 'TRANSLATE') {
       // Handle translation
+      // For now just display the translation in a dialog
       const translateContent = action.content;
       
       Alert.alert(
@@ -155,25 +137,17 @@ export default function TranslationChat() {
   async function send() {
     if (!input.trim() || loading) return;
 
-
-
     const userMsg: Msg = { id: Date.now().toString(), role: 'user', text: input };
     setMessages(prev => [...prev, userMsg]);
     setInput('');
     setLoading(true);
     setIsTyping(true);
-    setLoading(true);
 
     try {
       const REQUEST_TIMEOUT = 120000;         
       const ctrl = new AbortController();
       const timer = setTimeout(() => ctrl.abort(), REQUEST_TIMEOUT);
       
-      const REQUEST_TIMEOUT = 60000;          // 60 s – adjust later
-
-    const ctrl   = new AbortController();
-    const timer  = setTimeout(() => ctrl.abort(), REQUEST_TIMEOUT);
-      // inside send()
       const res = await fetch(`${API_BASE}/chat`, {
         method: 'POST',
         headers: { 
@@ -192,6 +166,7 @@ export default function TranslationChat() {
       clearTimeout(timer);
       const data = await res.json();
       
+      // Process the actions if present
       const actions = data.actions || [];
       
       const botMsg: Msg = {
@@ -203,7 +178,9 @@ export default function TranslationChat() {
       
       setMessages(prev => [...prev, botMsg]);
       
+      // Automatically handle actions if present
       if (actions && actions.length > 0) {
+        // Delay action handling a bit to allow the message to be seen first
         setTimeout(() => {
           actions.forEach(handleAction);
         }, 500);
@@ -221,13 +198,12 @@ export default function TranslationChat() {
       const errMsg: Msg = {
         id: Date.now() + 'e',
         role: 'assistant',
-        text: '⚠️ Sorry, I could not reach the server.',
+        text: `⚠️ Sorry, I could not reach the server. Error: ${errorMessage}`,
       };
       setMessages(prev => [...prev, errMsg]);
-      console.error(e);
     } finally {
       setLoading(false);
-      // ensure we scroll after RN finished layout
+      setIsTyping(false);
       setTimeout(() => listRef.current?.scrollToEnd({ animated: true }), 50);
     }
   }
@@ -239,6 +215,7 @@ export default function TranslationChat() {
         return;
       }
 
+      // Ensure URL has proper format
       const formattedUrl = url.startsWith('http') ? url : `https://${url}`;
       
       const supported = await Linking.canOpenURL(formattedUrl);
@@ -255,6 +232,10 @@ export default function TranslationChat() {
 
   const renderItem = ({ item, index }: { item: Msg; index: number }) => {
     const user = item.role === 'user';
+    const parts = item.text.split('\n\nSources:\n');
+    const mainText = parts[0];
+    const sources = parts[1] ? parts[1].split('\n').filter(line => line.trim()) : [];
+
     return (
       <Pressable
         onLongPress={() => {
@@ -265,7 +246,6 @@ export default function TranslationChat() {
               {
                 text: 'Copy',
                 onPress: () => {
-                  // Clipboard.setString(item.text); // Consider re-enabling if @react-native-clipboard/clipboard is installed
                   Alert.alert('Success', 'Message copied to clipboard');
                 },
               },
@@ -306,10 +286,12 @@ export default function TranslationChat() {
             {mainText}
           </TText>
           
+          {/* Render action buttons if present */}
           {!user && item.actions && item.actions.length > 0 && (
             <View style={{ marginTop: 12, flexDirection: 'row', flexWrap: 'wrap' }}>
               {item.actions.map((action, idx) => {
-                let iconName: any = "alert-circle"; // Consider using a more specific type for Ionicons names
+                // Choose icon based on action type
+                let iconName = "alert-circle";
                 let color = theme.colors.primary;
                 
                 if (action.type === 'CALL') {
@@ -336,14 +318,14 @@ export default function TranslationChat() {
                       marginTop: 8,
                       flexDirection: 'row',
                       alignItems: 'center',
-                      shadowColor: '#000',
+          shadowColor: '#000',
                       shadowOpacity: 0.1,
-                      shadowRadius: 2,
-                      shadowOffset: { width: 0, height: 1 },
+          shadowRadius: 2,
+          shadowOffset: { width: 0, height: 1 },
                       elevation: 2,
-                    }}
-                  >
-                    <Ionicons name={iconName} size={16} color={color} style={{ marginRight: 6 }} />
+        }}
+      >
+                    <Ionicons name={iconName as any} size={16} color={color} style={{ marginRight: 6 }} />
                     <TText style={{ color: '#333', fontWeight: '500' }}>
                       {action.type}
                     </TText>
@@ -353,6 +335,7 @@ export default function TranslationChat() {
             </View>
           )}
           
+          {/* Sources section */}
           {sources.length > 0 && (
             <View style={{ marginTop: 12 }}>
               <TText 
@@ -403,7 +386,7 @@ export default function TranslationChat() {
                       numberOfLines={2}
                     >
                       {content}
-                    </TText>
+        </TText>
                   </TouchableOpacity>
                 );
               })}
@@ -444,18 +427,18 @@ export default function TranslationChat() {
             shadowOffset: { width: 0, height: 2 },
             elevation: 2,
           }}>
-            <Ionicons name="chatbubbles" size={28} color={theme.colors.primary} style={{ marginRight: 8 }} />
-            <TText style={{ fontSize: 20, fontWeight: 'bold', color: '#222' }}>Aussist AI Chatbot</TText>
-          </View>
-          <FlatList
-            ref={listRef}
-            data={messages}
-            keyExtractor={m => m.id}
-            renderItem={renderItem}
+        <Ionicons name="chatbubbles" size={28} color={theme.colors.primary} style={{ marginRight: 8 }} />
+        <TText style={{ fontSize: 20, fontWeight: 'bold', color: '#222' }}>Aussist AI Chatbot</TText>
+      </View>
+      <FlatList
+        ref={listRef}
+        data={messages}
+        keyExtractor={m => m.id}
+        renderItem={renderItem}
             contentContainerStyle={{ paddingBottom: 24 }}
-            onContentSizeChange={() => listRef.current?.scrollToEnd({ animated: true })}
-            showsVerticalScrollIndicator={false}
-          />
+        onContentSizeChange={() => listRef.current?.scrollToEnd({ animated: true })}
+        showsVerticalScrollIndicator={false}
+      />
 
           {isTyping && (
             <View style={{ 
@@ -474,57 +457,58 @@ export default function TranslationChat() {
             </View>
           )}
 
-          <View
-            style={{
-              flexDirection: 'row',
-              alignItems: 'center',
+      {/* input bar */}
+      <View
+        style={{
+          flexDirection: 'row',
+          alignItems: 'center',
               marginHorizontal: 8,
               marginTop: 8,
-              backgroundColor: '#fff',
-              borderRadius: 24,
+          backgroundColor: '#fff',
+          borderRadius: 24,
               paddingHorizontal: 16,
-              shadowColor: '#000',
+          shadowColor: '#000',
               shadowOpacity: 0.1,
               shadowRadius: 8,
-              shadowOffset: { width: 0, height: 2 },
+          shadowOffset: { width: 0, height: 2 },
               elevation: 4,
               marginBottom: 0,
-            }}
-          >
-            <TextInput
-              value={input}
-              onChangeText={setInput}
-              placeholder="Type a message"
+        }}
+      >
+        <TextInput
+          value={input}
+          onChangeText={setInput}
+          placeholder="Type a message"
               style={{ 
                 height: 44, 
                 flex: 1, 
                 fontSize: 16,
                 paddingVertical: 8,
               }}
-              placeholderTextColor="#aaa"
+          placeholderTextColor="#aaa"
               multiline
               maxLength={500}
-            />
-            {loading && <ActivityIndicator size="small" style={{ marginRight: 8 }} />}
-            <TouchableOpacity
-              onPress={send}
-              style={{
+        />
+        {loading && <ActivityIndicator size="small" style={{ marginRight: 8 }} />}
+        <TouchableOpacity
+          onPress={send}
+          style={{
                 backgroundColor: input.trim() ? theme.colors.primary : '#E5E7EB',
-                borderRadius: 20,
-                padding: 8,
-                marginLeft: 4,
+            borderRadius: 20,
+            padding: 8,
+            marginLeft: 4,
                 transform: [{ scale: input.trim() ? 0.9 : 0.8 }],
-              }}
-              disabled={!input.trim() || loading}
-            >
-              <Ionicons
-                name="send"
-                size={24}
-                color={input.trim() ? 'white' : '#9ca3af'}
-              />
-            </TouchableOpacity>
-          </View>
-        </View>
+          }}
+          disabled={!input.trim() || loading}
+        >
+          <Ionicons
+            name="send"
+            size={24}
+            color={input.trim() ? 'white' : '#9ca3af'}
+          />
+        </TouchableOpacity>
+      </View>
+    </View>
       </Animated.View>
     </KeyboardAvoidingView>
   );

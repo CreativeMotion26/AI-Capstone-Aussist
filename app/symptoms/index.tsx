@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
+import { View, TextInput, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { router, useNavigation } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import TText from '../components/TText';
 
 const symptoms = [
   'Symptom 1',
@@ -63,16 +64,16 @@ export default function SymptomChecker() {
 
       {/* Emergency Call Section */}
       <View style={styles.emergencyCard}>
-        <Text style={styles.emergencyTitle}>Emergency Call</Text>
-        <Text style={styles.emergencyDescription}>
+        <TText style={styles.emergencyTitle}>Emergency Call</TText>
+        <TText style={styles.emergencyDescription}>
           For immediate assistance in an emergency, please use the numbers below:
-        </Text>
-        <Text style={styles.emergencySubtitle}>Fire: 000</Text>
-        <Text style={styles.emergencySubtitle}>Ambulance: 000</Text>
-        <Text style={styles.emergencySubtitle}>Police: 000</Text>
-        <Text style={styles.emergencyNote}>
+        </TText>
+        <TText style={styles.emergencySubtitle}>Fire: 000</TText>
+        <TText style={styles.emergencySubtitle}>Ambulance: 000</TText>
+        <TText style={styles.emergencySubtitle}>Police: 000</TText>
+        <TText style={styles.emergencyNote}>
           In a critical situation, these contacts provide the quickest route to safety and emergency services. Ensure your phone is location-enabled to allow for swift assistance.
-        </Text>
+        </TText>
       </View>
 
       {/* Symptoms List */}
@@ -85,7 +86,7 @@ export default function SymptomChecker() {
               style={styles.symptomItem}
               onPress={() => toggleSymptom(symptom)}
             >
-              <Text style={styles.symptomText}>{symptom}</Text>
+              <TText style={styles.symptomText}>{symptom}</TText>
               <View style={[
                 styles.checkCircle,
                 selectedSymptoms.includes(symptom) && styles.checkCircleSelected
@@ -107,7 +108,7 @@ export default function SymptomChecker() {
         onPress={goToResult}
         disabled={selectedSymptoms.length === 0}
       >
-        <Text style={styles.resultButtonText}>Go to Result</Text>
+        <TText style={styles.resultButtonText}>Go to Result</TText>
       </TouchableOpacity>
     </SafeAreaView>
   );

@@ -1,6 +1,5 @@
-// app/lib/api.ts
 import Constants from 'expo-constants';
-
+import { Platform } from 'react-native';
 
 function defaultBase(): string {
   // 1. physical phone – use LAN IP from hostUri (53.x SDK format)
@@ -19,4 +18,4 @@ function defaultBase(): string {
   return 'http://localhost:8000';
 }
 
-export const API_BASE = "http://192.168.1.117:8000";
+export const API_BASE = "http://192.168.1.117:8001";

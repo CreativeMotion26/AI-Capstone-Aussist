@@ -112,9 +112,12 @@ export default function TranslationChat() {
           home: '/(tabs)',
           profile: '/(tabs)/profile',
           translation: '/(tabs)/translation',
+<<<<<<< Updated upstream
           hospital: '/symptoms/hospital',
           banking: '/(tabs)/banking',
           education: '/(tabs)/education'
+=======
+>>>>>>> Stashed changes
         };
         
         const route = routeMap[destination];
@@ -125,9 +128,13 @@ export default function TranslationChat() {
             [
               {
                 text: 'Go',
+<<<<<<< Updated upstream
                 onPress: () => {
                   router.push(route as any);
                 },
+=======
+                onPress: () => router.push(route),
+>>>>>>> Stashed changes
               },
               {
                 text: 'Stay Here',
@@ -135,12 +142,19 @@ export default function TranslationChat() {
               },
             ]
           );
+<<<<<<< Updated upstream
         } else {
           Alert.alert('Navigation Error', `Cannot navigate to ${destination} page.`);
+=======
+>>>>>>> Stashed changes
         }
       }
     } else if (action.type === 'TRANSLATE') {
       // Handle translation
+<<<<<<< Updated upstream
+=======
+      // For now just display the translation in a dialog
+>>>>>>> Stashed changes
       const translateContent = action.content;
       
       Alert.alert(
@@ -317,6 +331,7 @@ export default function TranslationChat() {
                       marginTop: 8,
                       flexDirection: 'row',
                       alignItems: 'center',
+<<<<<<< Updated upstream
           shadowColor: '#000',
                       shadowOpacity: 0.1,
           shadowRadius: 2,
@@ -324,6 +339,15 @@ export default function TranslationChat() {
                       elevation: 2,
         }}
       >
+=======
+                      shadowColor: '#000',
+                      shadowOpacity: 0.1,
+                      shadowRadius: 2,
+                      shadowOffset: { width: 0, height: 1 },
+                      elevation: 2,
+                    }}
+                  >
+>>>>>>> Stashed changes
                     <Ionicons name={iconName as any} size={16} color={color} style={{ marginRight: 6 }} />
                     <TText style={{ color: '#333', fontWeight: '500' }}>
                       {action.type}

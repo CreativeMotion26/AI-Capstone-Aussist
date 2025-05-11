@@ -202,7 +202,11 @@ if __name__ == "__main__":
     uvicorn.run(
         "api:app",
         host="0.0.0.0",
+<<<<<<< Updated upstream
         port=8001,
+=======
+        port=8000,
+>>>>>>> Stashed changes
         reload=True,
         workers=4,
         log_level="info"

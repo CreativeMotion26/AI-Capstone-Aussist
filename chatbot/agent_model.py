@@ -8,22 +8,14 @@ from typing import Dict, List, Any, Optional, Tuple, Union
 
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
-<<<<<<< Updated upstream
 from langchain_core.agents import AgentAction
-=======
->>>>>>> Stashed changes
 from langchain.agents import AgentExecutor, create_openai_functions_agent
 from langchain.memory import ConversationBufferMemory
 from langchain.prompts import MessagesPlaceholder, ChatPromptTemplate
 from langchain.schema import Document
 from langchain.schema.runnable import Runnable
-<<<<<<< Updated upstream
 from langchain.tools import StructuredTool
 from pydantic import BaseModel, Field
-=======
-from langchain.tools import BaseTool, StructuredTool, tool
-from langchain.pydantic_v1 import BaseModel, Field
->>>>>>> Stashed changes
 from langchain.chains import LLMChain
 
 from astra_db import AstraDB
@@ -43,15 +35,11 @@ class EmergencyCallInput(BaseModel):
 
 class NavigateInput(BaseModel):
     """Input for navigation within the app."""
-<<<<<<< Updated upstream
     destination: str = Field(..., description="Destination page (e.g., 'emergency', 'healthcare', 'symptoms', 'home', 'profile', 'translation', 'hospital', 'banking', 'education')")
 
 class RetrieveMedicalInfoInput(BaseModel):
     """Input for medical information retrieval."""
     query: str = Field(..., description="The user's specific medical question or symptom to search for information, e.g., 'information on back pain', 'symptoms of flu'")
-=======
-    destination: str = Field(..., description="Destination page (e.g., 'emergency', 'healthcare', 'symptoms', 'home')")
->>>>>>> Stashed changes
 
 class AgenticMedicalBot:
     def __init__(self, model_name: str = "gpt-3.5-turbo"):
@@ -78,7 +66,6 @@ class AgenticMedicalBot:
             temperature=0.7
         )
         
-<<<<<<< Updated upstream
         # Initialize memory with new format
         self.memory = ConversationBufferMemory(
             memory_key="chat_history",
@@ -146,30 +133,6 @@ class AgenticMedicalBot:
 
         prompt = ChatPromptTemplate.from_messages([
             ("system", system_prompt),
-=======
-        # Initialize memory
-        self.memory = ConversationBufferMemory(
-            memory_key="chat_history",
-            return_messages=True
-        )
-        
-        # Create tools
-        self.tools = [
-            self.translate,
-            self.emergency_call,
-            self.navigate_to_page,
-            self.retrieve_medical_info
-        ]
-        
-        # Create agent prompt
-        prompt = ChatPromptTemplate.from_messages([
-            ("system", "You are an AI assistant for the Aussist app, designed to help international users "
-                     "navigate healthcare in Australia. You can assist with medical information, translations, "
-                     "emergency services, and app navigation. When a user asks for help in an emergency, "
-                     "help them contact emergency services. When they need translation, translate their content. "
-                     "When they need to access other parts of the app, help them navigate there. Always respond "
-                     "in the same language as the user's question."),
->>>>>>> Stashed changes
             MessagesPlaceholder(variable_name="chat_history"),
             ("human", "{input}"),
             MessagesPlaceholder(variable_name="agent_scratchpad"),
@@ -188,7 +151,6 @@ class AgenticMedicalBot:
             tools=self.tools,
             memory=self.memory,
             verbose=True,
-<<<<<<< Updated upstream
             return_intermediate_steps=True,
             handle_parsing_errors=True
         )
@@ -199,21 +161,6 @@ class AgenticMedicalBot:
         """Translates text from one language to another."""
         return f"[ACTION:TRANSLATE] Translating the text: '{text}' to {target_language}"
 
-=======
-            return_intermediate_steps=True
-        )
-        
-        print("Agentic Medical Bot initialized.")
-
-    @tool(args_schema=TranslateInput)
-    def translate(self, text: str, target_language: str) -> str:
-        """Translates text from one language to another."""
-        # In a real implementation, this would call a translation API
-        # For now, we'll simulate a response
-        return f"[ACTION:TRANSLATE] Translating the text: '{text}' to {target_language}"
-
-    @tool(args_schema=EmergencyCallInput)
->>>>>>> Stashed changes
     def emergency_call(self, emergency_type: str) -> str:
         """Initiates an emergency call based on the type of emergency."""
         emergency_numbers = {
@@ -229,7 +176,6 @@ class AgenticMedicalBot:
         number = emergency_numbers.get(emergency_type.lower(), "000")
         return f"[ACTION:CALL] Initiating call to emergency service: {number} for {emergency_type} emergency"
 
-<<<<<<< Updated upstream
     def navigate_to_page(self, destination: str) -> str:
         """Navigates to a different page within the app."""
         valid_destinations = {
@@ -250,19 +196,6 @@ class AgenticMedicalBot:
         else:
             return f"Could not directly navigate to {destination}. Please specify a valid page like {', '.join(valid_destinations.keys())}."
 
-=======
-    @tool(args_schema=NavigateInput)
-    def navigate_to_page(self, destination: str) -> str:
-        """Navigates to a different page within the app."""
-        valid_destinations = ["emergency", "healthcare", "symptoms", "translation", "home", "profile"]
-        
-        if destination.lower() in valid_destinations:
-            return f"[ACTION:NAVIGATE] Navigating to {destination} page"
-        else:
-            return f"Cannot navigate to {destination}. Valid destinations are: {', '.join(valid_destinations)}"
-
-    @tool
->>>>>>> Stashed changes
     def retrieve_medical_info(self, query: str) -> str:
         """Retrieves medical information based on the query."""
         try:
@@ -275,15 +208,7 @@ class AgenticMedicalBot:
             context = "\n\n".join([doc.page_content for doc in docs])
             
             # Get sources for citation
-<<<<<<< Updated upstream
             sources = list(set(doc.metadata.get('source', 'Unknown') for doc in docs))
-=======
-            sources = []
-            for doc in docs:
-                source = doc.metadata.get('source', 'Unknown')
-                if source not in sources:
-                    sources.append(source)
->>>>>>> Stashed changes
             
             source_str = ", ".join(sources)
             return f"Based on the medical information: {context}\n\nSources: {source_str}"
@@ -292,7 +217,6 @@ class AgenticMedicalBot:
             return f"Error retrieving medical information: {str(e)}"
 
     def process_response(self, response: Dict[str, Any]) -> Dict[str, Any]:
-<<<<<<< Updated upstream
         """Process the agent response, extracting actions from intermediate tool outputs."""
         processed_actions = []
         
@@ -322,46 +246,11 @@ class AgenticMedicalBot:
             "intermediate_steps": response.get("intermediate_steps", []), # For debugging or other uses
             "sources": self._extract_sources(response) # Sources from retrieve_medical_info
         }
-=======
-        """Process the agent response and extract actions."""
-        actions = []
-        
-        # Check for action tags in the output
-        if "output" in response:
-            text = response["output"]
-            
-            # Extract actions from the response
-            action_matches = re.finditer(r'\[ACTION:(\w+)\]\s+([^\[]+)', text)
-            for match in action_matches:
-                action_type = match.group(1)
-                action_content = match.group(2).strip()
-                
-                actions.append({
-                    "type": action_type,
-                    "content": action_content
-                })
-                
-                # Remove the action tag from the text for clean output
-                text = text.replace(match.group(0), "")
-            
-            # Clean up the text
-            text = re.sub(r'\s+', ' ', text).strip()
-            
-            return {
-                "answer": text,
-                "actions": actions,
-                "intermediate_steps": response.get("intermediate_steps", []),
-                "sources": self._extract_sources(response)
-            }
-        
-        return response
->>>>>>> Stashed changes
 
     def _extract_sources(self, response: Dict[str, Any]) -> List[Dict[str, str]]:
         """Extract sources from the response."""
         sources = []
         
-<<<<<<< Updated upstream
         # First, check if the direct output already contains pre-formatted sources 
         # (e.g. if the agent itself summarized them and put them in 'output')
         if "output" in response and isinstance(response["output"], str):
@@ -396,40 +285,6 @@ class AgenticMedicalBot:
                                             "source": src_item, 
                                             "url": src_item if src_item.startswith("http") else None
                                         })
-=======
-        # Look for sources in the text
-        if "output" in response:
-            text = response["output"]
-            source_matches = re.findall(r'Sources?: ([^\.]+)', text)
-            
-            for match in source_matches:
-                sources_list = [s.strip() for s in match.split(",")]
-                for source in sources_list:
-                    if source:
-                        sources.append({
-                            "content": f"Referenced document",
-                            "source": source,
-                            "url": f"{source}"
-                        })
-        
-        # Also check intermediate steps for tool outputs that might have sources
-        if "intermediate_steps" in response:
-            for step in response["intermediate_steps"]:
-                if "retrieve_medical_info" in str(step[0]):
-                    output = step[1]
-                    source_matches = re.findall(r'Sources?: ([^\.]+)', output)
-                    
-                    for match in source_matches:
-                        sources_list = [s.strip() for s in match.split(",")]
-                        for source in sources_list:
-                            if source and not any(s["source"] == source for s in sources):
-                                sources.append({
-                                    "content": f"Medical information from {source}",
-                                    "source": source,
-                                    "url": f"{source}"
-                                })
-        
->>>>>>> Stashed changes
         return sources
 
     async def aask(self, question: str) -> Dict[str, Any]:
@@ -443,19 +298,11 @@ class AgenticMedicalBot:
             
             return processed_response
         except Exception as e:
-<<<<<<< Updated upstream
             # Log the full error for debugging
             print(f"Error in aask: {e}")
             import traceback
             traceback.print_exc()
             return {"answer": f"Error processing question: {str(e)}", "actions": [], "sources": []}
-=======
-            return {
-                "answer": f"Error processing question: {str(e)}",
-                "actions": [],
-                "sources": []
-            }
->>>>>>> Stashed changes
 
     def ask(self, question: str) -> Dict[str, Any]:
         """Ask a question to the agentic medical bot."""
@@ -468,18 +315,10 @@ class AgenticMedicalBot:
             
             return processed_response
         except Exception as e:
-<<<<<<< Updated upstream
             print(f"Error in ask: {e}")
             import traceback
             traceback.print_exc()
             return {"answer": f"Error processing question: {str(e)}", "actions": [], "sources": []}
-=======
-            return {
-                "answer": f"Error processing question: {str(e)}",
-                "actions": [],
-                "sources": []
-            }
->>>>>>> Stashed changes
 
 def main():
     # Initialize bot
@@ -504,29 +343,21 @@ def main():
             # Print actions if available
             if response['actions']:
                 print("\nActions to be taken:")
-<<<<<<< Updated upstream
                 for action_item in response['actions']:
                     print(f"- {action_item['type']}: {action_item['content']}")
-=======
-                for action in response['actions']:
-                    print(f"- {action['type']}: {action['content']}")
->>>>>>> Stashed changes
             
             # Print sources if available
             if response.get('sources'):
                 print("\nSources used:")
-<<<<<<< Updated upstream
                 for i, source_item in enumerate(response['sources'], 1):
+                    url_info = f' (URL: {source_item["url"]})' if source_item.get("url") else ''
                     print(f"\n{i}. From: {source_item['source']}")
-                    print(f"Content: {source_item['content']}{f' (URL: {source_item["url"]})' if source_item.get('url') else ''}")
-=======
-                for i, source in enumerate(response['sources'], 1):
-                    print(f"\n{i}. From: {source['source']}")
-                    print(f"Content: {source['content']}")
->>>>>>> Stashed changes
+                    print(f"Content: {source_item['content']}{url_info}")
             
     except Exception as e:
-        print(f"\nError: {str(e)}")
+        print(f"\nError in main: {str(e)}")
+        import traceback
+        traceback.print_exc()
 
 if __name__ == "__main__":
     main() 

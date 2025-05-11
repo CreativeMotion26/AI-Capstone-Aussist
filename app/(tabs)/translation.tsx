@@ -32,21 +32,8 @@ import { theme } from '../lib/theme';
 import { cn } from '../lib/utils';
 import { useRouter } from 'expo-router';
 //import * as Haptics from 'expo-haptics';
-import { useRouter } from 'expo-router';
-//import * as Haptics from 'expo-haptics';
 //import Clipboard from '@react-native-clipboard/clipboard';
 
-type Action = {
-  type: string;
-  content: string;
-};
-
-type Msg = { 
-  id: string; 
-  role: 'user' | 'assistant'; 
-  text: string;
-  actions?: Action[];
-};
 type Action = {
   type: string;
   content: string;
@@ -67,7 +54,6 @@ export default function TranslationChat() {
     {
       id: '0',
       role: 'assistant',
-      text: 'Hello 👋 — I can help you with medical information, emergency services, navigation within the app, and translation. How can I assist you today?',
       text: 'Hello 👋 — I can help you with medical information, emergency services, navigation within the app, and translation. How can I assist you today?',
     },
   ]);
@@ -195,7 +181,6 @@ export default function TranslationChat() {
           'Accept': 'application/json'
         },
         body: JSON.stringify({ question: userMsg.text }),
-        body: JSON.stringify({ question: userMsg.text }),
         signal: ctrl.signal
       });
       
@@ -207,7 +192,6 @@ export default function TranslationChat() {
       clearTimeout(timer);
       const data = await res.json();
       
-      // Process the actions if present
       const actions = data.actions || [];
       
       const botMsg: Msg = {
@@ -215,16 +199,11 @@ export default function TranslationChat() {
         role: 'assistant',
         text: data.answer + (data.sources && data.sources.length > 0 ? '\n\nSources:\n' + data.sources.slice(0, 2).map((s: any) => `- ${s.content} (${s.url || 'No URL available'})`).join('\n') : ''),
         actions: actions,
-        text: data.answer + (data.sources && data.sources.length > 0 ? '\n\nSources:\n' + data.sources.slice(0, 2).map((s: any) => `- ${s.content} (${s.url || 'No URL available'})`).join('\n') : ''),
-        actions: actions,
       };
-      
       
       setMessages(prev => [...prev, botMsg]);
       
-      // Automatically handle actions if present
       if (actions && actions.length > 0) {
-        // Delay action handling a bit to allow the message to be seen first
         setTimeout(() => {
           actions.forEach(handleAction);
         }, 500);
@@ -286,6 +265,7 @@ export default function TranslationChat() {
               {
                 text: 'Copy',
                 onPress: () => {
+                  // Clipboard.setString(item.text); // Consider re-enabling if @react-native-clipboard/clipboard is installed
                   Alert.alert('Success', 'Message copied to clipboard');
                 },
               },
@@ -326,12 +306,10 @@ export default function TranslationChat() {
             {mainText}
           </TText>
           
-          {/* Render action buttons if present */}
           {!user && item.actions && item.actions.length > 0 && (
             <View style={{ marginTop: 12, flexDirection: 'row', flexWrap: 'wrap' }}>
               {item.actions.map((action, idx) => {
-                // Choose icon based on action type
-                let iconName = "alert-circle";
+                let iconName: any = "alert-circle"; // Consider using a more specific type for Ionicons names
                 let color = theme.colors.primary;
                 
                 if (action.type === 'CALL') {
@@ -365,7 +343,7 @@ export default function TranslationChat() {
                       elevation: 2,
                     }}
                   >
-                    <Ionicons name={iconName as any} size={16} color={color} style={{ marginRight: 6 }} />
+                    <Ionicons name={iconName} size={16} color={color} style={{ marginRight: 6 }} />
                     <TText style={{ color: '#333', fontWeight: '500' }}>
                       {action.type}
                     </TText>
@@ -375,7 +353,6 @@ export default function TranslationChat() {
             </View>
           )}
           
-          {/* Sources section */}
           {sources.length > 0 && (
             <View style={{ marginTop: 12 }}>
               <TText 
@@ -426,7 +403,7 @@ export default function TranslationChat() {
                       numberOfLines={2}
                     >
                       {content}
-        </TText>
+                    </TText>
                   </TouchableOpacity>
                 );
               })}
@@ -467,18 +444,18 @@ export default function TranslationChat() {
             shadowOffset: { width: 0, height: 2 },
             elevation: 2,
           }}>
-        <Ionicons name="chatbubbles" size={28} color={theme.colors.primary} style={{ marginRight: 8 }} />
-        <TText style={{ fontSize: 20, fontWeight: 'bold', color: '#222' }}>Aussist AI Chatbot</TText>
-      </View>
-      <FlatList
-        ref={listRef}
-        data={messages}
-        keyExtractor={m => m.id}
-        renderItem={renderItem}
+            <Ionicons name="chatbubbles" size={28} color={theme.colors.primary} style={{ marginRight: 8 }} />
+            <TText style={{ fontSize: 20, fontWeight: 'bold', color: '#222' }}>Aussist AI Chatbot</TText>
+          </View>
+          <FlatList
+            ref={listRef}
+            data={messages}
+            keyExtractor={m => m.id}
+            renderItem={renderItem}
             contentContainerStyle={{ paddingBottom: 24 }}
-        onContentSizeChange={() => listRef.current?.scrollToEnd({ animated: true })}
-        showsVerticalScrollIndicator={false}
-      />
+            onContentSizeChange={() => listRef.current?.scrollToEnd({ animated: true })}
+            showsVerticalScrollIndicator={false}
+          />
 
           {isTyping && (
             <View style={{ 
@@ -497,58 +474,57 @@ export default function TranslationChat() {
             </View>
           )}
 
-      {/* input bar */}
-      <View
-        style={{
-          flexDirection: 'row',
-          alignItems: 'center',
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
               marginHorizontal: 8,
               marginTop: 8,
-          backgroundColor: '#fff',
-          borderRadius: 24,
+              backgroundColor: '#fff',
+              borderRadius: 24,
               paddingHorizontal: 16,
-          shadowColor: '#000',
+              shadowColor: '#000',
               shadowOpacity: 0.1,
               shadowRadius: 8,
-          shadowOffset: { width: 0, height: 2 },
+              shadowOffset: { width: 0, height: 2 },
               elevation: 4,
               marginBottom: 0,
-        }}
-      >
-        <TextInput
-          value={input}
-          onChangeText={setInput}
-          placeholder="Type a message"
+            }}
+          >
+            <TextInput
+              value={input}
+              onChangeText={setInput}
+              placeholder="Type a message"
               style={{ 
                 height: 44, 
                 flex: 1, 
                 fontSize: 16,
                 paddingVertical: 8,
               }}
-          placeholderTextColor="#aaa"
+              placeholderTextColor="#aaa"
               multiline
               maxLength={500}
-        />
-        {loading && <ActivityIndicator size="small" style={{ marginRight: 8 }} />}
-        <TouchableOpacity
-          onPress={send}
-          style={{
+            />
+            {loading && <ActivityIndicator size="small" style={{ marginRight: 8 }} />}
+            <TouchableOpacity
+              onPress={send}
+              style={{
                 backgroundColor: input.trim() ? theme.colors.primary : '#E5E7EB',
-            borderRadius: 20,
-            padding: 8,
-            marginLeft: 4,
+                borderRadius: 20,
+                padding: 8,
+                marginLeft: 4,
                 transform: [{ scale: input.trim() ? 0.9 : 0.8 }],
-          }}
-          disabled={!input.trim() || loading}
-        >
-          <Ionicons
-            name="send"
-            size={24}
-            color={input.trim() ? 'white' : '#9ca3af'}
-          />
-        </TouchableOpacity>
-      </View>
-    </View>
+              }}
+              disabled={!input.trim() || loading}
+            >
+              <Ionicons
+                name="send"
+                size={24}
+                color={input.trim() ? 'white' : '#9ca3af'}
+              />
+            </TouchableOpacity>
+          </View>
+        </View>
       </Animated.View>
     </KeyboardAvoidingView>
   );

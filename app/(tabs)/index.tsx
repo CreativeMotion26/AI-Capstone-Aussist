@@ -39,7 +39,7 @@ export default function Home() {
     setSelectedLanguage(code);
     await translateAll(code);
   };
-
+//ds
   return (
     <View style={{ flex:1, backgroundColor:'white' }}>
       <StatusBar barStyle="light-content" />

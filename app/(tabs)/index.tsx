@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, View, TouchableOpacity, Image, StatusBar, Text } from 'react-native';
+import { ScrollView, View, TouchableOpacity, Image, StatusBar } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -39,7 +39,7 @@ export default function Home() {
     setSelectedLanguage(code);
     await translateAll(code);
   };
-//ds
+
   return (
     <View style={{ flex:1, backgroundColor:'white' }}>
       <StatusBar barStyle="light-content" />
@@ -47,7 +47,7 @@ export default function Home() {
 
         {/* header */}
         <View style={{ paddingTop:insets.top, paddingBottom:16, paddingHorizontal:16, backgroundColor:theme.colors.primary }}>
-          <Text style={{ fontSize:24, fontWeight:'bold', color:'white' }}>Aussist</Text>
+          <TText style={{ fontSize:24, fontWeight:'bold', color:'white' }}>Aussist</TText>
           <TText style={{ fontSize:16, color:'white' }}>Your guide to settling in Australia</TText>
         </View>
 
@@ -64,7 +64,7 @@ export default function Home() {
                   backgroundColor: selectedLanguage===l.code ? theme.colors.primary : 'white',
                   borderWidth:1, borderColor: selectedLanguage===l.code ? theme.colors.primary : '#E5E7EB'
                 }}>
-                <Text style={{ color:selectedLanguage===l.code ? 'white' : '#6B7280' }}>{l.name}</Text>
+                <TText style={{ color:selectedLanguage===l.code ? 'white' : '#6B7280' }}>{l.name}</TText>
               </TouchableOpacity>
             ))}
           </View>

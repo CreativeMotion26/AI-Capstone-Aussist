@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image, Linking } from 'react-native';
+import { View, StyleSheet, ScrollView, TouchableOpacity, Image, Linking } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Stack, router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -132,9 +132,9 @@ export default function EnglishScreen() {
       />
       <View style={{ flex: 1, backgroundColor: 'white' }}>
         <View style={{ paddingTop: insets.top + 10, paddingBottom: 16, paddingHorizontal: 16, backgroundColor: theme.colors.primary }}>
-          <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>
+          <TText style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>
             {translatedTexts["Improve your English"] || "Improve your English"}
-          </Text>
+          </TText>
           <TText style={{ fontSize: 16, color: 'white' }}>
             {translatedTexts["Find English learning resources and courses"] || "Find English learning resources and courses"}
           </TText>
@@ -143,8 +143,8 @@ export default function EnglishScreen() {
         <View style={styles.content}>
           {/* Free Classes Section */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>{translatedTexts["Free & Affordable Classes"] || "Free & Affordable Classes"}</Text>
-            <Text style={styles.sectionDesc}>{translatedTexts["Government-funded and affordable English programs"] || "Government-funded and affordable English programs"}</Text>
+            <TText style={styles.sectionTitle}>{translatedTexts["Free & Affordable Classes"] || "Free & Affordable Classes"}</TText>
+            <TText style={styles.sectionDesc}>{translatedTexts["Government-funded and affordable English programs"] || "Government-funded and affordable English programs"}</TText>
             {freeClasses.map(program => (
               <TouchableOpacity
                 key={program.id}
@@ -156,19 +156,19 @@ export default function EnglishScreen() {
                       <MaterialIcons name={program.icon as any} size={24} color="#0284C7" />
                   </View>
                   <View style={styles.textContainer}>
-                    <Text style={styles.siteName}>{translatedTexts[program.name] || program.name}</Text>
+                    <TText style={styles.siteName}>{translatedTexts[program.name] || program.name}</TText>
                   </View>
                     <MaterialIcons name="open-in-new" size={20} color="#0284C7" />
                 </View>
-                <Text style={styles.siteDesc}>{translatedTexts[program.desc] || program.desc}</Text>
+                <TText style={styles.siteDesc}>{translatedTexts[program.desc] || program.desc}</TText>
               </TouchableOpacity>
             ))}
           </View>
 
           {/* Online Resources Section */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>{translatedTexts["Online Resources"] || "Online Resources"}</Text>
-            <Text style={styles.sectionDesc}>{translatedTexts["Free online tools and apps for learning English"] || "Free online tools and apps for learning English"}</Text>
+            <TText style={styles.sectionTitle}>{translatedTexts["Online Resources"] || "Online Resources"}</TText>
+            <TText style={styles.sectionDesc}>{translatedTexts["Free online tools and apps for learning English"] || "Free online tools and apps for learning English"}</TText>
             {onlineResources.map(resource => (
               <TouchableOpacity
                 key={resource.id}
@@ -180,19 +180,19 @@ export default function EnglishScreen() {
                       <MaterialIcons name={resource.icon as any} size={24} color="#0284C7" />
                   </View>
                   <View style={styles.textContainer}>
-                    <Text style={styles.siteName}>{translatedTexts[resource.name] || resource.name}</Text>
+                    <TText style={styles.siteName}>{translatedTexts[resource.name] || resource.name}</TText>
                   </View>
-                    <MaterialIcons name="open-in-new" size={20} color="#0284C7" />
+                    <MaterialIcons name="open-in-new" size={20} color="#0284C7" />  
                 </View>
-                <Text style={styles.siteDesc}>{translatedTexts[resource.desc] || resource.desc}</Text>
+                <TText style={styles.siteDesc}>{translatedTexts[resource.desc] || resource.desc}</TText>
               </TouchableOpacity>
             ))}
           </View>
 
           {/* Community Groups Section */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>{translatedTexts["Community Groups"] || "Community Groups"}</Text>
-            <Text style={styles.sectionDesc}>{translatedTexts["Local groups and libraries offering English support"] || "Local groups and libraries offering English support"}</Text>
+            <TText style={styles.sectionTitle}>{translatedTexts["Community Groups"] || "Community Groups"}</TText>
+            <TText style={styles.sectionDesc}>{translatedTexts["Local groups and libraries offering English su pport"] || "Local groups and libraries offering English support"}</TText>
             {communityGroups.map(group => (
               <TouchableOpacity
                 key={group.id}
@@ -204,19 +204,19 @@ export default function EnglishScreen() {
                       <MaterialIcons name={group.icon as any} size={24} color="#0284C7" />
                   </View>
                   <View style={styles.textContainer}>
-                    <Text style={styles.siteName}>{translatedTexts[group.name] || group.name}</Text>
+                    <TText style={styles.siteName}>{translatedTexts[group.name] || group.name}</TText>
                   </View>
                     <MaterialIcons name="open-in-new" size={20} color="#0284C7" />
                 </View>
-                <Text style={styles.siteDesc}>{translatedTexts[group.desc] || group.desc}</Text>
+                  <TText style={styles.siteDesc}>{translatedTexts[group.desc] || group.desc}</TText>
               </TouchableOpacity>
             ))}
           </View>
 
           {/* English Tests Section */}
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>{translatedTexts["English Tests"] || "English Tests"}</Text>
-            <Text style={styles.sectionDesc}>{translatedTexts["Official English language proficiency tests"] || "Official English language proficiency tests"}</Text>
+            <TText style={styles.sectionTitle}>{translatedTexts["English Tests"] || "English Tests"}</TText>
+            <TText style={styles.sectionDesc}>{translatedTexts["Official English language proficiency tests"] || "Official English language proficiency tests"}</TText>
             {englishTests.map(test => (
               <TouchableOpacity
                 key={test.id}
@@ -228,11 +228,11 @@ export default function EnglishScreen() {
                       <MaterialIcons name={test.icon as any} size={24} color="#0284C7" />
                   </View>
                   <View style={styles.textContainer}>
-                    <Text style={styles.siteName}>{translatedTexts[test.name] || test.name}</Text>
+                    <TText style={styles.siteName}>{translatedTexts[test.name] || test.name}</TText>
                   </View>
                     <MaterialIcons name="open-in-new" size={20} color="#0284C7" />
                 </View>
-                <Text style={styles.siteDesc}>{translatedTexts[test.desc] || test.desc}</Text>
+                <TText style={styles.siteDesc}>{translatedTexts[test.desc] || test.desc}</TText>
               </TouchableOpacity>
             ))}
           </View>

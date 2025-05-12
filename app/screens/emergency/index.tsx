@@ -4,7 +4,6 @@ import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../../_lib/theme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import TText from '../../_components/TText';
-import { Text } from 'react-native';
 import { useTranslation } from '../../_context/TranslationContext';
 
 type IconName = React.ComponentProps<typeof Ionicons>['name'];
@@ -38,7 +37,7 @@ export default function EmergencyPage() {
 
       {/* header */}
       <View style={{ paddingTop: insets.top + 10, paddingBottom: 16, paddingHorizontal: 16, backgroundColor: theme.colors.primary }}>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>{translatedTexts['Emergency Services'] || 'Emergency Services'}</Text>
+        <TText style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>{translatedTexts['Emergency Services'] || 'Emergency Services'}</TText>
         <TText style={{ fontSize: 16, color: 'white' }}>{translatedTexts['Quick access to emergency contacts and nearby hospitals'] || 'Quick access to emergency contacts and nearby hospitals'}</TText>
       </View>
 
@@ -154,7 +153,7 @@ export default function EmergencyPage() {
                   <Ionicons name="heart" size={20} color="#DC2626" />
                 </View>
                 <View style={{ flex: 1 }}>
-                  <Text style={{ fontWeight: 'bold', marginBottom: 4 }}>Lifeline</Text>
+                  <TText style={{ fontWeight: 'bold', marginBottom: 4 }}>Lifeline</TText>
                   <TText style={{ color: '#6B7280' }}>{translatedTexts['24/7 crisis support and suicide prevention'] || '24/7 crisis support and suicide prevention'}</TText>
                 </View>
               </View>
@@ -204,7 +203,7 @@ export default function EmergencyPage() {
                   <Ionicons name="people" size={20} color="#DC2626" />
                 </View>
                 <View style={{ flex: 1 }}>
-                  <Text style={{ fontWeight: 'bold', marginBottom: 4 }}>Kids Helpline</Text>
+                  <TText style={{ fontWeight: 'bold', marginBottom: 4 }}>Kids Helpline</TText>
                   <TText style={{ color: '#6B7280' }}>{translatedTexts['24/7 counselling for young people'] || '24/7 counselling for young people'}</TText>
                 </View>
               </View>

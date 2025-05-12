@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, TouchableOpacity, StatusBar, Text } from 'react-native';
+import { View, ScrollView, TouchableOpacity, StatusBar } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../lib/theme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -63,11 +63,11 @@ export default function ProfileScreen() {
               width: 80, height: 80, borderRadius: 40, backgroundColor: '#F3F4F6',
               alignItems: 'center', justifyContent: 'center', marginBottom: 12
             }}>
-              <Text style={{ fontSize: 24, fontWeight: 'bold', color: theme.colors.primary }}>JS</Text>
+              <TText style={{ fontSize: 24, fontWeight: 'bold', color: theme.colors.primary }}>JS</TText>
             </View>
             {/* name / email could also be translated if needed */}
-            <Text style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 4 }}>John Smith</Text>
-            <Text style={{ color: '#6B7280' }}>john.smith@example.com</Text>
+            <TText style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 4 }}>John Smith</TText>
+            <TText style={{ color: '#6B7280' }}>john.smith@example.com</TText>
 
             <TouchableOpacity style={{
               marginTop: 12, backgroundColor: theme.colors.primary,

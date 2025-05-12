@@ -1,11 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, Image } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, ScrollView, Image } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 import { router, Stack } from 'expo-router';
 import { useTranslation } from '../../_context/TranslationContext';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { theme } from '../../_lib/theme';
 import { useFavourites } from '../../_context/FavouriteContext';
+import TText from '../../components/TText';
 
 export default function FavouritePage() {
   const { selectedLanguage, translateAll, registerText, translatedTexts } = useTranslation();
@@ -40,12 +41,12 @@ export default function FavouritePage() {
       <View style={styles.container}>
         <ScrollView style={styles.scrollView}>
           <View style={[styles.header, { paddingTop: insets.top + 10, backgroundColor: theme.colors.primary }]}>
-            <Text style={styles.headerTitle}>
+            <TText style={styles.headerTitle}>
               {translatedTexts["Favourites"] || "Favourites"}
-            </Text>
-            <Text style={styles.headerSubtitle}>
+            </TText>
+            <TText style={styles.headerSubtitle}>
               {translatedTexts["Your saved services and information"] || "Your saved services and information"}
-            </Text>
+            </TText>
       </View>
 
           <View style={styles.favouritesContainer}>
@@ -61,8 +62,8 @@ export default function FavouritePage() {
                       <Image source={item.image} style={styles.favouriteImage} />
                     )}
                     <View style={styles.favouriteTextContainer}>
-                      <Text style={styles.favouriteTitle}>{item.title}</Text>
-                      <Text style={styles.favouriteDescription}>{item.description}</Text>
+                      <TText style={styles.favouriteTitle}>{item.title}</TText>
+                      <TText style={styles.favouriteDescription}>{item.description}</TText>
                     </View>
                 </View>
                 <TouchableOpacity
@@ -76,12 +77,12 @@ export default function FavouritePage() {
             ) : (
               <View style={styles.emptyState}>
                 <MaterialIcons name="favorite-border" size={48} color="#ccc" />
-                <Text style={styles.emptyStateTitle}>
+                <TText style={styles.emptyStateTitle}>
                   {translatedTexts["No favourites yet"] || "No favourites yet"}
-                </Text>
-                <Text style={styles.emptyStateDescription}>
+                </TText>
+                <TText style={styles.emptyStateDescription}>
                   {translatedTexts["Add services to your favourites for quick access"] || "Add services to your favourites for quick access"}
-                </Text>
+                </TText>
               </View>
             )}
           </View>

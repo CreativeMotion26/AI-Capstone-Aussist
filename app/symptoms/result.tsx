@@ -1,183 +1,256 @@
-import React from 'react';
-import { View, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { router, useNavigation } from 'expo-router';
-import TText from '../components/TText';
+// app/symptoms/result.tsx
+
+import React, { useEffect, useState } from 'react';
+import {
+  View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
+  StyleSheet,
+  SafeAreaView,
+  Linking,
+} from 'react-native';
+import { useLocalSearchParams } from 'expo-router';
+import { useTranslation } from '@/app/context/TranslationContext';
+import { conditionsMappings } from '@/app/lib/DataProvider';
+import rawConditions from '@/assets/data/Conditions.json';
+
+// Define the shape of each condition detail entry
+interface ConditionDetail {
+  ConditionID: string;
+  ConditionName: string;
+  ShortSummary: string;
+  SymptomIDs: string[];
+  Link: string;
+}
+
+// Cast imported JSON into typed object
+const Conditions: Record<string, ConditionDetail> = rawConditions as any;
+
+// Build lookup map from condition name to its detail entry
+const conditionNameToDetail: Record<string, ConditionDetail> = {};
+Object.values(Conditions).forEach((detail) => {
+  conditionNameToDetail[detail.ConditionName] = detail;
+});
 
 export default function SymptomResult() {
-  const navigation = useNavigation();
+  // Get selected symptom codes from query params
+  const { selected } = useLocalSearchParams<{ selected: string }>();
+  // Pull out translation utilities and current language
+  const { registerText, translatedTexts, selectedLanguage } = useTranslation();
+  const t = (key: string) => translatedTexts[key] || key;
+
+  // URL to redirect to when a condition is tapped
+  const [redirectUrl, setRedirectUrl] = useState<string | null>(null);
+
+  // Register static text for translation
+  useEffect(() => {
+    registerText('Possible Conditions');
+    registerText('Common Conditions');
+    registerText('Redirecting to external site...');
+  }, []);
+
+  // Handle external redirect after a short delay
+  useEffect(() => {
+    if (redirectUrl) {
+      const timer = setTimeout(() => {
+        Linking.openURL(redirectUrl);
+        setRedirectUrl(null);
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [redirectUrl]);
+
+  // If a redirectUrl is set, show the interstitial screen
+  if (redirectUrl) {
+    return (
+      <SafeAreaView style={styles.redirectContainer}>
+        <Text style={styles.redirectText}>
+          {t('Redirecting to external site...')}
+        </Text>
+      </SafeAreaView>
+    );
+  }
+
+  // Split the comma-separated symptom codes
+  const symptomCodes = selected ? selected.split(',') : [];
+
+  // Build a flat list of all condition names for frequency analysis
+  const allConditionNames = symptomCodes.flatMap((symCode) => {
+    const mapping = conditionsMappings.find((m) => m.code === symCode);
+    return mapping ? mapping.english : [];
+  });
+
+  // Count how many times each condition appears
+  const freqMap: Record<string, number> = {};
+  allConditionNames.forEach((name) => {
+    freqMap[name] = (freqMap[name] || 0) + 1;
+  });
+
+  // Extract overlapping conditions (freq >= 2), sort by descending frequency
+  const overlappingConditions = Object.entries(freqMap)
+    .filter(([, count]) => count >= 2)
+    .sort((a, b) => b[1] - a[1])
+    .map(([name]) => conditionNameToDetail[name])
+    .filter(Boolean);
+
+  // Helper to build translated proxy URL via domain.translate.goog
+  const makeTranslatedUrl = (originalLink: string) => {
+    // strip protocol and split host/path
+    const withoutProto = originalLink.replace(/^https?:\/\//, '');
+    const [host, ...pathParts] = withoutProto.split('/');
+    // convert dots to hyphens for proxy host
+    const hyphenHost = host.split('.').join('-');
+    // reassemble with translate.goog and attach query params
+    const path = pathParts.join('/');
+    return `https://${hyphenHost}.translate.goog/${path}?_x_tr_sl=auto&_x_tr_tl=${selectedLanguage}&_x_tr_hl=${selectedLanguage}`;
+  };
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Header
-      <View style={styles.header}>
-        <TouchableOpacity 
-          style={styles.backButton}
-          onPress={() => navigation.goBack()}
-        >
-          <Ionicons name="chevron-back" size={24} color="#333" />
-        </TouchableOpacity>
-        <TText style={styles.headerTitle}>Symptom Checker</TText>
-        <View style={{ width: 24 }} />
-      </View> */}
+      {/* Page title */}
+      <Text style={styles.title}>{t('Possible Conditions')}</Text>
 
-      <ScrollView style={styles.contentContainer}>
-        {/* Disease Info */}
-        <View style={styles.diseaseCard}>
-          <TText style={styles.diseaseTitle}>Seasonal Allergies</TText>
-          
-          <TText style={styles.sectionTitle}>Overview:</TText>
-          <TText style={styles.description}>
-            Seasonal allergies, also known as hay fever, are allergic reactions to environmental allergens such as pollen and dust. During specific seasons, typically spring or fall.
-          </TText>
-          
-          <TText style={styles.sectionTitle}>Symptoms:</TText>
-          <View style={styles.symptomList}>
-            <View style={styles.bulletPoint}>
-              <TText style={styles.bulletDot}>•</TText>
-              <TText style={styles.symptomText}>Nasal congestion and runny nose</TText>
-            </View>
-            <View style={styles.bulletPoint}>
-              <TText style={styles.bulletDot}>•</TText>
-              <TText style={styles.symptomText}>Sneezing</TText>
-            </View>
-            <View style={styles.bulletPoint}>
-              <TText style={styles.bulletDot}>•</TText>
-              <TText style={styles.symptomText}>Itchy and watery eyes</TText>
-            </View>
-            <View style={styles.bulletPoint}>
-              <TText style={styles.bulletDot}>•</TText>
-              <TText style={styles.symptomText}>Throat irritation</TText>
-            </View>
-          </View>
-          
-          <TText style={styles.sectionTitle}>Causes:</TText>
-          <TText style={styles.description}>
-            The condition is triggered by an immune response to airborne allergens like pollen and dust mites, which are more prevalent during certain seasons.
-          </TText>
-          
-          <TText style={styles.sectionTitle}>Management and Treatment:</TText>
-          <View style={styles.symptomList}>
-            <View style={styles.bulletPoint}>
-              <TText style={styles.bulletDot}>•</TText>
-              <TText style={styles.symptomText}>Medication: Use antihistamines, nasal sprays, or decongestants to alleviate symptoms</TText>
-            </View>
-            <View style={styles.bulletPoint}>
-              <TText style={styles.bulletDot}>•</TText>
-              <TText style={styles.symptomText}>Environmental Control: Keep windows closed and use air purifiers to reduce indoor allergen levels</TText>
-            </View>
-            <View style={styles.bulletPoint}>
-              <TText style={styles.bulletDot}>•</TText>
-              <TText style={styles.symptomText}>Consultation with a Specialist: If symptoms are severe, consult an allergist for appropriate treatment</TText>
-            </View>
-          </View>
-          
-          <TText style={styles.sectionTitle}>Related Diseases:</TText>
-          <View style={styles.symptomList}>
-            <View style={styles.bulletPoint}>
-              <TText style={styles.bulletDot}>•</TText>
-              <TText style={styles.symptomText}>Asthma</TText>
-            </View>
-            <View style={styles.bulletPoint}>
-              <TText style={styles.bulletDot}>•</TText>
-              <TText style={styles.symptomText}>Chronic sinusitis</TText>
-            </View>
-          </View>
-        </View>
+      <ScrollView style={styles.scrollView}>
+        {/* Top section: common overlapping conditions */}
+        {overlappingConditions.length > 0 && (
+          <View style={styles.section}>
+            <Text style={styles.sectionTitle}>{t('Common Conditions')}</Text>
+            {overlappingConditions.map((detail) => {
+              const count = freqMap[detail.ConditionName] || 0;
+              // Determine frequency-based style override
+              let freqStyle = {};
+              if (count >= 4) freqStyle = styles.freq4Card;
+              else if (count === 3) freqStyle = styles.freq3Card;
+              else if (count === 2) freqStyle = styles.freq2Card;
 
-        {/* Learn More Button */}
-        <TouchableOpacity 
-          style={styles.learnMoreButton}
-          onPress={() => router.push({
-            pathname: '/symptoms/detail',
-          })}
-        >
-          <TText style={styles.learnMoreText}>Learn More</TText>
-        </TouchableOpacity>
+              return (
+                <TouchableOpacity
+                  key={detail.ConditionID}
+                  style={[styles.card, freqStyle]}
+                  onPress={() => setRedirectUrl(makeTranslatedUrl(detail.Link))}
+                >
+                  <Text style={styles.conditionName}>
+                    {t(detail.ConditionName)}
+                  </Text>
+                  <Text style={styles.conditionSummary}>
+                    {t(detail.ShortSummary)}
+                  </Text>
+                </TouchableOpacity>
+              );
+            })}
+          </View>
+        )}
+
+        {/* Per-symptom sections: only unique conditions (freq === 1) */}
+        {symptomCodes.map((symCode) => {
+          const mapping = conditionsMappings.find((m) => m.code === symCode);
+          if (!mapping) return null;
+
+          // Filter out overlapping ones
+          const uniqueConditions = mapping.english.filter(
+            (name) => (freqMap[name] || 0) === 1
+          );
+
+          if (uniqueConditions.length === 0) return null;
+
+          return (
+            <View key={symCode} style={styles.section}>
+              {/* Symptom header */}
+              <Text style={styles.sectionTitle}>{t(mapping.symptom)}</Text>
+
+              {/* Unique conditions list */}
+              {uniqueConditions.map((name) => {
+                const detail = conditionNameToDetail[name];
+                if (!detail) return null;
+                return (
+                  <TouchableOpacity
+                    key={detail.ConditionID}
+                    style={styles.card}
+                    onPress={() => setRedirectUrl(makeTranslatedUrl(detail.Link))}
+                  >
+                    <Text style={styles.conditionName}>
+                      {t(detail.ConditionName)}
+                    </Text>
+                    <Text style={styles.conditionSummary}>
+                      {t(detail.ShortSummary)}
+                    </Text>
+                  </TouchableOpacity>
+                );
+              })}
+            </View>
+          );
+        })}
       </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-  },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
-  },
-  backButton: {
-    padding: 4,
-  },
-  headerTitle: {
+  // Container for main screen
+  container: { flex: 1, backgroundColor: 'white' },
+  title: {
     fontSize: 18,
     fontWeight: '600',
     color: '#333',
-  },
-  contentContainer: {
-    flex: 1,
-  },
-  diseaseCard: {
-    margin: 16,
     padding: 16,
-    backgroundColor: 'white',
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
   },
-  diseaseTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
-    color: '#333',
-    marginBottom: 16,
-  },
+  scrollView: { flex: 1, paddingHorizontal: 16 },
+  section: { marginBottom: 24 },
   sectionTitle: {
     fontSize: 16,
     fontWeight: '600',
     color: '#333',
-    marginTop: 16,
-    marginBottom: 8,
+    marginBottom: 12,
   },
-  description: {
-    fontSize: 14,
-    lineHeight: 20,
-    color: '#4B5563',
-  },
-  symptomList: {
-    marginLeft: 8,
-  },
-  bulletPoint: {
-    flexDirection: 'row',
-    marginBottom: 6,
-  },
-  bulletDot: {
-    fontSize: 16,
-    marginRight: 8,
-    color: '#4B5563',
-  },
-  symptomText: {
-    flex: 1,
-    fontSize: 14,
-    lineHeight: 20,
-    color: '#4B5563',
-  },
-  learnMoreButton: {
-    margin: 16,
-    padding: 14,
-    backgroundColor: '#4CAF50',
+
+  // Default card style (green for unique/freq===1)
+  card: {
+    padding: 16,
+    backgroundColor: '#E8F5E9',    // light green
     borderRadius: 8,
-    alignItems: 'center',
+    marginBottom: 12,
+    borderWidth: 1,
+    borderColor: '#4CAF50',        // green
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 2,
   },
-  learnMoreText: {
+  conditionName: {
     fontSize: 16,
-    fontWeight: '600',
-    color: 'white',
+    fontWeight: '500',
+    color: '#333',
   },
-}); 
+  conditionSummary: {
+    fontSize: 14,
+    color: '#666',
+    marginTop: 4,
+  },
+
+  // Frequency-based overrides
+  freq2Card: {
+    backgroundColor: '#E3F2FD', // blue for freq === 2
+    borderColor: '#2196F3',
+  },
+  freq3Card: {
+    backgroundColor: '#FFF3E0', // orange for freq === 3
+    borderColor: '#FF9800',
+  },
+  freq4Card: {
+    backgroundColor: '#FFEBEE', // red for freq >= 4
+    borderColor: '#F44336',
+  },
+
+  // Interstitial redirect screen
+  redirectContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white',
+  },
+  redirectText: {
+    fontSize: 16,
+    color: '#333',
+  },
+});

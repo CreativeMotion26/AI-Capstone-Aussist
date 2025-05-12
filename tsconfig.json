@@ -6,10 +6,17 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
   },
   "include": [
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.json",
+    "global.d.ts",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
   ]
 }

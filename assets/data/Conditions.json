@@ -1,0 +1,2736 @@
+[
+  {
+    "ConditionID": "COND001",
+    "ConditionName": "Abrasion",
+    "SymptomIDs": [
+      "SYM018",
+      "SYM042"
+    ],
+    "ShortSummary": "An abrasion is a wound caused by superficial damage to the skin, usually due to a scrape or friction.",
+    "Link": "https://www.healthdirect.gov.au/wounds-cuts-and-grazes"
+  },
+  {
+    "ConditionID": "COND002",
+    "ConditionName": "Abscess",
+    "SymptomIDs": [
+      "SYM101",
+      "SYM177"
+    ],
+    "ShortSummary": "An abscess is a localized collection of pus in a cavity formed by the disintegration of tissues.",
+    "Link": "https://www.healthdirect.gov.au/abscesses"
+  },
+  {
+    "ConditionID": "COND003",
+    "ConditionName": "Achilles Tendinitis",
+    "SymptomIDs": [
+      "SYM006"
+    ],
+    "ShortSummary": "Achilles tendinitis is characterized by pain and inflammation of the Achilles tendon, typically due to overuse.",
+    "Link": "https://www.healthdirect.gov.au/achilles-tendon"
+  },
+  {
+    "ConditionID": "COND004",
+    "ConditionName": "ADHD",
+    "SymptomIDs": [
+      "SYM015",
+      "SYM045"
+    ],
+    "ShortSummary": "Attention deficit hyperactivity disorder is characterised by a persistent pattern (at least 6 months) of inattention and/or hyperactivity-impulsivity that has a direct negative impact on academic, occupational, or social functioning.",
+    "Link": "https://www.healthdirect.gov.au/attention-deficit-disorder-add-or-adhd"
+  },
+  {
+    "ConditionID": "COND005",
+    "ConditionName": "Airway Obstruction",
+    "SymptomIDs": [
+      "SYM034",
+      "SYM153"
+    ],
+    "ShortSummary": "Airway obstruction is a blockage in any part of the airway that impedes breathing.",
+    "Link": "https://www.healthdirect.gov.au/choking"
+  },
+  {
+    "ConditionID": "COND006",
+    "ConditionName": "Alcohol Intolerance",
+    "SymptomIDs": [
+      "SYM059"
+    ],
+    "ShortSummary": "Alcohol intolerance is a condition in which the body cannot break down alcohol properly, often due to a genetic variant.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/alcohol-intolerance/diagnosis-treatment/drc-20369215"
+  },
+  {
+    "ConditionID": "COND007",
+    "ConditionName": "Allergic Asthma",
+    "SymptomIDs": [
+      "SYM011"
+    ],
+    "ShortSummary": "Allergic asthma is asthma triggered by exposure to allergens such as pollen, dust mites, or pet dander.",
+    "Link": "https://www.healthdirect.gov.au/asthma"
+  },
+  {
+    "ConditionID": "COND008",
+    "ConditionName": "Allergic Conjunctivitis",
+    "SymptomIDs": [
+      "SYM057",
+      "SYM085"
+    ],
+    "ShortSummary": "Allergic conjunctivitis is inflammation of the conjunctiva caused by an allergic reaction to substances like pollen or mold.",
+    "Link": "https://www.healthdirect.gov.au/conjunctivitis"
+  },
+  {
+    "ConditionID": "COND009",
+    "ConditionName": "Allergic Reaction",
+    "SymptomIDs": [
+      "SYM016",
+      "SYM075",
+      "SYM077",
+      "SYM080",
+      "SYM087",
+      "SYM088",
+      "SYM125",
+      "SYM129",
+      "SYM141",
+      "SYM154",
+      "SYM167"
+    ],
+    "ShortSummary": "An allergic reaction is an immune system response to a foreign substance that's not typically harmful to your body.",
+    "Link": "https://www.healthdirect.gov.au/allergies-and-hypersensitivities"
+  },
+  {
+    "ConditionID": "COND010",
+    "ConditionName": "Allergic Rhinitis",
+    "SymptomIDs": [
+      "SYM071",
+      "SYM130",
+      "SYM136",
+      "SYM142"
+    ],
+    "ShortSummary": "Allergic rhinitis is an allergic reaction that causes sneezing, congestion, and a runny nose.",
+    "Link": "https://www.healthdirect.gov.au/hay-fever"
+  },
+  {
+    "ConditionID": "COND011",
+    "ConditionName": "Alzheimer’s Disease",
+    "SymptomIDs": [
+      "SYM003"
+    ],
+    "ShortSummary": "Alzheimer’s disease is a progressive neurodegenerative disorder that causes memory loss, cognitive decline, and behavioral changes.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/alzheimers-disease/symptoms-causes/syc-20350447"
+  },
+  {
+    "ConditionID": "COND012",
+    "ConditionName": "Anal Fissure",
+    "SymptomIDs": [
+      "SYM004",
+      "SYM022",
+      "SYM126"
+    ],
+    "ShortSummary": "An anal fissure is a small tear in the lining of the anus which can cause pain and bleeding during bowel movements.",
+    "Link": "https://www.healthdirect.gov.au/anal-fissure"
+  },
+  {
+    "ConditionID": "COND013",
+    "ConditionName": "Anaphylaxis",
+    "SymptomIDs": [
+      "SYM002",
+      "SYM034",
+      "SYM067",
+      "SYM080",
+      "SYM088"
+    ],
+    "ShortSummary": "Anaphylaxis is a severe, potentially life-threatening allergic reaction that occurs rapidly after exposure to an allergen.",
+    "Link": "https://www.healthdirect.gov.au/anaphylaxis"
+  },
+  {
+    "ConditionID": "COND014",
+    "ConditionName": "Anemia",
+    "SymptomIDs": [
+      "SYM048",
+      "SYM063",
+      "SYM064",
+      "SYM094",
+      "SYM114",
+      "SYM159"
+    ],
+    "ShortSummary": "Anemia is a condition in which the blood doesn’t have enough healthy red blood cells or hemoglobin.",
+    "Link": "https://www.healthdirect.gov.au/anaemia"
+  },
+  {
+    "ConditionID": "COND015",
+    "ConditionName": "Angina",
+    "SymptomIDs": [
+      "SYM033",
+      "SYM158"
+    ],
+    "ShortSummary": "Angina is chest pain or discomfort due to reduced blood flow to the heart muscle.",
+    "Link": "https://www.healthdirect.gov.au/angina"
+  },
+  {
+    "ConditionID": "COND016",
+    "ConditionName": "Ankle Sprain",
+    "SymptomIDs": [
+      "SYM006",
+      "SYM007",
+      "SYM145"
+    ],
+    "ShortSummary": "An ankle sprain is an injury to the ligaments that connect bones in the ankle, often due to twisting.",
+    "Link": "https://www.healthdirect.gov.au/sprained-ankle"
+  },
+  {
+    "ConditionID": "COND017",
+    "ConditionName": "Anorexia Nervosa",
+    "SymptomIDs": [
+      "SYM064"
+    ],
+    "ShortSummary": "Anorexia nervosa is an eating disorder characterized by weight loss, food restriction, and an intense fear of gaining weight.",
+    "Link": "https://www.healthdirect.gov.au/anorexia-nervosa"
+  },
+  {
+    "ConditionID": "COND018",
+    "ConditionName": "Anxiety",
+    "SymptomIDs": [
+      "SYM115",
+      "SYM124",
+      "SYM134",
+      "SYM158",
+      "SYM160"
+    ],
+    "ShortSummary": "Anxiety is a feeling of worry, nervousness, or unease about something with an uncertain outcome.",
+    "Link": "https://www.healthdirect.gov.au/anxiety"
+  },
+  {
+    "ConditionID": "COND019",
+    "ConditionName": "Anxiety Disorder",
+    "SymptomIDs": [
+      "SYM081",
+      "SYM082",
+      "SYM116",
+      "SYM122",
+      "SYM148"
+    ],
+    "ShortSummary": "An anxiety disorder involves excessive fear or anxiety that interferes with daily activities.",
+    "Link": "https://www.healthdirect.gov.au/anxiety-related-disorders"
+  },
+  {
+    "ConditionID": "COND020",
+    "ConditionName": "Aphthous Stomatitis",
+    "SymptomIDs": [
+      "SYM104"
+    ],
+    "ShortSummary": "Aphthous stomatitis is a common condition characterized by the repeated formation of benign and non-contagious mouth ulcers.",
+    "Link": "https://www.healthdirect.gov.au/mouth-sores-and-ulcers"
+  },
+  {
+    "ConditionID": "COND021",
+    "ConditionName": "Appendicitis",
+    "SymptomIDs": [
+      "SYM001",
+      "SYM147",
+      "SYM161"
+    ],
+    "ShortSummary": "Appendicitis is a condition characterized by inflammation of the vermiform appendix, which may become obstructed and infected.",
+    "Link": "https://www.healthdirect.gov.au/appendicitis"
+  },
+  {
+    "ConditionID": "COND022",
+    "ConditionName": "Arrhythmia",
+    "SymptomIDs": [
+      "SYM056",
+      "SYM062",
+      "SYM115",
+      "SYM122",
+      "SYM124"
+    ],
+    "ShortSummary": "Arrhythmia is a group of conditions in which the heartbeat is irregular, too fast, or too slow.",
+    "Link": "https://www.healthdirect.gov.au/heart-arrhythmias"
+  },
+  {
+    "ConditionID": "COND023",
+    "ConditionName": "Arthritis",
+    "SymptomIDs": [
+      "SYM006",
+      "SYM055",
+      "SYM156",
+      "SYM178"
+    ],
+    "ShortSummary": "Arthritis is a group of diseases that cause inflammation and degeneration of joints.",
+    "Link": "https://www.healthdirect.gov.au/arthritis"
+  },
+  {
+    "ConditionID": "COND024",
+    "ConditionName": "Asthma",
+    "SymptomIDs": [
+      "SYM028",
+      "SYM039",
+      "SYM052",
+      "SYM067",
+      "SYM135",
+      "SYM158",
+      "SYM175"
+    ],
+    "ShortSummary": "Asthma is a chronic inflammatory disorder of the airways characterised by recurrent episodes of wheezing, breathlessness, chest tightness and coughing.",
+    "Link": "https://www.healthdirect.gov.au/asthma"
+  },
+  {
+    "ConditionID": "COND025",
+    "ConditionName": "Autism Spectrum Disorder",
+    "SymptomIDs": [
+      "SYM015",
+      "SYM144"
+    ],
+    "ShortSummary": "Autism spectrum disorder is characterised by persistent deficits in the ability to initiate and sustain reciprocal social interaction and social communication.",
+    "Link": "https://www.healthdirect.gov.au/autism"
+  },
+  {
+    "ConditionID": "COND026",
+    "ConditionName": "Autoimmune Urticaria",
+    "SymptomIDs": [
+      "SYM077"
+    ],
+    "ShortSummary": "Autoimmune urticaria is a form of chronic hives that occurs when the body's immune system attacks its own tissues.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/chronic-hives/symptoms-causes/syc-20352719"
+  },
+  {
+    "ConditionID": "COND027",
+    "ConditionName": "Bacterial Vaginosis",
+    "SymptomIDs": [
+      "SYM166",
+      "SYM167"
+    ],
+    "ShortSummary": "Bacterial vaginosis is a condition characterised by an overgrowth of certain bacteria in the vagina, resulting in an imbalance of the normal vaginal flora.",
+    "Link": "https://www.healthdirect.gov.au/bacterial-vaginosis"
+  },
+  {
+    "ConditionID": "COND028",
+    "ConditionName": "Bell's Palsy",
+    "SymptomIDs": [
+      "SYM061"
+    ],
+    "ShortSummary": "Bell's palsy is an acute peripheral facial nerve palsy of unknown cause resulting in muscle weakness on one side of the face.",
+    "Link": "https://www.healthdirect.gov.au/bells-palsy"
+  },
+  {
+    "ConditionID": "COND029",
+    "ConditionName": "Benign Paroxysmal Positional Vertigo",
+    "SymptomIDs": [
+      "SYM168"
+    ],
+    "ShortSummary": "Benign paroxysmal positional vertigo is a condition characterised by brief episodes of vertigo associated with changes in head position.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/vertigo/symptoms-causes/syc-20370055"
+  },
+  {
+    "ConditionID": "COND030",
+    "ConditionName": "Bipolar Disorder",
+    "SymptomIDs": [
+      "SYM043",
+      "SYM150"
+    ],
+    "ShortSummary": "Bipolar disorder is characterised by episodes of elevated mood and increased activity or energy (mania or hypomania) and episodes of depression.",
+    "Link": "https://www.healthdirect.gov.au/bipolar-disorder"
+  },
+  {
+    "ConditionID": "COND031",
+    "ConditionName": "Bladder Cancer",
+    "SymptomIDs": [
+      "SYM023"
+    ],
+    "ShortSummary": "Bladder cancer is a malignant neoplasm arising from the epithelial lining of the urinary bladder.",
+    "Link": "https://www.healthdirect.gov.au/bladder-cancer"
+  },
+  {
+    "ConditionID": "COND032",
+    "ConditionName": "Blepharitis",
+    "SymptomIDs": [
+      "SYM085",
+      "SYM127"
+    ],
+    "ShortSummary": "Blepharitis is an inflammatory condition affecting the eyelid margins, often associated with bacterial infection or skin conditions.",
+    "Link": "https://www.healthdirect.gov.au/blepharitis"
+  },
+  {
+    "ConditionID": "COND033",
+    "ConditionName": "Blistering Skin Disorder",
+    "SymptomIDs": [
+      "SYM131"
+    ],
+    "ShortSummary": "Blistering skin disorders are a group of conditions characterised by blister formation on the skin and mucous membranes.",
+    "Link": "https://www.healthdirect.gov.au/blisters"
+  },
+  {
+    "ConditionID": "COND034",
+    "ConditionName": "Borderline Personality Disorder",
+    "SymptomIDs": [
+      "SYM150",
+      "SYM157"
+    ],
+    "ShortSummary": "Borderline personality disorder is characterised by a pervasive pattern of instability in interpersonal relationships, self-image, and affect, with marked impulsivity.",
+    "Link": "https://www.healthdirect.gov.au/borderline-personality-disorder-bpd"
+  },
+  {
+    "ConditionID": "COND035",
+    "ConditionName": "Bowel Cancer",
+    "SymptomIDs": [
+      "SYM022",
+      "SYM126"
+    ],
+    "ShortSummary": "Bowel cancer, also known as colorectal cancer, develops when cells in the wall of the large bowel grow in an abnormal and uncontrolled way.",
+    "Link": "https://www.healthdirect.gov.au/bowel-cancer"
+  },
+  {
+    "ConditionID": "COND036",
+    "ConditionName": "Brain Injury",
+    "SymptomIDs": [
+      "SYM046"
+    ],
+    "ShortSummary": "Brain injury refers to damage to the brain that impairs its normal function and can result from trauma or other causes.",
+    "Link": "https://www.healthdirect.gov.au/brain-diseases-disorders-and-injuries"
+  },
+  {
+    "ConditionID": "COND037",
+    "ConditionName": "Brain Tumor",
+    "SymptomIDs": [
+      "SYM061",
+      "SYM133",
+      "SYM149"
+    ],
+    "ShortSummary": "A brain tumour is an abnormal growth of tissue in the brain that can be benign or malignant.",
+    "Link": "https://www.healthdirect.gov.au/brain-cancer"
+  },
+  {
+    "ConditionID": "COND038",
+    "ConditionName": "Breast Cancer",
+    "SymptomIDs": [
+      "SYM026",
+      "SYM027",
+      "SYM102"
+    ],
+    "ShortSummary": "Breast cancer is a malignant tumour that originates from the breast tissue, most commonly from the lining of the milk ducts.",
+    "Link": "https://www.healthdirect.gov.au/breast-cancer"
+  },
+  {
+    "ConditionID": "COND039",
+    "ConditionName": "Breast Cyst",
+    "SymptomIDs": [
+      "SYM027",
+      "SYM102"
+    ],
+    "ShortSummary": "Breast cysts are fluid-filled sacs within the breast, often benign and related to hormonal changes.",
+    "Link": "https://www.healthdirect.gov.au/breast-cysts"
+  },
+  {
+    "ConditionID": "COND040",
+    "ConditionName": "Bronchitis",
+    "SymptomIDs": [
+      "SYM039",
+      "SYM041",
+      "SYM175"
+    ],
+    "ShortSummary": "Bronchitis is an inflammation of the bronchial tubes, often resulting from infection and characterised by coughing and sputum production.",
+    "Link": "https://www.healthdirect.gov.au/bronchitis"
+  },
+  {
+    "ConditionID": "COND041",
+    "ConditionName": "Burns",
+    "SymptomIDs": [
+      "SYM020",
+      "SYM056"
+    ],
+    "ShortSummary": "Burns are injuries to tissues caused by heat, electricity, chemicals, or radiation, classified by depth and severity.",
+    "Link": "https://www.healthdirect.gov.au/burns-and-scalds"
+  },
+  {
+    "ConditionID": "COND042",
+    "ConditionName": "Bursitis",
+    "SymptomIDs": [
+      "SYM055",
+      "SYM091",
+      "SYM156"
+    ],
+    "ShortSummary": "Bursitis is inflammation of the bursa, a small fluid-filled sac that cushions bones, tendons, and muscles near joints.",
+    "Link": "https://www.healthdirect.gov.au/bursitis"
+  },
+  {
+    "ConditionID": "COND043",
+    "ConditionName": "Cancer",
+    "SymptomIDs": [
+      "SYM174"
+    ],
+    "ShortSummary": "Cancer is a group of diseases characterised by the uncontrolled growth and spread of abnormal cells.",
+    "Link": "https://www.healthdirect.gov.au/cancer"
+  },
+  {
+    "ConditionID": "COND044",
+    "ConditionName": "Carcinoid Syndrome",
+    "SymptomIDs": [
+      "SYM059"
+    ],
+    "ShortSummary": "Carcinoid syndrome is a condition caused by hormone-secreting carcinoid tumors, leading to symptoms such as flushing and diarrhea.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/carcinoid-syndrome/symptoms-causes/syc-20370666"
+  },
+  {
+    "ConditionID": "COND045",
+    "ConditionName": "Carpal Tunnel Syndrome",
+    "SymptomIDs": [
+      "SYM118",
+      "SYM178"
+    ],
+    "ShortSummary": "Carpal tunnel syndrome is a condition caused by compression of the median nerve within the carpal tunnel of the wrist, resulting in pain and numbness.",
+    "Link": "https://www.healthdirect.gov.au/carpal-tunnel-syndrome"
+  },
+  {
+    "ConditionID": "COND046",
+    "ConditionName": "Cataract",
+    "SymptomIDs": [
+      "SYM025",
+      "SYM169"
+    ],
+    "ShortSummary": "A cataract is a clouding of the eye's natural lens, leading to blurred vision and visual impairment.",
+    "Link": "https://www.healthdirect.gov.au/cataracts"
+  },
+  {
+    "ConditionID": "COND047",
+    "ConditionName": "Cellulitis",
+    "SymptomIDs": [
+      "SYM177"
+    ],
+    "ShortSummary": "Cellulitis is a common bacterial skin infection that causes redness, swelling, and pain in the affected area.",
+    "Link": "https://www.healthdirect.gov.au/cellulitis"
+  },
+  {
+    "ConditionID": "COND048",
+    "ConditionName": "Cervical Spondylosis",
+    "SymptomIDs": [
+      "SYM107",
+      "SYM108"
+    ],
+    "ShortSummary": "Cervical spondylosis is a degenerative condition of the cervical spine due to wear and tear of bones and discs.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/cervical-spondylosis/symptoms-causes/syc-20370787"
+  },
+  {
+    "ConditionID": "COND049",
+    "ConditionName": "Chemical Burn",
+    "SymptomIDs": [
+      "SYM030"
+    ],
+    "ShortSummary": "Chemical burns result from skin or eye contact with corrosive substances such as acids or alkalis, leading to tissue damage.",
+    "Link": "https://www.healthdirect.gov.au/chemical-burns"
+  },
+  {
+    "ConditionID": "COND050",
+    "ConditionName": "Chickenpox",
+    "SymptomIDs": [
+      "SYM020"
+    ],
+    "ShortSummary": "Chickenpox is a highly contagious disease caused by the varicella-zoster virus, characterised by an itchy rash and fever.",
+    "Link": "https://www.healthdirect.gov.au/chickenpox"
+  },
+  {
+    "ConditionID": "COND051",
+    "ConditionName": "Chronic Fatigue Syndrome",
+    "SymptomIDs": [
+      "SYM159"
+    ],
+    "ShortSummary": "Chronic fatigue syndrome is a complex disorder characterised by extreme fatigue that is not improved by rest and may worsen with physical or mental activity.",
+    "Link": "https://www.healthdirect.gov.au/chronic-fatigue-syndrome-cfs-me"
+  },
+  {
+    "ConditionID": "COND052",
+    "ConditionName": "Chronic Illness",
+    "SymptomIDs": [
+      "SYM099"
+    ],
+    "ShortSummary": "Chronic illness refers to long-lasting conditions that often require ongoing medical attention and affect daily living.",
+    "Link": "https://www.healthdirect.gov.au/management-of-chronic-conditions"
+  },
+  {
+    "ConditionID": "COND053",
+    "ConditionName": "Chronic Obstructive Pulmonary Disease",
+    "SymptomIDs": [
+      "SYM041",
+      "SYM134"
+    ],
+    "ShortSummary": "Chronic obstructive pulmonary disease is a progressive lung disease that obstructs airflow and makes breathing difficult.",
+    "Link": "https://www.healthdirect.gov.au/copd"
+  },
+  {
+    "ConditionID": "COND054",
+    "ConditionName": "Chronic Pain",
+    "SymptomIDs": [
+      "SYM081"
+    ],
+    "ShortSummary": "Chronic pain is persistent or recurrent pain lasting longer than three months and may arise from a variety of causes.",
+    "Link": "https://www.healthdirect.gov.au/chronic-pain"
+  },
+  {
+    "ConditionID": "COND055",
+    "ConditionName": "Common Cold",
+    "SymptomIDs": [
+      "SYM039",
+      "SYM130",
+      "SYM142"
+    ],
+    "ShortSummary": "The common cold is a viral upper respiratory tract infection that causes symptoms such as runny nose, cough, and sore throat.",
+    "Link": "https://www.healthdirect.gov.au/colds"
+  },
+  {
+    "ConditionID": "COND056",
+    "ConditionName": "Concussion",
+    "SymptomIDs": [
+      "SYM072"
+    ],
+    "ShortSummary": "Concussion is a type of traumatic brain injury caused by a blow to the head, leading to temporary loss of brain function.",
+    "Link": "Concussion"
+  },
+  {
+    "ConditionID": "COND057",
+    "ConditionName": "Congenital Heart Disease",
+    "SymptomIDs": [
+      "SYM024",
+      "SYM096"
+    ],
+    "ShortSummary": "Congenital heart disease encompasses a range of defects in the heart's structure and function present from birth.",
+    "Link": "https://www.healthdirect.gov.au/congenital-heart-disease"
+  },
+  {
+    "ConditionID": "COND058",
+    "ConditionName": "Conjunctivitis",
+    "SymptomIDs": [
+      "SYM071",
+      "SYM127"
+    ],
+    "ShortSummary": "Conjunctivitis is inflammation of the conjunctiva, causing redness, discharge, and irritation of the eye.",
+    "Link": "https://www.healthdirect.gov.au/conjunctivitis"
+  },
+  {
+    "ConditionID": "COND059",
+    "ConditionName": "Constipation",
+    "SymptomIDs": [
+      "SYM021"
+    ],
+    "ShortSummary": "Constipation is a common digestive issue characterised by infrequent bowel movements or difficulty passing stools.",
+    "Link": "https://www.healthdirect.gov.au/constipation"
+  },
+  {
+    "ConditionID": "COND060",
+    "ConditionName": "Contact Dermatitis",
+    "SymptomIDs": [
+      "SYM075",
+      "SYM084",
+      "SYM086"
+    ],
+    "ShortSummary": "Contact dermatitis is an inflammatory skin reaction resulting from direct contact with allergens or irritants.",
+    "Link": "https://www.healthdirect.gov.au/contact-dermatitis"
+  },
+  {
+    "ConditionID": "COND061",
+    "ConditionName": "Contusion",
+    "SymptomIDs": [
+      "SYM009",
+      "SYM016",
+      "SYM029",
+      "SYM060",
+      "SYM095",
+      "SYM176"
+    ],
+    "ShortSummary": "Contusion, or bruise, is a type of hematoma caused by trauma to tissues without breaking the skin, leading to discoloration.",
+    "Link": "https://www.healthdirect.gov.au/bumps-knocks-and-bruises"
+  },
+  {
+    "ConditionID": "COND062",
+    "ConditionName": "COPD",
+    "SymptomIDs": [
+      "SYM024",
+      "SYM028",
+      "SYM175"
+    ],
+    "ShortSummary": "Chronic obstructive pulmonary disease is a common, preventable, and treatable disease characterised by persistent respiratory symptoms and airflow limitation.",
+    "Link": "https://www.healthdirect.gov.au/copd"
+  },
+  {
+    "ConditionID": "COND063",
+    "ConditionName": "Corneal Abrasion",
+    "SymptomIDs": [
+      "SYM058"
+    ],
+    "ShortSummary": "Corneal abrasion is a scratch or injury to the surface layer of the eye, causing pain, redness, and tearing.",
+    "Link": "https://www.mayoclinic.org/first-aid/first-aid-corneal-abrasion/basics/art-20056659"
+  },
+  {
+    "ConditionID": "COND064",
+    "ConditionName": "Coronary Artery Disease",
+    "SymptomIDs": [
+      "SYM005"
+    ],
+    "ShortSummary": "Coronary artery disease is a condition in which narrowed arteries reduce blood flow to the heart muscle.",
+    "Link": "https://www.healthdirect.gov.au/coronary-heart-disease-and-atherosclerosis"
+  },
+  {
+    "ConditionID": "COND065",
+    "ConditionName": "COVID-19",
+    "SymptomIDs": [
+      "SYM052",
+      "SYM065",
+      "SYM076"
+    ],
+    "ShortSummary": "COVID-19 is an infectious disease caused by the SARS-CoV-2 virus, primarily affecting the respiratory system and ranging from mild symptoms to severe illness.",
+    "Link": "https://www.healthdirect.gov.au/covid-19"
+  },
+  {
+    "ConditionID": "COND066",
+    "ConditionName": "Cushing's Syndrome",
+    "SymptomIDs": [
+      "SYM173"
+    ],
+    "ShortSummary": "Cushing’s syndrome is caused by prolonged exposure to high cortisol levels, leading to symptoms like weight gain and high blood pressure.",
+    "Link": "https://www.healthdirect.gov.au/cushings-syndrome"
+  },
+  {
+    "ConditionID": "COND067",
+    "ConditionName": "Cyanosis",
+    "SymptomIDs": [
+      "SYM024"
+    ],
+    "ShortSummary": "Cyanosis is a bluish discoloration of the skin and mucous membranes due to low oxygen levels in the blood.",
+    "Link": "https://www.cincinnatichildrens.org/health/c/cyanosis"
+  },
+  {
+    "ConditionID": "COND068",
+    "ConditionName": "Deep Vein Thrombosis",
+    "SymptomIDs": [
+      "SYM031",
+      "SYM093"
+    ],
+    "ShortSummary": "Deep vein thrombosis is the formation of a blood clot in a deep vein, usually in the legs, which can be life-threatening if it travels to the lungs.",
+    "Link": "https://www.healthdirect.gov.au/deep-vein-thrombosis"
+  },
+  {
+    "ConditionID": "COND069",
+    "ConditionName": "Dehydration",
+    "SymptomIDs": [
+      "SYM048",
+      "SYM050",
+      "SYM062",
+      "SYM094",
+      "SYM105",
+      "SYM140",
+      "SYM152",
+      "SYM171"
+    ],
+    "ShortSummary": "Dehydration occurs when the body loses more fluids than it takes in, leading to impaired normal body functions.",
+    "Link": "https://www.healthdirect.gov.au/dehydration"
+  },
+  {
+    "ConditionID": "COND070",
+    "ConditionName": "Delirium",
+    "SymptomIDs": [
+      "SYM037",
+      "SYM047",
+      "SYM070"
+    ],
+    "ShortSummary": "Delirium is an acute neuropsychiatric syndrome characterised by disturbed consciousness, attention, and cognition.",
+    "Link": "https://www.healthdirect.gov.au/delirium"
+  },
+  {
+    "ConditionID": "COND071",
+    "ConditionName": "Dementia",
+    "SymptomIDs": [
+      "SYM037",
+      "SYM047"
+    ],
+    "ShortSummary": "Dementia is a syndrome resulting in deterioration in memory, thinking, behavior, and the ability to perform everyday activities.",
+    "Link": "https://www.healthdirect.gov.au/dementia"
+  },
+  {
+    "ConditionID": "COND072",
+    "ConditionName": "Dental Abscess",
+    "SymptomIDs": [
+      "SYM155"
+    ],
+    "ShortSummary": "A dental abscess is a localized collection of pus in the tissues surrounding a tooth, usually due to bacterial infection.",
+    "Link": "https://www.healthdirect.gov.au/tooth-abscess"
+  },
+  {
+    "ConditionID": "COND073",
+    "ConditionName": "Depression",
+    "SymptomIDs": [
+      "SYM045",
+      "SYM050",
+      "SYM063",
+      "SYM081",
+      "SYM099",
+      "SYM148",
+      "SYM150",
+      "SYM157",
+      "SYM159"
+    ],
+    "ShortSummary": "Depression is a common mental disorder characterised by persistent sadness, loss of interest, and impairment in daily functioning.",
+    "Link": "https://www.healthdirect.gov.au/depression"
+  },
+  {
+    "ConditionID": "COND074",
+    "ConditionName": "Dermatitis",
+    "SymptomIDs": [
+      "SYM129"
+    ],
+    "ShortSummary": "Dermatitis refers to inflammation of the skin characterized by redness, swelling, and itching.",
+    "Link": "https://www.healthdirect.gov.au/dermatitis"
+  },
+  {
+    "ConditionID": "COND075",
+    "ConditionName": "Deviated septum",
+    "SymptomIDs": [
+      "SYM110"
+    ],
+    "ShortSummary": "A deviated septum is when the cartilage and bone that divides your nose down the middle is not straight.",
+    "Link": "https://www.healthdirect.gov.au/deviated-septum"
+  },
+  {
+    "ConditionID": "COND076",
+    "ConditionName": "Diabetes",
+    "SymptomIDs": [
+      "SYM014",
+      "SYM051",
+      "SYM138",
+      "SYM140",
+      "SYM172"
+    ],
+    "ShortSummary": "Diabetes is a chronic disease characterized by elevated levels of blood glucose resulting from defects in insulin production, action, or both.",
+    "Link": "https://www.healthdirect.gov.au/diabetes"
+  },
+  {
+    "ConditionID": "COND077",
+    "ConditionName": "Diabetic Retinopathy",
+    "SymptomIDs": [
+      "SYM025"
+    ],
+    "ShortSummary": "Diabetic retinopathy is a microvascular complication of diabetes that affects the retina, leading to vision impairment.",
+    "Link": "https://www.healthdirect.gov.au/diabetic-retinopathy"
+  },
+  {
+    "ConditionID": "COND078",
+    "ConditionName": "Diuretic Use",
+    "SymptomIDs": [
+      "SYM172"
+    ],
+    "ShortSummary": "Diuretic use refers to the administration of medications that promote the excretion of salt and water from the body to treat various conditions like hypertension.",
+    "Link": "https://www.healthdirect.gov.au/diuretic-medicines"
+  },
+  {
+    "ConditionID": "COND079",
+    "ConditionName": "Drug Allergy",
+    "SymptomIDs": [
+      "SYM002"
+    ],
+    "ShortSummary": "Drug allergy is an adverse immune response to a medication, which can manifest as skin reactions, respiratory symptoms, or anaphylaxis.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/drug-allergy/symptoms-causes/syc-20371835"
+  },
+  {
+    "ConditionID": "COND080",
+    "ConditionName": "Drug Overdose",
+    "SymptomIDs": [
+      "SYM046",
+      "SYM119",
+      "SYM163"
+    ],
+    "ShortSummary": "Drug overdose occurs when a person takes more than the medically recommended dose of a drug, leading to toxic effects or death.",
+    "Link": "https://www.healthdirect.gov.au/drug-overdose"
+  },
+  {
+    "ConditionID": "COND081",
+    "ConditionName": "Dry Eye Syndrome",
+    "SymptomIDs": [
+      "SYM057",
+      "SYM085"
+    ],
+    "ShortSummary": "Dry eye syndrome is a multifactorial disease of the ocular surface characterized by loss of tear film homeostasis and ocular symptoms.",
+    "Link": "https://www.healthdirect.gov.au/dry-eye-disease"
+  },
+  {
+    "ConditionID": "COND082",
+    "ConditionName": "Dysmenorrhea",
+    "SymptomIDs": [
+      "SYM117"
+    ],
+    "ShortSummary": "Dysmenorrhea is characterized by painful menstrual cramps originating from the uterus before or during menstruation.",
+    "Link": "https://www.healthdirect.gov.au/painful-periods"
+  },
+  {
+    "ConditionID": "COND083",
+    "ConditionName": "Ear Barotrauma",
+    "SymptomIDs": [
+      "SYM066"
+    ],
+    "ShortSummary": "Ear barotrauma is damage to the ear caused by pressure differences between the inside and outside of the eardrum.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/airplane-ear/symptoms-causes/syc-20351701"
+  },
+  {
+    "ConditionID": "COND084",
+    "ConditionName": "Earwax Buildup",
+    "SymptomIDs": [
+      "SYM053",
+      "SYM074"
+    ],
+    "ShortSummary": "Earwax buildup refers to the accumulation of cerumen that can block the ear canal and affect hearing.",
+    "Link": "https://www.healthdirect.gov.au/ear-wax"
+  },
+  {
+    "ConditionID": "COND085",
+    "ConditionName": "Ectopic Pregnancy",
+    "SymptomIDs": [
+      "SYM103",
+      "SYM120"
+    ],
+    "ShortSummary": "Ectopic pregnancy is a condition in which a fertilized egg implants outside the uterine cavity, most commonly in the fallopian tube.",
+    "Link": "https://www.healthdirect.gov.au/ectopic-pregnancy"
+  },
+  {
+    "ConditionID": "COND086",
+    "ConditionName": "Eczema",
+    "SymptomIDs": [
+      "SYM071",
+      "SYM087",
+      "SYM121",
+      "SYM125",
+      "SYM137"
+    ],
+    "ShortSummary": "Eczema is a group of conditions that cause the skin to become inflamed, itchy, and cracked, often due to genetic and environmental factors.",
+    "Link": "https://www.healthdirect.gov.au/eczema"
+  },
+  {
+    "ConditionID": "COND087",
+    "ConditionName": "Electrical Burn",
+    "SymptomIDs": [
+      "SYM030"
+    ],
+    "ShortSummary": "An electrical burn results from contact with electric current, which can cause deep tissue damage and cardiac complications.",
+    "Link": "https://www.healthdirect.gov.au/electric-shocks-and-burns"
+  },
+  {
+    "ConditionID": "COND088",
+    "ConditionName": "Electrolyte Imbalance",
+    "SymptomIDs": [
+      "SYM105"
+    ],
+    "ShortSummary": "Electrolyte imbalance refers to abnormal levels of essential minerals like sodium, potassium, and calcium that affect various body functions.",
+    "Link": "https://my.clevelandclinic.org/health/symptoms/24019-electrolyte-imbalance"
+  },
+  {
+    "ConditionID": "COND089",
+    "ConditionName": "Endometrial Cancer",
+    "SymptomIDs": [
+      "SYM165"
+    ],
+    "ShortSummary": "Endometrial cancer is a malignancy originating from the lining of the uterus, commonly presenting with abnormal uterine bleeding.",
+    "Link": "https://www.healthdirect.gov.au/cancer-of-the-uterus"
+  },
+  {
+    "ConditionID": "COND090",
+    "ConditionName": "Endometriosis",
+    "SymptomIDs": [
+      "SYM112",
+      "SYM117"
+    ],
+    "ShortSummary": "Endometriosis is a chronic inflammatory condition where tissue similar to the endometrium grows outside the uterus, causing pain and infertility.",
+    "Link": "https://www.healthdirect.gov.au/endometriosis"
+  },
+  {
+    "ConditionID": "COND091",
+    "ConditionName": "Envenomation",
+    "SymptomIDs": [
+      "SYM141"
+    ],
+    "ShortSummary": "Envenomation refers to the process by which venom is injected into a person through a bite or sting by a venomous animal.",
+    "Link": "https://www.healthdirect.gov.au/bites-and-stings"
+  },
+  {
+    "ConditionID": "COND092",
+    "ConditionName": "Epilepsy",
+    "SymptomIDs": [
+      "SYM133"
+    ],
+    "ShortSummary": "Epilepsy is a brain disorder characterized by recurrent, unprovoked seizures due to abnormal electrical activity in the brain.",
+    "Link": "https://www.healthdirect.gov.au/epilepsy"
+  },
+  {
+    "ConditionID": "COND093",
+    "ConditionName": "Esophageal Injury",
+    "SymptomIDs": [
+      "SYM153"
+    ],
+    "ShortSummary": "Esophageal injury involves damage to the esophagus, which may result from trauma, ingestion of corrosives, or medical procedures.",
+    "Link": "https://www.childrenshospital.org/conditions/esophageal-injury-and-trauma"
+  },
+  {
+    "ConditionID": "COND094",
+    "ConditionName": "Esophageal Varices",
+    "SymptomIDs": [
+      "SYM017"
+    ],
+    "ShortSummary": "Esophageal varices are abnormally dilated veins in the lower esophagus, often due to portal hypertension and risk of life-threatening bleeding.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/esophageal-varices/symptoms-causes/syc-20351538"
+  },
+  {
+    "ConditionID": "COND095",
+    "ConditionName": "Essential Tremor",
+    "SymptomIDs": [
+      "SYM160"
+    ],
+    "ShortSummary": "Essential tremor is a neurological disorder that causes rhythmic trembling of the hands, head, voice, or other body parts during voluntary movements.",
+    "Link": "https://www.healthdirect.gov.au/essential-tremor"
+  },
+  {
+    "ConditionID": "COND096",
+    "ConditionName": "Exercise-induced Asthma",
+    "SymptomIDs": [
+      "SYM011"
+    ],
+    "ShortSummary": "Exercise-induced asthma is the narrowing of the airways triggered by vigorous physical activity, causing coughing, wheezing, or shortness of breath.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/exercise-induced-asthma/symptoms-causes/syc-20372300"
+  },
+  {
+    "ConditionID": "COND097",
+    "ConditionName": "Facial Fracture",
+    "SymptomIDs": [
+      "SYM060"
+    ],
+    "ShortSummary": "Facial fracture refers to any break in the bones of the face, such as the nose, jaw, or cheekbones, typically due to trauma.",
+    "Link": "https://www.healthdirect.gov.au/fractures"
+  },
+  {
+    "ConditionID": "COND098",
+    "ConditionName": "Febrile Seizure",
+    "SymptomIDs": [
+      "SYM133"
+    ],
+    "ShortSummary": "Febrile seizures are convulsions triggered by fever in infants and young children, typically occurring without an underlying neurological cause.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/febrile-seizure/symptoms-causes/syc-20372522"
+  },
+  {
+    "ConditionID": "COND099",
+    "ConditionName": "Fibroadenoma",
+    "SymptomIDs": [
+      "SYM027",
+      "SYM102"
+    ],
+    "ShortSummary": "A fibroadenoma is a benign breast tumor composed of fibrous and glandular tissue, commonly found in young women.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/fibroadenoma/symptoms-causes/syc-20352752"
+  },
+  {
+    "ConditionID": "COND100",
+    "ConditionName": "Fibroids",
+    "SymptomIDs": [
+      "SYM117",
+      "SYM165"
+    ],
+    "ShortSummary": "Fibroids are benign tumors of the uterus composed of smooth muscle and connective tissue, often associated with heavy menstrual bleeding.",
+    "Link": "https://www.healthdirect.gov.au/uterine-fibroids"
+  },
+  {
+    "ConditionID": "COND101",
+    "ConditionName": "Flu",
+    "SymptomIDs": [
+      "SYM065",
+      "SYM076",
+      "SYM142",
+      "SYM143"
+    ],
+    "ShortSummary": "Influenza (flu) is a contagious respiratory illness caused by influenza viruses, characterized by fever, cough, body aches, and fatigue.",
+    "Link": "https://www.healthdirect.gov.au/flu"
+  },
+  {
+    "ConditionID": "COND102",
+    "ConditionName": "Food Allergy",
+    "SymptomIDs": [
+      "SYM002"
+    ],
+    "ShortSummary": "Food allergy is an immune system reaction to a specific food, leading to symptoms that range from mild rash to anaphylaxis.",
+    "Link": "https://www.healthdirect.gov.au/food-allergies"
+  },
+  {
+    "ConditionID": "COND103",
+    "ConditionName": "Food Poisoning",
+    "SymptomIDs": [
+      "SYM044",
+      "SYM098",
+      "SYM119",
+      "SYM146",
+      "SYM170"
+    ],
+    "ShortSummary": "Food poisoning is an illness caused by consuming contaminated food or drinks, leading to symptoms such as vomiting, diarrhea, and stomach cramps.",
+    "Link": "https://www.healthdirect.gov.au/food-poisoning"
+  },
+  {
+    "ConditionID": "COND104",
+    "ConditionName": "Foreign Body in Eye",
+    "SymptomIDs": [
+      "SYM057"
+    ],
+    "ShortSummary": "A foreign body in the eye refers to any object—dust, metal, or glass—that enters and causes irritation or injury to the eye surface.",
+    "Link": "https://www.mayoclinic.org/first-aid/first-aid/basics/art-20056645"
+  },
+  {
+    "ConditionID": "COND105",
+    "ConditionName": "Foreign Body Ingestion",
+    "SymptomIDs": [
+      "SYM153"
+    ],
+    "ShortSummary": "Foreign body ingestion occurs when an object is swallowed accidentally, potentially causing obstruction or injury to the gastrointestinal tract.",
+    "Link": "https://www.healthdirect.gov.au/swallowed-object"
+  },
+  {
+    "ConditionID": "COND106",
+    "ConditionName": "Foreign Object in Ear",
+    "SymptomIDs": [
+      "SYM053"
+    ],
+    "ShortSummary": "A foreign object in the ear occurs when items like beads or insects enter the ear canal, leading to discomfort, pain, or hearing loss.",
+    "Link": "https://www.healthdirect.gov.au/objects-in-ear"
+  },
+  {
+    "ConditionID": "COND107",
+    "ConditionName": "Fracture",
+    "SymptomIDs": [
+      "SYM009",
+      "SYM055",
+      "SYM092",
+      "SYM095",
+      "SYM145"
+    ],
+    "ShortSummary": "A fracture is a break or crack in a bone usually resulting from trauma, overuse, or disease conditions like osteoporosis.",
+    "Link": "https://www.healthdirect.gov.au/fractures"
+  },
+  {
+    "ConditionID": "COND108",
+    "ConditionName": "Friction Blister",
+    "SymptomIDs": [
+      "SYM020"
+    ],
+    "ShortSummary": "A friction blister is a fluid-filled skin lesion caused by repetitive rubbing, commonly occurring on the hands or feet.",
+    "Link": "https://www.healthdirect.gov.au/blisters"
+  },
+  {
+    "ConditionID": "COND109",
+    "ConditionName": "Galactorrhea",
+    "SymptomIDs": [
+      "SYM026"
+    ],
+    "ShortSummary": "Galactorrhea is the spontaneous flow of milk from the breast, unrelated to childbirth or nursing, often due to hormonal imbalances.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/galactorrhea/symptoms-causes/syc-20350431"
+  },
+  {
+    "ConditionID": "COND110",
+    "ConditionName": "Gastritis",
+    "SymptomIDs": [
+      "SYM147"
+    ],
+    "ShortSummary": "Gastritis is the inflammation of the stomach lining, usually caused by infection, certain medications, or excessive alcohol consumption.",
+    "Link": "https://www.healthdirect.gov.au/gastritis"
+  },
+  {
+    "ConditionID": "COND111",
+    "ConditionName": "Gastroenteritis",
+    "SymptomIDs": [
+      "SYM001",
+      "SYM044",
+      "SYM098",
+      "SYM106",
+      "SYM146",
+      "SYM161",
+      "SYM170"
+    ],
+    "ShortSummary": "Gastroenteritis is inflammation of the stomach and intestines, often caused by viral or bacterial infection, leading to diarrhea and vomiting.",
+    "Link": "https://www.healthdirect.gov.au/gastroenteritis"
+  },
+  {
+    "ConditionID": "COND112",
+    "ConditionName": "Gastroesophageal Reflux Disease",
+    "SymptomIDs": [
+      "SYM033"
+    ],
+    "ShortSummary": "Gastro-oesophageal reflux disease (GORD) happens when stomach acid leaks into your food pipe, causing symptoms or health complications.",
+    "Link": "https://www.healthdirect.gov.au/gord-reflux"
+  },
+  {
+    "ConditionID": "COND113",
+    "ConditionName": "Generalized Anxiety Disorder",
+    "SymptomIDs": [
+      "SYM008"
+    ],
+    "ShortSummary": "Generalized anxiety disorder is characterized by excessive, uncontrollable worry about various aspects of life, lasting for at least six months.",
+    "Link": "https://www.healthdirect.gov.au/generalised-anxiety-disorder-gad"
+  },
+  {
+    "ConditionID": "COND114",
+    "ConditionName": "Geographic Tongue",
+    "SymptomIDs": [
+      "SYM128"
+    ],
+    "ShortSummary": "Geographic tongue is a benign condition with irregular, red patches on the tongue surface, giving it a map-like appearance.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/geographic-tongue/symptoms-causes/syc-20354396"
+  },
+  {
+    "ConditionID": "COND115",
+    "ConditionName": "Gingivitis",
+    "SymptomIDs": [
+      "SYM019",
+      "SYM069",
+      "SYM155"
+    ],
+    "ShortSummary": "Gingivitis is a mild form of gum disease causing redness, swelling, and bleeding, often due to poor oral hygiene.",
+    "Link": "https://www.healthdirect.gov.au/gingivitis"
+  },
+  {
+    "ConditionID": "COND116",
+    "ConditionName": "Glaucoma",
+    "SymptomIDs": [
+      "SYM046",
+      "SYM058",
+      "SYM169"
+    ],
+    "ShortSummary": "Glaucoma is a group of eye diseases that damage the optic nerve, often due to elevated intraocular pressure, potentially leading to blindness.",
+    "Link": "https://www.healthdirect.gov.au/glaucoma"
+  },
+  {
+    "ConditionID": "COND117",
+    "ConditionName": "Gout",
+    "SymptomIDs": [
+      "SYM089"
+    ],
+    "ShortSummary": "Gout is a type of arthritis characterized by sudden, severe attacks of pain, redness, and swelling in joints, due to uric acid buildup.",
+    "Link": "https://www.healthdirect.gov.au/gout"
+  },
+  {
+    "ConditionID": "COND118",
+    "ConditionName": "Head Injury",
+    "SymptomIDs": [
+      "SYM163"
+    ],
+    "ShortSummary": "Head injury refers to trauma to the head that may affect the scalp, skull, or brain, ranging from mild bumps to serious brain damage.",
+    "Link": "https://www.healthdirect.gov.au/head-injuries"
+  },
+  {
+    "ConditionID": "COND119",
+    "ConditionName": "Hearing Loss",
+    "SymptomIDs": [
+      "SYM074",
+      "SYM144"
+    ],
+    "ShortSummary": "Hearing loss is a partial or total inability to hear, resulting from damage to the ear or auditory nerves.",
+    "Link": "https://www.healthdirect.gov.au/hearing-loss"
+  },
+  {
+    "ConditionID": "COND120",
+    "ConditionName": "Heart Attack",
+    "SymptomIDs": [
+      "SYM033"
+    ],
+    "ShortSummary": "A heart attack occurs when blood flow to the heart muscle is blocked, usually by a clot, leading to tissue damage.",
+    "Link": "https://www.healthdirect.gov.au/heart-attack"
+  },
+  {
+    "ConditionID": "COND121",
+    "ConditionName": "Heart Failure",
+    "SymptomIDs": [
+      "SYM007",
+      "SYM067",
+      "SYM123",
+      "SYM135"
+    ],
+    "ShortSummary": "Heart failure is a chronic condition in which the heart is unable to pump blood effectively to meet the body’s needs.",
+    "Link": "https://www.healthdirect.gov.au/heart-failure"
+  },
+  {
+    "ConditionID": "COND122",
+    "ConditionName": "Heat Rash",
+    "SymptomIDs": [
+      "SYM151"
+    ],
+    "ShortSummary": "Heat rash is a skin irritation caused by blocked sweat ducts, resulting in small red bumps and discomfort in hot or humid conditions.",
+    "Link": "https://www.healthdirect.gov.au/heat-rash"
+  },
+  {
+    "ConditionID": "COND123",
+    "ConditionName": "Hemorrhoids",
+    "SymptomIDs": [
+      "SYM004",
+      "SYM022",
+      "SYM084",
+      "SYM126"
+    ],
+    "ShortSummary": "Hemorrhoids are swollen veins in the lower rectum or anus that cause discomfort, bleeding, or itching.",
+    "Link": "https://www.healthdirect.gov.au/haemorrhoids-piles"
+  },
+  {
+    "ConditionID": "COND124",
+    "ConditionName": "Herniated Disc",
+    "SymptomIDs": [
+      "SYM012",
+      "SYM013",
+      "SYM100",
+      "SYM132"
+    ],
+    "ShortSummary": "A herniated disc occurs when the soft center of a spinal disc pushes through a crack in the tougher exterior, potentially compressing nearby nerves.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/herniated-disk/symptoms-causes/syc-20354095"
+  },
+  {
+    "ConditionID": "COND125",
+    "ConditionName": "Herpes Simplex",
+    "SymptomIDs": [
+      "SYM104"
+    ],
+    "ShortSummary": "Herpes simplex is a viral infection causing sores on the mouth or genitals, typically caused by HSV-1 or HSV-2.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/22855-herpes-simplex"
+  },
+  {
+    "ConditionID": "COND126",
+    "ConditionName": "Hormonal Imbalance",
+    "SymptomIDs": [
+      "SYM099",
+      "SYM165"
+    ],
+    "ShortSummary": "Hormonal imbalance occurs when there's too much or too little of a hormone, disrupting body functions like metabolism, reproduction, and mood.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/22673-hormonal-imbalance"
+  },
+  {
+    "ConditionID": "COND127",
+    "ConditionName": "Horner's Syndrome",
+    "SymptomIDs": [
+      "SYM139"
+    ],
+    "ShortSummary": "Horner's syndrome is a rare neurological disorder characterized by drooping eyelid, pupil constriction, and reduced sweating on one side of the face.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/horner-syndrome/symptoms-causes/syc-20373547"
+  },
+  {
+    "ConditionID": "COND128",
+    "ConditionName": "Hypercalcemia",
+    "SymptomIDs": [
+      "SYM051"
+    ],
+    "ShortSummary": "Hypercalcemia is a condition in which calcium levels in the blood are above normal, often caused by overactive parathyroid glands or cancer.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/hypercalcemia/symptoms-causes/syc-20355523"
+  },
+  {
+    "ConditionID": "COND129",
+    "ConditionName": "Hypertension",
+    "SymptomIDs": [
+      "SYM110"
+    ],
+    "ShortSummary": "Hypertension, or high blood pressure, is a chronic condition in which the force of blood against artery walls is consistently too high.",
+    "Link": "https://www.healthdirect.gov.au/high-blood-pressure-hypertension"
+  },
+  {
+    "ConditionID": "COND130",
+    "ConditionName": "Hyperthyroidism",
+    "SymptomIDs": [
+      "SYM035",
+      "SYM038",
+      "SYM063",
+      "SYM064",
+      "SYM114",
+      "SYM115",
+      "SYM116",
+      "SYM122",
+      "SYM124",
+      "SYM173",
+      "SYM174"
+    ],
+    "ShortSummary": "Hyperthyroidism is a condition where the thyroid gland produces excessive hormones, leading to increased metabolism and other symptoms.",
+    "Link": "https://www.healthdirect.gov.au/hyperthyroidism"
+  },
+  {
+    "ConditionID": "COND131",
+    "ConditionName": "Hypoglycemia",
+    "SymptomIDs": [
+      "SYM047"
+    ],
+    "ShortSummary": "Hypoglycemia is a condition characterized by abnormally low levels of blood glucose, which can lead to shakiness, confusion, or fainting.",
+    "Link": "https://www.healthdirect.gov.au/hypoglycaemia-low-blood-sugar"
+  },
+  {
+    "ConditionID": "COND132",
+    "ConditionName": "Hypoxia",
+    "SymptomIDs": [
+      "SYM096"
+    ],
+    "ShortSummary": "Hypoxia is a condition where the body or a part of the body is deprived of adequate oxygen supply at the tissue level.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/23063-hypoxia"
+  },
+  {
+    "ConditionID": "COND133",
+    "ConditionName": "Infection",
+    "SymptomIDs": [
+      "SYM077",
+      "SYM129",
+      "SYM131",
+      "SYM138",
+      "SYM141",
+      "SYM154",
+      "SYM176",
+      "SYM177"
+    ],
+    "ShortSummary": "Infection occurs when harmful microorganisms invade the body, multiply, and cause illness or inflammation.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/infectious-diseases/symptoms-causes/syc-20351173"
+  },
+  {
+    "ConditionID": "COND134",
+    "ConditionName": "Injury",
+    "SymptomIDs": [
+      "SYM154"
+    ],
+    "ShortSummary": "An injury is physical damage to the body caused by external force, ranging from minor cuts to serious trauma.",
+    "Link": "https://www.healthdirect.gov.au/accidents-and-injuries"
+  },
+  {
+    "ConditionID": "COND135",
+    "ConditionName": "Insomnia",
+    "SymptomIDs": [
+      "SYM148"
+    ],
+    "ShortSummary": "Insomnia is a sleep disorder characterized by difficulty falling asleep, staying asleep, or getting restful sleep.",
+    "Link": "https://www.healthdirect.gov.au/insomnia"
+  },
+  {
+    "ConditionID": "COND136",
+    "ConditionName": "Intracranial Hemorrhage",
+    "SymptomIDs": [
+      "SYM072"
+    ],
+    "ShortSummary": "Intracranial hemorrhage is bleeding within the skull, often caused by trauma, stroke, or ruptured aneurysms.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/14480-brain-bleed-hemorrhage-intracranial-hemorrhage"
+  },
+  {
+    "ConditionID": "COND137",
+    "ConditionName": "Irritable Bowel Syndrome",
+    "SymptomIDs": [
+      "SYM001",
+      "SYM021",
+      "SYM038",
+      "SYM044",
+      "SYM098",
+      "SYM146",
+      "SYM161"
+    ],
+    "ShortSummary": "Irritable bowel syndrome is a functional gastrointestinal disorder marked by chronic abdominal pain and altered bowel habits.",
+    "Link": "https://www.healthdirect.gov.au/irritable-bowel-syndrome-ibs"
+  },
+  {
+    "ConditionID": "COND138",
+    "ConditionName": "Jock Itch (Tinea Cruris)",
+    "SymptomIDs": [
+      "SYM086"
+    ],
+    "ShortSummary": "Jock itch is a fungal skin infection that affects the groin area, causing redness, itching, and a ring-shaped rash.",
+    "Link": "https://www.healthdirect.gov.au/tinea"
+  },
+  {
+    "ConditionID": "COND139",
+    "ConditionName": "Kidney Failure",
+    "SymptomIDs": [
+      "SYM171"
+    ],
+    "ShortSummary": "Kidney failure is a condition where the kidneys lose their ability to filter waste and balance fluids in the body.",
+    "Link": "https://www.healthdirect.gov.au/kidney-failure"
+  },
+  {
+    "ConditionID": "COND140",
+    "ConditionName": "Kidney Stones",
+    "SymptomIDs": [
+      "SYM023",
+      "SYM113"
+    ],
+    "ShortSummary": "A kidney stone is a hard mineral deposit formed in the kidneys, often causing severe pain during passage through the urinary tract.",
+    "Link": "https://www.healthdirect.gov.au/kidney-stones"
+  },
+  {
+    "ConditionID": "COND141",
+    "ConditionName": "Laceration",
+    "SymptomIDs": [
+      "SYM018",
+      "SYM042",
+      "SYM060",
+      "SYM176"
+    ],
+    "ShortSummary": "A laceration is a deep cut or tear in the skin or flesh, often caused by blunt or sharp trauma.",
+    "Link": "https://www.hopkinsmedicine.org/health/conditions-and-diseases/lacerations"
+  },
+  {
+    "ConditionID": "COND142",
+    "ConditionName": "Lactose Intolerance",
+    "SymptomIDs": [
+      "SYM021"
+    ],
+    "ShortSummary": "Lactose intolerance is the inability to digest lactose, a sugar found in milk, leading to gastrointestinal discomfort.",
+    "Link": "https://www.healthdirect.gov.au/lactose-intolerance"
+  },
+  {
+    "ConditionID": "COND143",
+    "ConditionName": "Learning Disabilities",
+    "SymptomIDs": [
+      "SYM144"
+    ],
+    "ShortSummary": "Learning disabilities affect how you learn in a specific area, such as reading or writing.",
+    "Link": "https://www.healthdirect.gov.au/learning-disabilities"
+  },
+  {
+    "ConditionID": "COND144",
+    "ConditionName": "Leukemia",
+    "SymptomIDs": [
+      "SYM029"
+    ],
+    "ShortSummary": "Leukemia is a type of cancer that affects blood-forming tissues, leading to the overproduction of abnormal white blood cells.",
+    "Link": "https://www.healthdirect.gov.au/leukaemia"
+  },
+  {
+    "ConditionID": "COND145",
+    "ConditionName": "Ligament Injury",
+    "SymptomIDs": [
+      "SYM090",
+      "SYM091",
+      "SYM145",
+      "SYM156"
+    ],
+    "ShortSummary": "A ligament injury involves damage to the tough bands of tissue connecting bones, often caused by excessive force or twisting.",
+    "Link": "https://www.beaumont.org/conditions/ligament-tears"
+  },
+  {
+    "ConditionID": "COND146",
+    "ConditionName": "Ligament Sprain",
+    "SymptomIDs": [
+      "SYM092"
+    ],
+    "ShortSummary": "A ligament sprain is the overstretching or tearing of ligaments, typically resulting from sudden twists or trauma.",
+    "Link": "https://www.healthdirect.gov.au/sprains-and-strains"
+  },
+  {
+    "ConditionID": "COND147",
+    "ConditionName": "Lipoma",
+    "SymptomIDs": [
+      "SYM101"
+    ],
+    "ShortSummary": "A lipoma is a benign tumor composed of fatty tissue, usually soft and movable under the skin.",
+    "Link": "https://www.healthdirect.gov.au/lipoma"
+  },
+  {
+    "ConditionID": "COND148",
+    "ConditionName": "Low Blood Pressure",
+    "SymptomIDs": [
+      "SYM094"
+    ],
+    "ShortSummary": "Low blood pressure, or hypotension, is when blood pressure drops below the normal range, possibly causing dizziness or fainting.",
+    "Link": "https://www.healthdirect.gov.au/low-blood-pressure-hypotension"
+  },
+  {
+    "ConditionID": "COND149",
+    "ConditionName": "Low Fiber Diet",
+    "SymptomIDs": [
+      "SYM038"
+    ],
+    "ShortSummary": "A low fiber diet restricts the intake of dietary fiber, often used to manage specific digestive or post-operative conditions.",
+    "Link": "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/low-fiber-diet/art-20048511"
+  },
+  {
+    "ConditionID": "COND150",
+    "ConditionName": "Low Sperm Count",
+    "SymptomIDs": [
+      "SYM079"
+    ],
+    "ShortSummary": "Low sperm count is a condition where the semen contains fewer sperm than normal, which can affect male fertility.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/low-sperm-count/symptoms-causes/syc-20374585"
+  },
+  {
+    "ConditionID": "COND151",
+    "ConditionName": "Lung Cancer",
+    "SymptomIDs": [
+      "SYM040"
+    ],
+    "ShortSummary": "Lung cancer is a malignant tumor in the lungs characterized by uncontrolled cell growth, often related to smoking.",
+    "Link": "https://www.healthdirect.gov.au/lung-cancer"
+  },
+  {
+    "ConditionID": "COND152",
+    "ConditionName": "Lung Contusion",
+    "SymptomIDs": [
+      "SYM032"
+    ],
+    "ShortSummary": "A lung contusion is a bruise of the lung tissue, usually caused by trauma, leading to bleeding and swelling.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/pulmonary-contusion"
+  },
+  {
+    "ConditionID": "COND153",
+    "ConditionName": "Lymphadenopathy",
+    "SymptomIDs": [
+      "SYM101"
+    ],
+    "ShortSummary": "Lymphadenopathy is the abnormal enlargement of lymph nodes, often due to infection, autoimmune disease, or malignancy.",
+    "Link": "https://www.healthdirect.gov.au/swollen-lymph-nodes"
+  },
+  {
+    "ConditionID": "COND154",
+    "ConditionName": "Lymphedema",
+    "SymptomIDs": [
+      "SYM007"
+    ],
+    "ShortSummary": "Lymphedema is swelling caused by lymph fluid buildup, usually in the arms or legs, due to blockage or damage.",
+    "Link": "https://www.healthdirect.gov.au/lymphoedema"
+  },
+  {
+    "ConditionID": "COND155",
+    "ConditionName": "Lymphoma",
+    "SymptomIDs": [
+      "SYM109"
+    ],
+    "ShortSummary": "Lymphoma is a cancer of the lymphatic system, which includes lymph nodes, spleen, and bone marrow.",
+    "Link": "https://www.healthdirect.gov.au/lymphoma"
+  },
+  {
+    "ConditionID": "COND156",
+    "ConditionName": "Major Depressive Disorder",
+    "SymptomIDs": [
+      "SYM043"
+    ],
+    "ShortSummary": "Major depressive disorder is a mood disorder characterized by persistent sadness, loss of interest, and impaired daily functioning.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/depression/symptoms-causes/syc-20356007"
+  },
+  {
+    "ConditionID": "COND157",
+    "ConditionName": "Malabsorption",
+    "SymptomIDs": [
+      "SYM174"
+    ],
+    "ShortSummary": "Malabsorption is a disorder in which the small intestine cannot absorb nutrients properly, leading to nutritional deficiencies.",
+    "Link": "https://www.healthdirect.gov.au/malabsorption-syndromes"
+  },
+  {
+    "ConditionID": "COND158",
+    "ConditionName": "Malnutrition",
+    "SymptomIDs": [
+      "SYM152"
+    ],
+    "ShortSummary": "Malnutrition refers to deficiencies, excesses, or imbalances in energy and nutrient intake affecting health and development.",
+    "Link": "https://www.healthdirect.gov.au/malnutrition"
+  },
+  {
+    "ConditionID": "COND159",
+    "ConditionName": "Mastitis",
+    "SymptomIDs": [
+      "SYM026"
+    ],
+    "ShortSummary": "Mastitis is inflammation of breast tissue, often due to infection, resulting in pain, swelling, and redness.",
+    "Link": "https://www.healthdirect.gov.au/mastitis"
+  },
+  {
+    "ConditionID": "COND160",
+    "ConditionName": "Meniere's Disease",
+    "SymptomIDs": [
+      "SYM168"
+    ],
+    "ShortSummary": "Meniere's disease is a chronic inner ear disorder causing vertigo, hearing loss, tinnitus, and a feeling of fullness in the ear.",
+    "Link": "https://www.healthdirect.gov.au/menieres-disease"
+  },
+  {
+    "ConditionID": "COND161",
+    "ConditionName": "Meningitis",
+    "SymptomIDs": [
+      "SYM107",
+      "SYM108"
+    ],
+    "ShortSummary": "Meningitis is an inflammation of the protective membranes covering the brain and spinal cord, often caused by infection.",
+    "Link": "https://www.healthdirect.gov.au/meningitis"
+  },
+  {
+    "ConditionID": "COND162",
+    "ConditionName": "Meniscus Tear",
+    "SymptomIDs": [
+      "SYM090"
+    ],
+    "ShortSummary": "A meniscus tear is an injury to the cartilage in the knee, often caused by twisting motions or trauma.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/torn-meniscus/symptoms-causes/syc-20354818"
+  },
+  {
+    "ConditionID": "COND163",
+    "ConditionName": "Menopause",
+    "SymptomIDs": [
+      "SYM059",
+      "SYM109"
+    ],
+    "ShortSummary": "Menopause is the natural cessation of menstruation, marked by hormonal changes and the end of reproductive capability in women.",
+    "Link": "https://www.healthdirect.gov.au/menopause"
+  },
+  {
+    "ConditionID": "COND164",
+    "ConditionName": "Migraine",
+    "SymptomIDs": [
+      "SYM073"
+    ],
+    "ShortSummary": "Migraine is a neurological condition characterized by recurrent, often severe headaches, typically accompanied by nausea and sensitivity to light or sound.",
+    "Link": "https://www.healthdirect.gov.au/migraine"
+  },
+  {
+    "ConditionID": "COND165",
+    "ConditionName": "Mild Traumatic Brain Injury",
+    "SymptomIDs": [
+      "SYM036"
+    ],
+    "ShortSummary": "Mild traumatic brain injury, often referred to as a concussion, is a brain injury resulting from a blow or jolt to the head.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/traumatic-brain-injury/symptoms-causes/syc-20378557"
+  },
+  {
+    "ConditionID": "COND166",
+    "ConditionName": "Miliaria",
+    "SymptomIDs": [
+      "SYM075"
+    ],
+    "ShortSummary": "Miliaria, or heat rash, occurs when sweat ducts become blocked, leading to skin irritation and small red bumps.",
+    "Link": "https://www.healthdirect.gov.au/heat-rash"
+  },
+  {
+    "ConditionID": "COND167",
+    "ConditionName": "Molar Pregnancy",
+    "SymptomIDs": [
+      "SYM103",
+      "SYM120"
+    ],
+    "ShortSummary": "Molar pregnancy is a rare complication of pregnancy characterized by abnormal growth of trophoblasts, the cells that normally develop into the placenta.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/molar-pregnancy/symptoms-causes/syc-20375175"
+  },
+  {
+    "ConditionID": "COND168",
+    "ConditionName": "Motion Sickness",
+    "SymptomIDs": [
+      "SYM106"
+    ],
+    "ShortSummary": "Motion sickness is a disturbance of the inner ear caused by repeated motion, leading to nausea, dizziness, and vomiting.",
+    "Link": "https://www.healthdirect.gov.au/motion-sickness"
+  },
+  {
+    "ConditionID": "COND169",
+    "ConditionName": "Mouth Ulcer",
+    "SymptomIDs": [
+      "SYM050"
+    ],
+    "ShortSummary": "A mouth ulcer is a small, painful sore inside the mouth, often caused by injury, stress, or certain conditions.",
+    "Link": "https://www.healthdirect.gov.au/mouth-sores-and-ulcers"
+  },
+  {
+    "ConditionID": "COND170",
+    "ConditionName": "Multiple Sclerosis",
+    "SymptomIDs": [
+      "SYM118"
+    ],
+    "ShortSummary": "Multiple sclerosis is a chronic autoimmune disease where the immune system attacks the central nervous system, leading to varied neurological symptoms.",
+    "Link": "https://www.healthdirect.gov.au/multiple-sclerosis-ms"
+  },
+  {
+    "ConditionID": "COND171",
+    "ConditionName": "Muscle Spasm",
+    "SymptomIDs": [
+      "SYM097",
+      "SYM108"
+    ],
+    "ShortSummary": "A muscle spasm is a sudden, involuntary contraction of one or more muscles, often causing pain or stiffness.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/muscle-spasms-muscle-cramps"
+  },
+  {
+    "ConditionID": "COND172",
+    "ConditionName": "Muscle Strain",
+    "SymptomIDs": [
+      "SYM009",
+      "SYM012",
+      "SYM013",
+      "SYM031",
+      "SYM092",
+      "SYM100",
+      "SYM107"
+    ],
+    "ShortSummary": "Muscle strain is an injury where muscle fibers are overstretched or torn, often due to physical overexertion.",
+    "Link": "https://www.healthdirect.gov.au/sprains-and-strains"
+  },
+  {
+    "ConditionID": "COND173",
+    "ConditionName": "Nasal Trauma",
+    "SymptomIDs": [
+      "SYM110"
+    ],
+    "ShortSummary": "Nasal trauma refers to injury to the nose, which may cause bleeding, swelling, deformity, or breathing difficulty.",
+    "Link": "https://pch.health.wa.gov.au/For-health-professionals/Emergency-Department-Guidelines/Nasal-trauma"
+  },
+  {
+    "ConditionID": "COND174",
+    "ConditionName": "Nerve Damage",
+    "SymptomIDs": [
+      "SYM056"
+    ],
+    "ShortSummary": "Nerve damage is an injury or dysfunction of nerves resulting in numbness, weakness, or pain in affected areas.",
+    "Link": "https://www.healthdirect.gov.au/nerve-pain"
+  },
+  {
+    "ConditionID": "COND175",
+    "ConditionName": "Nerve Injury",
+    "SymptomIDs": [
+      "SYM162"
+    ],
+    "ShortSummary": "Nerve injury involves trauma or compression that disrupts nerve signals, potentially causing motor or sensory dysfunction.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/peripheral-nerve-injuries/symptoms-causes/syc-20355631"
+  },
+  {
+    "ConditionID": "COND176",
+    "ConditionName": "Obsessive Compulsive Disorder",
+    "SymptomIDs": [
+      "SYM082"
+    ],
+    "ShortSummary": "Obsessive compulsive disorder is a mental health condition characterized by intrusive thoughts (obsessions) and repetitive behaviors (compulsions).",
+    "Link": "https://www.healthdirect.gov.au/obsessive-compulsive-disorder-ocd"
+  },
+  {
+    "ConditionID": "COND177",
+    "ConditionName": "Occupational Asthma",
+    "SymptomIDs": [
+      "SYM011"
+    ],
+    "ShortSummary": "Occupational asthma is asthma caused or worsened by inhaling fumes, gases, dust, or other harmful substances in the workplace.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/occupational-asthma/symptoms-causes/syc-20375772"
+  },
+  {
+    "ConditionID": "COND178",
+    "ConditionName": "Opioid Overdose",
+    "SymptomIDs": [
+      "SYM139"
+    ],
+    "ShortSummary": "Opioid overdose occurs when excessive use of opioids suppresses breathing, potentially leading to unconsciousness or death.",
+    "Link": "https://www.who.int/news-room/fact-sheets/detail/opioid-overdose"
+  },
+  {
+    "ConditionID": "COND179",
+    "ConditionName": "Optic Neuritis",
+    "SymptomIDs": [
+      "SYM058"
+    ],
+    "ShortSummary": "Optic neuritis is inflammation of the optic nerve, often associated with pain and temporary vision loss.",
+    "Link": "https://www.healthdirect.gov.au/optic-neuritis"
+  },
+  {
+    "ConditionID": "COND180",
+    "ConditionName": "Orbital Fracture",
+    "SymptomIDs": [
+      "SYM016"
+    ],
+    "ShortSummary": "An orbital fracture is a break in one of the bones surrounding the eye, typically caused by blunt trauma to the face.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/25075-orbital-fractures"
+  },
+  {
+    "ConditionID": "COND181",
+    "ConditionName": "Osteoarthritis",
+    "SymptomIDs": [
+      "SYM010",
+      "SYM089",
+      "SYM090",
+      "SYM091"
+    ],
+    "ShortSummary": "Osteoarthritis is a degenerative joint disease characterized by cartilage breakdown, causing joint pain and stiffness.",
+    "Link": "https://www.healthdirect.gov.au/osteoarthritis"
+  },
+  {
+    "ConditionID": "COND182",
+    "ConditionName": "Otitis Media",
+    "SymptomIDs": [
+      "SYM053",
+      "SYM054",
+      "SYM066",
+      "SYM074"
+    ],
+    "ShortSummary": "Otitis media is an inflammation or infection of the middle ear, often causing ear pain, fever, and hearing problems.",
+    "Link": "https://www.healthdirect.gov.au/otitis-media"
+  },
+  {
+    "ConditionID": "COND183",
+    "ConditionName": "Overflow Incontinence",
+    "SymptomIDs": [
+      "SYM078"
+    ],
+    "ShortSummary": "Overflow incontinence is the involuntary release of urine due to an overfilled bladder that doesn't empty properly.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/22162-overflow-incontinence"
+  },
+  {
+    "ConditionID": "COND184",
+    "ConditionName": "Panic Attack",
+    "SymptomIDs": [
+      "SYM123"
+    ],
+    "ShortSummary": "A panic attack is a sudden episode of intense fear or anxiety accompanied by physical symptoms like rapid heartbeat or shortness of breath.",
+    "Link": "https://www.healthdirect.gov.au/panic-attacks-and-panic-disorder"
+  },
+  {
+    "ConditionID": "COND185",
+    "ConditionName": "Panic Disorder",
+    "SymptomIDs": [
+      "SYM008",
+      "SYM116"
+    ],
+    "ShortSummary": "Panic disorder is characterized by recurring panic attacks and persistent worry about having future attacks.",
+    "Link": "https://www.healthdirect.gov.au/panic-attacks-and-panic-disorder"
+  },
+  {
+    "ConditionID": "COND186",
+    "ConditionName": "Parkinson's Disease",
+    "SymptomIDs": [
+      "SYM070",
+      "SYM160",
+      "SYM164"
+    ],
+    "ShortSummary": "Parkinson's disease is a progressive neurological disorder characterized by tremor, rigidity, and bradykinesia due to dopamine deficiency.",
+    "Link": "https://www.healthdirect.gov.au/parkinsons-disease"
+  },
+  {
+    "ConditionID": "COND187",
+    "ConditionName": "Pelvic Inflammatory Disease",
+    "SymptomIDs": [
+      "SYM112"
+    ],
+    "ShortSummary": "Pelvic inflammatory disease is an infection of the female reproductive organs, often caused by sexually transmitted bacteria.",
+    "Link": "https://www.healthdirect.gov.au/pelvic-inflammatory-disease"
+  },
+  {
+    "ConditionID": "COND188",
+    "ConditionName": "Peptic Ulcer",
+    "SymptomIDs": [
+      "SYM017",
+      "SYM147"
+    ],
+    "ShortSummary": "A peptic ulcer is a sore in the stomach lining or upper part of the small intestine caused by stomach acid and H. pylori infection.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/peptic-ulcer/symptoms-causes/syc-20354223"
+  },
+  {
+    "ConditionID": "COND189",
+    "ConditionName": "Perimenopause",
+    "SymptomIDs": [
+      "SYM083"
+    ],
+    "ShortSummary": "Perimenopause is the transitional period before menopause when hormonal fluctuations cause irregular periods and other symptoms.",
+    "Link": "https://www.healthdirect.gov.au/perimenopause"
+  },
+  {
+    "ConditionID": "COND190",
+    "ConditionName": "Periodontitis",
+    "SymptomIDs": [
+      "SYM019",
+      "SYM069",
+      "SYM155"
+    ],
+    "ShortSummary": "Periodontitis is a serious gum infection that damages the soft tissue and can destroy the bone that supports your teeth.",
+    "Link": "https://www.healthdirect.gov.au/gum-disease"
+  },
+  {
+    "ConditionID": "COND191",
+    "ConditionName": "Peripheral Artery Disease",
+    "SymptomIDs": [
+      "SYM031",
+      "SYM035",
+      "SYM093"
+    ],
+    "ShortSummary": "Peripheral artery disease is a condition where narrowed arteries reduce blood flow to the limbs, typically causing leg pain during walking.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/peripheral-artery-disease/symptoms-causes/syc-20350557"
+  },
+  {
+    "ConditionID": "COND192",
+    "ConditionName": "Peripheral Neuropathy",
+    "SymptomIDs": [
+      "SYM105",
+      "SYM111",
+      "SYM118"
+    ],
+    "ShortSummary": "Peripheral neuropathy is damage to the peripheral nerves causing weakness, numbness, and pain, typically in the hands and feet.",
+    "Link": "https://www.healthdirect.gov.au/peripheral-neuropathy"
+  },
+  {
+    "ConditionID": "COND193",
+    "ConditionName": "Persistent Depressive Disorder",
+    "SymptomIDs": [
+      "SYM043"
+    ],
+    "ShortSummary": "Persistent depressive disorder is a chronic form of depression with long-term symptoms that are less severe but longer lasting.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/persistent-depressive-disorder/symptoms-causes/syc-20350929"
+  },
+  {
+    "ConditionID": "COND194",
+    "ConditionName": "Pharyngitis",
+    "SymptomIDs": [
+      "SYM143"
+    ],
+    "ShortSummary": "Pharyngitis is inflammation of the pharynx, resulting in a sore throat and discomfort when swallowing.",
+    "Link": "https://www.healthdirect.gov.au/sore-throat"
+  },
+  {
+    "ConditionID": "COND195",
+    "ConditionName": "Photosensitivity",
+    "SymptomIDs": [
+      "SYM151"
+    ],
+    "ShortSummary": "Photosensitivity is an abnormal skin reaction to sunlight or artificial light, often due to medications or underlying conditions.",
+    "Link": "https://my.clevelandclinic.org/health/symptoms/photosensitivity"
+  },
+  {
+    "ConditionID": "COND196",
+    "ConditionName": "Pinched Nerve",
+    "SymptomIDs": [
+      "SYM111"
+    ],
+    "ShortSummary": "A pinched nerve occurs when surrounding tissues compress a nerve, causing pain, tingling, or numbness.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/pinched-nerve/symptoms-causes/syc-20354746"
+  },
+  {
+    "ConditionID": "COND197",
+    "ConditionName": "Pinworms",
+    "SymptomIDs": [
+      "SYM084"
+    ],
+    "ShortSummary": "Pinworms are small intestinal parasites that cause itching around the anus, especially at night.",
+    "Link": "https://www.healthdirect.gov.au/threadworms-pinworms"
+  },
+  {
+    "ConditionID": "COND198",
+    "ConditionName": "Piriformis Syndrome",
+    "SymptomIDs": [
+      "SYM132"
+    ],
+    "ShortSummary": "Piriformis syndrome is a condition in which the piriformis muscle irritates or compresses the sciatic nerve, causing pain in the buttocks and leg.",
+    "Link": "https://www.healthdirect.gov.au/piriformis-syndrome"
+  },
+  {
+    "ConditionID": "COND199",
+    "ConditionName": "Pneumonia",
+    "SymptomIDs": [
+      "SYM028",
+      "SYM041",
+      "SYM068",
+      "SYM076",
+      "SYM096",
+      "SYM134",
+      "SYM135"
+    ],
+    "ShortSummary": "Pneumonia is an infection that inflames the air sacs in one or both lungs, which may fill with fluid or pus.",
+    "Link": "https://www.healthdirect.gov.au/pneumonia"
+  },
+  {
+    "ConditionID": "COND200",
+    "ConditionName": "Pneumothorax",
+    "SymptomIDs": [
+      "SYM032"
+    ],
+    "ShortSummary": "Pneumothorax is the presence of air in the pleural space causing lung collapse and difficulty breathing.",
+    "Link": "https://www.healthdirect.gov.au/pneumothorax"
+  },
+  {
+    "ConditionID": "COND201",
+    "ConditionName": "Poisoning",
+    "SymptomIDs": [
+      "SYM119"
+    ],
+    "ShortSummary": "Poisoning happens when you are sufficiently exposed to a substance that can cause illness, injury or death.",
+    "Link": "https://www.healthdirect.gov.au/poisoning"
+  },
+  {
+    "ConditionID": "COND202",
+    "ConditionName": "Polycystic Ovary Syndrome",
+    "SymptomIDs": [
+      "SYM079",
+      "SYM083",
+      "SYM173"
+    ],
+    "ShortSummary": "Polycystic ovary syndrome is a hormonal disorder causing enlarged ovaries with small cysts, irregular periods, and excess androgens.",
+    "Link": "https://www.healthdirect.gov.au/polycystic-ovarian-syndrome-pcos"
+  },
+  {
+    "ConditionID": "COND203",
+    "ConditionName": "Pontine Stroke",
+    "SymptomIDs": [
+      "SYM139"
+    ],
+    "ShortSummary": "A pontine stroke is a type of brainstem stroke affecting the pons, which can lead to severe motor, speech, and sensory deficits.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/pontine-stroke"
+  },
+  {
+    "ConditionID": "COND204",
+    "ConditionName": "Post-Concussion Syndrome",
+    "SymptomIDs": [
+      "SYM036"
+    ],
+    "ShortSummary": "Post-concussion syndrome is a complex disorder with symptoms like headache and dizziness lasting weeks or months after a concussion.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/post-concussion-syndrome/symptoms-causes/syc-20353352"
+  },
+  {
+    "ConditionID": "COND205",
+    "ConditionName": "Pregnancy",
+    "SymptomIDs": [
+      "SYM106",
+      "SYM120",
+      "SYM170"
+    ],
+    "ShortSummary": "Pregnancy is the condition of having a developing embryo or fetus within the body, typically lasting about 40 weeks in humans.",
+    "Link": "https://www.healthdirect.gov.au/pregnancy"
+  },
+  {
+    "ConditionID": "COND206",
+    "ConditionName": "Primary Nocturnal Enuresis",
+    "SymptomIDs": [
+      "SYM014"
+    ],
+    "ShortSummary": "Primary nocturnal enuresis is involuntary urination during sleep in children aged five years or older who have never been consistently dry at night.",
+    "Link": "https://www.healthdirect.gov.au/bedwetting-in-older-children"
+  },
+  {
+    "ConditionID": "COND207",
+    "ConditionName": "Proctitis",
+    "SymptomIDs": [
+      "SYM004"
+    ],
+    "ShortSummary": "Proctitis is inflammation of the lining of the rectum, which can cause rectal pain, bleeding, and a frequent urge to defecate.",
+    "Link": "https://www.healthdirect.gov.au/proctitis"
+  },
+  {
+    "ConditionID": "COND208",
+    "ConditionName": "Psoriasis",
+    "SymptomIDs": [
+      "SYM087",
+      "SYM121",
+      "SYM137"
+    ],
+    "ShortSummary": "Psoriasis is a chronic autoimmune skin disease that speeds up the life cycle of skin cells, leading to scaling and inflammation.",
+    "Link": "https://www.healthdirect.gov.au/psoriasis"
+  },
+  {
+    "ConditionID": "COND209",
+    "ConditionName": "Psoriatic Arthritis",
+    "SymptomIDs": [
+      "SYM010",
+      "SYM121"
+    ],
+    "ShortSummary": "Psoriatic arthritis is a chronic inflammatory arthritis associated with psoriasis, causing joint pain, stiffness, and swelling.",
+    "Link": "https://www.healthdirect.gov.au/psoriatic-arthritis"
+  },
+  {
+    "ConditionID": "COND210",
+    "ConditionName": "Psychogenic Polydipsia",
+    "SymptomIDs": [
+      "SYM051"
+    ],
+    "ShortSummary": "Psychogenic polydipsia is a condition characterized by excessive water intake due to psychological factors, often seen in psychiatric patients.",
+    "Link": "https://my.clevelandclinic.org/health/symptoms/24050-polydipsia"
+  },
+  {
+    "ConditionID": "COND211",
+    "ConditionName": "PTSD",
+    "SymptomIDs": [
+      "SYM082",
+      "SYM157"
+    ],
+    "ShortSummary": "Post-traumatic stress disorder is a mental health condition triggered by experiencing or witnessing a traumatic event.",
+    "Link": "https://www.healthdirect.gov.au/post-traumatic-stress-disorder-ptsd"
+  },
+  {
+    "ConditionID": "COND212",
+    "ConditionName": "Pubic Lice",
+    "SymptomIDs": [
+      "SYM086"
+    ],
+    "ShortSummary": "Pubic lice are tiny parasites that infest the hair in the pubic area, causing itching and irritation.",
+    "Link": "https://www.healthdirect.gov.au/pubic-lice-crabs"
+  },
+  {
+    "ConditionID": "COND213",
+    "ConditionName": "Pulmonary Embolism",
+    "SymptomIDs": [
+      "SYM040"
+    ],
+    "ShortSummary": "Pulmonary embolism is a blockage in one of the pulmonary arteries in the lungs, usually caused by blood clots that travel from the legs.",
+    "Link": "https://www.healthdirect.gov.au/pulmonary-embolism"
+  },
+  {
+    "ConditionID": "COND214",
+    "ConditionName": "Puncture Wound",
+    "SymptomIDs": [
+      "SYM018",
+      "SYM042"
+    ],
+    "ShortSummary": "A puncture wound is a deep wound caused by a sharp, pointed object that pierces the skin and underlying tissues.",
+    "Link": "https://www.healthdirect.gov.au/wounds-cuts-and-grazes"
+  },
+  {
+    "ConditionID": "COND215",
+    "ConditionName": "Rabies",
+    "SymptomIDs": [
+      "SYM049"
+    ],
+    "ShortSummary": "Rabies is a viral disease that affects the central nervous system and is almost always fatal once symptoms appear.",
+    "Link": "https://www.healthdirect.gov.au/rabies"
+  },
+  {
+    "ConditionID": "COND216",
+    "ConditionName": "Raynaud’s Phenomenon",
+    "SymptomIDs": [
+      "SYM035"
+    ],
+    "ShortSummary": "Raynaud’s phenomenon is a condition in which small blood vessels in the fingers and toes constrict in response to cold or stress, causing color changes and pain.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/raynauds-disease/symptoms-causes/syc-20363571"
+  },
+  {
+    "ConditionID": "COND217",
+    "ConditionName": "Refractive Errors",
+    "SymptomIDs": [
+      "SYM025",
+      "SYM169"
+    ],
+    "ShortSummary": "Refractive error is a common eye disorder where the eye does not bend light properly, resulting in blurred vision.",
+    "Link": "https://www.healthdirect.gov.au/refractive-errors"
+  },
+  {
+    "ConditionID": "COND218",
+    "ConditionName": "Respiratory Distress",
+    "SymptomIDs": [
+      "SYM068"
+    ],
+    "ShortSummary": "Respiratory distress is a condition where breathing becomes difficult and inefficient, often requiring immediate medical attention.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/ards/symptoms-causes/syc-20355576"
+  },
+  {
+    "ConditionID": "COND219",
+    "ConditionName": "Respiratory Infection",
+    "SymptomIDs": [
+      "SYM123"
+    ],
+    "ShortSummary": "Respiratory infection refers to any infectious disease involving the respiratory tract, such as bronchitis, pneumonia, or the common cold.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/4022-upper-respiratory-infection"
+  },
+  {
+    "ConditionID": "COND220",
+    "ConditionName": "Rheumatoid Arthritis",
+    "SymptomIDs": [
+      "SYM010",
+      "SYM089"
+    ],
+    "ShortSummary": "Rheumatoid arthritis is an autoimmune disorder that primarily affects joints, causing pain, swelling, and eventually joint damage.",
+    "Link": "https://www.healthdirect.gov.au/rheumatoid-arthritis"
+  },
+  {
+    "ConditionID": "COND221",
+    "ConditionName": "Rib Fracture",
+    "SymptomIDs": [
+      "SYM032"
+    ],
+    "ShortSummary": "A rib fracture is a break or crack in one of the bones in the rib cage, typically caused by trauma or injury.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/broken-ribs/symptoms-causes/syc-20350763"
+  },
+  {
+    "ConditionID": "COND222",
+    "ConditionName": "Rotator Cuff Tear",
+    "SymptomIDs": [
+      "SYM162"
+    ],
+    "ShortSummary": "A rotator cuff tear is an injury to the group of muscles and tendons that stabilize the shoulder joint and allow arm movement.",
+    "Link": "https://www.healthdirect.gov.au/rotator-cuff-injury"
+  },
+  {
+    "ConditionID": "COND223",
+    "ConditionName": "Scarlet Fever",
+    "SymptomIDs": [
+      "SYM128"
+    ],
+    "ShortSummary": "Scarlet fever is a bacterial illness that develops in some people with strep throat and is characterized by a red rash and high fever.",
+    "Link": "https://www.healthdirect.gov.au/scarlet-fever"
+  },
+  {
+    "ConditionID": "COND224",
+    "ConditionName": "Schizophrenia",
+    "SymptomIDs": [
+      "SYM070"
+    ],
+    "ShortSummary": "Schizophrenia is a chronic mental disorder characterized by distorted thinking, hallucinations, delusions, and impaired functioning.",
+    "Link": "https://www.healthdirect.gov.au/schizophrenia"
+  },
+  {
+    "ConditionID": "COND225",
+    "ConditionName": "Sciatica",
+    "SymptomIDs": [
+      "SYM093",
+      "SYM100"
+    ],
+    "ShortSummary": "Sciatica refers to pain that radiates along the path of the sciatic nerve, usually caused by compression or irritation of the nerve roots.",
+    "Link": "https://www.healthdirect.gov.au/sciatica"
+  },
+  {
+    "ConditionID": "COND226",
+    "ConditionName": "Sepsis",
+    "SymptomIDs": [
+      "SYM068"
+    ],
+    "ShortSummary": "Sepsis is a life-threatening organ dysfunction caused by a dysregulated body response to infection.",
+    "Link": "https://www.healthdirect.gov.au/sepsis-septicaemia"
+  },
+  {
+    "ConditionID": "COND227",
+    "ConditionName": "Severe Illness in Infants",
+    "SymptomIDs": [
+      "SYM152"
+    ],
+    "ShortSummary": "Severe illness in infants can include conditions that lead to critical health deterioration requiring urgent medical attention.",
+    "Link": "https://www.healthdirect.gov.au/symptoms-of-serious-illness-in-babies-and-children"
+  },
+  {
+    "ConditionID": "COND228",
+    "ConditionName": "Sexually Transmitted Infection",
+    "SymptomIDs": [
+      "SYM113",
+      "SYM166"
+    ],
+    "ShortSummary": "Sexually transmitted infections are infections transmitted through sexual contact, caused by bacteria, viruses, or parasites.",
+    "Link": "https://www.healthdirect.gov.au/sexually-transmitted-infections-sti"
+  },
+  {
+    "ConditionID": "COND229",
+    "ConditionName": "Shock",
+    "SymptomIDs": [
+      "SYM114"
+    ],
+    "ShortSummary": "Shock is a critical condition brought on by a sudden drop in blood flow through the body, which can be life-threatening.",
+    "Link": "https://www.healthdirect.gov.au/shock"
+  },
+  {
+    "ConditionID": "COND230",
+    "ConditionName": "Sinusitis",
+    "SymptomIDs": [
+      "SYM073",
+      "SYM130",
+      "SYM136"
+    ],
+    "ShortSummary": "Sinusitis is inflammation or swelling of the tissue lining the sinuses, often due to infection, causing congestion and facial pain.",
+    "Link": "https://www.healthdirect.gov.au/sinusitis"
+  },
+  {
+    "ConditionID": "COND231",
+    "ConditionName": "Skin Cancer",
+    "SymptomIDs": [
+      "SYM137"
+    ],
+    "ShortSummary": "Skin cancer is the abnormal growth of skin cells, usually caused by ultraviolet radiation from the sun or tanning beds.",
+    "Link": "https://www.healthdirect.gov.au/skin-cancer-and-melanomas"
+  },
+  {
+    "ConditionID": "COND232",
+    "ConditionName": "Skin Infection",
+    "SymptomIDs": [
+      "SYM049",
+      "SYM080"
+    ],
+    "ShortSummary": "A staph skin infection happens when staphylococcus bacteria get inside your body and affects your skin.",
+    "Link": "https://www.healthdirect.gov.au/staph-skin-infection"
+  },
+  {
+    "ConditionID": "COND233",
+    "ConditionName": "Skin Irritation",
+    "SymptomIDs": [
+      "SYM088"
+    ],
+    "ShortSummary": "Skin irritation is a general term for redness, itching, or burning caused by contact with an irritant or allergen.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/17413-rashes-red-skin"
+  },
+  {
+    "ConditionID": "COND234",
+    "ConditionName": "Skull Fracture",
+    "SymptomIDs": [
+      "SYM036",
+      "SYM066",
+      "SYM072"
+    ],
+    "ShortSummary": "A skull fracture is a break in the cranial bone resulting from head trauma and may be accompanied by brain injury.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/skull-fracture"
+  },
+  {
+    "ConditionID": "COND235",
+    "ConditionName": "Sleep Deprivation",
+    "SymptomIDs": [
+      "SYM045"
+    ],
+    "ShortSummary": "Sleep deprivation occurs when an individual gets insufficient sleep, leading to fatigue, cognitive impairment, and other health issues.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/23970-sleep-deprivation"
+  },
+  {
+    "ConditionID": "COND236",
+    "ConditionName": "Social Anxiety Disorder",
+    "SymptomIDs": [
+      "SYM008"
+    ],
+    "ShortSummary": "Social anxiety disorder is a mental health condition characterized by intense fear or anxiety in social situations.",
+    "Link": "https://www.healthdirect.gov.au/social-anxiety-disorder"
+  },
+  {
+    "ConditionID": "COND237",
+    "ConditionName": "Social behaviour disorders",
+    "SymptomIDs": [
+      "SYM015"
+    ],
+    "ShortSummary": "Social behaviour disorders affect a person's ability to manage their behaviour in a positive way.",
+    "Link": "https://www.healthdirect.gov.au/social-behaviour-disorders"
+  },
+  {
+    "ConditionID": "COND238",
+    "ConditionName": "Spinal Stenosis",
+    "SymptomIDs": [
+      "SYM013",
+      "SYM132"
+    ],
+    "ShortSummary": "Spinal stenosis is the narrowing of spaces in the spine, which can put pressure on the spinal cord and nerves.",
+    "Link": "https://www.healthdirect.gov.au/spinal-stenosis"
+  },
+  {
+    "ConditionID": "COND239",
+    "ConditionName": "Spontaneous Abortion",
+    "SymptomIDs": [
+      "SYM103"
+    ],
+    "ShortSummary": "Spontaneous abortion, also known as miscarriage, is the natural loss of a pregnancy before the 20th week.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/pregnancy-loss-miscarriage/symptoms-causes/syc-20354298"
+  },
+  {
+    "ConditionID": "COND240",
+    "ConditionName": "Sprain",
+    "SymptomIDs": [
+      "SYM095"
+    ],
+    "ShortSummary": "A sprain is a stretch or tear of ligaments caused by sudden twisting or force to a joint.",
+    "Link": "https://www.healthdirect.gov.au/sprains-and-strains"
+  },
+  {
+    "ConditionID": "COND241",
+    "ConditionName": "Stable Angina",
+    "SymptomIDs": [
+      "SYM005"
+    ],
+    "ShortSummary": "Stable angina is chest pain or discomfort that typically occurs with activity or stress due to reduced blood flow to the heart.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/21847-stable-angina"
+  },
+  {
+    "ConditionID": "COND242",
+    "ConditionName": "Stroke",
+    "SymptomIDs": [
+      "SYM003",
+      "SYM037",
+      "SYM061",
+      "SYM111",
+      "SYM149",
+      "SYM162",
+      "SYM163",
+      "SYM164"
+    ],
+    "ShortSummary": "A stroke occurs when the blood supply to part of the brain is interrupted or reduced, causing brain cells to die.",
+    "Link": "https://www.healthdirect.gov.au/stroke"
+  },
+  {
+    "ConditionID": "COND243",
+    "ConditionName": "Sunburn",
+    "SymptomIDs": [
+      "SYM151"
+    ],
+    "ShortSummary": "Sunburn is skin damage caused by overexposure to ultraviolet rays from the sun, resulting in redness and pain.",
+    "Link": "https://www.healthdirect.gov.au/sunburn"
+  },
+  {
+    "ConditionID": "COND244",
+    "ConditionName": "Swallowed Foreign Object",
+    "SymptomIDs": [
+      "SYM034"
+    ],
+    "ShortSummary": "Swallowed foreign object refers to the accidental ingestion of non-food items, which may require medical attention depending on the object and symptoms.",
+    "Link": "https://www.healthdirect.gov.au/swallowed-object"
+  },
+  {
+    "ConditionID": "COND245",
+    "ConditionName": "Swimmer’s Ear",
+    "SymptomIDs": [
+      "SYM054"
+    ],
+    "ShortSummary": "Swimmer’s ear is an outer ear canal infection often caused by water remaining in the ear, creating a moist environment for bacteria.",
+    "Link": "https://www.healthdirect.gov.au/swimmers-ear"
+  },
+  {
+    "ConditionID": "COND246",
+    "ConditionName": "Temporomandibular Joint Disorder",
+    "SymptomIDs": [
+      "SYM054",
+      "SYM097"
+    ],
+    "ShortSummary": "Temporomandibular joint disorder involves pain and dysfunction in the jaw joint and muscles controlling jaw movement.",
+    "Link": "https://www.healthdirect.gov.au/temporomandibular-joint-dysfunction"
+  },
+  {
+    "ConditionID": "COND247",
+    "ConditionName": "Tendonitis",
+    "SymptomIDs": [
+      "SYM178"
+    ],
+    "ShortSummary": "Tendonitis is the inflammation of a tendon, typically caused by repetitive motion or overuse, resulting in pain and limited mobility.",
+    "Link": "https://www.healthdirect.gov.au/tendinitis"
+  },
+  {
+    "ConditionID": "COND248",
+    "ConditionName": "Tension Headache",
+    "SymptomIDs": [
+      "SYM073"
+    ],
+    "ShortSummary": "Tension headache is a common type of headache characterized by a dull, aching pain and tightness across the forehead or back of the head.",
+    "Link": "https://www.healthdirect.gov.au/tension-headache"
+  },
+  {
+    "ConditionID": "COND249",
+    "ConditionName": "Tetanus",
+    "SymptomIDs": [
+      "SYM049",
+      "SYM097"
+    ],
+    "ShortSummary": "Tetanus is a serious bacterial infection characterized by muscle stiffness and spasms, often caused by wounds contaminated with Clostridium tetani.",
+    "Link": "https://www.healthdirect.gov.au/tetanus"
+  },
+  {
+    "ConditionID": "COND250",
+    "ConditionName": "Thermal Burn",
+    "SymptomIDs": [
+      "SYM030",
+      "SYM131"
+    ],
+    "ShortSummary": "A thermal burn is tissue damage caused by contact with hot objects, flames, steam, or scalding liquids.",
+    "Link": "https://www.healthdirect.gov.au/burns-and-scalds"
+  },
+  {
+    "ConditionID": "COND251",
+    "ConditionName": "Thrombocytopenia",
+    "SymptomIDs": [
+      "SYM029"
+    ],
+    "ShortSummary": "Thrombocytopenia is when you have low levels of platelets in your blood.",
+    "Link": "https://www.healthdirect.gov.au/thrombocytopenia"
+  },
+  {
+    "ConditionID": "COND252",
+    "ConditionName": "Thyroid Disorder",
+    "SymptomIDs": [
+      "SYM079",
+      "SYM083"
+    ],
+    "ShortSummary": "Thyroid disorders include conditions affecting the thyroid gland, leading to overproduction or underproduction of thyroid hormones.",
+    "Link": "https://www.healthdirect.gov.au/thyroid-problems"
+  },
+  {
+    "ConditionID": "COND253",
+    "ConditionName": "Tonsillitis",
+    "SymptomIDs": [
+      "SYM143"
+    ],
+    "ShortSummary": "Tonsillitis is inflammation of the tonsils, usually due to viral or bacterial infection, causing sore throat and difficulty swallowing.",
+    "Link": "https://www.healthdirect.gov.au/tonsillitis"
+  },
+  {
+    "ConditionID": "COND254",
+    "ConditionName": "Tooth Abscess",
+    "SymptomIDs": [
+      "SYM069"
+    ],
+    "ShortSummary": "A tooth abscess is a localized bacterial infection in the tooth or gums, often causing pain, swelling, and pus.",
+    "Link": "https://www.healthdirect.gov.au/tooth-abscess"
+  },
+  {
+    "ConditionID": "COND255",
+    "ConditionName": "Transient Ischemic Attack",
+    "SymptomIDs": [
+      "SYM149"
+    ],
+    "ShortSummary": "A transient ischemic attack (TIA) is a temporary period of stroke-like symptoms caused by brief blockage of blood flow to the brain.",
+    "Link": "https://www.healthdirect.gov.au/transient-ischaemic-attack-tia"
+  },
+  {
+    "ConditionID": "COND256",
+    "ConditionName": "Traumatic Brain Injury",
+    "SymptomIDs": [
+      "SYM003"
+    ],
+    "ShortSummary": "Traumatic brain injury is damage to the brain resulting from external mechanical force, often leading to physical, cognitive, or emotional impairment.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/traumatic-brain-injury/symptoms-causes/syc-20378557"
+  },
+  {
+    "ConditionID": "COND257",
+    "ConditionName": "Tuberculosis",
+    "SymptomIDs": [
+      "SYM040",
+      "SYM109"
+    ],
+    "ShortSummary": "Tuberculosis is a bacterial infection caused by Mycobacterium tuberculosis, primarily affecting the lungs and potentially spreading to other organs.",
+    "Link": "https://www.healthdirect.gov.au/tuberculosis"
+  },
+  {
+    "ConditionID": "COND258",
+    "ConditionName": "Unstable Angina",
+    "SymptomIDs": [
+      "SYM005"
+    ],
+    "ShortSummary": "Unstable angina is a type of chest pain that occurs unpredictably and may signal an impending heart attack.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/21744-unstable-angina"
+  },
+  {
+    "ConditionID": "COND259",
+    "ConditionName": "Upper Gastrointestinal Bleeding",
+    "SymptomIDs": [
+      "SYM017"
+    ],
+    "ShortSummary": "Upper gastrointestinal bleeding refers to bleeding from the esophagus, stomach, or the first part of the small intestine, often presenting as vomiting blood.",
+    "Link": "https://www.healthdirect.gov.au/gastrointestinal-bleeding"
+  },
+  {
+    "ConditionID": "COND260",
+    "ConditionName": "Upper Respiratory Infection",
+    "SymptomIDs": [
+      "SYM136"
+    ],
+    "ShortSummary": "An upper respiratory infection affects the nose, throat, and airways, commonly caused by viruses leading to symptoms like cough, congestion, and sore throat.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/4022-upper-respiratory-infection"
+  },
+  {
+    "ConditionID": "COND261",
+    "ConditionName": "Urge Incontinence",
+    "SymptomIDs": [
+      "SYM078"
+    ],
+    "ShortSummary": "Urge incontinence is a sudden, intense urge to urinate followed by involuntary leakage, often due to overactive bladder muscles.",
+    "Link": "https://www.healthdirect.gov.au/urinary-incontinence"
+  },
+  {
+    "ConditionID": "COND262",
+    "ConditionName": "Urinary Tract Infection",
+    "SymptomIDs": [
+      "SYM014",
+      "SYM023",
+      "SYM065",
+      "SYM078",
+      "SYM113",
+      "SYM140",
+      "SYM172"
+    ],
+    "ShortSummary": "A urinary tract infection (UTI) is a bacterial infection affecting any part of the urinary system, most commonly the bladder and urethra.",
+    "Link": "https://www.healthdirect.gov.au/urinary-tract-infection-uti"
+  },
+  {
+    "ConditionID": "COND263",
+    "ConditionName": "Urinary Tract Obstruction",
+    "SymptomIDs": [
+      "SYM171"
+    ],
+    "ShortSummary": "Urinary tract obstruction is a blockage that inhibits the flow of urine, potentially leading to kidney damage if left untreated.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/15181-bladder-outlet-obstruction"
+  },
+  {
+    "ConditionID": "COND264",
+    "ConditionName": "Uveitis",
+    "SymptomIDs": [
+      "SYM127"
+    ],
+    "ShortSummary": "Uveitis is inflammation of the uvea, the middle layer of the eye, which can cause redness, pain, light sensitivity, and blurred vision.",
+    "Link": "https://www.healthdirect.gov.au/uveitis"
+  },
+  {
+    "ConditionID": "COND265",
+    "ConditionName": "Vaginitis",
+    "SymptomIDs": [
+      "SYM112"
+    ],
+    "ShortSummary": "Vaginitis is inflammation of the vagina, often due to infection, hormonal changes, or irritants, leading to discharge, itching, and discomfort.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/vaginitis/symptoms-causes/syc-20354707"
+  },
+  {
+    "ConditionID": "COND266",
+    "ConditionName": "Vasovagal Syncope",
+    "SymptomIDs": [
+      "SYM062"
+    ],
+    "ShortSummary": "Vasovagal syncope is a common cause of fainting, triggered by sudden drops in heart rate and blood pressure, often due to stress or standing too long.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/vasovagal-syncope/symptoms-causes/syc-20350527"
+  },
+  {
+    "ConditionID": "COND267",
+    "ConditionName": "Venous Ulcer",
+    "SymptomIDs": [
+      "SYM138"
+    ],
+    "ShortSummary": "A venous ulcer is a chronic wound on the leg caused by poor blood circulation due to venous insufficiency.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/23165-venous-ulcer"
+  },
+  {
+    "ConditionID": "COND268",
+    "ConditionName": "Vertebral Fracture",
+    "SymptomIDs": [
+      "SYM012"
+    ],
+    "ShortSummary": "A vertebral fracture is a break in a spinal bone, often caused by trauma or osteoporosis, resulting in pain and limited mobility.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/17498-spinal-fractures"
+  },
+  {
+    "ConditionID": "COND269",
+    "ConditionName": "Vertigo",
+    "SymptomIDs": [
+      "SYM048",
+      "SYM164"
+    ],
+    "ShortSummary": "Vertigo is a sensation of spinning or dizziness, often caused by inner ear problems affecting balance.",
+    "Link": "https://www.healthdirect.gov.au/vertigo"
+  },
+  {
+    "ConditionID": "COND270",
+    "ConditionName": "Vestibular Neuritis",
+    "SymptomIDs": [
+      "SYM168"
+    ],
+    "ShortSummary": "Vestibular neuritis is inflammation of the vestibular nerve, leading to sudden, severe vertigo without hearing loss.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/15227-vestibular-neuritis"
+  },
+  {
+    "ConditionID": "COND271",
+    "ConditionName": "Viral Exanthem",
+    "SymptomIDs": [
+      "SYM125"
+    ],
+    "ShortSummary": "Viral exanthem is a widespread skin rash caused by a viral infection, often accompanied by fever and other systemic symptoms.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/22510-viral-exanthem-rash"
+  },
+  {
+    "ConditionID": "COND272",
+    "ConditionName": "Viral Upper Respiratory Infection",
+    "SymptomIDs": [
+      "SYM052"
+    ],
+    "ShortSummary": "A viral upper respiratory infection is a common viral illness affecting the nose and throat, leading to sneezing, sore throat, and cough.",
+    "Link": "https://my.clevelandclinic.org/health/diseases/4022-upper-respiratory-infection"
+  },
+  {
+    "ConditionID": "COND273",
+    "ConditionName": "Vitamin C Deficiency",
+    "SymptomIDs": [
+      "SYM019"
+    ],
+    "ShortSummary": "Vitamin C deficiency, or scurvy, is a condition resulting from inadequate intake of vitamin C, leading to fatigue, bleeding gums, and poor wound healing.",
+    "Link": "https://www.healthdirect.gov.au/vitamin-c-deficiency"
+  },
+  {
+    "ConditionID": "COND274",
+    "ConditionName": "Vitamin Deficiency",
+    "SymptomIDs": [
+      "SYM104",
+      "SYM128"
+    ],
+    "ShortSummary": "Vitamin deficiency refers to insufficient levels of essential vitamins, which can cause various health problems depending on the vitamin lacking.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/vitamin-deficiency-anemia/symptoms-causes/syc-20355025"
+  },
+  {
+    "ConditionID": "COND275",
+    "ConditionName": "Yeast Infection",
+    "SymptomIDs": [
+      "SYM166",
+      "SYM167"
+    ],
+    "ShortSummary": "A yeast infection is a fungal infection caused by Candida species, commonly affecting moist areas like the mouth, skin folds, or vagina.",
+    "Link": "https://www.mayoclinic.org/diseases-conditions/yeast-infection/symptoms-causes/syc-20378999"
+  }
+]

@@ -30,7 +30,7 @@ export default function MainPage() {
                 <Image source={{ uri: 'https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?w=500&auto=format&fit=crop&q=60' }} style={styles.serviceImage} />
                 <Text style={styles.serviceText}>Find Hospital</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.serviceCard}>
+              <TouchableOpacity style={styles.serviceCard} onPress={() => router.push('/diseases')}>
                 <Image source={{ uri: 'https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=500&auto=format&fit=crop&q=60' }} style={styles.serviceImage} />
                 <Text style={styles.serviceText}>Disease Information</Text>
               </TouchableOpacity>

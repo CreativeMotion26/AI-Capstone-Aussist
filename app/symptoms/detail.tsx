@@ -1,84 +1,91 @@
-import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { router, useNavigation } from 'expo-router';
+// app/symptoms/detail.tsx
 
-export default function SymptomDetail() {
-  const navigation = useNavigation();
+import React, { useEffect } from 'react';
+import {
+  View,
+  Text,
+  ScrollView,
+  TouchableOpacity,
+  StyleSheet,
+  SafeAreaView
+} from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useTranslation } from '@/app/context/TranslationContext';
+import rawConditions from '@/assets/data/Conditions.json'; // import Conditions.json
+
+// Define the shape of each entry in the conditions JSON
+interface ConditionDetail {
+  ConditionID: string;
+  ConditionName: string;
+  ShortSummary: string;
+  SymptomIDs: string[];
+  Link: string;
+}
+
+// Cast the imported JSON so we can index by detail entries
+const Conditions: Record<string, ConditionDetail> = rawConditions as any;
+
+// Build lookup map from condition name to its detail object
+const detailByName: Record<string, ConditionDetail> = {};
+Object.values(Conditions).forEach(detail => {
+  detailByName[detail.ConditionName] = detail;
+});
+
+export default function ConditionDetail() {
+  // Read the "condition" param from the URL: ?condition=Asthma (the name)
+  const { condition } = useLocalSearchParams<{ condition: string }>();
+  const router = useRouter();
+  const { registerText, translatedTexts } = useTranslation();
+  const t = (key: string) => translatedTexts[key] || key;
+
+  // Lookup the detail entry by condition name
+  const detailEntry = condition ? detailByName[condition] : undefined;
+
+  // Register all strings for translation on mount
+  useEffect(() => {
+    registerText('Back');
+    registerText('Overview');
+    if (detailEntry) {
+      registerText(detailEntry.ConditionName);
+      registerText(detailEntry.ShortSummary);
+    } else {
+      registerText('Condition not found');
+    }
+  }, []);
+
+  // If we don't find the condition, show an error
+  if (!detailEntry) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <Text style={styles.errorText}>{t('Condition not found')}</Text>
+      </SafeAreaView>
+    );
+  }
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* Header
+      {/* Header with back button and title */}
       <View style={styles.header}>
-        <TouchableOpacity 
+        <TouchableOpacity
           style={styles.backButton}
-          onPress={() => navigation.goBack()}
+          onPress={() => router.back()}
         >
           <Ionicons name="chevron-back" size={24} color="#333" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>Symptom Checker</Text>
+        <Text style={styles.headerTitle}>
+          {t(detailEntry.ConditionName)}
+        </Text>
         <View style={{ width: 24 }} />
-      </View> */}
+      </View>
 
-      <ScrollView style={styles.contentContainer}>
-        {/* Disease Info */}
-        <View style={styles.diseaseCard}>
-          <Text style={styles.diseaseTitle}>Seasonal Allergies</Text>
-          
-          <View style={styles.optionsContainer}>
-            <TouchableOpacity style={styles.optionCard}>
-              <View style={styles.optionIcon}>
-                <Ionicons name="document-text-outline" size={24} color="#4299E1" />
-              </View>
-              <Text style={styles.optionLabel}>Guide to medicine for this symptom</Text>
-            </TouchableOpacity>
-            
-            <TouchableOpacity style={styles.optionCard}>
-              <View style={styles.optionIcon}>
-                <Ionicons name="information-circle-outline" size={24} color="#4299E1" />
-              </View>
-              <Text style={styles.optionLabel}>Related Diseases</Text>
-            </TouchableOpacity>
-            
-            <TouchableOpacity style={styles.optionCard}>
-              <View style={styles.optionIcon}>
-                <Ionicons name="list-outline" size={24} color="#4299E1" />
-              </View>
-              <Text style={styles.optionLabel}>Symptom Overview</Text>
-            </TouchableOpacity>
-            
-            <TouchableOpacity style={styles.optionCard}>
-              <View style={styles.optionIcon}>
-                <Ionicons name="medkit-outline" size={24} color="#4299E1" />
-              </View>
-              <Text style={styles.optionLabel}>Management & Treatment</Text>
-            </TouchableOpacity>
-            
-            <TouchableOpacity 
-              style={styles.optionCard}
-              onPress={() => router.push({
-                pathname: '/symptoms/pharmacy',
-              })}
-            >
-              <View style={styles.optionIcon}>
-                <Ionicons name="medical-outline" size={24} color="#4299E1" />
-              </View>
-              <Text style={styles.optionLabel}>Find Pharmacy</Text>
-            </TouchableOpacity>
-            
-            <TouchableOpacity 
-              style={styles.optionCard}
-              onPress={() => router.push({
-                pathname: '/symptoms/hospital',
-              })}
-            >
-              <View style={styles.optionIcon}>
-                <Ionicons name="business-outline" size={24} color="#4299E1" />
-              </View>
-              <Text style={styles.optionLabel}>Find Hospital</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
+      {/* Scrollable content */}
+      <ScrollView contentContainerStyle={styles.contentContainer}>
+        {/* Overview section */}
+        <Text style={styles.sectionTitle}>{t('Overview')}</Text>
+        <Text style={styles.description}>
+          {t(detailEntry.ShortSummary)}
+        </Text>
       </ScrollView>
     </SafeAreaView>
   );
@@ -87,69 +94,45 @@ export default function SymptomDetail() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'white'
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
     paddingHorizontal: 16,
     paddingVertical: 12,
     borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
+    borderBottomColor: '#E5E7EB'
   },
   backButton: {
-    padding: 4,
+    padding: 4
   },
   headerTitle: {
+    flex: 1,
     fontSize: 18,
     fontWeight: '600',
     color: '#333',
+    textAlign: 'center'
   },
   contentContainer: {
-    flex: 1,
+    padding: 16
   },
-  diseaseCard: {
-    margin: 16,
-    padding: 16,
-    backgroundColor: 'white',
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: '#E5E7EB',
-  },
-  diseaseTitle: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  sectionTitle: {
+    fontSize: 16,
+    fontWeight: '600',
     color: '#333',
-    marginBottom: 24,
-    textAlign: 'center',
+    marginBottom: 8
   },
-  optionsContainer: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'space-between',
-  },
-  optionCard: {
-    width: '48%',
-    backgroundColor: '#F3F4F6',
-    borderRadius: 12,
-    padding: 16,
-    marginBottom: 16,
-    alignItems: 'center',
-  },
-  optionIcon: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-    backgroundColor: '#E0F2FE',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginBottom: 12,
-  },
-  optionLabel: {
+  description: {
     fontSize: 14,
-    fontWeight: '500',
-    color: '#333',
-    textAlign: 'center',
+    lineHeight: 20,
+    color: '#4B5563'
   },
-}); 
+  errorText: {
+    flex: 1,
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    fontSize: 16,
+    color: 'red'
+  }
+});

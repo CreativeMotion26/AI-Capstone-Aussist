@@ -1,0 +1,892 @@
+{
+  "SYM001": {
+    "English": "Abdominal pain",
+    "Korean": "복통",
+    "Vietnamese": "Đau bụng"
+  },
+  "SYM002": {
+    "English": "Allergic reaction (severe reaction in the past)",
+    "Korean": "알레르기 반응 (과거에 심한 반응)",
+    "Vietnamese": "Phản ứng dị ứng (phản ứng nghiêm trọng trong quá khứ)"
+  },
+  "SYM003": {
+    "English": "Amnesia",
+    "Korean": "기억 상실",
+    "Vietnamese": "Mất trí nhớ"
+  },
+  "SYM004": {
+    "English": "Anal pain",
+    "Korean": "항문 통증",
+    "Vietnamese": "Đau hậu môn"
+  },
+  "SYM005": {
+    "English": "Angina (chest pain)",
+    "Korean": "협심증 (가슴 통증)",
+    "Vietnamese": "Đau thắt ngực (đau ngực)"
+  },
+  "SYM006": {
+    "English": "Ankle pain",
+    "Korean": "발목 통증",
+    "Vietnamese": "Đau mắt cá chân"
+  },
+  "SYM007": {
+    "English": "Ankle swelling",
+    "Korean": "발목 붓기",
+    "Vietnamese": "Sưng mắt cá chân"
+  },
+  "SYM008": {
+    "English": "Anxiety",
+    "Korean": "불안",
+    "Vietnamese": "Lo âu"
+  },
+  "SYM009": {
+    "English": "Arm injury",
+    "Korean": "팔 부상",
+    "Vietnamese": "Chấn thương cánh tay"
+  },
+  "SYM010": {
+    "English": "Arthritis",
+    "Korean": "관절염",
+    "Vietnamese": "Viêm khớp"
+  },
+  "SYM011": {
+    "English": "Asthma",
+    "Korean": "천식",
+    "Vietnamese": "Hen suyễn"
+  },
+  "SYM012": {
+    "English": "Back injury",
+    "Korean": "등 부상",
+    "Vietnamese": "Chấn thương lưng"
+  },
+  "SYM013": {
+    "English": "Back pain",
+    "Korean": "허리 통증",
+    "Vietnamese": "Đau lưng"
+  },
+  "SYM014": {
+    "English": "Bedwetting",
+    "Korean": "야뇨증",
+    "Vietnamese": "Đái dầm"
+  },
+  "SYM015": {
+    "English": "Behavioural conditions",
+    "Korean": "행동 장애",
+    "Vietnamese": "Rối loạn hành vi"
+  },
+  "SYM016": {
+    "English": "Black eye",
+    "Korean": "멍든 눈",
+    "Vietnamese": "Mắt thâm tím"
+  },
+  "SYM017": {
+    "English": "Black stool (poo)",
+    "Korean": "검은 대변",
+    "Vietnamese": "Phân đen"
+  },
+  "SYM018": {
+    "English": "Bleeding from wound",
+    "Korean": "상처 출혈",
+    "Vietnamese": "Chảy máu từ vết thương"
+  },
+  "SYM019": {
+    "English": "Bleeding gums",
+    "Korean": "잇몸 출혈",
+    "Vietnamese": "Chảy máu nướu"
+  },
+  "SYM020": {
+    "English": "Blisters",
+    "Korean": "물집",
+    "Vietnamese": "Phồng rộp"
+  },
+  "SYM021": {
+    "English": "Bloating",
+    "Korean": "복부 팽만감",
+    "Vietnamese": "Đầy bụng"
+  },
+  "SYM022": {
+    "English": "Blood in stool (poo)",
+    "Korean": "대변에 피가 섞임",
+    "Vietnamese": "Máu trong phân"
+  },
+  "SYM023": {
+    "English": "Blood in urine",
+    "Korean": "소변에 피가 섞임",
+    "Vietnamese": "Máu trong nước tiểu"
+  },
+  "SYM024": {
+    "English": "Blue skin",
+    "Korean": "푸른 피부(청색증)",
+    "Vietnamese": "Da xanh"
+  },
+  "SYM025": {
+    "English": "Blurred vision",
+    "Korean": "시야 흐림",
+    "Vietnamese": "Mờ mắt"
+  },
+  "SYM026": {
+    "English": "Breast discharge",
+    "Korean": "유방 분비물",
+    "Vietnamese": "Tiết dịch từ vú"
+  },
+  "SYM027": {
+    "English": "Breast lump",
+    "Korean": "유방 멍울",
+    "Vietnamese": "Cục u ở ngực"
+  },
+  "SYM028": {
+    "English": "Breathing problems",
+    "Korean": "호흡 곤란",
+    "Vietnamese": "Khó thở"
+  },
+  "SYM029": {
+    "English": "Bruise",
+    "Korean": "멍",
+    "Vietnamese": "Vết bầm"
+  },
+  "SYM030": {
+    "English": "Burn",
+    "Korean": "화상",
+    "Vietnamese": "Bỏng"
+  },
+  "SYM031": {
+    "English": "Calf pain",
+    "Korean": "종아리 통증",
+    "Vietnamese": "Đau bắp chân"
+  },
+  "SYM032": {
+    "English": "Chest injury",
+    "Korean": "흉부 부상",
+    "Vietnamese": "Chấn thương ngực"
+  },
+  "SYM033": {
+    "English": "Chest pain",
+    "Korean": "가슴 통증",
+    "Vietnamese": "Đau ngực"
+  },
+  "SYM034": {
+    "English": "Choking",
+    "Korean": "질식",
+    "Vietnamese": "Nghẹt thở"
+  },
+  "SYM035": {
+    "English": "Cold hands and feet",
+    "Korean": "손발이 차가움",
+    "Vietnamese": "Tay chân lạnh"
+  },
+  "SYM036": {
+    "English": "Concussion (diagnosed)",
+    "Korean": "뇌진탕 (진단됨)",
+    "Vietnamese": "Chấn động não (đã được chẩn đoán)"
+  },
+  "SYM037": {
+    "English": "Confusion",
+    "Korean": "혼란",
+    "Vietnamese": "Lú lẫn"
+  },
+  "SYM038": {
+    "English": "Constipation",
+    "Korean": "변비",
+    "Vietnamese": "Táo bón"
+  },
+  "SYM039": {
+    "English": "Cough",
+    "Korean": "기침",
+    "Vietnamese": "Ho"
+  },
+  "SYM040": {
+    "English": "Coughing up blood",
+    "Korean": "기침 시 피가 섞임",
+    "Vietnamese": "Ho ra máu"
+  },
+  "SYM041": {
+    "English": "Coughing up phlegm",
+    "Korean": "가래를 동반한 기침",
+    "Vietnamese": "Ho có đờm"
+  },
+  "SYM042": {
+    "English": "Cuts",
+    "Korean": "베인 상처",
+    "Vietnamese": "Vết cắt"
+  },
+  "SYM043": {
+    "English": "Depression",
+    "Korean": "우울증",
+    "Vietnamese": "Trầm cảm"
+  },
+  "SYM044": {
+    "English": "Diarrhea",
+    "Korean": "설사",
+    "Vietnamese": "Tiêu chảy"
+  },
+  "SYM045": {
+    "English": "Difficulty concentrating",
+    "Korean": "집중 곤란",
+    "Vietnamese": "Khó tập trung"
+  },
+  "SYM046": {
+    "English": "Dilated (enlarged) pupils",
+    "Korean": "동공 확장",
+    "Vietnamese": "Đồng tử giãn"
+  },
+  "SYM047": {
+    "English": "Disoriented",
+    "Korean": "방향 감각 상실",
+    "Vietnamese": "Mất phương hướng"
+  },
+  "SYM048": {
+    "English": "Dizziness",
+    "Korean": "어지러움",
+    "Vietnamese": "Chóng mặt"
+  },
+  "SYM049": {
+    "English": "Dog bite",
+    "Korean": "개 물림",
+    "Vietnamese": "Chó cắn"
+  },
+  "SYM050": {
+    "English": "Drinking less than usual",
+    "Korean": "평소보다 음수량 감소",
+    "Vietnamese": "Uống ít hơn bình thường"
+  },
+  "SYM051": {
+    "English": "Drinking more than usual",
+    "Korean": "평소보다 물을 더 많이 마심",
+    "Vietnamese": "Uống nhiều hơn bình thường"
+  },
+  "SYM052": {
+    "English": "Dry cough",
+    "Korean": "마른 기침",
+    "Vietnamese": "Ho khan"
+  },
+  "SYM053": {
+    "English": "Ear rubbing",
+    "Korean": "귀를 만짐",
+    "Vietnamese": "Dụi tai"
+  },
+  "SYM054": {
+    "English": "Earache",
+    "Korean": "귀 통증",
+    "Vietnamese": "Đau tai"
+  },
+  "SYM055": {
+    "English": "Elbow swelling",
+    "Korean": "팔꿈치 붓기",
+    "Vietnamese": "Sưng khuỷu tay"
+  },
+  "SYM056": {
+    "English": "Electric shock",
+    "Korean": "감전",
+    "Vietnamese": "Điện giật"
+  },
+  "SYM057": {
+    "English": "Eye irritation",
+    "Korean": "눈 자극",
+    "Vietnamese": "Kích ứng mắt"
+  },
+  "SYM058": {
+    "English": "Eye pain",
+    "Korean": "눈 통증",
+    "Vietnamese": "Đau mắt"
+  },
+  "SYM059": {
+    "English": "Face flushing (sudden)",
+    "Korean": "얼굴이 갑자기 붉어짐",
+    "Vietnamese": "Đỏ mặt đột ngột"
+  },
+  "SYM060": {
+    "English": "Face injury",
+    "Korean": "얼굴 부상",
+    "Vietnamese": "Chấn thương mặt"
+  },
+  "SYM061": {
+    "English": "Facial droop",
+    "Korean": "안면 마비",
+    "Vietnamese": "Liệt mặt"
+  },
+  "SYM062": {
+    "English": "Fainted",
+    "Korean": "기절",
+    "Vietnamese": "Ngất xỉu"
+  },
+  "SYM063": {
+    "English": "Fatigue",
+    "Korean": "피로",
+    "Vietnamese": "Mệt mỏi"
+  },
+  "SYM064": {
+    "English": "Feeling cold",
+    "Korean": "추위를 느낌",
+    "Vietnamese": "Cảm thấy lạnh"
+  },
+  "SYM065": {
+    "English": "Fever",
+    "Korean": "열",
+    "Vietnamese": "Sốt"
+  },
+  "SYM066": {
+    "English": "Fluid from ear",
+    "Korean": "수면 중 소변 실금",
+    "Vietnamese": "Tiểu tiện không kiểm soát khi ngủ"
+  },
+  "SYM067": {
+    "English": "Gasping",
+    "Korean": "숨을 헐떡임",
+    "Vietnamese": "Thở hổn hển"
+  },
+  "SYM068": {
+    "English": "Grunting",
+    "Korean": "신음 소리",
+    "Vietnamese": "Rên rỉ"
+  },
+  "SYM069": {
+    "English": "Gum pain",
+    "Korean": "잇몸 통증",
+    "Vietnamese": "Đau nướu"
+  },
+  "SYM070": {
+    "English": "Hallucinations",
+    "Korean": "환각",
+    "Vietnamese": "Ảo giác"
+  },
+  "SYM071": {
+    "English": "Hay fever and minor allergies",
+    "Korean": "꽃가루 알레르기 및 경미한 알레르기",
+    "Vietnamese": "Sốt cỏ khô và dị ứng nhẹ"
+  },
+  "SYM072": {
+    "English": "Head injury",
+    "Korean": "머리 부상",
+    "Vietnamese": "Chấn thương đầu"
+  },
+  "SYM073": {
+    "English": "Headache",
+    "Korean": "두통",
+    "Vietnamese": "Đau đầu"
+  },
+  "SYM074": {
+    "English": "Hearing problems",
+    "Korean": "청력 문제",
+    "Vietnamese": "Vấn đề về thính giác"
+  },
+  "SYM075": {
+    "English": "Heat rash",
+    "Korean": "땀띠",
+    "Vietnamese": "Rôm sảy"
+  },
+  "SYM076": {
+    "English": "High temperature",
+    "Korean": "고열",
+    "Vietnamese": "Nhiệt độ cao"
+  },
+  "SYM077": {
+    "English": "Hives",
+    "Korean": "두드러기",
+    "Vietnamese": "Mề đay"
+  },
+  "SYM078": {
+    "English": "Incontinence",
+    "Korean": "요실금",
+    "Vietnamese": "Tiểu không tự chủ"
+  },
+  "SYM079": {
+    "English": "Infertility",
+    "Korean": "불임",
+    "Vietnamese": "Vô sinh"
+  },
+  "SYM080": {
+    "English": "Insect bite or sting",
+    "Korean": "곤충에 물림 또는 쏘임",
+    "Vietnamese": "Vết cắn hoặc đốt của côn trùng"
+  },
+  "SYM081": {
+    "English": "Insomnia",
+    "Korean": "불면증",
+    "Vietnamese": "Mất ngủ"
+  },
+  "SYM082": {
+    "English": "Intrusive thoughts",
+    "Korean": "침습적 사고",
+    "Vietnamese": "Suy nghĩ xâm nhập"
+  },
+  "SYM083": {
+    "English": "Irregular periods",
+    "Korean": "불규칙한 생리",
+    "Vietnamese": "Kinh nguyệt không đều"
+  },
+  "SYM084": {
+    "English": "Itchy anus",
+    "Korean": "항문 가려움",
+    "Vietnamese": "Ngứa hậu môn"
+  },
+  "SYM085": {
+    "English": "Itchy eyes",
+    "Korean": "눈 가려움",
+    "Vietnamese": "Ngứa mắt"
+  },
+  "SYM086": {
+    "English": "Itchy groin",
+    "Korean": "사타구니 가려움",
+    "Vietnamese": "Ngứa bẹn"
+  },
+  "SYM087": {
+    "English": "Itchy skin",
+    "Korean": "피부 가려움",
+    "Vietnamese": "Ngứa da"
+  },
+  "SYM088": {
+    "English": "Jellyfish sting",
+    "Korean": "해파리 쏘임",
+    "Vietnamese": "Bị sứa đốt"
+  },
+  "SYM089": {
+    "English": "Joint pain",
+    "Korean": "관절 통증",
+    "Vietnamese": "Đau khớp"
+  },
+  "SYM090": {
+    "English": "Knee pain",
+    "Korean": "무릎 통증",
+    "Vietnamese": "Đau đầu gối"
+  },
+  "SYM091": {
+    "English": "Knee swelling",
+    "Korean": "무릎 붓기",
+    "Vietnamese": "Sưng đầu gối"
+  },
+  "SYM092": {
+    "English": "Leg injury",
+    "Korean": "다리 부상",
+    "Vietnamese": "Chấn thương chân"
+  },
+  "SYM093": {
+    "English": "Leg pain",
+    "Korean": "다리 통증",
+    "Vietnamese": "Đau chân"
+  },
+  "SYM094": {
+    "English": "Lightheaded",
+    "Korean": "어지럽고 멍한 느낌",
+    "Vietnamese": "Choáng váng"
+  },
+  "SYM095": {
+    "English": "Limb injury",
+    "Korean": "사지 부상",
+    "Vietnamese": "Chấn thương chi"
+  },
+  "SYM096": {
+    "English": "Lips turning blue",
+    "Korean": "입술이 파래짐",
+    "Vietnamese": "Môi chuyển sang màu xanh"
+  },
+  "SYM097": {
+    "English": "Lock jaw, or difficulty opening mouth",
+    "Korean": "턱 경련 또는 입 벌리기 어려움",
+    "Vietnamese": "Cứng hàm hoặc khó mở miệng"
+  },
+  "SYM098": {
+    "English": "Loose stool (poo)",
+    "Korean": "묽은 대변",
+    "Vietnamese": "Phân lỏng"
+  },
+  "SYM099": {
+    "English": "Low libido",
+    "Korean": "성욕 감소",
+    "Vietnamese": "Giảm ham muốn tình dục"
+  },
+  "SYM100": {
+    "English": "Lower back pain",
+    "Korean": "허리 아래 통증",
+    "Vietnamese": "Đau lưng dưới"
+  },
+  "SYM101": {
+    "English": "Lump in the armpit",
+    "Korean": "겨드랑이 멍울",
+    "Vietnamese": "Cục u ở nách"
+  },
+  "SYM102": {
+    "English": "Lump in the breast",
+    "Korean": "유방 멍울",
+    "Vietnamese": "Cục u ở ngực"
+  },
+  "SYM103": {
+    "English": "Miscarriage",
+    "Korean": "유산",
+    "Vietnamese": "Sảy thai"
+  },
+  "SYM104": {
+    "English": "Mouth ulcer",
+    "Korean": "입안 궤양",
+    "Vietnamese": "Loét miệng"
+  },
+  "SYM105": {
+    "English": "Muscle cramps",
+    "Korean": "근육 경련",
+    "Vietnamese": "Chuột rút cơ"
+  },
+  "SYM106": {
+    "English": "Nausea",
+    "Korean": "메스꺼움",
+    "Vietnamese": "Buồn nôn"
+  },
+  "SYM107": {
+    "English": "Neck pain",
+    "Korean": "목 통증",
+    "Vietnamese": "Đau cổ"
+  },
+  "SYM108": {
+    "English": "Neck stiffness",
+    "Korean": "목 뻣뻣함",
+    "Vietnamese": "Cứng cổ"
+  },
+  "SYM109": {
+    "English": "Night sweats",
+    "Korean": "야간 발한",
+    "Vietnamese": "Đổ mồ hôi đêm"
+  },
+  "SYM110": {
+    "English": "Nosebleed",
+    "Korean": "코피",
+    "Vietnamese": "Chảy máu mũi"
+  },
+  "SYM111": {
+    "English": "Numbness",
+    "Korean": "저림",
+    "Vietnamese": "Tê bì"
+  },
+  "SYM112": {
+    "English": "Pain during sex",
+    "Korean": "성교통",
+    "Vietnamese": "Đau khi quan hệ tình dục"
+  },
+  "SYM113": {
+    "English": "Pain when urinating",
+    "Korean": "배뇨 시 통증",
+    "Vietnamese": "Đau khi đi tiểu"
+  },
+  "SYM114": {
+    "English": "Pale skin",
+    "Korean": "창백한 피부",
+    "Vietnamese": "Da tái nhợt"
+  },
+  "SYM115": {
+    "English": "Palpitations at rest",
+    "Korean": "안정 시 두근거림",
+    "Vietnamese": "Hồi hộp khi nghỉ ngơi"
+  },
+  "SYM116": {
+    "English": "Panic attacks",
+    "Korean": "공황 발작",
+    "Vietnamese": "Cơn hoảng loạn"
+  },
+  "SYM117": {
+    "English": "Period pain",
+    "Korean": "생리통",
+    "Vietnamese": "Đau bụng kinh"
+  },
+  "SYM118": {
+    "English": "Pins and needles",
+    "Korean": "따끔거림",
+    "Vietnamese": "Cảm giác kiến bò"
+  },
+  "SYM119": {
+    "English": "Chemical Exposure",
+    "Korean": "화학물질 노출",
+    "Vietnamese": "Tiếp xúc hóa chất"
+  },
+  "SYM120": {
+    "English": "Pregnancy",
+    "Korean": "임신",
+    "Vietnamese": "Mang thai"
+  },
+  "SYM121": {
+    "English": "Psoriasis (diagnosed)",
+    "Korean": "건선 (진단됨)",
+    "Vietnamese": "Bệnh vẩy nến (đã được chẩn đoán)"
+  },
+  "SYM122": {
+    "English": "Racing heart",
+    "Korean": "심장이 빠르게 뜀",
+    "Vietnamese": "Tim đập nhanh"
+  },
+  "SYM123": {
+    "English": "Rapid breathing",
+    "Korean": "빠른 호흡",
+    "Vietnamese": "Thở nhanh"
+  },
+  "SYM124": {
+    "English": "Rapid heartbeat",
+    "Korean": "빠른 심장 박동",
+    "Vietnamese": "Nhịp tim nhanh"
+  },
+  "SYM125": {
+    "English": "Rash",
+    "Korean": "발진",
+    "Vietnamese": "Phát ban"
+  },
+  "SYM126": {
+    "English": "Rectal bleeding",
+    "Korean": "직장 출혈",
+    "Vietnamese": "Chảy máu trực tràng"
+  },
+  "SYM127": {
+    "English": "Red eye",
+    "Korean": "충혈된 눈",
+    "Vietnamese": "Mắt đỏ"
+  },
+  "SYM128": {
+    "English": "Red tongue",
+    "Korean": "붉은 혀",
+    "Vietnamese": "Lưỡi đỏ"
+  },
+  "SYM129": {
+    "English": "Redness",
+    "Korean": "붉어짐",
+    "Vietnamese": "Đỏ da"
+  },
+  "SYM130": {
+    "English": "Runny nose",
+    "Korean": "콧물",
+    "Vietnamese": "Chảy nước mũi"
+  },
+  "SYM131": {
+    "English": "Scalds",
+    "Korean": "끓는 액체에 의한 화상",
+    "Vietnamese": "Bỏng nước sôi"
+  },
+  "SYM132": {
+    "English": "Sciatica",
+    "Korean": "좌골신경통",
+    "Vietnamese": "Đau thần kinh tọa"
+  },
+  "SYM133": {
+    "English": "Seizure",
+    "Korean": "발작",
+    "Vietnamese": "Cơn động kinh"
+  },
+  "SYM134": {
+    "English": "Shallow breathing",
+    "Korean": "배뇨 시 통증",
+    "Vietnamese": "Đau khi đi tiểu"
+  },
+  "SYM135": {
+    "English": "Shortness of breath",
+    "Korean": "호흡 곤란",
+    "Vietnamese": "Khó thở"
+  },
+  "SYM136": {
+    "English": "Sinus pain",
+    "Korean": "부비동 통증",
+    "Vietnamese": "Đau xoang"
+  },
+  "SYM137": {
+    "English": "Skin changes",
+    "Korean": "피부 변화",
+    "Vietnamese": "Thay đổi da"
+  },
+  "SYM138": {
+    "English": "Skin ulcer",
+    "Korean": "피부 궤양",
+    "Vietnamese": "Loét da"
+  },
+  "SYM139": {
+    "English": "Small pupils",
+    "Korean": "작은 동공",
+    "Vietnamese": "Đồng tử nhỏ"
+  },
+  "SYM140": {
+    "English": "Smelly urine",
+    "Korean": "악취 나는 소변",
+    "Vietnamese": "Nước tiểu có mùi hôi"
+  },
+  "SYM141": {
+    "English": "Snake bite",
+    "Korean": "뱀에 물림",
+    "Vietnamese": "Rắn cắn"
+  },
+  "SYM142": {
+    "English": "Sneezing",
+    "Korean": "재채기",
+    "Vietnamese": "Hắt hơi"
+  },
+  "SYM143": {
+    "English": "Sore throat",
+    "Korean": "인후통",
+    "Vietnamese": "Đau họng"
+  },
+  "SYM144": {
+    "English": "Speech delay",
+    "Korean": "언어 발달 지연",
+    "Vietnamese": "Chậm phát triển ngôn ngữ"
+  },
+  "SYM145": {
+    "English": "Sprained ankle",
+    "Korean": "발목 염좌",
+    "Vietnamese": "Trật mắt cá chân"
+  },
+  "SYM146": {
+    "English": "Stomach cramp",
+    "Korean": "복부 경련",
+    "Vietnamese": "Chuột rút dạ dày"
+  },
+  "SYM147": {
+    "English": "Stomach pain",
+    "Korean": "복통",
+    "Vietnamese": "Đau bụng"
+  },
+  "SYM148": {
+    "English": "Stress",
+    "Korean": "스트레스",
+    "Vietnamese": "Căng thẳng"
+  },
+  "SYM149": {
+    "English": "Sudden speech difficulties",
+    "Korean": "갑작스러운 언어 장애",
+    "Vietnamese": "Khó nói đột ngột"
+  },
+  "SYM150": {
+    "English": "Suicidal thoughts",
+    "Korean": "자살 충동",
+    "Vietnamese": "Suy nghĩ tự tử"
+  },
+  "SYM151": {
+    "English": "Sunburn",
+    "Korean": "햇볕에 탐",
+    "Vietnamese": "Cháy nắng"
+  },
+  "SYM152": {
+    "English": "Sunken fontanelle",
+    "Korean": "움푹 꺼진 대천문",
+    "Vietnamese": "Thóp lõm"
+  },
+  "SYM153": {
+    "English": "Swallowed object",
+    "Korean": "이물질 삼킴",
+    "Vietnamese": "Nuốt dị vật"
+  },
+  "SYM154": {
+    "English": "Swelling",
+    "Korean": "붓기",
+    "Vietnamese": "Sưng"
+  },
+  "SYM155": {
+    "English": "Swollen gum",
+    "Korean": "잇몸 붓기",
+    "Vietnamese": "Nướu sưng"
+  },
+  "SYM156": {
+    "English": "Swollen knee",
+    "Korean": "무릎 붓기",
+    "Vietnamese": "Đầu gối sưng"
+  },
+  "SYM157": {
+    "English": "Thoughts about self harm",
+    "Korean": "자해 충동",
+    "Vietnamese": "Suy nghĩ tự làm hại bản thân"
+  },
+  "SYM158": {
+    "English": "Tight chest",
+    "Korean": "가슴 조임",
+    "Vietnamese": "Tức ngực"
+  },
+  "SYM159": {
+    "English": "Tired",
+    "Korean": "피곤함",
+    "Vietnamese": "Mệt mỏi"
+  },
+  "SYM160": {
+    "English": "Tremors",
+    "Korean": "떨림",
+    "Vietnamese": "Run"
+  },
+  "SYM161": {
+    "English": "Tummy pain",
+    "Korean": "배 통증",
+    "Vietnamese": "Đau bụng"
+  },
+  "SYM162": {
+    "English": "Unable to lift arms",
+    "Korean": "팔을 들 수 없음",
+    "Vietnamese": "Không thể nhấc tay"
+  },
+  "SYM163": {
+    "English": "Unconscious",
+    "Korean": "의식 없음",
+    "Vietnamese": "Bất tỉnh"
+  },
+  "SYM164": {
+    "English": "Unsteadiness",
+    "Korean": "불안정한 균형",
+    "Vietnamese": "Không vững"
+  },
+  "SYM165": {
+    "English": "Vaginal bleeding between periods",
+    "Korean": "생리 외 출혈",
+    "Vietnamese": "Ra máu âm đạo giữa kỳ kinh"
+  },
+  "SYM166": {
+    "English": "Vaginal discharge (abnormal)",
+    "Korean": "이상한 질 분비물",
+    "Vietnamese": "Khí hư bất thường"
+  },
+  "SYM167": {
+    "English": "Vaginal itching",
+    "Korean": "질 가려움",
+    "Vietnamese": "Ngứa âm đạo"
+  },
+  "SYM168": {
+    "English": "Vertigo",
+    "Korean": "현기증",
+    "Vietnamese": "Chóng mặt"
+  },
+  "SYM169": {
+    "English": "Vision problems",
+    "Korean": "시야 문제",
+    "Vietnamese": "Vấn đề thị lực"
+  },
+  "SYM170": {
+    "English": "Vomiting",
+    "Korean": "구토",
+    "Vietnamese": "Nôn"
+  },
+  "SYM171": {
+    "English": "Weeing less than usual",
+    "Korean": "소변량 감소",
+    "Vietnamese": "Đi tiểu ít hơn bình thường"
+  },
+  "SYM172": {
+    "English": "Weeing more than usual",
+    "Korean": "소변량 증가",
+    "Vietnamese": "Đi tiểu nhiều hơn bình thường"
+  },
+  "SYM173": {
+    "English": "Weight gain",
+    "Korean": "체중 증가",
+    "Vietnamese": "Tăng cân"
+  },
+  "SYM174": {
+    "English": "Weight loss",
+    "Korean": "체중 감소",
+    "Vietnamese": "Giảm cân"
+  },
+  "SYM175": {
+    "English": "Wheezing",
+    "Korean": "쌕쌕거림",
+    "Vietnamese": "Thở khò khè"
+  },
+  "SYM176": {
+    "English": "Wound",
+    "Korean": "상처",
+    "Vietnamese": "Vết thương"
+  },
+  "SYM177": {
+    "English": "Wound oozing",
+    "Korean": "상처에서 진물",
+    "Vietnamese": "Vết thương rỉ dịch"
+  },
+  "SYM178": {
+    "English": "Wrist pain",
+    "Korean": "손목 통증",
+    "Vietnamese": "Đau cổ tay"
+  }
+}

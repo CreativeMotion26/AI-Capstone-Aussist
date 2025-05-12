@@ -1,0 +1,3206 @@
+{
+    "SYM001": {
+        "Symptom": "Abdominal pain",
+        "English": [
+            "Gastroenteritis",
+            "Appendicitis",
+            "Irritable Bowel Syndrome"
+        ],
+        "Korean": [
+            "위장염",
+            "충수염",
+            "과민성 대장 증후군"
+        ],
+        "Vietnamese": [
+            "Viêm dạ dày ruột",
+            "Viêm ruột thừa",
+            "Hội chứng ruột kích thích"
+        ]
+    },
+    "SYM002": {
+        "Symptom": "Allergic reaction (severe reaction in the past)",
+        "English": [
+            "Anaphylaxis",
+            "Food Allergy",
+            "Drug Allergy"
+        ],
+        "Korean": [
+            "아나필락시스",
+            "음식 알레르기",
+            "약물 알레르기"
+        ],
+        "Vietnamese": [
+            "Sốc phản vệ",
+            "Dị ứng thực phẩm",
+            "Dị ứng thuốc"
+        ]
+    },
+    "SYM003": {
+        "Symptom": "Amnesia",
+        "English": [
+            "Traumatic Brain Injury",
+            "Alzheimer’s Disease",
+            "Stroke"
+        ],
+        "Korean": [
+            "외상성 뇌손상",
+            "알츠하이머병",
+            "뇌졸중"
+        ],
+        "Vietnamese": [
+            "Chấn thương sọ não",
+            "Bệnh Alzheimer",
+            "Đột quỵ"
+        ]
+    },
+    "SYM004": {
+        "Symptom": "Anal pain",
+        "English": [
+            "Hemorrhoids",
+            "Anal Fissure",
+            "Proctitis"
+        ],
+        "Korean": [
+            "치질",
+            "항문열상",
+            "직장염"
+        ],
+        "Vietnamese": [
+            "Trĩ",
+            "Nứt hậu môn",
+            "Viêm trực tràng"
+        ]
+    },
+    "SYM005": {
+        "Symptom": "Angina (chest pain)",
+        "English": [
+            "Coronary Artery Disease",
+            "Stable Angina",
+            "Unstable Angina"
+        ],
+        "Korean": [
+            "관상동맥질환",
+            "안정형 협심증",
+            "불안정형 협심증"
+        ],
+        "Vietnamese": [
+            "Bệnh mạch vành",
+            "Đau thắt ngực ổn định",
+            "Đau thắt ngực không ổn định"
+        ]
+    },
+    "SYM006": {
+        "Symptom": "Ankle pain",
+        "English": [
+            "Ankle Sprain",
+            "Achilles Tendinitis",
+            "Arthritis"
+        ],
+        "Korean": [
+            "발목 염좌",
+            "아킬레스건염",
+            "관절염"
+        ],
+        "Vietnamese": [
+            "Trật mắt cá",
+            "Viêm gân gót chân",
+            "Viêm khớp"
+        ]
+    },
+    "SYM007": {
+        "Symptom": "Ankle swelling",
+        "English": [
+            "Ankle Sprain",
+            "Lymphedema",
+            "Heart Failure"
+        ],
+        "Korean": [
+            "발목 염좌",
+            "림프부종",
+            "심부전"
+        ],
+        "Vietnamese": [
+            "Trật mắt cá",
+            "Phù bạch huyết",
+            "Suy tim"
+        ]
+    },
+    "SYM008": {
+        "Symptom": "Anxiety",
+        "English": [
+            "Generalized Anxiety Disorder",
+            "Panic Disorder",
+            "Social Anxiety Disorder"
+        ],
+        "Korean": [
+            "범불안장애",
+            "공황장애",
+            "사회불안장애"
+        ],
+        "Vietnamese": [
+            "Rối loạn lo âu toàn thể",
+            "Rối loạn hoảng sợ",
+            "Rối loạn lo âu xã hội"
+        ]
+    },
+    "SYM009": {
+        "Symptom": "Arm injury",
+        "English": [
+            "Fracture",
+            "Muscle Strain",
+            "Contusion"
+        ],
+        "Korean": [
+            "골절",
+            "근육 염좌",
+            "타박상"
+        ],
+        "Vietnamese": [
+            "Gãy xương",
+            "Căng cơ",
+            "Bầm tím"
+        ]
+    },
+    "SYM010": {
+        "Symptom": "Arthritis",
+        "English": [
+            "Osteoarthritis",
+            "Rheumatoid Arthritis",
+            "Psoriatic Arthritis"
+        ],
+        "Korean": [
+            "골관절염",
+            "류마티스 관절염",
+            "건선성 관절염"
+        ],
+        "Vietnamese": [
+            "Thoái hóa khớp",
+            "Viêm khớp dạng thấp",
+            "Viêm khớp vảy nến"
+        ]
+    },
+    "SYM011": {
+        "Symptom": "Asthma",
+        "English": [
+            "Allergic Asthma",
+            "Exercise-induced Asthma",
+            "Occupational Asthma"
+        ],
+        "Korean": [
+            "알레르기성 천식",
+            "운동 유발 천식",
+            "직업성 천식"
+        ],
+        "Vietnamese": [
+            "Hen dị ứng",
+            "Hen do vận động",
+            "Hen nghề nghiệp"
+        ]
+    },
+    "SYM012": {
+        "Symptom": "Back injury",
+        "English": [
+            "Muscle Strain",
+            "Herniated Disc",
+            "Vertebral Fracture"
+        ],
+        "Korean": [
+            "근육 염좌",
+            "디스크 탈출",
+            "척추 골절"
+        ],
+        "Vietnamese": [
+            "Căng cơ",
+            "Thoát vị đĩa đệm",
+            "Gãy đốt sống"
+        ]
+    },
+    "SYM013": {
+        "Symptom": "Back pain",
+        "English": [
+            "Muscle Strain",
+            "Herniated Disc",
+            "Spinal Stenosis"
+        ],
+        "Korean": [
+            "근육 염좌",
+            "디스크 탈출",
+            "척추관 협착증"
+        ],
+        "Vietnamese": [
+            "Căng cơ",
+            "Thoát vị đĩa đệm",
+            "Hẹp ống sống"
+        ]
+    },
+    "SYM014": {
+        "Symptom": "Bedwetting",
+        "English": [
+            "Primary Nocturnal Enuresis",
+            "Urinary Tract Infection",
+            "Diabetes"
+        ],
+        "Korean": [
+            "일차성 야뇨증",
+            "요로감염",
+            "당뇨병"
+        ],
+        "Vietnamese": [
+            "Đái dầm nguyên phát",
+            "Nhiễm trùng đường tiểu",
+            "Tiểu đường"
+        ]
+    },
+    "SYM015": {
+        "Symptom": "Behavioural conditions",
+        "English": [
+            "ADHD",
+            "Autism Spectrum Disorder",
+            "Social behaviour disorders"
+        ],
+        "Korean": [
+            "주의력결핍 과잉행동장애",
+            "자폐 스펙트럼 장애",
+            "사회적 행동 장애"
+        ],
+        "Vietnamese": [
+            "Rối loạn tăng động giảm chú ý",
+            "Rối loạn phổ tự kỷ",
+            "Rối loạn hành vi xã hội"
+        ]
+    },
+    "SYM016": {
+        "Symptom": "Black eye",
+        "English": [
+            "Contusion",
+            "Orbital Fracture",
+            "Allergic Reaction"
+        ],
+        "Korean": [
+            "타박상",
+            "안와 골절",
+            "알레르기 반응"
+        ],
+        "Vietnamese": [
+            "Bầm tím",
+            "Gãy hốc mắt",
+            "Phản ứng dị ứng"
+        ]
+    },
+    "SYM017": {
+        "Symptom": "Black stool (poo)",
+        "English": [
+            "Upper Gastrointestinal Bleeding",
+            "Peptic Ulcer",
+            "Esophageal Varices"
+        ],
+        "Korean": [
+            "상부 위장관 출혈",
+            "소화성 궤양",
+            "식도 정맥류"
+        ],
+        "Vietnamese": [
+            "Xuất huyết tiêu hóa trên",
+            "Loét dạ dày",
+            "Giãn tĩnh mạch thực quản"
+        ]
+    },
+    "SYM018": {
+        "Symptom": "Bleeding from wound",
+        "English": [
+            "Laceration",
+            "Abrasion",
+            "Puncture Wound"
+        ],
+        "Korean": [
+            "열상",
+            "찰과상",
+            "천자 상처"
+        ],
+        "Vietnamese": [
+            "Vết rách",
+            "Vết trầy xước",
+            "Vết đâm"
+        ]
+    },
+    "SYM019": {
+        "Symptom": "Bleeding gums",
+        "English": [
+            "Gingivitis",
+            "Periodontitis",
+            "Vitamin C Deficiency"
+        ],
+        "Korean": [
+            "잇몸염",
+            "치주염",
+            "비타민 C 결핍"
+        ],
+        "Vietnamese": [
+            "Viêm nướu",
+            "Viêm nha chu",
+            "Thiếu vitamin C"
+        ]
+    },
+    "SYM020": {
+        "Symptom": "Blisters",
+        "English": [
+            "Friction Blister",
+            "Burns",
+            "Chickenpox"
+        ],
+        "Korean": [
+            "마찰 물집",
+            "화상",
+            "수두"
+        ],
+        "Vietnamese": [
+            "Phồng rộp do cọ xát",
+            "Bỏng",
+            "Thủy đậu"
+        ]
+    },
+    "SYM021": {
+        "Symptom": "Bloating",
+        "English": [
+            "Irritable Bowel Syndrome",
+            "Lactose Intolerance",
+            "Constipation"
+        ],
+        "Korean": [
+            "과민성 대장 증후군",
+            "유당 불내증",
+            "변비"
+        ],
+        "Vietnamese": [
+            "Hội chứng ruột kích thích",
+            "Không dung nạp lactose",
+            "Táo bón"
+        ]
+    },
+    "SYM022": {
+        "Symptom": "Blood in stool (poo)",
+        "English": [
+            "Hemorrhoids",
+            "Anal Fissure",
+            "Colorectal Cancer"
+        ],
+        "Korean": [
+            "치질",
+            "항문열상",
+            "대장암"
+        ],
+        "Vietnamese": [
+            "Trĩ",
+            "Nứt hậu môn",
+            "Ung thư đại trực tràng"
+        ]
+    },
+    "SYM023": {
+        "Symptom": "Blood in urine",
+        "English": [
+            "Urinary Tract Infection",
+            "Kidney Stones",
+            "Bladder Cancer"
+        ],
+        "Korean": [
+            "요로감염",
+            "신장 결석",
+            "방광암"
+        ],
+        "Vietnamese": [
+            "Nhiễm trùng đường tiểu",
+            "Sỏi thận",
+            "Ung thư bàng quang"
+        ]
+    },
+    "SYM024": {
+        "Symptom": "Blue skin",
+        "English": [
+            "Cyanosis",
+            "Congenital Heart Disease",
+            "COPD"
+        ],
+        "Korean": [
+            "청색증",
+            "선천성 심장 질환",
+            "만성 폐쇄성 폐 질환"
+        ],
+        "Vietnamese": [
+            "Tím tái",
+            "Bệnh tim bẩm sinh",
+            "Bệnh phổi tắc nghẽn mãn tính"
+        ]
+    },
+    "SYM025": {
+        "Symptom": "Blurred vision",
+        "English": [
+            "Refractive Errors",
+            "Cataract",
+            "Diabetic Retinopathy"
+        ],
+        "Korean": [
+            "굴절 이상",
+            "백내장",
+            "당뇨망막병증"
+        ],
+        "Vietnamese": [
+            "Tật khúc xạ",
+            "Đục thủy tinh thể",
+            "Bệnh võng mạc tiểu đường"
+        ]
+    },
+    "SYM026": {
+        "Symptom": "Breast discharge",
+        "English": [
+            "Galactorrhea",
+            "Breast Cancer",
+            "Mastitis"
+        ],
+        "Korean": [
+            "유즙 분비증",
+            "유방암",
+            "유선염"
+        ],
+        "Vietnamese": [
+            "Tiết sữa không liên quan đến sinh con",
+            "Ung thư vú",
+            "Viêm tuyến vú"
+        ]
+    },
+    "SYM027": {
+        "Symptom": "Breast lump",
+        "English": [
+            "Fibroadenoma",
+            "Breast Cyst",
+            "Breast Cancer"
+        ],
+        "Korean": [
+            "섬유선종",
+            "유방 낭종",
+            "유방암"
+        ],
+        "Vietnamese": [
+            "U xơ tuyến vú",
+            "Nang vú",
+            "Ung thư vú"
+        ]
+    },
+    "SYM028": {
+        "Symptom": "Breathing problems",
+        "English": [
+            "Asthma",
+            "Pneumonia",
+            "COPD"
+        ],
+        "Korean": [
+            "천식",
+            "폐렴",
+            "만성 폐쇄성 폐질환"
+        ],
+        "Vietnamese": [
+            "Hen suyễn",
+            "Viêm phổi",
+            "Bệnh phổi tắc nghẽn mãn tính"
+        ]
+    },
+    "SYM029": {
+        "Symptom": "Bruise",
+        "English": [
+            "Contusion",
+            "Leukemia",
+            "Thrombocytopenia"
+        ],
+        "Korean": [
+            "타박상",
+            "백혈병",
+            "혈소판 감소증"
+        ],
+        "Vietnamese": [
+            "Bầm tím",
+            "Bệnh bạch cầu",
+            "Giảm tiểu cầu"
+        ]
+    },
+    "SYM030": {
+        "Symptom": "Burn",
+        "English": [
+            "Thermal Burn",
+            "Chemical Burn",
+            "Electrical Burn"
+        ],
+        "Korean": [
+            "열 화상",
+            "화학 화상",
+            "전기 화상"
+        ],
+        "Vietnamese": [
+            "Bỏng nhiệt",
+            "Bỏng hóa chất",
+            "Bỏng điện"
+        ]
+    },
+    "SYM031": {
+        "Symptom": "Calf pain",
+        "English": [
+            "Muscle Strain",
+            "Deep Vein Thrombosis",
+            "Peripheral Artery Disease"
+        ],
+        "Korean": [
+            "근육 염좌",
+            "심부정맥 혈전증",
+            "말초동맥질환"
+        ],
+        "Vietnamese": [
+            "Căng cơ",
+            "Huyết khối tĩnh mạch sâu",
+            "Bệnh động mạch ngoại biên"
+        ]
+    },
+    "SYM032": {
+        "Symptom": "Chest injury",
+        "English": [
+            "Rib Fracture",
+            "Lung Contusion",
+            "Pneumothorax"
+        ],
+        "Korean": [
+            "갈비뼈 골절",
+            "폐 타박상",
+            "기흉"
+        ],
+        "Vietnamese": [
+            "Gãy xương sườn",
+            "Bầm phổi",
+            "Tràn khí màng phổi"
+        ]
+    },
+    "SYM033": {
+        "Symptom": "Chest pain",
+        "English": [
+            "Angina",
+            "Heart Attack",
+            "Gastroesophageal Reflux Disease"
+        ],
+        "Korean": [
+            "협심증",
+            "심근경색",
+            "역류성 식도염"
+        ],
+        "Vietnamese": [
+            "Đau thắt ngực",
+            "Nhồi máu cơ tim",
+            "Trào ngược dạ dày thực quản"
+        ]
+    },
+    "SYM034": {
+        "Symptom": "Choking",
+        "English": [
+            "Airway Obstruction",
+            "Anaphylaxis",
+            "Swallowed Foreign Object"
+        ],
+        "Korean": [
+            "기도 폐쇄",
+            "아나필락시스",
+            "이물질 삼킴"
+        ],
+        "Vietnamese": [
+            "Tắc nghẽn đường thở",
+            "Sốc phản vệ",
+            "Nuốt dị vật"
+        ]
+    },
+    "SYM035": {
+        "Symptom": "Cold hands and feet",
+        "English": [
+            "Raynaud’s Phenomenon",
+            "Peripheral Artery Disease",
+            "Hypothyroidism"
+        ],
+        "Korean": [
+            "레이노 현상",
+            "말초동맥질환",
+            "갑상선기능저하증"
+        ],
+        "Vietnamese": [
+            "Hiện tượng Raynaud",
+            "Bệnh động mạch ngoại biên",
+            "Suy giáp"
+        ]
+    },
+    "SYM036": {
+        "Symptom": "Concussion (diagnosed)",
+        "English": [
+            "Mild Traumatic Brain Injury",
+            "Post-Concussion Syndrome",
+            "Skull Fracture"
+        ],
+        "Korean": [
+            "경미한 외상성 뇌손상",
+            "뇌진탕 후 증후군",
+            "두개골 골절"
+        ],
+        "Vietnamese": [
+            "Chấn thương sọ não nhẹ",
+            "Hội chứng sau chấn động",
+            "Gãy hộp sọ"
+        ]
+    },
+    "SYM037": {
+        "Symptom": "Confusion",
+        "English": [
+            "Delirium",
+            "Stroke",
+            "Dementia"
+        ],
+        "Korean": [
+            "섬망",
+            "뇌졸중",
+            "치매"
+        ],
+        "Vietnamese": [
+            "Sảng",
+            "Đột quỵ",
+            "Sa sút trí tuệ"
+        ]
+    },
+    "SYM038": {
+        "Symptom": "Constipation",
+        "English": [
+            "Irritable Bowel Syndrome",
+            "Low Fiber Diet",
+            "Hypothyroidism"
+        ],
+        "Korean": [
+            "과민성 대장 증후군",
+            "저섬유소 식이",
+            "갑상선기능저하증"
+        ],
+        "Vietnamese": [
+            "Hội chứng ruột kích thích",
+            "Chế độ ăn ít chất xơ",
+            "Suy giáp"
+        ]
+    },
+    "SYM039": {
+        "Symptom": "Cough",
+        "English": [
+            "Common Cold",
+            "Asthma",
+            "Bronchitis"
+        ],
+        "Korean": [
+            "감기",
+            "천식",
+            "기관지염"
+        ],
+        "Vietnamese": [
+            "Cảm lạnh",
+            "Hen suyễn",
+            "Viêm phế quản"
+        ]
+    },
+    "SYM040": {
+        "Symptom": "Coughing up blood",
+        "English": [
+            "Tuberculosis",
+            "Lung Cancer",
+            "Pulmonary Embolism"
+        ],
+        "Korean": [
+            "결핵",
+            "폐암",
+            "폐색전증"
+        ],
+        "Vietnamese": [
+            "Lao phổi",
+            "Ung thư phổi",
+            "Tắc mạch phổi"
+        ]
+    },
+    "SYM041": {
+        "Symptom": "Coughing up phlegm",
+        "English": [
+            "Bronchitis",
+            "Pneumonia",
+            "Chronic Obstructive Pulmonary Disease"
+        ],
+        "Korean": [
+            "기관지염",
+            "폐렴",
+            "만성 폐쇄성 폐질환"
+        ],
+        "Vietnamese": [
+            "Viêm phế quản",
+            "Viêm phổi",
+            "Bệnh phổi tắc nghẽn mãn tính"
+        ]
+    },
+    "SYM042": {
+        "Symptom": "Cuts",
+        "English": [
+            "Laceration",
+            "Abrasion",
+            "Puncture Wound"
+        ],
+        "Korean": [
+            "열상",
+            "찰과상",
+            "천자 상처"
+        ],
+        "Vietnamese": [
+            "Vết rách",
+            "Vết trầy xước",
+            "Vết đâm"
+        ]
+    },
+    "SYM043": {
+        "Symptom": "Depression",
+        "English": [
+            "Major Depressive Disorder",
+            "Persistent Depressive Disorder",
+            "Bipolar Disorder"
+        ],
+        "Korean": [
+            "주요우울장애",
+            "기분부전장애",
+            "양극성 장애"
+        ],
+        "Vietnamese": [
+            "Rối loạn trầm cảm nặng",
+            "Rối loạn trầm cảm kéo dài",
+            "Rối loạn lưỡng cực"
+        ]
+    },
+    "SYM044": {
+        "Symptom": "Diarrhea",
+        "English": [
+            "Gastroenteritis",
+            "Irritable Bowel Syndrome",
+            "Food Poisoning"
+        ],
+        "Korean": [
+            "위장염",
+            "과민성 대장 증후군",
+            "식중독"
+        ],
+        "Vietnamese": [
+            "Viêm dạ dày ruột",
+            "Hội chứng ruột kích thích",
+            "Ngộ độc thực phẩm"
+        ]
+    },
+    "SYM045": {
+        "Symptom": "Difficulty concentrating",
+        "English": [
+            "ADHD",
+            "Depression",
+            "Sleep Deprivation"
+        ],
+        "Korean": [
+            "주의력결핍 과잉행동장애",
+            "우울증",
+            "수면 부족"
+        ],
+        "Vietnamese": [
+            "Rối loạn tăng động giảm chú ý",
+            "Trầm cảm",
+            "Thiếu ngủ"
+        ]
+    },
+    "SYM046": {
+        "Symptom": "Dilated (enlarged) pupils",
+        "English": [
+            "Drug Overdose",
+            "Brain Injury",
+            "Glaucoma"
+        ],
+        "Korean": [
+            "약물 과다복용",
+            "뇌손상",
+            "녹내장"
+        ],
+        "Vietnamese": [
+            "Quá liều thuốc",
+            "Chấn thương não",
+            "Bệnh tăng nhãn áp"
+        ]
+    },
+    "SYM047": {
+        "Symptom": "Disoriented",
+        "English": [
+            "Delirium",
+            "Dementia",
+            "Hypoglycemia"
+        ],
+        "Korean": [
+            "섬망",
+            "치매",
+            "저혈당"
+        ],
+        "Vietnamese": [
+            "Sảng",
+            "Sa sút trí tuệ",
+            "Hạ đường huyết"
+        ]
+    },
+    "SYM048": {
+        "Symptom": "Dizziness",
+        "English": [
+            "Vertigo",
+            "Anemia",
+            "Dehydration"
+        ],
+        "Korean": [
+            "현기증",
+            "빈혈",
+            "탈수"
+        ],
+        "Vietnamese": [
+            "Chóng mặt",
+            "Thiếu máu",
+            "Mất nước"
+        ]
+    },
+    "SYM049": {
+        "Symptom": "Dog bite",
+        "English": [
+            "Rabies",
+            "Tetanus",
+            "Skin Infection"
+        ],
+        "Korean": [
+            "광견병",
+            "파상풍",
+            "피부 감염"
+        ],
+        "Vietnamese": [
+            "Bệnh dại",
+            "Uốn ván",
+            "Nhiễm trùng da"
+        ]
+    },
+    "SYM050": {
+        "Symptom": "Drinking less than usual",
+        "English": [
+            "Dehydration",
+            "Depression",
+            "Mouth Ulcer"
+        ],
+        "Korean": [
+            "탈수",
+            "우울증",
+            "구내염"
+        ],
+        "Vietnamese": [
+            "Mất nước",
+            "Trầm cảm",
+            "Loét miệng"
+        ]
+    },
+    "SYM051": {
+        "Symptom": "Drinking more than usual",
+        "English": [
+            "Diabetes",
+            "Hypercalcemia",
+            "Psychogenic Polydipsia"
+        ],
+        "Korean": [
+            "당뇨병",
+            "고칼슘혈증",
+            "심인성 다음증"
+        ],
+        "Vietnamese": [
+            "Tiểu đường",
+            "Tăng canxi máu",
+            "Khát do tâm lý"
+        ]
+    },
+    "SYM052": {
+        "Symptom": "Dry cough",
+        "English": [
+            "Viral Upper Respiratory Infection",
+            "Asthma",
+            "COVID-19"
+        ],
+        "Korean": [
+            "바이러스성 상기도 감염",
+            "천식",
+            "코로나19"
+        ],
+        "Vietnamese": [
+            "Nhiễm trùng đường hô hấp trên do virus",
+            "Hen suyễn",
+            "COVID-19"
+        ]
+    },
+    "SYM053": {
+        "Symptom": "Ear rubbing",
+        "English": [
+            "Otitis Media",
+            "Earwax Buildup",
+            "Foreign Object in Ear"
+        ],
+        "Korean": [
+            "중이염",
+            "귀지 막힘",
+            "이물질 삽입"
+        ],
+        "Vietnamese": [
+            "Viêm tai giữa",
+            "Tắc ráy tai",
+            "Vật lạ trong tai"
+        ]
+    },
+    "SYM054": {
+        "Symptom": "Earache",
+        "English": [
+            "Otitis Media",
+            "Swimmer’s Ear",
+            "Temporomandibular Joint Disorder"
+        ],
+        "Korean": [
+            "중이염",
+            "외이도염",
+            "턱관절 장애"
+        ],
+        "Vietnamese": [
+            "Viêm tai giữa",
+            "Viêm ống tai ngoài",
+            "Rối loạn khớp thái dương hàm"
+        ]
+    },
+    "SYM055": {
+        "Symptom": "Elbow swelling",
+        "English": [
+            "Bursitis",
+            "Arthritis",
+            "Fracture"
+        ],
+        "Korean": [
+            "윤활낭염",
+            "관절염",
+            "골절"
+        ],
+        "Vietnamese": [
+            "Viêm bao hoạt dịch",
+            "Viêm khớp",
+            "Gãy xương"
+        ]
+    },
+    "SYM056": {
+        "Symptom": "Electric shock",
+        "English": [
+            "Burns",
+            "Arrhythmia",
+            "Nerve Damage"
+        ],
+        "Korean": [
+            "화상",
+            "부정맥",
+            "신경 손상"
+        ],
+        "Vietnamese": [
+            "Bỏng",
+            "Rối loạn nhịp tim",
+            "Tổn thương thần kinh"
+        ]
+    },
+    "SYM057": {
+        "Symptom": "Eye irritation",
+        "English": [
+            "Allergic Conjunctivitis",
+            "Dry Eye Syndrome",
+            "Foreign Body in Eye"
+        ],
+        "Korean": [
+            "알레르기성 결막염",
+            "안구건조증",
+            "이물질 삽입"
+        ],
+        "Vietnamese": [
+            "Viêm kết mạc dị ứng",
+            "Khô mắt",
+            "Vật lạ trong mắt"
+        ]
+    },
+    "SYM058": {
+        "Symptom": "Eye pain",
+        "English": [
+            "Glaucoma",
+            "Optic Neuritis",
+            "Corneal Abrasion"
+        ],
+        "Korean": [
+            "녹내장",
+            "시신경염",
+            "각막 찰과상"
+        ],
+        "Vietnamese": [
+            "Tăng nhãn áp",
+            "Viêm dây thần kinh thị giác",
+            "Trầy xước giác mạc"
+        ]
+    },
+    "SYM059": {
+        "Symptom": "Face flushing (sudden)",
+        "English": [
+            "Menopause",
+            "Carcinoid Syndrome",
+            "Alcohol Intolerance"
+        ],
+        "Korean": [
+            "폐경",
+            "카시노이드 증후군",
+            "알코올 불내증"
+        ],
+        "Vietnamese": [
+            "Mãn kinh",
+            "Hội chứng carcinoid",
+            "Không dung nạp rượu"
+        ]
+    },
+    "SYM060": {
+        "Symptom": "Face injury",
+        "English": [
+            "Facial Fracture",
+            "Contusion",
+            "Laceration"
+        ],
+        "Korean": [
+            "안면 골절",
+            "타박상",
+            "열상"
+        ],
+        "Vietnamese": [
+            "Gãy xương mặt",
+            "Bầm tím",
+            "Vết rách"
+        ]
+    },
+    "SYM061": {
+        "Symptom": "Facial droop",
+        "English": [
+            "Stroke",
+            "Bell's Palsy",
+            "Brain Tumor"
+        ],
+        "Korean": [
+            "뇌졸중",
+            "벨 마비",
+            "뇌종양"
+        ],
+        "Vietnamese": [
+            "Đột quỵ",
+            "Liệt dây thần kinh mặt",
+            "U não"
+        ]
+    },
+    "SYM062": {
+        "Symptom": "Fainted",
+        "English": [
+            "Vasovagal Syncope",
+            "Dehydration",
+            "Arrhythmia"
+        ],
+        "Korean": [
+            "미주신경성 실신",
+            "탈수",
+            "부정맥"
+        ],
+        "Vietnamese": [
+            "Ngất do phản xạ thần kinh",
+            "Mất nước",
+            "Rối loạn nhịp tim"
+        ]
+    },
+    "SYM063": {
+        "Symptom": "Fatigue",
+        "English": [
+            "Anemia",
+            "Depression",
+            "Hypothyroidism"
+        ],
+        "Korean": [
+            "빈혈",
+            "우울증",
+            "갑상선기능저하증"
+        ],
+        "Vietnamese": [
+            "Thiếu máu",
+            "Trầm cảm",
+            "Suy giáp"
+        ]
+    },
+    "SYM064": {
+        "Symptom": "Feeling cold",
+        "English": [
+            "Hypothyroidism",
+            "Anemia",
+            "Anorexia Nervosa"
+        ],
+        "Korean": [
+            "갑상선기능저하증",
+            "빈혈",
+            "신경성 식욕부진"
+        ],
+        "Vietnamese": [
+            "Suy giáp",
+            "Thiếu máu",
+            "Chán ăn tâm thần"
+        ]
+    },
+    "SYM065": {
+        "Symptom": "Fever",
+        "English": [
+            "Flu",
+            "COVID-19",
+            "Urinary Tract Infection"
+        ],
+        "Korean": [
+            "독감",
+            "코로나19",
+            "요로감염"
+        ],
+        "Vietnamese": [
+            "Cúm",
+            "COVID-19",
+            "Nhiễm trùng đường tiết niệu"
+        ]
+    },
+    "SYM066": {
+        "Symptom": "Fluid from ear",
+        "English": [
+            "Otitis Media",
+            "Ear Barotrauma",
+            "Skull Fracture"
+        ],
+        "Korean": [
+            "중이염",
+            "이압손상",
+            "두개골 골절"
+        ],
+        "Vietnamese": [
+            "Viêm tai giữa",
+            "Tổn thương do thay đổi áp suất",
+            "Gãy hộp sọ"
+        ]
+    },
+    "SYM067": {
+        "Symptom": "Gasping",
+        "English": [
+            "Asthma",
+            "Anaphylaxis",
+            "Heart Failure"
+        ],
+        "Korean": [
+            "천식",
+            "아나필락시스",
+            "심부전"
+        ],
+        "Vietnamese": [
+            "Hen suyễn",
+            "Sốc phản vệ",
+            "Suy tim"
+        ]
+    },
+    "SYM068": {
+        "Symptom": "Grunting",
+        "English": [
+            "Respiratory Distress",
+            "Pneumonia",
+            "Sepsis"
+        ],
+        "Korean": [
+            "호흡곤란",
+            "폐렴",
+            "패혈증"
+        ],
+        "Vietnamese": [
+            "Khó thở",
+            "Viêm phổi",
+            "Nhiễm trùng huyết"
+        ]
+    },
+    "SYM069": {
+        "Symptom": "Gum pain",
+        "English": [
+            "Gingivitis",
+            "Tooth Abscess",
+            "Periodontitis"
+        ],
+        "Korean": [
+            "잇몸염",
+            "치아 농양",
+            "치주염"
+        ],
+        "Vietnamese": [
+            "Viêm nướu",
+            "Áp xe răng",
+            "Viêm nha chu"
+        ]
+    },
+    "SYM070": {
+        "Symptom": "Hallucinations",
+        "English": [
+            "Schizophrenia",
+            "Delirium",
+            "Parkinson's Disease"
+        ],
+        "Korean": [
+            "조현병",
+            "섬망",
+            "파킨슨병"
+        ],
+        "Vietnamese": [
+            "Tâm thần phân liệt",
+            "Sảng",
+            "Bệnh Parkinson"
+        ]
+    },
+    "SYM071": {
+        "Symptom": "Hay fever and minor allergies",
+        "English": [
+            "Allergic Rhinitis",
+            "Conjunctivitis",
+            "Eczema"
+        ],
+        "Korean": [
+            "알레르기 비염",
+            "결막염",
+            "습진"
+        ],
+        "Vietnamese": [
+            "Viêm mũi dị ứng",
+            "Viêm kết mạc",
+            "Chàm"
+        ]
+    },
+    "SYM072": {
+        "Symptom": "Head injury",
+        "English": [
+            "Concussion",
+            "Skull Fracture",
+            "Intracranial Hemorrhage"
+        ],
+        "Korean": [
+            "뇌진탕",
+            "두개골 골절",
+            "두개내 출혈"
+        ],
+        "Vietnamese": [
+            "Chấn động não",
+            "Gãy hộp sọ",
+            "Xuất huyết nội sọ"
+        ]
+    },
+    "SYM073": {
+        "Symptom": "Headache",
+        "English": [
+            "Tension Headache",
+            "Migraine",
+            "Sinusitis"
+        ],
+        "Korean": [
+            "긴장성 두통",
+            "편두통",
+            "부비동염"
+        ],
+        "Vietnamese": [
+            "Đau đầu căng thẳng",
+            "Đau nửa đầu",
+            "Viêm xoang"
+        ]
+    },
+    "SYM074": {
+        "Symptom": "Hearing problems",
+        "English": [
+            "Hearing Loss",
+            "Otitis Media",
+            "Earwax Buildup"
+        ],
+        "Korean": [
+            "청력 손실",
+            "중이염",
+            "귀지 막힘"
+        ],
+        "Vietnamese": [
+            "Mất thính lực",
+            "Viêm tai giữa",
+            "Tắc ráy tai"
+        ]
+    },
+    "SYM075": {
+        "Symptom": "Heat rash",
+        "English": [
+            "Miliaria",
+            "Contact Dermatitis",
+            "Allergic Reaction"
+        ],
+        "Korean": [
+            "땀띠",
+            "접촉성 피부염",
+            "알레르기 반응"
+        ],
+        "Vietnamese": [
+            "Rôm sảy",
+            "Viêm da tiếp xúc",
+            "Phản ứng dị ứng"
+        ]
+    },
+    "SYM076": {
+        "Symptom": "High temperature",
+        "English": [
+            "Flu",
+            "Pneumonia",
+            "COVID-19"
+        ],
+        "Korean": [
+            "독감",
+            "폐렴",
+            "코로나19"
+        ],
+        "Vietnamese": [
+            "Cúm",
+            "Viêm phổi",
+            "COVID-19"
+        ]
+    },
+    "SYM077": {
+        "Symptom": "Hives",
+        "English": [
+            "Allergic Reaction",
+            "Autoimmune Urticaria",
+            "Infection"
+        ],
+        "Korean": [
+            "알레르기 반응",
+            "자가면역 두드러기",
+            "감염"
+        ],
+        "Vietnamese": [
+            "Phản ứng dị ứng",
+            "Mề đay tự miễn",
+            "Nhiễm trùng"
+        ]
+    },
+    "SYM078": {
+        "Symptom": "Incontinence",
+        "English": [
+            "Urge Incontinence",
+            "Overflow Incontinence",
+            "Urinary Tract Infection"
+        ],
+        "Korean": [
+            "절박성 요실금",
+            "일류성 요실금",
+            "요로감염"
+        ],
+        "Vietnamese": [
+            "Tiểu không kiểm soát do thôi thúc",
+            "Tiểu không kiểm soát do đầy bàng quang",
+            "Nhiễm trùng đường tiết niệu"
+        ]
+    },
+    "SYM079": {
+        "Symptom": "Infertility",
+        "English": [
+            "Polycystic Ovary Syndrome",
+            "Thyroid Disorder",
+            "Low Sperm Count"
+        ],
+        "Korean": [
+            "다낭성 난소 증후군",
+            "갑상선 질환",
+            "정자 수 감소"
+        ],
+        "Vietnamese": [
+            "Hội chứng buồng trứng đa nang",
+            "Rối loạn tuyến giáp",
+            "Số lượng tinh trùng thấp"
+        ]
+    },
+    "SYM080": {
+        "Symptom": "Insect bite or sting",
+        "English": [
+            "Allergic Reaction",
+            "Skin Infection",
+            "Anaphylaxis"
+        ],
+        "Korean": [
+            "알레르기 반응",
+            "피부 감염",
+            "아나필락시스"
+        ],
+        "Vietnamese": [
+            "Phản ứng dị ứng",
+            "Nhiễm trùng da",
+            "Sốc phản vệ"
+        ]
+    },
+    "SYM081": {
+        "Symptom": "Insomnia",
+        "English": [
+            "Anxiety Disorder",
+            "Depression",
+            "Chronic Pain"
+        ],
+        "Korean": [
+            "불안 장애",
+            "우울증",
+            "만성 통증"
+        ],
+        "Vietnamese": [
+            "Rối loạn lo âu",
+            "Trầm cảm",
+            "Đau mãn tính"
+        ]
+    },
+    "SYM082": {
+        "Symptom": "Intrusive thoughts",
+        "English": [
+            "Obsessive Compulsive Disorder",
+            "PTSD",
+            "Anxiety Disorder"
+        ],
+        "Korean": [
+            "강박장애",
+            "외상 후 스트레스 장애",
+            "불안 장애"
+        ],
+        "Vietnamese": [
+            "Rối loạn ám ảnh cưỡng chế",
+            "Rối loạn stress sau sang chấn",
+            "Rối loạn lo âu"
+        ]
+    },
+    "SYM083": {
+        "Symptom": "Irregular periods",
+        "English": [
+            "Polycystic Ovary Syndrome",
+            "Thyroid Disorder",
+            "Perimenopause"
+        ],
+        "Korean": [
+            "다낭성 난소 증후군",
+            "갑상선 질환",
+            "폐경 전 증후군"
+        ],
+        "Vietnamese": [
+            "Hội chứng buồng trứng đa nang",
+            "Rối loạn tuyến giáp",
+            "Tiền mãn kinh"
+        ]
+    },
+    "SYM084": {
+        "Symptom": "Itchy anus",
+        "English": [
+            "Hemorrhoids",
+            "Pinworms",
+            "Contact Dermatitis"
+        ],
+        "Korean": [
+            "치질",
+            "요충감염",
+            "접촉성 피부염"
+        ],
+        "Vietnamese": [
+            "Bệnh trĩ",
+            "Giun kim",
+            "Viêm da tiếp xúc"
+        ]
+    },
+    "SYM085": {
+        "Symptom": "Itchy eyes",
+        "English": [
+            "Allergic Conjunctivitis",
+            "Dry Eye Syndrome",
+            "Blepharitis"
+        ],
+        "Korean": [
+            "알레르기성 결막염",
+            "안구건조증",
+            "안검염"
+        ],
+        "Vietnamese": [
+            "Viêm kết mạc dị ứng",
+            "Khô mắt",
+            "Viêm bờ mi"
+        ]
+    },
+    "SYM086": {
+        "Symptom": "Itchy groin",
+        "English": [
+            "Jock Itch (Tinea Cruris)",
+            "Contact Dermatitis",
+            "Pubic Lice"
+        ],
+        "Korean": [
+            "완선",
+            "접촉성 피부염",
+            "사면발이 감염"
+        ],
+        "Vietnamese": [
+            "Hắc lào bẹn",
+            "Viêm da tiếp xúc",
+            "Chấy rận vùng mu"
+        ]
+    },
+    "SYM087": {
+        "Symptom": "Itchy skin",
+        "English": [
+            "Eczema",
+            "Allergic Reaction",
+            "Psoriasis"
+        ],
+        "Korean": [
+            "습진",
+            "알레르기 반응",
+            "건선"
+        ],
+        "Vietnamese": [
+            "Chàm",
+            "Phản ứng dị ứng",
+            "Vảy nến"
+        ]
+    },
+    "SYM088": {
+        "Symptom": "Jellyfish sting",
+        "English": [
+            "Allergic Reaction",
+            "Skin Irritation",
+            "Anaphylaxis"
+        ],
+        "Korean": [
+            "알레르기 반응",
+            "피부 자극",
+            "아나필락시스"
+        ],
+        "Vietnamese": [
+            "Phản ứng dị ứng",
+            "Kích ứng da",
+            "Sốc phản vệ"
+        ]
+    },
+    "SYM089": {
+        "Symptom": "Joint pain",
+        "English": [
+            "Osteoarthritis",
+            "Rheumatoid Arthritis",
+            "Gout"
+        ],
+        "Korean": [
+            "골관절염",
+            "류마티스 관절염",
+            "통풍"
+        ],
+        "Vietnamese": [
+            "Thoái hóa khớp",
+            "Viêm khớp dạng thấp",
+            "Gút"
+        ]
+    },
+    "SYM090": {
+        "Symptom": "Knee pain",
+        "English": [
+            "Osteoarthritis",
+            "Meniscus Tear",
+            "Ligament Injury"
+        ],
+        "Korean": [
+            "골관절염",
+            "반월상 연골 파열",
+            "인대 손상"
+        ],
+        "Vietnamese": [
+            "Thoái hóa khớp",
+            "Rách sụn chêm",
+            "Tổn thương dây chằng"
+        ]
+    },
+    "SYM091": {
+        "Symptom": "Knee swelling",
+        "English": [
+            "Osteoarthritis",
+            "Bursitis",
+            "Ligament Injury"
+        ],
+        "Korean": [
+            "골관절염",
+            "윤활낭염",
+            "인대 손상"
+        ],
+        "Vietnamese": [
+            "Thoái hóa khớp",
+            "Viêm bao hoạt dịch",
+            "Tổn thương dây chằng"
+        ]
+    },
+    "SYM092": {
+        "Symptom": "Leg injury",
+        "English": [
+            "Fracture",
+            "Muscle Strain",
+            "Ligament Sprain"
+        ],
+        "Korean": [
+            "골절",
+            "근육 염좌",
+            "인대 염좌"
+        ],
+        "Vietnamese": [
+            "Gãy xương",
+            "Căng cơ",
+            "Trật dây chằng"
+        ]
+    },
+    "SYM093": {
+        "Symptom": "Leg pain",
+        "English": [
+            "Peripheral Artery Disease",
+            "Deep Vein Thrombosis",
+            "Sciatica"
+        ],
+        "Korean": [
+            "말초동맥질환",
+            "심부정맥 혈전증",
+            "좌골신경통"
+        ],
+        "Vietnamese": [
+            "Bệnh động mạch ngoại biên",
+            "Huyết khối tĩnh mạch sâu",
+            "Đau thần kinh tọa"
+        ]
+    },
+    "SYM094": {
+        "Symptom": "Lightheaded",
+        "English": [
+            "Dehydration",
+            "Low Blood Pressure",
+            "Anemia"
+        ],
+        "Korean": [
+            "탈수",
+            "저혈압",
+            "빈혈"
+        ],
+        "Vietnamese": [
+            "Mất nước",
+            "Huyết áp thấp",
+            "Thiếu máu"
+        ]
+    },
+    "SYM095": {
+        "Symptom": "Limb injury",
+        "English": [
+            "Fracture",
+            "Sprain",
+            "Contusion"
+        ],
+        "Korean": [
+            "골절",
+            "염좌",
+            "타박상"
+        ],
+        "Vietnamese": [
+            "Gãy xương",
+            "Trật khớp",
+            "Bầm tím"
+        ]
+    },
+    "SYM096": {
+        "Symptom": "Lips turning blue",
+        "English": [
+            "Hypoxia",
+            "Congenital Heart Disease",
+            "Pneumonia"
+        ],
+        "Korean": [
+            "저산소증",
+            "선천성 심장 질환",
+            "폐렴"
+        ],
+        "Vietnamese": [
+            "Thiếu oxy",
+            "Bệnh tim bẩm sinh",
+            "Viêm phổi"
+        ]
+    },
+    "SYM097": {
+        "Symptom": "Lock jaw, or difficulty opening mouth",
+        "English": [
+            "Tetanus",
+            "Temporomandibular Joint Disorder",
+            "Muscle Spasm"
+        ],
+        "Korean": [
+            "파상풍",
+            "턱관절 장애",
+            "근육 경련"
+        ],
+        "Vietnamese": [
+            "Uốn ván",
+            "Rối loạn khớp thái dương hàm",
+            "Chuột rút cơ"
+        ]
+    },
+    "SYM098": {
+        "Symptom": "Loose stool (poo)",
+        "English": [
+            "Gastroenteritis",
+            "Food Poisoning",
+            "Irritable Bowel Syndrome"
+        ],
+        "Korean": [
+            "위장염",
+            "식중독",
+            "과민성 대장 증후군"
+        ],
+        "Vietnamese": [
+            "Viêm dạ dày ruột",
+            "Ngộ độc thực phẩm",
+            "Hội chứng ruột kích thích"
+        ]
+    },
+    "SYM099": {
+        "Symptom": "Low libido",
+        "English": [
+            "Depression",
+            "Hormonal Imbalance",
+            "Chronic Illness"
+        ],
+        "Korean": [
+            "우울증",
+            "호르몬 불균형",
+            "만성 질환"
+        ],
+        "Vietnamese": [
+            "Trầm cảm",
+            "Mất cân bằng nội tiết",
+            "Bệnh mãn tính"
+        ]
+    },
+    "SYM100": {
+        "Symptom": "Lower back pain",
+        "English": [
+            "Herniated Disc",
+            "Muscle Strain",
+            "Sciatica"
+        ],
+        "Korean": [
+            "디스크 탈출증",
+            "근육 염좌",
+            "좌골신경통"
+        ],
+        "Vietnamese": [
+            "Thoát vị đĩa đệm",
+            "Căng cơ",
+            "Đau thần kinh tọa"
+        ]
+    },
+    "SYM101": {
+        "Symptom": "Lump in the armpit",
+        "English": [
+            "Lymphadenopathy",
+            "Abscess",
+            "Lipoma"
+        ],
+        "Korean": [
+            "림프절병증",
+            "농양",
+            "지방종"
+        ],
+        "Vietnamese": [
+            "Sưng hạch bạch huyết",
+            "Áp xe",
+            "U mỡ"
+        ]
+    },
+    "SYM102": {
+        "Symptom": "Lump in the breast",
+        "English": [
+            "Fibroadenoma",
+            "Breast Cyst",
+            "Breast Cancer"
+        ],
+        "Korean": [
+            "섬유선종",
+            "유방 낭종",
+            "유방암"
+        ],
+        "Vietnamese": [
+            "U xơ tuyến vú",
+            "Nang tuyến vú",
+            "Ung thư vú"
+        ]
+    },
+    "SYM103": {
+        "Symptom": "Miscarriage",
+        "English": [
+            "Spontaneous Abortion",
+            "Ectopic Pregnancy",
+            "Molar Pregnancy"
+        ],
+        "Korean": [
+            "자연 유산",
+            "자궁외 임신",
+            "포상 기태"
+        ],
+        "Vietnamese": [
+            "Sẩy thai",
+            "Mang thai ngoài tử cung",
+            "Chửa trứng"
+        ]
+    },
+    "SYM104": {
+        "Symptom": "Mouth ulcer",
+        "English": [
+            "Aphthous Stomatitis",
+            "Herpes Simplex",
+            "Vitamin Deficiency"
+        ],
+        "Korean": [
+            "아프타성 구내염",
+            "단순 포진",
+            "비타민 결핍"
+        ],
+        "Vietnamese": [
+            "Viêm loét miệng",
+            "Herpes simplex",
+            "Thiếu vitamin"
+        ]
+    },
+    "SYM105": {
+        "Symptom": "Muscle cramps",
+        "English": [
+            "Electrolyte Imbalance",
+            "Dehydration",
+            "Peripheral Neuropathy"
+        ],
+        "Korean": [
+            "전해질 불균형",
+            "탈수",
+            "말초신경병증"
+        ],
+        "Vietnamese": [
+            "Mất cân bằng điện giải",
+            "Mất nước",
+            "Bệnh thần kinh ngoại biên"
+        ]
+    },
+    "SYM106": {
+        "Symptom": "Nausea",
+        "English": [
+            "Gastroenteritis",
+            "Pregnancy",
+            "Motion Sickness"
+        ],
+        "Korean": [
+            "위장염",
+            "임신",
+            "멀미"
+        ],
+        "Vietnamese": [
+            "Viêm dạ dày ruột",
+            "Mang thai",
+            "Say tàu xe"
+        ]
+    },
+    "SYM107": {
+        "Symptom": "Neck pain",
+        "English": [
+            "Cervical Spondylosis",
+            "Muscle Strain",
+            "Meningitis"
+        ],
+        "Korean": [
+            "경추증",
+            "근육 염좌",
+            "수막염"
+        ],
+        "Vietnamese": [
+            "Thoái hóa đốt sống cổ",
+            "Căng cơ",
+            "Viêm màng não"
+        ]
+    },
+    "SYM108": {
+        "Symptom": "Neck stiffness",
+        "English": [
+            "Meningitis",
+            "Muscle Spasm",
+            "Cervical Spondylosis"
+        ],
+        "Korean": [
+            "수막염",
+            "근육 경련",
+            "경추증"
+        ],
+        "Vietnamese": [
+            "Viêm màng não",
+            "Chuột rút cơ",
+            "Thoái hóa đốt sống cổ"
+        ]
+    },
+    "SYM109": {
+        "Symptom": "Night sweats",
+        "English": [
+            "Tuberculosis",
+            "Lymphoma",
+            "Menopause"
+        ],
+        "Korean": [
+            "결핵",
+            "림프종",
+            "폐경"
+        ],
+        "Vietnamese": [
+            "Lao phổi",
+            "U lympho",
+            "Mãn kinh"
+        ]
+    },
+    "SYM110": {
+        "Symptom": "Nosebleed",
+        "English": [
+            "Nasal Trauma",
+            "Hypertension",
+            "Deviated septum"
+        ],
+        "Korean": [
+            "외상",
+            "고혈압",
+            "비중격 만곡"
+        ],
+        "Vietnamese": [
+            "Chấn thương mũi",
+            "Tăng huyết áp",
+            "Vẹo vách ngăn mũi"
+        ]
+    },
+    "SYM111": {
+        "Symptom": "Numbness",
+        "English": [
+            "Peripheral Neuropathy",
+            "Stroke",
+            "Pinched Nerve"
+        ],
+        "Korean": [
+            "말초신경병증",
+            "뇌졸중",
+            "신경 압박"
+        ],
+        "Vietnamese": [
+            "Bệnh thần kinh ngoại biên",
+            "Đột quỵ",
+            "Chèn ép dây thần kinh"
+        ]
+    },
+    "SYM112": {
+        "Symptom": "Pain during sex",
+        "English": [
+            "Endometriosis",
+            "Vaginitis",
+            "Pelvic Inflammatory Disease"
+        ],
+        "Korean": [
+            "자궁내막증",
+            "질염",
+            "골반염"
+        ],
+        "Vietnamese": [
+            "Lạc nội mạc tử cung",
+            "Viêm âm đạo",
+            "Viêm vùng chậu"
+        ]
+    },
+    "SYM113": {
+        "Symptom": "Pain when urinating",
+        "English": [
+            "Urinary Tract Infection",
+            "Sexually Transmitted Infection",
+            "Kidney Stones"
+        ],
+        "Korean": [
+            "요로감염",
+            "성병",
+            "신장 결석"
+        ],
+        "Vietnamese": [
+            "Nhiễm trùng đường tiểu",
+            "Bệnh lây qua đường tình dục",
+            "Sỏi thận"
+        ]
+    },
+    "SYM114": {
+        "Symptom": "Pale skin",
+        "English": [
+            "Anemia",
+            "Shock",
+            "Hypothyroidism"
+        ],
+        "Korean": [
+            "빈혈",
+            "쇼크",
+            "갑상선기능저하증"
+        ],
+        "Vietnamese": [
+            "Thiếu máu",
+            "Sốc",
+            "Suy giáp"
+        ]
+    },
+    "SYM115": {
+        "Symptom": "Palpitations at rest",
+        "English": [
+            "Anxiety",
+            "Arrhythmia",
+            "Hyperthyroidism"
+        ],
+        "Korean": [
+            "불안",
+            "부정맥",
+            "갑상선기능항진증"
+        ],
+        "Vietnamese": [
+            "Lo âu",
+            "Rối loạn nhịp tim",
+            "Cường giáp"
+        ]
+    },
+    "SYM116": {
+        "Symptom": "Panic attacks",
+        "English": [
+            "Panic Disorder",
+            "Anxiety Disorder",
+            "Hyperthyroidism"
+        ],
+        "Korean": [
+            "공황장애",
+            "불안장애",
+            "갑상선기능항진증"
+        ],
+        "Vietnamese": [
+            "Rối loạn hoảng sợ",
+            "Rối loạn lo âu",
+            "Cường giáp"
+        ]
+    },
+    "SYM117": {
+        "Symptom": "Period pain",
+        "English": [
+            "Dysmenorrhea",
+            "Endometriosis",
+            "Fibroids"
+        ],
+        "Korean": [
+            "생리통",
+            "자궁내막증",
+            "자궁근종"
+        ],
+        "Vietnamese": [
+            "Đau bụng kinh",
+            "Lạc nội mạc tử cung",
+            "U xơ tử cung"
+        ]
+    },
+    "SYM118": {
+        "Symptom": "Pins and needles",
+        "English": [
+            "Peripheral Neuropathy",
+            "Carpal Tunnel Syndrome",
+            "Multiple Sclerosis"
+        ],
+        "Korean": [
+            "말초신경병증",
+            "손목터널증후군",
+            "다발성경화증"
+        ],
+        "Vietnamese": [
+            "Bệnh thần kinh ngoại biên",
+            "Hội chứng ống cổ tay",
+            "Xơ cứng rải rác"
+        ]
+    },
+    "SYM119": {
+        "Symptom": "Chemical Exposure",
+        "English": [
+            "Poisoning",
+            "Food Poisoning",
+            "Drug Overdose"
+        ],
+        "Korean": [
+            "중독",
+            "식중독",
+            "약물 과다복용"
+        ],
+        "Vietnamese": [
+            "Ngộ độc",
+            "Ngộ độc thực phẩm",
+            "Quá liều thuốc"
+        ]
+    },
+    "SYM120": {
+        "Symptom": "Pregnancy",
+        "English": [
+            "Pregnancy",
+            "Ectopic Pregnancy",
+            "Molar Pregnancy"
+        ],
+        "Korean": [
+            "정상 임신",
+            "자궁외 임신",
+            "포상기태"
+        ],
+        "Vietnamese": [
+            "Mang thai bình thường",
+            "Mang thai ngoài tử cung",
+            "Chửa trứng"
+        ]
+    },
+    "SYM121": {
+        "Symptom": "Psoriasis (diagnosed)",
+        "English": [
+            "Psoriasis",
+            "Psoriatic Arthritis",
+            "Eczema"
+        ],
+        "Korean": [
+            "건선",
+            "건선성 관절염",
+            "습진"
+        ],
+        "Vietnamese": [
+            "Vảy nến",
+            "Viêm khớp vảy nến",
+            "Chàm"
+        ]
+    },
+    "SYM122": {
+        "Symptom": "Racing heart",
+        "English": [
+            "Arrhythmia",
+            "Anxiety Disorder",
+            "Hyperthyroidism"
+        ],
+        "Korean": [
+            "부정맥",
+            "불안 장애",
+            "갑상선기능항진증"
+        ],
+        "Vietnamese": [
+            "Rối loạn nhịp tim",
+            "Rối loạn lo âu",
+            "Cường giáp"
+        ]
+    },
+    "SYM123": {
+        "Symptom": "Rapid breathing",
+        "English": [
+            "Panic Attack",
+            "Respiratory Infection",
+            "Heart Failure"
+        ],
+        "Korean": [
+            "공황 발작",
+            "호흡기 감염",
+            "심부전"
+        ],
+        "Vietnamese": [
+            "Cơn hoảng loạn",
+            "Nhiễm trùng hô hấp",
+            "Suy tim"
+        ]
+    },
+    "SYM124": {
+        "Symptom": "Rapid heartbeat",
+        "English": [
+            "Arrhythmia",
+            "Anxiety",
+            "Hyperthyroidism"
+        ],
+        "Korean": [
+            "부정맥",
+            "불안",
+            "갑상선기능항진증"
+        ],
+        "Vietnamese": [
+            "Rối loạn nhịp tim",
+            "Lo âu",
+            "Cường giáp"
+        ]
+    },
+    "SYM125": {
+        "Symptom": "Rash",
+        "English": [
+            "Allergic Reaction",
+            "Eczema",
+            "Viral Exanthem"
+        ],
+        "Korean": [
+            "알레르기 반응",
+            "습진",
+            "바이러스 발진"
+        ],
+        "Vietnamese": [
+            "Phản ứng dị ứng",
+            "Chàm",
+            "Phát ban do virus"
+        ]
+    },
+    "SYM126": {
+        "Symptom": "Rectal bleeding",
+        "English": [
+            "Hemorrhoids",
+            "Anal Fissure",
+            "Colorectal Cancer"
+        ],
+        "Korean": [
+            "치질",
+            "항문 열상",
+            "대장암"
+        ],
+        "Vietnamese": [
+            "Bệnh trĩ",
+            "Nứt hậu môn",
+            "Ung thư đại trực tràng"
+        ]
+    },
+    "SYM127": {
+        "Symptom": "Red eye",
+        "English": [
+            "Conjunctivitis",
+            "Blepharitis",
+            "Uveitis"
+        ],
+        "Korean": [
+            "결막염",
+            "안검염",
+            "포도막염"
+        ],
+        "Vietnamese": [
+            "Viêm kết mạc",
+            "Viêm bờ mi",
+            "Viêm màng mạch"
+        ]
+    },
+    "SYM128": {
+        "Symptom": "Red tongue",
+        "English": [
+            "Scarlet Fever",
+            "Vitamin Deficiency",
+            "Geographic Tongue"
+        ],
+        "Korean": [
+            "성홍열",
+            "비타민 결핍",
+            "지리설"
+        ],
+        "Vietnamese": [
+            "Sốt đỏ tươi",
+            "Thiếu vitamin",
+            "Lưỡi bản đồ"
+        ]
+    },
+    "SYM129": {
+        "Symptom": "Redness",
+        "English": [
+            "Allergic Reaction",
+            "Dermatitis",
+            "Infection"
+        ],
+        "Korean": [
+            "알레르기 반응",
+            "피부염",
+            "감염"
+        ],
+        "Vietnamese": [
+            "Phản ứng dị ứng",
+            "Viêm da",
+            "Nhiễm trùng"
+        ]
+    },
+    "SYM130": {
+        "Symptom": "Runny nose",
+        "English": [
+            "Common Cold",
+            "Allergic Rhinitis",
+            "Sinusitis"
+        ],
+        "Korean": [
+            "감기",
+            "알레르기 비염",
+            "부비동염"
+        ],
+        "Vietnamese": [
+            "Cảm lạnh",
+            "Viêm mũi dị ứng",
+            "Viêm xoang"
+        ]
+    },
+    "SYM131": {
+        "Symptom": "Scalds",
+        "English": [
+            "Thermal Burn",
+            "Infection",
+            "Blistering Skin Disorder"
+        ],
+        "Korean": [
+            "열화상",
+            "감염",
+            "물집 피부 질환"
+        ],
+        "Vietnamese": [
+            "Bỏng nhiệt",
+            "Nhiễm trùng",
+            "Bệnh da có mụn nước"
+        ]
+    },
+    "SYM132": {
+        "Symptom": "Sciatica",
+        "English": [
+            "Herniated Disc",
+            "Spinal Stenosis",
+            "Piriformis Syndrome"
+        ],
+        "Korean": [
+            "디스크 탈출증",
+            "척추관 협착증",
+            "이상근 증후군"
+        ],
+        "Vietnamese": [
+            "Thoát vị đĩa đệm",
+            "Hẹp ống sống",
+            "Hội chứng cơ hình lê"
+        ]
+    },
+    "SYM133": {
+        "Symptom": "Seizure",
+        "English": [
+            "Epilepsy",
+            "Febrile Seizure",
+            "Brain Tumor"
+        ],
+        "Korean": [
+            "간질",
+            "열성 경련",
+            "뇌종양"
+        ],
+        "Vietnamese": [
+            "Động kinh",
+            "Cơn co giật do sốt",
+            "U não"
+        ]
+    },
+    "SYM134": {
+        "Symptom": "Shallow breathing",
+        "English": [
+            "Pneumonia",
+            "Anxiety",
+            "Chronic Obstructive Pulmonary Disease"
+        ],
+        "Korean": [
+            "폐렴",
+            "불안",
+            "만성 폐쇄성 폐질환"
+        ],
+        "Vietnamese": [
+            "Viêm phổi",
+            "Lo âu",
+            "Bệnh phổi tắc nghẽn mãn tính"
+        ]
+    },
+    "SYM135": {
+        "Symptom": "Shortness of breath",
+        "English": [
+            "Asthma",
+            "Heart Failure",
+            "Pneumonia"
+        ],
+        "Korean": [
+            "천식",
+            "심부전",
+            "폐렴"
+        ],
+        "Vietnamese": [
+            "Hen suyễn",
+            "Suy tim",
+            "Viêm phổi"
+        ]
+    },
+    "SYM136": {
+        "Symptom": "Sinus pain",
+        "English": [
+            "Sinusitis",
+            "Allergic Rhinitis",
+            "Upper Respiratory Infection"
+        ],
+        "Korean": [
+            "부비동염",
+            "알레르기 비염",
+            "상기도 감염"
+        ],
+        "Vietnamese": [
+            "Viêm xoang",
+            "Viêm mũi dị ứng",
+            "Nhiễm trùng đường hô hấp trên"
+        ]
+    },
+    "SYM137": {
+        "Symptom": "Skin changes",
+        "English": [
+            "Eczema",
+            "Psoriasis",
+            "Skin Cancer"
+        ],
+        "Korean": [
+            "습진",
+            "건선",
+            "피부암"
+        ],
+        "Vietnamese": [
+            "Chàm",
+            "Vảy nến",
+            "Ung thư da"
+        ]
+    },
+    "SYM138": {
+        "Symptom": "Skin ulcer",
+        "English": [
+            "Venous Ulcer",
+            "Diabetes",
+            "Infection"
+        ],
+        "Korean": [
+            "정맥 궤양",
+            "당뇨병",
+            "감염"
+        ],
+        "Vietnamese": [
+            "Loét tĩnh mạch",
+            "Tiểu đường",
+            "Nhiễm trùng"
+        ]
+    },
+    "SYM139": {
+        "Symptom": "Small pupils",
+        "English": [
+            "Opioid Overdose",
+            "Horner's Syndrome",
+            "Pontine Stroke"
+        ],
+        "Korean": [
+            "오피오이드 과다복용",
+            "호너 증후군",
+            "뇌교 뇌졸중"
+        ],
+        "Vietnamese": [
+            "Quá liều opioid",
+            "Hội chứng Horner",
+            "Đột quỵ thân cầu"
+        ]
+    },
+    "SYM140": {
+        "Symptom": "Smelly urine",
+        "English": [
+            "Urinary Tract Infection",
+            "Dehydration",
+            "Diabetes"
+        ],
+        "Korean": [
+            "요로감염",
+            "탈수",
+            "당뇨병"
+        ],
+        "Vietnamese": [
+            "Nhiễm trùng đường tiết niệu",
+            "Mất nước",
+            "Tiểu đường"
+        ]
+    },
+    "SYM141": {
+        "Symptom": "Snake bite",
+        "English": [
+            "Envenomation",
+            "Allergic Reaction",
+            "Infection"
+        ],
+        "Korean": [
+            "독사 교상",
+            "알레르기 반응",
+            "감염"
+        ],
+        "Vietnamese": [
+            "Rắn cắn có độc",
+            "Phản ứng dị ứng",
+            "Nhiễm trùng"
+        ]
+    },
+    "SYM142": {
+        "Symptom": "Sneezing",
+        "English": [
+            "Common Cold",
+            "Allergic Rhinitis",
+            "Flu"
+        ],
+        "Korean": [
+            "감기",
+            "알레르기 비염",
+            "독감"
+        ],
+        "Vietnamese": [
+            "Cảm lạnh",
+            "Viêm mũi dị ứng",
+            "Cúm"
+        ]
+    },
+    "SYM143": {
+        "Symptom": "Sore throat",
+        "English": [
+            "Pharyngitis",
+            "Tonsillitis",
+            "Flu"
+        ],
+        "Korean": [
+            "인두염",
+            "편도염",
+            "독감"
+        ],
+        "Vietnamese": [
+            "Viêm họng",
+            "Viêm amidan",
+            "Cúm"
+        ]
+    },
+    "SYM144": {
+        "Symptom": "Speech delay",
+        "English": [
+            "Autism Spectrum Disorder",
+            "Hearing Loss",
+            "Learning Disabilities"
+        ],
+        "Korean": [
+            "자폐 스펙트럼 장애",
+            "청력 손실",
+            "학습 장애애"
+        ],
+        "Vietnamese": [
+            "Rối loạn phổ tự kỷ",
+            "Mất thính lực",
+            "Rối loạn học tập"
+        ]
+    },
+    "SYM145": {
+        "Symptom": "Sprained ankle",
+        "English": [
+            "Ankle Sprain",
+            "Ligament Injury",
+            "Fracture"
+        ],
+        "Korean": [
+            "발목 염좌",
+            "인대 손상",
+            "골절"
+        ],
+        "Vietnamese": [
+            "Trật mắt cá",
+            "Tổn thương dây chằng",
+            "Gãy xương"
+        ]
+    },
+    "SYM146": {
+        "Symptom": "Stomach cramp",
+        "English": [
+            "Gastroenteritis",
+            "Irritable Bowel Syndrome",
+            "Food Poisoning"
+        ],
+        "Korean": [
+            "위장염",
+            "과민성 대장 증후군",
+            "식중독"
+        ],
+        "Vietnamese": [
+            "Viêm dạ dày ruột",
+            "Hội chứng ruột kích thích",
+            "Ngộ độc thực phẩm"
+        ]
+    },
+    "SYM147": {
+        "Symptom": "Stomach pain",
+        "English": [
+            "Gastritis",
+            "Peptic Ulcer",
+            "Appendicitis"
+        ],
+        "Korean": [
+            "위염",
+            "소화성 궤양",
+            "충수염"
+        ],
+        "Vietnamese": [
+            "Viêm dạ dày",
+            "Loét dạ dày tá tràng",
+            "Viêm ruột thừa"
+        ]
+    },
+    "SYM148": {
+        "Symptom": "Stress",
+        "English": [
+            "Anxiety Disorder",
+            "Depression",
+            "Insomnia"
+        ],
+        "Korean": [
+            "불안 장애",
+            "우울증",
+            "불면증"
+        ],
+        "Vietnamese": [
+            "Rối loạn lo âu",
+            "Trầm cảm",
+            "Mất ngủ"
+        ]
+    },
+    "SYM149": {
+        "Symptom": "Sudden speech difficulties",
+        "English": [
+            "Stroke",
+            "Transient Ischemic Attack",
+            "Brain Tumor"
+        ],
+        "Korean": [
+            "뇌졸중",
+            "일과성 허혈 발작",
+            "뇌종양"
+        ],
+        "Vietnamese": [
+            "Đột quỵ",
+            "Cơn thiếu máu não thoáng qua",
+            "U não"
+        ]
+    },
+    "SYM150": {
+        "Symptom": "Suicidal thoughts",
+        "English": [
+            "Depression",
+            "Bipolar Disorder",
+            "Borderline Personality Disorder"
+        ],
+        "Korean": [
+            "우울증",
+            "조울증",
+            "경계성 인격장애"
+        ],
+        "Vietnamese": [
+            "Trầm cảm",
+            "Rối loạn lưỡng cực",
+            "Rối loạn nhân cách ranh giới"
+        ]
+    },
+    "SYM151": {
+        "Symptom": "Sunburn",
+        "English": [
+            "Sunburn",
+            "Photosensitivity",
+            "Heat Rash"
+        ],
+        "Korean": [
+            "햇볕 화상",
+            "광과민성",
+            "땀띠"
+        ],
+        "Vietnamese": [
+            "Bỏng nắng",
+            "Nhạy cảm ánh sáng",
+            "Rôm sảy"
+        ]
+    },
+    "SYM152": {
+        "Symptom": "Sunken fontanelle",
+        "English": [
+            "Dehydration",
+            "Malnutrition",
+            "Severe Illness in Infants"
+        ],
+        "Korean": [
+            "탈수",
+            "영양실조",
+            "영아 중증 질환"
+        ],
+        "Vietnamese": [
+            "Mất nước",
+            "Suy dinh dưỡng",
+            "Bệnh nặng ở trẻ sơ sinh"
+        ]
+    },
+    "SYM153": {
+        "Symptom": "Swallowed object",
+        "English": [
+            "Foreign Body Ingestion",
+            "Airway Obstruction",
+            "Esophageal Injury"
+        ],
+        "Korean": [
+            "이물질 삼킴",
+            "기도 폐쇄",
+            "식도 손상"
+        ],
+        "Vietnamese": [
+            "Nuốt dị vật",
+            "Tắc nghẽn đường thở",
+            "Tổn thương thực quản"
+        ]
+    },
+    "SYM154": {
+        "Symptom": "Swelling",
+        "English": [
+            "Injury",
+            "Infection",
+            "Allergic Reaction"
+        ],
+        "Korean": [
+            "외상",
+            "감염",
+            "알레르기 반응"
+        ],
+        "Vietnamese": [
+            "Chấn thương",
+            "Nhiễm trùng",
+            "Phản ứng dị ứng"
+        ]
+    },
+    "SYM155": {
+        "Symptom": "Swollen gum",
+        "English": [
+            "Gingivitis",
+            "Periodontitis",
+            "Dental Abscess"
+        ],
+        "Korean": [
+            "잇몸염",
+            "치주염",
+            "치과 농양"
+        ],
+        "Vietnamese": [
+            "Viêm nướu",
+            "Viêm nha chu",
+            "Áp xe răng"
+        ]
+    },
+    "SYM156": {
+        "Symptom": "Swollen knee",
+        "English": [
+            "Arthritis",
+            "Bursitis",
+            "Ligament Injury"
+        ],
+        "Korean": [
+            "관절염",
+            "윤활낭염",
+            "인대 손상"
+        ],
+        "Vietnamese": [
+            "Viêm khớp",
+            "Viêm bao hoạt dịch",
+            "Tổn thương dây chằng"
+        ]
+    },
+    "SYM157": {
+        "Symptom": "Thoughts about self harm",
+        "English": [
+            "Depression",
+            "Borderline Personality Disorder",
+            "PTSD"
+        ],
+        "Korean": [
+            "우울증",
+            "경계성 인격장애",
+            "외상 후 스트레스 장애"
+        ],
+        "Vietnamese": [
+            "Trầm cảm",
+            "Rối loạn nhân cách ranh giới",
+            "Rối loạn stress sau sang chấn"
+        ]
+    },
+    "SYM158": {
+        "Symptom": "Tight chest",
+        "English": [
+            "Asthma",
+            "Anxiety",
+            "Angina"
+        ],
+        "Korean": [
+            "천식",
+            "불안",
+            "협심증"
+        ],
+        "Vietnamese": [
+            "Hen suyễn",
+            "Lo âu",
+            "Đau thắt ngực"
+        ]
+    },
+    "SYM159": {
+        "Symptom": "Tired",
+        "English": [
+            "Anemia",
+            "Chronic Fatigue Syndrome",
+            "Depression"
+        ],
+        "Korean": [
+            "빈혈",
+            "만성 피로 증후군",
+            "우울증"
+        ],
+        "Vietnamese": [
+            "Thiếu máu",
+            "Hội chứng mệt mỏi mãn tính",
+            "Trầm cảm"
+        ]
+    },
+    "SYM160": {
+        "Symptom": "Tremors",
+        "English": [
+            "Parkinson's Disease",
+            "Anxiety",
+            "Essential Tremor"
+        ],
+        "Korean": [
+            "파킨슨병",
+            "불안",
+            "본태성 떨림"
+        ],
+        "Vietnamese": [
+            "Bệnh Parkinson",
+            "Lo âu",
+            "Run vô căn"
+        ]
+    },
+    "SYM161": {
+        "Symptom": "Tummy pain",
+        "English": [
+            "Gastroenteritis",
+            "Appendicitis",
+            "Irritable Bowel Syndrome"
+        ],
+        "Korean": [
+            "위장염",
+            "충수염",
+            "과민성 대장 증후군"
+        ],
+        "Vietnamese": [
+            "Viêm dạ dày ruột",
+            "Viêm ruột thừa",
+            "Hội chứng ruột kích thích"
+        ]
+    },
+    "SYM162": {
+        "Symptom": "Unable to lift arms",
+        "English": [
+            "Stroke",
+            "Nerve Injury",
+            "Rotator Cuff Tear"
+        ],
+        "Korean": [
+            "뇌졸중",
+            "신경 손상",
+            "회전근개 파열"
+        ],
+        "Vietnamese": [
+            "Đột quỵ",
+            "Tổn thương dây thần kinh",
+            "Rách cơ xoay vai"
+        ]
+    },
+    "SYM163": {
+        "Symptom": "Unconscious",
+        "English": [
+            "Head Injury",
+            "Stroke",
+            "Drug Overdose"
+        ],
+        "Korean": [
+            "머리 외상",
+            "뇌졸중",
+            "약물 과다복용"
+        ],
+        "Vietnamese": [
+            "Chấn thương đầu",
+            "Đột quỵ",
+            "Quá liều thuốc"
+        ]
+    },
+    "SYM164": {
+        "Symptom": "Unsteadiness",
+        "English": [
+            "Vertigo",
+            "Stroke",
+            "Parkinson's Disease"
+        ],
+        "Korean": [
+            "현기증",
+            "뇌졸중",
+            "파킨슨병"
+        ],
+        "Vietnamese": [
+            "Chóng mặt",
+            "Đột quỵ",
+            "Bệnh Parkinson"
+        ]
+    },
+    "SYM165": {
+        "Symptom": "Vaginal bleeding between periods",
+        "English": [
+            "Hormonal Imbalance",
+            "Fibroids",
+            "Endometrial Cancer"
+        ],
+        "Korean": [
+            "호르몬 불균형",
+            "자궁근종",
+            "자궁내막암"
+        ],
+        "Vietnamese": [
+            "Mất cân bằng nội tiết",
+            "U xơ tử cung",
+            "Ung thư nội mạc tử cung"
+        ]
+    },
+    "SYM166": {
+        "Symptom": "Vaginal discharge (abnormal)",
+        "English": [
+            "Bacterial Vaginosis",
+            "Yeast Infection",
+            "Sexually Transmitted Infection"
+        ],
+        "Korean": [
+            "세균성 질염",
+            "칸디다 질염",
+            "성병"
+        ],
+        "Vietnamese": [
+            "Viêm âm đạo do vi khuẩn",
+            "Nhiễm nấm âm đạo",
+            "Bệnh lây qua đường tình dục"
+        ]
+    },
+    "SYM167": {
+        "Symptom": "Vaginal itching",
+        "English": [
+            "Yeast Infection",
+            "Allergic Reaction",
+            "Bacterial Vaginosis"
+        ],
+        "Korean": [
+            "칸디다 질염",
+            "알레르기 반응",
+            "세균성 질염"
+        ],
+        "Vietnamese": [
+            "Nhiễm nấm âm đạo",
+            "Phản ứng dị ứng",
+            "Viêm âm đạo do vi khuẩn"
+        ]
+    },
+    "SYM168": {
+        "Symptom": "Vertigo",
+        "English": [
+            "Benign Paroxysmal Positional Vertigo",
+            "Vestibular Neuritis",
+            "Meniere's Disease"
+        ],
+        "Korean": [
+            "양성 발작성 체위성 현훈",
+            "전정 신경염",
+            "메니에르병"
+        ],
+        "Vietnamese": [
+            "Chóng mặt tư thế lành tính",
+            "Viêm dây thần kinh tiền đình",
+            "Bệnh Meniere"
+        ]
+    },
+    "SYM169": {
+        "Symptom": "Vision problems",
+        "English": [
+            "Refractive Errors",
+            "Cataract",
+            "Glaucoma"
+        ],
+        "Korean": [
+            "굴절 이상",
+            "백내장",
+            "녹내장"
+        ],
+        "Vietnamese": [
+            "Tật khúc xạ",
+            "Đục thủy tinh thể",
+            "Tăng nhãn áp"
+        ]
+    },
+    "SYM170": {
+        "Symptom": "Vomiting",
+        "English": [
+            "Gastroenteritis",
+            "Food Poisoning",
+            "Pregnancy"
+        ],
+        "Korean": [
+            "위장염",
+            "식중독",
+            "임신"
+        ],
+        "Vietnamese": [
+            "Viêm dạ dày ruột",
+            "Ngộ độc thực phẩm",
+            "Mang thai"
+        ]
+    },
+    "SYM171": {
+        "Symptom": "Weeing less than usual",
+        "English": [
+            "Dehydration",
+            "Kidney Failure",
+            "Urinary Tract Obstruction"
+        ],
+        "Korean": [
+            "탈수",
+            "신부전",
+            "요로 폐쇄"
+        ],
+        "Vietnamese": [
+            "Mất nước",
+            "Suy thận",
+            "Tắc nghẽn đường tiết niệu"
+        ]
+    },
+    "SYM172": {
+        "Symptom": "Weeing more than usual",
+        "English": [
+            "Diabetes",
+            "Urinary Tract Infection",
+            "Diuretic Use"
+        ],
+        "Korean": [
+            "당뇨병",
+            "요로감염",
+            "이뇨제 사용"
+        ],
+        "Vietnamese": [
+            "Tiểu đường",
+            "Nhiễm trùng đường tiểu",
+            "Dùng thuốc lợi tiểu"
+        ]
+    },
+    "SYM173": {
+        "Symptom": "Weight gain",
+        "English": [
+            "Hypothyroidism",
+            "Cushing's Syndrome",
+            "Polycystic Ovary Syndrome"
+        ],
+        "Korean": [
+            "갑상선기능저하증",
+            "쿠싱증후군",
+            "다낭성 난소 증후군"
+        ],
+        "Vietnamese": [
+            "Suy giáp",
+            "Hội chứng Cushing",
+            "Hội chứng buồng trứng đa nang"
+        ]
+    },
+    "SYM174": {
+        "Symptom": "Weight loss",
+        "English": [
+            "Hyperthyroidism",
+            "Cancer",
+            "Malabsorption"
+        ],
+        "Korean": [
+            "갑상선기능항진증",
+            "암",
+            "흡수 장애"
+        ],
+        "Vietnamese": [
+            "Cường giáp",
+            "Ung thư",
+            "Rối loạn hấp thu"
+        ]
+    },
+    "SYM175": {
+        "Symptom": "Wheezing",
+        "English": [
+            "Asthma",
+            "Bronchitis",
+            "COPD"
+        ],
+        "Korean": [
+            "천식",
+            "기관지염",
+            "만성 폐쇄성 폐질환"
+        ],
+        "Vietnamese": [
+            "Hen suyễn",
+            "Viêm phế quản",
+            "Bệnh phổi tắc nghẽn mãn tính"
+        ]
+    },
+    "SYM176": {
+        "Symptom": "Wound",
+        "English": [
+            "Laceration",
+            "Contusion",
+            "Infection"
+        ],
+        "Korean": [
+            "열상",
+            "타박상",
+            "감염"
+        ],
+        "Vietnamese": [
+            "Vết rách",
+            "Vết bầm",
+            "Nhiễm trùng"
+        ]
+    },
+    "SYM177": {
+        "Symptom": "Wound oozing",
+        "English": [
+            "Infection",
+            "Abscess",
+            "Cellulitis"
+        ],
+        "Korean": [
+            "감염",
+            "농양",
+            "봉와직염"
+        ],
+        "Vietnamese": [
+            "Nhiễm trùng",
+            "Áp xe",
+            "Viêm mô tế bào"
+        ]
+    },
+    "SYM178": {
+        "Symptom": "Wrist pain",
+        "English": [
+            "Carpal Tunnel Syndrome",
+            "Arthritis",
+            "Tendonitis"
+        ],
+        "Korean": [
+            "손목터널증후군",
+            "관절염",
+            "힘줄염"
+        ],
+        "Vietnamese": [
+            "Hội chứng ống cổ tay",
+            "Viêm khớp",
+            "Viêm gân"
+        ]
+    }
+}

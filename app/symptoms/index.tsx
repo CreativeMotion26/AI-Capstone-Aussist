@@ -1,50 +1,53 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { router, useNavigation } from 'expo-router';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
+// app/symptoms/index.tsx
 
-const symptoms = [
-  'Symptom 1',
-  'Symptom 2',
-  'Symptom 3',
-  'Symptom 4',
-  'Symptom 5',
-  'Symptom 6',
-  'Symptom 7',
-  'Symptom 8',
-  'Symptom 9',
-  'Symptom 10',
-];
+import React, { useState } from 'react';
+import {
+  View,
+  Text,
+  TextInput,
+  ScrollView,
+  TouchableOpacity,
+  StyleSheet,
+  SafeAreaView
+} from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+import { router } from 'expo-router';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { symptoms } from '@/app/lib/DataProvider';
 
 export default function SymptomChecker() {
   const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
   const [searchText, setSearchText] = useState('');
   const insets = useSafeAreaInsets();
-  const navigation = useNavigation();
 
-  const toggleSymptom = (symptom: string) => {
-    if (selectedSymptoms.includes(symptom)) {
-      setSelectedSymptoms(selectedSymptoms.filter(s => s !== symptom));
-    } else {
-      setSelectedSymptoms([...selectedSymptoms, symptom]);
-    }
+  // toggle a symptom in the selected list, but allow max 4 selections
+  const toggleSymptom = (symptomCode: string) => {
+    setSelectedSymptoms(prev => {
+      if (prev.includes(symptomCode)) {
+        // if already selected, always allow deselect
+        return prev.filter(c => c !== symptomCode);
+      }
+      // if not selected and already 4, ignore
+      if (prev.length >= 4) {
+        return prev;
+      }
+      // otherwise add
+      return [...prev, symptomCode];
+    });
   };
 
+  // navigate to result page with selected codes
   const goToResult = () => {
-    if (selectedSymptoms.length > 0) {
+    if (selectedSymptoms.length) {
       router.push({
         pathname: '/symptoms/result',
+        params: { selected: selectedSymptoms.join(',') },
       });
     }
   };
 
-  const clearSearch = () => {
-    setSearchText('');
-  };
-
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, { paddingTop: insets.top }]}>
       {/* Search Bar */}
       <View style={styles.searchContainer}>
         <Ionicons name="search" size={20} color="#999" style={styles.searchIcon} />
@@ -55,54 +58,51 @@ export default function SymptomChecker() {
           onChangeText={setSearchText}
         />
         {searchText.length > 0 && (
-          <TouchableOpacity onPress={clearSearch}>
+          <TouchableOpacity onPress={() => setSearchText('')}>
             <Ionicons name="close-circle" size={20} color="#999" />
           </TouchableOpacity>
         )}
       </View>
 
-      {/* Emergency Call Section */}
-      <View style={styles.emergencyCard}>
-        <Text style={styles.emergencyTitle}>Emergency Call</Text>
-        <Text style={styles.emergencyDescription}>
-          For immediate assistance in an emergency, please use the numbers below:
-        </Text>
-        <Text style={styles.emergencySubtitle}>Fire: 000</Text>
-        <Text style={styles.emergencySubtitle}>Ambulance: 000</Text>
-        <Text style={styles.emergencySubtitle}>Police: 000</Text>
-        <Text style={styles.emergencyNote}>
-          In a critical situation, these contacts provide the quickest route to safety and emergency services. Ensure your phone is location-enabled to allow for swift assistance.
-        </Text>
-      </View>
-
       {/* Symptoms List */}
       <ScrollView style={styles.symptomsContainer}>
         {symptoms
-          .filter(symptom => symptom.toLowerCase().includes(searchText.toLowerCase()))
-          .map((symptom, index) => (
-            <TouchableOpacity
-              key={index}
-              style={styles.symptomItem}
-              onPress={() => toggleSymptom(symptom)}
-            >
-              <Text style={styles.symptomText}>{symptom}</Text>
-              <View style={[
-                styles.checkCircle,
-                selectedSymptoms.includes(symptom) && styles.checkCircleSelected
-              ]}>
-                {selectedSymptoms.includes(symptom) && (
-                  <View style={styles.checkInner} />
-                )}
-              </View>
-            </TouchableOpacity>
-          ))}
+          .filter(symptom =>
+            symptom.english.toLowerCase().includes(searchText.toLowerCase())
+          )
+          .map(symptom => {
+            const isSelected = selectedSymptoms.includes(symptom.code);
+            const isDisabled = !isSelected && selectedSymptoms.length >= 4;
+            return (
+              <TouchableOpacity
+                key={symptom.code}
+                onPress={() => toggleSymptom(symptom.code)}
+                disabled={isDisabled}
+                style={[
+                  styles.symptomItem,
+                  isSelected && styles.symptomItemSelected,
+                  isDisabled && styles.symptomItemDisabled
+                ]}
+              >
+                <Text style={styles.symptomText}>{symptom.english}</Text>
+                <View
+                  style={[
+                    styles.checkCircle,
+                    isSelected && styles.checkCircleSelected,
+                  ]}
+                >
+                  {isSelected && <View style={styles.checkInner} />}
+                </View>
+              </TouchableOpacity>
+            );
+          })}
       </ScrollView>
 
       {/* Result Button */}
-      <TouchableOpacity 
+      <TouchableOpacity
         style={[
           styles.resultButton,
-          selectedSymptoms.length === 0 && styles.resultButtonDisabled
+          selectedSymptoms.length === 0 && styles.resultButtonDisabled,
         ]}
         onPress={goToResult}
         disabled={selectedSymptoms.length === 0}
@@ -114,27 +114,7 @@ export default function SymptomChecker() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-  },
-  header: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    paddingVertical: 12,
-    borderBottomWidth: 1,
-    borderBottomColor: '#E5E7EB',
-  },
-  backButton: {
-    padding: 4,
-  },
-  headerTitle: {
-    fontSize: 18,
-    fontWeight: '600',
-    color: '#333',
-  },
+  container: { flex: 1, backgroundColor: 'white' },
   searchContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -146,47 +126,10 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#E5E7EB',
   },
-  searchIcon: {
-    marginRight: 8,
-  },
-  searchInput: {
-    flex: 1,
-    height: 40,
-    fontSize: 16,
-    color: '#333',
-  },
-  emergencyCard: {
-    margin: 16,
-    padding: 16,
-    backgroundColor: '#90CAF9',
-    borderRadius: 12,
-  },
-  emergencyTitle: {
-    fontSize: 18,
-    fontWeight: 'bold',
-    color: 'white',
-    marginBottom: 8,
-  },
-  emergencyDescription: {
-    fontSize: 14,
-    color: 'white',
-    marginBottom: 12,
-  },
-  emergencySubtitle: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: 'white',
-    marginBottom: 4,
-  },
-  emergencyNote: {
-    fontSize: 13,
-    color: 'white',
-    marginTop: 8,
-  },
-  symptomsContainer: {
-    flex: 1,
-    marginHorizontal: 16,
-  },
+  searchIcon: { marginRight: 8 },
+  searchInput: { flex: 1, height: 40, fontSize: 16, color: '#333' },
+
+  symptomsContainer: { flex: 1, marginHorizontal: 16 },
   symptomItem: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -195,10 +138,13 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: '#E5E7EB',
   },
-  symptomText: {
-    fontSize: 16,
-    color: '#333',
+  symptomItemSelected: {
+    backgroundColor: '#E0F7FA', // highlight selected
   },
+  symptomItemDisabled: {
+    opacity: 0.5,             // dim disabled
+  },
+  symptomText: { fontSize: 16, color: '#333' },
   checkCircle: {
     width: 22,
     height: 22,
@@ -208,15 +154,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  checkCircleSelected: {
-    borderColor: '#4CAF50',
-  },
-  checkInner: {
-    width: 12,
-    height: 12,
-    borderRadius: 6,
-    backgroundColor: '#4CAF50',
-  },
+  checkCircleSelected: { borderColor: '#4CAF50' },
+  checkInner: { width: 12, height: 12, borderRadius: 6, backgroundColor: '#4CAF50' },
+
   resultButton: {
     margin: 16,
     padding: 14,
@@ -224,12 +164,6 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     alignItems: 'center',
   },
-  resultButtonDisabled: {
-    backgroundColor: '#9CA3AF',
-  },
-  resultButtonText: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: 'white',
-  },
-}); 
+  resultButtonDisabled: { backgroundColor: '#9CA3AF' },
+  resultButtonText: { fontSize: 16, fontWeight: '600', color: 'white' },
+});

@@ -1,137 +1,125 @@
-import * as React from 'react';
-import FontAwesome from '@expo/vector-icons/FontAwesome';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
+// app/_layout.tsx
+
+import 'react-native-reanimated';  // 반드시 최상단에서 import
+import React, { useState, useEffect } from 'react';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect, useState } from 'react';
-import 'react-native-reanimated';
-import { useColorScheme, Animated, View, StyleSheet } from 'react-native';
-import CustomSplash from './components/CustomSplash';
-import { TranslationProvider } from '../app/context/TranslationContext'; 
+import { useFonts } from 'expo-font';
+import { TranslationProvider } from './_context/TranslationContext';
+import { Ionicons } from '@expo/vector-icons';
+import * as Crypto from 'expo-crypto';
+import { FavouriteProvider } from './_context/FavouriteContext';
 
-export {
-  // Catch any errors thrown by the Layout component.
-  ErrorBoundary,
-} from 'expo-router';
-
-export const unstable_settings = {
-  // Ensure that reloading on `/modal` keeps a back button present.
-  initialRouteName: '(tabs)',
-};
-
-// Prevent the splash screen from auto-hiding before asset loading is complete.
-SplashScreen.preventAutoHideAsync();
-
-export default function RootLayout() {
-  const [loaded, error] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
-    ...FontAwesome.font,
-  });
-  const [splashFinished, setSplashFinished] = useState(false);
-  const fadeAnim = React.useRef(new Animated.Value(0)).current;
-
-  // Expo Router uses Error Boundaries to catch errors in the navigation tree.
-  useEffect(() => {
-    if (error) throw error;
-  }, [error]);
-
-  useEffect(() => {
-    // Hide the native splash screen when fonts are loaded
-    if (loaded) {
-      SplashScreen.hideAsync();
-    }
-  }, [loaded]);
-
-  // Pre-load the main content with 0 opacity
-  useEffect(() => {
-    if (splashFinished) {
-      // Fade in the main content
-      Animated.timing(fadeAnim, {
-        toValue: 1,
-        duration: 150,
-        useNativeDriver: true,
-      }).start();
-    }
-  }, [splashFinished, fadeAnim]);
-
-  // Handle splash screen finish with a smooth transition
-  const handleSplashFinish = () => {
-    // Add a delay before showing the main content
-    setTimeout(() => {
-      setSplashFinished(true);
-    }, 100); // 1.5 seconds delay
-  };
-
-  if (!loaded) {
-    return null;
-  }
-
-  return (
-    <TranslationProvider>
-      <View style={styles.container}>
-        {!splashFinished && <CustomSplash onFinish={handleSplashFinish} />}
-        
-        <Animated.View 
-          style={[
-            styles.mainContent,
-            { 
-              opacity: fadeAnim,
-              // Keep it mounted but invisible before splash is finished
-              // This prevents the black flash
-              display: splashFinished ? 'flex' : 'flex',
-              zIndex: splashFinished ? 1 : 0,
-            }
-          ]}
-        >
-          <Stack>
-            {splashFinished && (
-              <Stack.Screen 
-                name="index" 
-                options={{ 
-                  headerShown: false,
-                  presentation: 'modal',
-                  animation: 'fade'
-                }} 
-              />
-            )}
-            <Stack.Screen name="onboarding" options={{ headerShown: false }} />
-            <Stack.Screen 
-              name="(tabs)" 
-              options={{ 
-                headerShown: false
-              }} 
-            />
-          </Stack>
-        </Animated.View>
-      </View>
-    </TranslationProvider>
-  );
+// webcrypto polyfill
+if (typeof global.crypto === 'undefined') {
+  global.crypto = {} as any;
+}
+if (typeof global.crypto.getRandomValues === 'undefined') {
+  global.crypto.getRandomValues = Crypto.getRandomValues as any;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  mainContent: {
-    flex: 1,
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-  }
-});
+export { ErrorBoundary } from 'expo-router';
 
-function RootLayoutNav() {
-  const colorScheme = useColorScheme();
+export const unstable_settings = {
+  initialRouteName: 'index',
+};
+
+// 라우팅 타입 정의
+type RouteNames = 
+  | 'screens/home/index'
+  | 'screens/banking/index'
+  | 'screens/housing/index'
+  | 'screens/legal/index'
+  | 'screens/english/index'
+  | 'screens/jobs/index'
+  | 'screens/favourite/index'
+  | 'screens/emergency/index'
+  | 'screens/profile/index'
+  | 'screens/chatbot/index'
+  | 'screens/location/enable-location'
+  | 'screens/hospital/index'
+  | 'screens/transport/index'
+  | 'screens/transport/1/index'
+  | 'screens/transport/2/index'
+  | 'screens/transport/2/fares/index'
+  | 'screens/transport/2/manage/index'
+  | 'screens/transport/3/index'
+  | 'screens/transport/4/index'
+  | 'screens/healthcare/index'
+  | 'screens/symptoms/index'
+  | '_components/WebTranslate';
+
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList {
+      [key: string]: RouteNames;
+    }
+  }
+}
+
+// 라우팅 타입 확장
+declare module 'expo-router' {
+  type RouteNames = 
+    | 'screens/home/index'
+    | 'screens/banking/index'
+    | 'screens/housing/index'
+    | 'screens/legal/index'
+    | 'screens/english/index'
+    | 'screens/jobs/index'
+    | 'screens/favourite/index'
+    | 'screens/emergency/index'
+    | 'screens/profile/index'
+    | 'screens/chatbot/index'
+    | 'screens/location/enable-location'
+    | 'screens/hospital/index'
+    | 'screens/transport/index'
+    | 'screens/transport/1/index'
+    | 'screens/transport/2/index'
+    | 'screens/transport/2/fares/index'
+    | 'screens/transport/2/manage/index'
+    | 'screens/transport/3/index'
+    | 'screens/transport/4/index'
+    | 'screens/healthcare/index'
+    | 'screens/symptoms/index'
+    | '_components/WebTranslate';
+}
+
+export default function RootLayout() {
+  const [fontsLoaded] = useFonts({ ...Ionicons.font });
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-      </Stack>
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaProvider>
+        <TranslationProvider>
+          <FavouriteProvider>
+            <Stack screenOptions={{ headerShown: false }}>
+              <Stack.Screen name="screens/home/index" />
+              <Stack.Screen name="screens/banking/index" />
+              <Stack.Screen name="screens/housing/index" />
+              <Stack.Screen name="screens/legal/index" />
+              <Stack.Screen name="screens/english/index" />
+              <Stack.Screen name="screens/jobs/index" />
+              <Stack.Screen name="screens/favourite/index" />
+              <Stack.Screen name="screens/emergency/index" />
+              <Stack.Screen name="screens/profile/index" />
+              <Stack.Screen name="screens/chatbot/index" />
+              <Stack.Screen name="screens/location/enable-location" />
+              <Stack.Screen name="screens/hospital/index" />
+              <Stack.Screen name="screens/transport/index" />
+              <Stack.Screen name="screens/transport/1/index" />
+              <Stack.Screen name="screens/transport/2/index" />
+              <Stack.Screen name="screens/transport/2/fares/index" />
+              <Stack.Screen name="screens/transport/2/manage/index" />
+              <Stack.Screen name="screens/transport/3/index" />
+              <Stack.Screen name="screens/transport/4/index" />
+              <Stack.Screen name="screens/healthcare/index" />
+              <Stack.Screen name="screens/symptoms/index" />
+              <Stack.Screen name="_components/WebTranslate" />
+            </Stack>
+          </FavouriteProvider>
+        </TranslationProvider>
+      </SafeAreaProvider>
+    </GestureHandlerRootView>
   );
 }

@@ -15,8 +15,6 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.json",
-    "global.d.ts",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts"
+    "global.d.ts"
   ]
 }

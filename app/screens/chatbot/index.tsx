@@ -410,7 +410,7 @@ export default function ChatbotPage() {
       <StatusBar barStyle="light-content" />
 
       <View style={{ paddingTop: insets.top + 10, paddingBottom: 16, paddingHorizontal: 16, backgroundColor: theme.colors.primary }}>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>Aussist Chatbot</Text>
+        <TText style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>Aussist Chatbot</TText>
         <TText style={{ fontSize: 16, color: 'white' }}>Ask anything about living in Australia</TText>
       </View>
 

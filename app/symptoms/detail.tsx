@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react';
 import {
   View,
-  Text,
   ScrollView,
   TouchableOpacity,
   StyleSheet,
@@ -13,6 +12,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import { useTranslation } from '@/app/context/TranslationContext';
 import rawConditions from '@/assets/data/Conditions.json'; // import Conditions.json
+import TText from '../_components/TText';
 
 // Define the shape of each entry in the conditions JSON
 interface ConditionDetail {
@@ -36,29 +36,29 @@ export default function ConditionDetail() {
   // Read the "condition" param from the URL: ?condition=Asthma (the name)
   const { condition } = useLocalSearchParams<{ condition: string }>();
   const router = useRouter();
-  const { registerText, translatedTexts } = useTranslation();
-  const t = (key: string) => translatedTexts[key] || key;
+  //const { registerText, translatedTexts } = useTranslation();
+  //const t = (key: string) => translatedTexts[key] || key;
 
   // Lookup the detail entry by condition name
   const detailEntry = condition ? detailByName[condition] : undefined;
 
   // Register all strings for translation on mount
-  useEffect(() => {
-    registerText('Back');
-    registerText('Overview');
-    if (detailEntry) {
-      registerText(detailEntry.ConditionName);
-      registerText(detailEntry.ShortSummary);
-    } else {
-      registerText('Condition not found');
-    }
-  }, []);
+  // useEffect(() => {
+  //   registerText('Back');
+  //   registerText('Overview');
+  //   if (detailEntry) {
+  //     registerText(detailEntry.ConditionName);
+  //     registerText(detailEntry.ShortSummary);
+  //   } else {
+  //     registerText('Condition not found');
+  //   }
+  // }, []);
 
   // If we don't find the condition, show an error
   if (!detailEntry) {
     return (
       <SafeAreaView style={styles.container}>
-        <Text style={styles.errorText}>{t('Condition not found')}</Text>
+        <TText style={styles.errorText}>{('Condition not found')}</TText>
       </SafeAreaView>
     );
   }
@@ -73,19 +73,19 @@ export default function ConditionDetail() {
         >
           <Ionicons name="chevron-back" size={24} color="#333" />
         </TouchableOpacity>
-        <Text style={styles.headerTitle}>
-          {t(detailEntry.ConditionName)}
-        </Text>
+        <TText style={styles.headerTitle}>
+          {(detailEntry.ConditionName)}
+        </TText>
         <View style={{ width: 24 }} />
       </View>
 
       {/* Scrollable content */}
       <ScrollView contentContainerStyle={styles.contentContainer}>
         {/* Overview section */}
-        <Text style={styles.sectionTitle}>{t('Overview')}</Text>
-        <Text style={styles.description}>
-          {t(detailEntry.ShortSummary)}
-        </Text>
+        <TText style={styles.sectionTitle}>{('Overview')}</TText>
+        <TText style={styles.description}>
+          {(detailEntry.ShortSummary)}
+        </TText>
       </ScrollView>
     </SafeAreaView>
   );
@@ -136,3 +136,7 @@ const styles = StyleSheet.create({
     color: 'red'
   }
 });
+function registerText(ConditionName: string) {
+  throw new Error('Function not implemented.');
+}
+

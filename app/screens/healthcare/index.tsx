@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, ScrollView, TouchableOpacity, Image, StatusBar, Text } from 'react-native';
+import { View, ScrollView, TouchableOpacity, Image, StatusBar } from 'react-native';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { theme } from '../../_lib/theme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -264,9 +264,9 @@ export default function HealthcareScreen() {
 
       {/* Header */}
         <View style={{ paddingTop: insets.top + 10, paddingBottom: 16, paddingHorizontal: 16, backgroundColor: theme.colors.primary }}>
-          <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>
+          <TText style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>
             {translatedTexts["Find healthcare services and support"] || "Find healthcare services and support"}
-          </Text>
+          </TText>
           <TText style={{ fontSize: 16, color: 'white' }}>
             {translatedTexts["Resources to help you access healthcare in Australia"] || "Resources to help you access healthcare in Australia"}
           </TText>

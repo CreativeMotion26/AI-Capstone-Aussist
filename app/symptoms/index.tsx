@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import {
   View,
-  Text,
   TextInput,
   ScrollView,
   TouchableOpacity,
@@ -14,6 +13,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { symptoms } from '@/app/lib/DataProvider';
+import TText from '../_components/TText';
 
 export default function SymptomChecker() {
   const [selectedSymptoms, setSelectedSymptoms] = useState<string[]>([]);
@@ -84,7 +84,7 @@ export default function SymptomChecker() {
                   isDisabled && styles.symptomItemDisabled
                 ]}
               >
-                <Text style={styles.symptomText}>{symptom.english}</Text>
+                <TText style={styles.symptomText}>{symptom.english}</TText>
                 <View
                   style={[
                     styles.checkCircle,

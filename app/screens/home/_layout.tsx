@@ -1,9 +1,8 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
-import { theme } from '../lib/theme';
+import { theme } from '../../_lib/theme';
 import { Platform } from 'react-native';
-
 
 export default function TabLayout() {
   return (
@@ -48,20 +47,20 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="healthcare"
-        options={{
-          title: 'TSL',
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "medkit" : "medkit-outline"} size={24} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="translation"
+        name="chatbot"
         options={{
           title: 'AI Chatbot',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? "chatbubbles" : "chatbubbles-outline"} size={24} color={color} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="healthcare"
+        options={{
+          title: 'Healthcare',
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons name={focused ? "medkit" : "medkit-outline"} size={24} color={color} />
           ),
         }}
       />
@@ -74,15 +73,6 @@ export default function TabLayout() {
           ),
         }}
       />
-      {/* <Tabs.Screen
-        name="chatbot"
-        options={{
-          title: 'Chatbot',
-          tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? "chatbubbles" : "chatbubbles-outline"} size={24} color={color} />
-          ),
-        }}
-      /> */}
     </Tabs>
   );
-}
+} 

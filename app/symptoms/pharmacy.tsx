@@ -1,7 +1,7 @@
 import { View, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { router, useNavigation } from 'expo-router';
-import TText from '../components/TText';
+import TText from '../_components/TText';
 
 export default function FindPharmacy() {
   const navigation = useNavigation();

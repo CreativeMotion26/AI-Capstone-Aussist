@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { API_BASE } from '../lib/api';
-import TText from '../components/TText';
+import TText from '../_components/TText';  
 import { theme } from '../lib/theme';
 import { cn } from '../lib/utils';
 import { useRouter } from 'expo-router';
@@ -111,7 +111,7 @@ export default function TranslationChat() {
             [
               {
                 text: 'Go',
-                onPress: () => router.push(route),
+                onPress: () => router.push(route as any),
               },
               {
                 text: 'Stay Here',

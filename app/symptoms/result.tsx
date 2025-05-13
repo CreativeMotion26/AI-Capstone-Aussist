@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from 'react';
 import {
   View,
-  Text,
   ScrollView,
   TouchableOpacity,
   StyleSheet,
@@ -14,7 +13,7 @@ import { useLocalSearchParams } from 'expo-router';
 import { useTranslation } from '@/app/context/TranslationContext';
 import { conditionsMappings } from '@/app/lib/DataProvider';
 import rawConditions from '@/assets/data/Conditions.json';
-
+import TText from '../_components/TText';
 // Define the shape of each condition detail entry
 interface ConditionDetail {
   ConditionID: string;
@@ -37,18 +36,18 @@ export default function SymptomResult() {
   // Get selected symptom codes from query params
   const { selected } = useLocalSearchParams<{ selected: string }>();
   // Pull out translation utilities and current language
-  const { registerText, translatedTexts, selectedLanguage } = useTranslation();
-  const t = (key: string) => translatedTexts[key] || key;
+  //const { registerText, translatedTexts, selectedLanguage } = useTranslation();
+  //const t = (key: string) => translatedTexts[key] || key;
 
   // URL to redirect to when a condition is tapped
   const [redirectUrl, setRedirectUrl] = useState<string | null>(null);
 
   // Register static text for translation
-  useEffect(() => {
-    registerText('Possible Conditions');
-    registerText('Common Conditions');
-    registerText('Redirecting to external site...');
-  }, []);
+  // useEffect(() => {
+  //   registerText('Possible Conditions');
+  //   registerText('Common Conditions');
+  //   registerText('Redirecting to external site...');
+  // }, []);
 
   // Handle external redirect after a short delay
   useEffect(() => {
@@ -65,9 +64,9 @@ export default function SymptomResult() {
   if (redirectUrl) {
     return (
       <SafeAreaView style={styles.redirectContainer}>
-        <Text style={styles.redirectText}>
-          {t('Redirecting to external site...')}
-        </Text>
+        <TText style={styles.redirectText}>
+          {('Redirecting to external site...')}
+        </TText>
       </SafeAreaView>
     );
   }
@@ -103,19 +102,19 @@ export default function SymptomResult() {
     const hyphenHost = host.split('.').join('-');
     // reassemble with translate.goog and attach query params
     const path = pathParts.join('/');
-    return `https://${hyphenHost}.translate.goog/${path}?_x_tr_sl=auto&_x_tr_tl=${selectedLanguage}&_x_tr_hl=${selectedLanguage}`;
+    return `https://${hyphenHost}.translate.goog/${path}?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en`;
   };
 
   return (
     <SafeAreaView style={styles.container}>
       {/* Page title */}
-      <Text style={styles.title}>{t('Possible Conditions')}</Text>
+      <TText style={styles.title}>{('Possible Conditions')}</TText>
 
-      <ScrollView style={styles.scrollView}>
+      <ScrollView style={styles.scrollView}>  
         {/* Top section: common overlapping conditions */}
         {overlappingConditions.length > 0 && (
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>{t('Common Conditions')}</Text>
+            <TText style={styles.sectionTitle}>{('Common Conditions')}</TText>
             {overlappingConditions.map((detail) => {
               const count = freqMap[detail.ConditionName] || 0;
               // Determine frequency-based style override
@@ -130,12 +129,12 @@ export default function SymptomResult() {
                   style={[styles.card, freqStyle]}
                   onPress={() => setRedirectUrl(makeTranslatedUrl(detail.Link))}
                 >
-                  <Text style={styles.conditionName}>
-                    {t(detail.ConditionName)}
-                  </Text>
-                  <Text style={styles.conditionSummary}>
-                    {t(detail.ShortSummary)}
-                  </Text>
+                  <TText style={styles.conditionName}>
+                    {(detail.ConditionName)}
+                  </TText>
+                  <TText style={styles.conditionSummary}>
+                    {(detail.ShortSummary)}
+                  </TText>
                 </TouchableOpacity>
               );
             })}
@@ -157,7 +156,7 @@ export default function SymptomResult() {
           return (
             <View key={symCode} style={styles.section}>
               {/* Symptom header */}
-              <Text style={styles.sectionTitle}>{t(mapping.symptom)}</Text>
+              <TText style={styles.sectionTitle}>{(mapping.symptom)}</TText>
 
               {/* Unique conditions list */}
               {uniqueConditions.map((name) => {
@@ -169,12 +168,12 @@ export default function SymptomResult() {
                     style={styles.card}
                     onPress={() => setRedirectUrl(makeTranslatedUrl(detail.Link))}
                   >
-                    <Text style={styles.conditionName}>
-                      {t(detail.ConditionName)}
-                    </Text>
-                    <Text style={styles.conditionSummary}>
-                      {t(detail.ShortSummary)}
-                    </Text>
+                    <TText style={styles.conditionName}>
+                      {(detail.ConditionName)}
+                    </TText>
+                    <TText style={styles.conditionSummary}>
+                      {(detail.ShortSummary)}
+                    </TText>
                   </TouchableOpacity>
                 );
               })}

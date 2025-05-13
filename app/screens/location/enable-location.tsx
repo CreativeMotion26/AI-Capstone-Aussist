@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image, SafeAreaView, Alert, Linking } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Image, SafeAreaView, Alert, Linking } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { theme } from '../../_lib/theme';
 import TText from '../../_components/TText';
@@ -48,8 +48,8 @@ export default function EnableLocationScreen() {
 
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
-      <View style={{ paddingTop: insets.top + 10, paddingBottom: 16, paddingHorizontal: 16, backgroundColor: theme.colors.primary }}>
-        <Text style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>{translatedTexts['Find Hospital'] || 'Find Hospital'}</Text>
+      <View style={{ paddingTop: 8, paddingBottom: 16, paddingHorizontal: 16, backgroundColor: theme.colors.primary }}>
+        <TText style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>{translatedTexts['Find Hospital'] || 'Find Hospital'}</TText>
         <TText style={{ fontSize: 16, color: 'white' }}>{translatedTexts['Locate nearby medical facilities'] || 'Locate nearby medical facilities'}</TText>
       </View>
 
@@ -67,13 +67,13 @@ export default function EnableLocationScreen() {
         <TouchableOpacity style={styles.denyButton} onPress={() => router.replace('/screens/home')}>
           <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
             <Ionicons name="close" size={25} color="#EF4444" style={{ marginRight: 4 }} />
-                <Text style={styles.denyButtonText}>{translatedTexts['Deny'] || 'Deny'}</Text>
+                <TText style={styles.denyButtonText}>{translatedTexts['Deny'] || 'Deny'}</TText>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={styles.allowButton} onPress={handleEnableLocation}>
           <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
             <Ionicons name="checkmark" size={25} color="#22C55E" style={{ marginRight: 4 }} />
-                <Text style={styles.allowButtonText}>{translatedTexts['Allow'] || 'Allow'}</Text>
+                <TText style={styles.allowButtonText}>{translatedTexts['Allow'] || 'Allow'}</TText>
               </View>
             </TouchableOpacity>
           </View>
@@ -91,7 +91,7 @@ export default function EnableLocationScreen() {
                 Linking.openURL(url);
               }}
             >
-              <Text style={styles.healthdirectButtonText}>{translatedTexts['Find your services on Healthdirect'] || 'Find your services on Healthdirect'}</Text>
+              <TText style={styles.healthdirectButtonText}>{translatedTexts['Find your services on Healthdirect'] || 'Find your services on Healthdirect'}</TText>
               <MaterialIcons name="open-in-new" size={20} color="#1976D2" style={{ marginLeft: 8 }} />
         </TouchableOpacity>
       </View>
@@ -107,6 +107,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
+    marginTop: 100,
   },
   content: {
     alignItems: 'center',

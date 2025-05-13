@@ -118,7 +118,7 @@ export default function EnglishScreen() {
 
   const handleCardPress = (url: string) => {
     if (url) {
-      router.push({pathname: '/_components/WebTranslate', params: {url: url}});
+      router.push({ pathname: '/_components/WebTranslate', params: { url } } as any);
     }
   };
 

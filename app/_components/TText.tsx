@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import { Text, TextProps } from 'react-native';
+import { Text } from 'react-native';
+import type { ComponentProps } from 'react';
 import { useTranslation } from '../_context/TranslationContext';
 
-type Props = TextProps & { children: string };
+type Props = ComponentProps<typeof Text> & { children: React.ReactNode };
 
 const TText: React.FC<Props> = ({ children, ...rest }) => {
   const { translatedTexts, registerText } = useTranslation();
@@ -13,7 +14,15 @@ const TText: React.FC<Props> = ({ children, ...rest }) => {
     }
   }, [children, registerText]);
 
-  return <Text {...rest}>{translatedTexts[children] ?? children}</Text>;
+  if (typeof children !== 'string') {
+    return <Text {...rest}>{children}</Text>;
+  }
+
+  return (
+    <Text {...rest}>
+      {translatedTexts[children] || children}
+    </Text>
+  );
 };
 
 export default TText;

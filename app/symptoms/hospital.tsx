@@ -2,7 +2,7 @@ import React from 'react';
 import { View, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from 'expo-router';
-import TText from '../components/TText';
+import TText from '../_components/TText';
 export default function FindHospital() {
   const navigation = useNavigation();
 

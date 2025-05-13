@@ -4,7 +4,6 @@ import React, { useEffect, useState, useMemo, useRef } from 'react';
 import {
     SafeAreaView,
     View,
-    Text,
     TextInput,
     SectionList,
     Pressable,
@@ -13,6 +12,7 @@ import {
 } from 'react-native';
 import { useTranslation } from '@/app/context/TranslationContext';
 import rawConditions from '@/assets/data/Conditions.json';
+import TText from '../_components/TText';
 
 interface ConditionDetail {
     ConditionID: string;
@@ -25,18 +25,18 @@ interface ConditionDetail {
 const Conditions: Record<string, ConditionDetail> = rawConditions as any;
 
 export default function DiseasesList() {
-    const { registerText, translatedTexts, selectedLanguage } = useTranslation();
-    const t = (key: string) => translatedTexts[key] || key;
+   // const { registerText, translatedTexts, selectedLanguage } = useTranslation();
+    //const t = (key: string) => translatedTexts[key] || key;
 
     const [searchText, setSearchText] = useState('');
     const [redirectUrl, setRedirectUrl] = useState<string | null>(null);
     const sectionListRef = useRef<SectionList<ConditionDetail>>(null);
 
-    useEffect(() => {
-        registerText('Search Conditions');
-        registerText('No conditions found');
-        registerText('Redirecting to external site...');
-    }, []);
+    // useEffect(() => {
+    //     registerText('Search Conditions');
+    //     registerText('No conditions found');
+    //     registerText('Redirecting to external site...');
+    // }, []);
 
     useEffect(() => {
         if (!redirectUrl) return;
@@ -80,16 +80,15 @@ export default function DiseasesList() {
         const [host, ...rest] = noProto.split('/');
         const hyphenHost = host.split('.').join('-');
         const path = rest.join('/');
-        return `https://${hyphenHost}.translate.goog/${path}` +
-            `?_x_tr_sl=auto&_x_tr_tl=${selectedLanguage}&_x_tr_hl=${selectedLanguage}`;
+        return `https://${hyphenHost}.translate.goog/${path}?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en`;
     };
 
     if (redirectUrl) {
         return (
             <SafeAreaView style={styles.splash}>
-                <Text style={styles.redirectText}>
-                    {t('Redirecting to external site...')}
-                </Text>
+                <TText style={styles.redirectText}>
+                    {('Redirecting to external site...')}
+                </TText>
             </SafeAreaView>
         );
     }
@@ -99,7 +98,7 @@ export default function DiseasesList() {
             {/* Search bar */}
             <View style={styles.searchWrap}>
                 <TextInput
-                    placeholder={t('Search Conditions')}
+                    placeholder={('Search Conditions')}
                     placeholderTextColor="#888"
                     style={styles.searchInput}
                     value={searchText}
@@ -114,7 +113,7 @@ export default function DiseasesList() {
                     sections={sections}
                     keyExtractor={item => item.ConditionID}
                     renderSectionHeader={({ section: { title } }) => (
-                        <Text style={styles.sectionHeader}>{title}</Text>
+                        <TText style={styles.sectionHeader}>{title}</TText>
                     )}
                     renderItem={({ item }) => (
                         <Pressable
@@ -125,20 +124,20 @@ export default function DiseasesList() {
                             onPress={() => setRedirectUrl(makeTranslatedUrl(item.Link))}
                         >
                             {({ pressed }) => (
-                                <Text style={[
+                                <TText style={[
                                     styles.itemText,
                                     pressed && styles.itemTextPressed
                                 ]}>
-                                    {t(item.ConditionName)}
-                                </Text>
+                                    {(item.ConditionName)}
+                                </TText>
                             )}
                         </Pressable>
                     )}
                     ListEmptyComponent={() => (
                         <View style={styles.empty}>
-                            <Text style={styles.emptyText}>
-                                {t('No conditions found')}
-                            </Text>
+                            <TText style={styles.emptyText}>
+                                {('No conditions found')}
+                            </TText>
                         </View>
                     )}
                     contentContainerStyle={{ paddingBottom: 40 }}

@@ -3,7 +3,7 @@ import { View, ScrollView, TouchableOpacity, StatusBar } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { theme } from '../lib/theme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import TText from '../components/TText';
+import TText from '../_components/TText';
 
 type IconName = React.ComponentProps<typeof Ionicons>['name'];
 

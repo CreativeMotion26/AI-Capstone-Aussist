@@ -6,7 +6,7 @@ import { useTranslation } from '../../_context/TranslationContext';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { theme } from '../../_lib/theme';
 import { useFavourites } from '../../_context/FavouriteContext';
-import TText from '../../components/TText';
+import TText from '../../_components/TText'; 
 
 export default function FavouritePage() {
   const { selectedLanguage, translateAll, registerText, translatedTexts } = useTranslation();

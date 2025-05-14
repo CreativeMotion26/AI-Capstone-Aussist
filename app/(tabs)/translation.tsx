@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { API_BASE } from '../lib/api';
-import TText from '../_components/TText';  
+import TText from '../_components/TText';
 import { theme } from '../lib/theme';
 import { cn } from '../lib/utils';
 import { useRouter } from 'expo-router';
@@ -91,35 +91,35 @@ export default function TranslationChat() {
       );
     } else if (action.type === 'NAVIGATE') {
       // Handle navigation within the app
-      const destination = action.content.match(/to\s+(\w+)\s+page/i)?.[1]?.toLowerCase();
-      if (destination) {
-        // Map destination to route
-        const routeMap: Record<string, string> = {
-          emergency: '/(tabs)/emergency',
-          healthcare: '/(tabs)/healthcare',
-          symptoms: '/symptoms/index',
-          home: '/(tabs)',
-          profile: '/(tabs)/profile',
-          translation: '/(tabs)/translation',
-        };
-        
-        const route = routeMap[destination];
-        if (route) {
-          Alert.alert(
-            'Navigate',
-            `Navigate to ${destination} page?`,
-            [
-              {
-                text: 'Go',
-                onPress: () => router.push(route as any),
-              },
-              {
-                text: 'Stay Here',
-                style: 'cancel',
-              },
-            ]
-          );
-        }
+      
+      // Extract the intended route path provided by the backend
+      const routeMatch = action.content.match(/\(Route: (.*?)\)$/);
+      const route = routeMatch ? routeMatch[1] : null;
+      
+      // Extract the destination name for the alert message (optional, improved extraction)
+      const destinationMatch = action.content.match(/to\s+(.*?)\s+page/i);
+      const destinationName = destinationMatch ? destinationMatch[1] : 'the requested page';
+
+      if (route) {
+        // Use the route directly from the backend action content
+        Alert.alert(
+          'Navigate',
+          `Navigate to ${destinationName}?`,
+          [
+            {
+              text: 'Go',
+              onPress: () => router.push(route as any), // Use the extracted route
+            },
+            {
+              text: 'Stay Here',
+              style: 'cancel',
+            },
+          ]
+        );
+      } else {
+        // Fallback if route couldn't be parsed (shouldn't normally happen)
+        console.error("Could not parse route from navigation action:", action.content);
+        Alert.alert('Navigation Error', 'Could not determine the navigation path.');
       }
     } else if (action.type === 'TRANSLATE') {
       // Handle translation

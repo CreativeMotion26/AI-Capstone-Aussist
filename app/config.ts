@@ -18,4 +18,4 @@ function defaultBase(): string {
   return 'http://localhost:8000';
 }
 
-export const API_BASE = "http://192.168.1.255:8001";
+export const API_BASE = "http://172.19.114.243:8001";

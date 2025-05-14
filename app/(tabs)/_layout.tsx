@@ -50,7 +50,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="healthcare"
         options={{
-          title: 'TSL',
+          title: 'TIS',
           tabBarIcon: ({ color, focused }) => (
             <Ionicons name={focused ? "medkit" : "medkit-outline"} size={24} color={color} />
           ),

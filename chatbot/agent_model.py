@@ -32,7 +32,7 @@ class EmergencyCallInput(BaseModel):
 
 class NavigateInput(BaseModel):
     """Input for navigation within the app."""
-    destination: str = Field(..., description="Destination page (e.g., 'emergency', 'healthcare', 'symptoms', 'home', 'profile', 'translation', 'hospital', 'banking', 'education')")
+    destination: str = Field(..., description="Destination page or section (e.g., 'emergency', 'healthcare', 'symptom checker', 'home', 'profile', 'translation', 'hospital', 'banking', 'jobs', 'transport', 'housing', 'legal', 'english', 'TIS', 'favourites')")
 
 class RetrieveMedicalInfoInput(BaseModel):
     """Input for medical information retrieval."""
@@ -88,7 +88,7 @@ class AgenticMedicalBot:
         self.navigate_tool = StructuredTool.from_function(
             func=lambda destination: self.navigate_to_page(destination),
             name="navigate_to_page",
-            description="Use to navigate to a specific page within the app. Identify the 'destination' page from the user's request (e.g., 'home', 'symptoms', 'hospital').",
+            description="Use to navigate to a specific page or section within the app. Identify the 'destination' from the user's request (e.g., 'home', 'symptoms', 'symptom checker', 'hospital', 'banking', 'jobs').",
             args_schema=NavigateInput
         )
         
@@ -162,37 +162,67 @@ class AgenticMedicalBot:
         """Initiates an emergency call based on the type of emergency."""
         emergency_numbers = {
             "medical": "000",
-            "fire": "000",
-            "police": "000",
-            "general": "000",
+            "fire": "000",      # Reverted to 000
+            "police": "000",     # Reverted to 000
+            "general": "000",     # Reverted to 000
             "non-urgent police": "131 444",
             "poisons": "13 11 26",
             "mental health": "13 11 14",
         }
-        
+
         number = emergency_numbers.get(emergency_type.lower(), "000")
         return f"[ACTION:CALL] Initiating call to emergency service: {number} for {emergency_type} emergency"
 
     def navigate_to_page(self, destination: str) -> str:
         """Navigates to a different page within the app."""
+        # Map common destinations to their likely routes based on file structure
         valid_destinations = {
+            # Tab destinations (Primary navigation from app/(tabs)/...)
+            "home": "/(tabs)",                 # Points to app/(tabs)/index.tsx
             "emergency": "/(tabs)/emergency",
             "healthcare": "/(tabs)/healthcare",
-            "symptoms": "/symptoms/index",
-            "symptom_detail": "/symptoms/detail",
-            "home": "/(tabs)",
             "profile": "/(tabs)/profile",
-            "translation": "/(tabs)/translation",
-            "hospital": "/symptoms/hospital",
-            "banking": "/(tabs)/banking",
-            "education": "/(tabs)/education"
+            "translation": "/(tabs)/translation", # Chatbot itself
+            "chatbot": "/(tabs)/translation",     # Alias
+
+            # Screens destinations (from app/screens/...)
+            "transport": "/screens/transport",    # Assumes /screens/transport/index.tsx
+            "banking": "/screens/banking",        # Assumes /screens/banking/index.tsx
+            "housing": "/screens/housing",        # Assumes /screens/housing/index.tsx
+            "legal": "/screens/legal",          # Assumes /screens/legal/index.tsx
+            "english": "/screens/english",        # Assumes /screens/english/index.tsx
+            "learn english": "/screens/english",    # Alias
+            "jobs": "/screens/jobs",           # Assumes /screens/jobs/index.tsx
+            "tis": "/screens/tis",            # Assumes /screens/tis/index.tsx
+            "favourite": "/screens/favourite",    # Assumes /screens/favourite/index.tsx
+            "favourites": "/screens/favourite",    # Alias
+            "hospital": "/screens/hospital",       # Assumes /screens/hospital/index.tsx
+            "find hospital": "/screens/hospital",   # Alias
+
+            # Top-level feature destinations (from app/...)
+            "symptoms": "/symptoms",             # Assumes /symptoms/index.tsx
+            "symptom checker": "/symptoms",       # Alias
+            # "symptom_detail": "/symptoms/detail", # If needed
+            # "symptom_result": "/symptoms/result", # If needed
+            "diseases": "/diseases",              # Assumes /diseases/index.tsx
+            "disease information": "/diseases",    # Alias
+
+            # Other specific screens
+            "enable location": "/screens/location/enable-location", # Specific path
         }
-        
-        dest_lower = destination.lower()
-        if dest_lower in valid_destinations:
-            return f"[ACTION:NAVIGATE] Navigating to {destination} page"
+
+        dest_lower = destination.lower().strip()
+        route = valid_destinations.get(dest_lower)
+
+        if route:
+            # Return the action with the *original* destination name for clarity
+            return f"[ACTION:NAVIGATE] Navigating to {destination} page (Route: {route})"
         else:
-            return f"Could not directly navigate to {destination}. Please specify a valid page like {', '.join(valid_destinations.keys())}."
+            # Provide better feedback if destination isn't found
+            available_pages = list(valid_destinations.keys())
+            # Filter out aliases for the suggestion list
+            unique_pages = sorted(list(set(k for k, v in valid_destinations.items() if not any(k != alias and v == valid_destinations.get(alias) for alias in valid_destinations))))
+            return f"I cannot navigate to '{destination}'. Available pages are: {', '.join(unique_pages)}."
 
     def retrieve_medical_info(self, query: str) -> str:
         """Retrieves medical information based on the query."""

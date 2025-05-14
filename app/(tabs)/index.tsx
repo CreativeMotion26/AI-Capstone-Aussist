@@ -180,7 +180,7 @@ export default function Home() {
                   onPress={() => {
                     if (searchText.trim()) {
                       router.push({
-                        pathname: '/screens/chatbot' as any,
+                        pathname: '/translation' as any,
                         params: { initialMessage: searchText.trim() }
                       });
                     }

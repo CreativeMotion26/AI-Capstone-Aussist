@@ -1,14 +1,20 @@
 import React from 'react';
-import { View, ScrollView, TouchableOpacity, StatusBar } from 'react-native';
+import { View, ScrollView, TouchableOpacity, StatusBar, Linking } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { theme } from '../lib/theme';
+import { theme } from '../_lib/theme';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import TText from '../_components/TText';
+import { useTranslation } from '../_context/TranslationContext';
 
 type IconName = React.ComponentProps<typeof Ionicons>['name'];
 
 export default function EmergencyPage() {
   const insets = useSafeAreaInsets();
+  const { translatedTexts } = useTranslation();
+
+  const handleCall = (number: string) => {
+    Linking.openURL(`tel:${number.replace(/\s/g, '')}`);
+  };
 
   const emergencyContacts = [
     { number: '000',         title: 'Emergency Services',  description: 'Police, Fire, Ambulance',                  icon: 'call'   as IconName },
@@ -30,8 +36,9 @@ export default function EmergencyPage() {
       <StatusBar barStyle="light-content" />
 
       {/* header */}
-      <View style={{ paddingTop: insets.top, paddingBottom: 16, paddingHorizontal: 16, backgroundColor: theme.colors.primary }}>
-        <TText style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>Emergency Services</TText>
+      <View style={{ paddingTop: insets.top + 10, paddingBottom: 16, paddingHorizontal: 16, backgroundColor: theme.colors.primary }}>
+        <TText style={{ fontSize: 24, fontWeight: 'bold', color: 'white' }}>{translatedTexts['Emergency Services'] || 'Emergency Services'}</TText>
+        <TText style={{ fontSize: 16, color: 'white' }}>{translatedTexts['Quick access to emergency contacts and nearby hospitals'] || 'Quick access to emergency contacts and nearby hospitals'}</TText>
       </View>
 
       <ScrollView>
@@ -40,37 +47,41 @@ export default function EmergencyPage() {
           {/* alert banner */}
           <View style={{
             backgroundColor: '#FEF2F2',
-            borderLeftWidth: 4,
+            borderLeftWidth: 8,
             borderLeftColor: '#DC2626',
             padding: 16,
             borderRadius: 6,
-            marginBottom: 24,
+            marginBottom: 12,
             flexDirection: 'row',
             alignItems: 'center'
           }}>
             <Ionicons name="warning" size={24} color="#DC2626" style={{ marginRight: 12 }} />
-            <View>
-              <TText style={{ fontWeight: 'bold', color: '#B91C1C', marginBottom: 4 }}>
-                In an emergency, call 000
+            <View style={{ flex: 1 }}>
+              <TText style={{ fontWeight: 'bold', color: '#B91C1C', marginBottom: 4, flexWrap: 'wrap' }}>
+                {translatedTexts['In an emergency, call 000'] || 'In an emergency, call 000'}
               </TText>
-              <TText style={{ color: '#B91C1C' }}>
-                For life-threatening situations, call Triple Zero immediately
+              <TText style={{ color: '#B91C1C', flexWrap: 'wrap' }}>
+                {translatedTexts['For life-threatening situations, call Triple Zero immediately'] || 'For life-threatening situations, call Triple Zero immediately'}
               </TText>
             </View>
           </View>
 
           {/* emergency contacts */}
           <View style={{ marginBottom: 24 }}>
-            <TText style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>Emergency Contacts</TText>
+            <TText style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>{translatedTexts['Emergency Contacts'] || 'Emergency Contacts'}</TText>
 
             {emergencyContacts.map((c, i) => (
-              <TouchableOpacity key={i} style={{
+              <View
+                key={i}
+                style={{
                 backgroundColor: 'white',
                 borderWidth: 1,
                 borderColor: '#E5E7EB',
                 borderRadius: 8,
+                  marginBottom: 12,
+                }}>
+                <View style={{
                 padding: 16,
-                marginBottom: 12,
                 flexDirection: 'row',
                 alignItems: 'center'
               }}>
@@ -86,61 +97,137 @@ export default function EmergencyPage() {
                   <Ionicons name={c.icon} size={20} color="#DC2626" />
                 </View>
                 <View style={{ flex: 1 }}>
-                  <TText style={{ fontWeight: 'bold', marginBottom: 4 }}>{c.title}</TText>
-                  <TText style={{ color: '#6B7280' }}>{c.description}</TText>
+                  <TText style={{ fontWeight: 'bold', marginBottom: 4 }}>{translatedTexts[c.title] || c.title}</TText>
+                  <TText style={{ color: '#6B7280' }}>{translatedTexts[c.description] || c.description}</TText>
                 </View>
-                <TText style={{ fontWeight: 'bold', fontSize: 16 }}>{c.number}</TText>
+                </View>
+                
+                <View style={{
+                  borderTopWidth: 1,
+                  borderTopColor: '#E5E7EB',
+                  padding: 12,
+                  backgroundColor: '#F9FAFB'
+                }}>
+                  <TouchableOpacity 
+                    onPress={() => handleCall(c.number)}
+                    style={{
+                      flexDirection: 'row',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}>
+                    <TText style={{ color: '#000000', marginRight: 8 }}>{translatedTexts['Click to call'] || 'Click to call'}</TText>
+                    <Ionicons name="call" size={20} color={theme.colors.primary} style={{ marginRight: 8 }} />
+                    <TText style={{ color: theme.colors.primary, fontWeight: 'bold' }}>{c.number}</TText>
               </TouchableOpacity>
+                </View>
+              </View>
             ))}
           </View>
 
-          {/* symptom checker */}
+          {/* Mental Health Helpline */}
           <View style={{ marginBottom: 24 }}>
-            <TText style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>Symptom Checker</TText>
-
-            <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
-              {symptomCategories.map((s, i) => (
-                <TouchableOpacity key={i} style={{ width: '30%', marginBottom: 16, alignItems: 'center' }}>
-                  <View style={{
-                    backgroundColor: '#F3F4F6',
-                    width: 56,
-                    height: 56,
-                    borderRadius: 28,
+            <TText style={{ fontSize: 18, fontWeight: 'bold', marginBottom: 12 }}>{translatedTexts['Mental Health Helpline'] || 'Mental Health Helpline'}</TText>
+            
+            {/* Lifeline */}
+            <View style={{
+              backgroundColor: 'white',
+              borderWidth: 1,
+              borderColor: '#E5E7EB',
+              borderRadius: 8,
+              marginBottom: 12,
+            }}>
+              <View style={{
+                padding: 16,
+                flexDirection: 'row',
+                alignItems: 'center'
+              }}>
+                <View style={{
+                  backgroundColor: '#FEE2E2',
+                  width: 42,
+                  height: 42,
+                  borderRadius: 21,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginRight: 16
+                }}>
+                  <Ionicons name="heart" size={20} color="#DC2626" />
+                </View>
+                <View style={{ flex: 1 }}>
+                  <TText style={{ fontWeight: 'bold', marginBottom: 4 }}>Lifeline</TText>
+                  <TText style={{ color: '#6B7280' }}>{translatedTexts['24/7 crisis support and suicide prevention'] || '24/7 crisis support and suicide prevention'}</TText>
+                </View>
+              </View>
+              
+              <View style={{
+                borderTopWidth: 1,
+                borderTopColor: '#E5E7EB',
+                padding: 12,
+                backgroundColor: '#F9FAFB'
+              }}>
+                <TouchableOpacity 
+                  onPress={() => handleCall('13 11 14')}
+                  style={{
+                    flexDirection: 'row',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: 8
+                    justifyContent: 'center'
                   }}>
-                    <Ionicons name={s.icon} size={24} color="#4B5563" />
-                  </View>
-                  <TText style={{ textAlign: 'center' }}>{s.name}</TText>
+                  <TText style={{ color: '#000000', marginRight: 8 }}>{translatedTexts['Click to call'] || 'Click to call'}</TText>
+                  <Ionicons name="call" size={20} color={theme.colors.primary} style={{ marginRight: 8 }} />
+                  <TText style={{ color: theme.colors.primary, fontWeight: 'bold' }}>13 11 14</TText>
                 </TouchableOpacity>
-              ))}
-            </View>
-          </View>
-
-          {/* find hospital */}
-          <TouchableOpacity style={{
-            backgroundColor: '#EFF6FF',
-            padding: 16,
-            borderRadius: 8,
-            marginBottom: 24
-          }}>
-            <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 12 }}>
-              <Ionicons name="location" size={24} color="#1D4ED8" style={{ marginRight: 12 }} />
-              <View>
-                <TText style={{ fontWeight: 'bold', marginBottom: 4 }}>Find nearest hospital</TText>
-                <TText style={{ color: '#6B7280' }}>Locate emergency rooms and hospitals near you</TText>
               </View>
             </View>
+
+            {/* Kids Helpline */}
             <View style={{
-              backgroundColor: '#2563EB',
-              alignItems: 'center',
-              padding: 12,
-              borderRadius: 6
+              backgroundColor: 'white',
+              borderWidth: 1,
+              borderColor: '#E5E7EB',
+              borderRadius: 8,
+              marginBottom: 12,
             }}>
-              <TText style={{ color: 'white', fontWeight: '500' }}>Find Hospital</TText>
+              <View style={{
+                padding: 16,
+                flexDirection: 'row',
+                alignItems: 'center'
+              }}>
+                <View style={{
+                  backgroundColor: '#FEE2E2',
+                  width: 42,
+                  height: 42,
+                  borderRadius: 21,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginRight: 16
+                }}>
+                  <Ionicons name="people" size={20} color="#DC2626" />
+                </View>
+                <View style={{ flex: 1 }}>
+                  <TText style={{ fontWeight: 'bold', marginBottom: 4 }}>Kids Helpline</TText>
+                  <TText style={{ color: '#6B7280' }}>{translatedTexts['24/7 counselling for young people'] || '24/7 counselling for young people'}</TText>
+                </View>
+              </View>
+              
+              <View style={{
+                borderTopWidth: 1,
+                borderTopColor: '#E5E7EB',
+                padding: 12,
+                backgroundColor: '#F9FAFB'
+              }}>
+                <TouchableOpacity 
+                  onPress={() => handleCall('1800 55 1800')}
+                  style={{
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    justifyContent: 'center'
+                  }}>
+                  <TText style={{ color: '#000000', marginRight: 8 }}>{translatedTexts['Click to call'] || 'Click to call'}</TText>
+                  <Ionicons name="call" size={20} color={theme.colors.primary} style={{ marginRight: 8 }} />
+                  <TText style={{ color: theme.colors.primary, fontWeight: 'bold' }}>1800 55 1800</TText>
+                </TouchableOpacity>
+              </View>
             </View>
-          </TouchableOpacity>
+          </View>
         </View>
       </ScrollView>
     </View>

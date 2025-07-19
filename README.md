@@ -63,4 +63,5 @@ The app uses a library of reusable UI components inspired by Shadcn UI:
 
 ## Styling
 
-The app uses Tailwind CSS for styling via NativeWind. Theme configuration can be found in `app/lib/theme.ts`.
+Access this link for viewing the demo and guide since the size of demo video is too big!
+https://drive.google.com/drive/folders/1RgBwmBP6o3-1CpreVCB5JIAxL_rSoNit?usp=sharing

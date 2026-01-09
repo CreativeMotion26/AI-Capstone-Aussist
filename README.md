@@ -1,7 +1,6 @@
 # Aussist App
 
-Aussist is a mobile application designed to help immigrants in Australia with essential services like healthcare, emergency contacts, translation, banking, and more.
-
+Aussist is a mobile application designed to help **immigrants in Australia** access essential services and information quickly and easily. Built AI Agent App with **Expo (React Native) & LLMs **, the app features useful tools such as emergency contacts, healthcare services, translation support, and more — all in one place.
 ## File Structure
 
 ```

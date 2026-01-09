@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
+import { View, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from 'expo-router';
-
+import TText from '../components/TText';
 export default function FindHospital() {
   const navigation = useNavigation();
 
@@ -12,11 +12,11 @@ export default function FindHospital() {
       <ScrollView style={styles.contentContainer}>
         <View style={styles.mapPlaceholder}>
           <Ionicons name="map-outline" size={60} color="#9CA3AF" />
-          <Text style={styles.mapText}>Map view showing nearby hospitals</Text>
+          <TText style={styles.mapText}>Map view showing nearby hospitals</TText>
         </View>
 
         <View style={styles.hospitalList}>
-          <Text style={styles.listTitle}>Nearby Hospitals</Text>
+          <TText style={styles.listTitle}>Nearby Hospitals</TText>
           
           {[1, 2, 3].map((i) => (
             <TouchableOpacity key={i} style={styles.hospitalItem}>
@@ -24,15 +24,15 @@ export default function FindHospital() {
                 <Ionicons name="medkit" size={24} color="#F87171" />
               </View>
               <View style={styles.hospitalDetails}>
-                <Text style={styles.hospitalName}>General Hospital {i}</Text>
-                <Text style={styles.hospitalAddress}>456 Hospital Street, Sydney</Text>
-                <Text style={styles.hospitalDistance}>2.{i} km away</Text>
+                <TText style={styles.hospitalName}>General Hospital {i}</TText>
+                <TText style={styles.hospitalAddress}>456 Hospital Street, Sydney</TText>
+                <TText style={styles.hospitalDistance}>2.{i} km away</TText>
                 <View style={styles.serviceContainer}>
                   <View style={styles.serviceTag}>
-                    <Text style={styles.serviceText}>Emergency</Text>
+                    <TText style={styles.serviceText}>Emergency</TText>
                   </View>
                   <View style={styles.serviceTag}>
-                    <Text style={styles.serviceText}>24/7</Text>
+                    <TText style={styles.serviceText}>24/7</TText>
                   </View>
                 </View>
               </View>
@@ -46,12 +46,12 @@ export default function FindHospital() {
                 <Ionicons name="business" size={24} color="#60A5FA" />
               </View>
               <View style={styles.hospitalDetails}>
-                <Text style={styles.hospitalName}>Medical Center {i}</Text>
-                <Text style={styles.hospitalAddress}>789 Medical Way, Sydney</Text>
-                <Text style={styles.hospitalDistance}>3.{i} km away</Text>
+                <TText style={styles.hospitalName}>Medical Center {i}</TText>
+                <TText style={styles.hospitalAddress}>789 Medical Way, Sydney</TText>
+                <TText style={styles.hospitalDistance}>3.{i} km away</TText>
                 <View style={styles.serviceContainer}>
                   <View style={styles.serviceTag}>
-                    <Text style={styles.serviceText}>Specialists</Text>
+                    <TText style={styles.serviceText}>Specialists</TText>
                   </View>
                 </View>
               </View>

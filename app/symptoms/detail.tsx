@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
+import { View,  ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { router, useNavigation } from 'expo-router';
-
+import TText from '../components/TText';
 export default function SymptomDetail() {
   const navigation = useNavigation();
 
@@ -23,35 +23,35 @@ export default function SymptomDetail() {
       <ScrollView style={styles.contentContainer}>
         {/* Disease Info */}
         <View style={styles.diseaseCard}>
-          <Text style={styles.diseaseTitle}>Seasonal Allergies</Text>
+          <TText style={styles.diseaseTitle}>Seasonal Allergies</TText>
           
           <View style={styles.optionsContainer}>
             <TouchableOpacity style={styles.optionCard}>
               <View style={styles.optionIcon}>
                 <Ionicons name="document-text-outline" size={24} color="#4299E1" />
               </View>
-              <Text style={styles.optionLabel}>Guide to medicine for this symptom</Text>
+              <TText style={styles.optionLabel}>Guide to medicine for this symptom</TText>
             </TouchableOpacity>
             
             <TouchableOpacity style={styles.optionCard}>
               <View style={styles.optionIcon}>
                 <Ionicons name="information-circle-outline" size={24} color="#4299E1" />
               </View>
-              <Text style={styles.optionLabel}>Related Diseases</Text>
+              <TText style={styles.optionLabel}>Related Diseases</TText>
             </TouchableOpacity>
             
             <TouchableOpacity style={styles.optionCard}>
               <View style={styles.optionIcon}>
                 <Ionicons name="list-outline" size={24} color="#4299E1" />
               </View>
-              <Text style={styles.optionLabel}>Symptom Overview</Text>
+              <TText style={styles.optionLabel}>Symptom Overview</TText>
             </TouchableOpacity>
             
             <TouchableOpacity style={styles.optionCard}>
               <View style={styles.optionIcon}>
                 <Ionicons name="medkit-outline" size={24} color="#4299E1" />
               </View>
-              <Text style={styles.optionLabel}>Management & Treatment</Text>
+              <TText style={styles.optionLabel}>Management & Treatment</TText>
             </TouchableOpacity>
             
             <TouchableOpacity 
@@ -63,7 +63,7 @@ export default function SymptomDetail() {
               <View style={styles.optionIcon}>
                 <Ionicons name="medical-outline" size={24} color="#4299E1" />
               </View>
-              <Text style={styles.optionLabel}>Find Pharmacy</Text>
+              <TText style={styles.optionLabel}>Find Pharmacy</TText>
             </TouchableOpacity>
             
             <TouchableOpacity 
@@ -75,7 +75,7 @@ export default function SymptomDetail() {
               <View style={styles.optionIcon}>
                 <Ionicons name="business-outline" size={24} color="#4299E1" />
               </View>
-              <Text style={styles.optionLabel}>Find Hospital</Text>
+              <TText style={styles.optionLabel}>Find Hospital</TText>
             </TouchableOpacity>
           </View>
         </View>

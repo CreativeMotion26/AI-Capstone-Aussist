@@ -1,7 +1,7 @@
-import React from 'react';
-import { View, Text, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
+import { View, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import { useNavigation } from 'expo-router';
+import { router, useNavigation } from 'expo-router';
+import TText from '../components/TText';
 
 export default function FindPharmacy() {
   const navigation = useNavigation();
@@ -12,11 +12,11 @@ export default function FindPharmacy() {
       <ScrollView style={styles.contentContainer}>
         <View style={styles.mapPlaceholder}>
           <Ionicons name="map-outline" size={60} color="#9CA3AF" />
-          <Text style={styles.mapText}>Map view showing nearby pharmacies</Text>
+          <TText style={styles.mapText}>Map view showing nearby pharmacies</TText>
         </View>
 
         <View style={styles.pharmacyList}>
-          <Text style={styles.listTitle}>Nearby Pharmacies</Text>
+          <TText style={styles.listTitle}>Nearby Pharmacies</TText>
           
           {[1, 2, 3, 4, 5].map((i) => (
             <TouchableOpacity key={i} style={styles.pharmacyItem}>
@@ -24,9 +24,9 @@ export default function FindPharmacy() {
                 <Ionicons name="medical" size={24} color="#4299E1" />
               </View>
               <View style={styles.pharmacyDetails}>
-                <Text style={styles.pharmacyName}>Pharmacy {i}</Text>
-                <Text style={styles.pharmacyAddress}>123 Main Street, Sydney</Text>
-                <Text style={styles.pharmacyDistance}>1.{i} km away</Text>
+                <TText style={styles.pharmacyName}>Pharmacy {i}</TText>
+                <TText style={styles.pharmacyAddress}>123 Main Street, Sydney</TText>
+                <TText style={styles.pharmacyDistance}>1.{i} km away</TText>
               </View>
               <Ionicons name="chevron-forward" size={20} color="#9CA3AF" />
             </TouchableOpacity>

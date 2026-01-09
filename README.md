@@ -3,6 +3,43 @@
 Aussist is a mobile application designed to help **immigrants in Australia** access essential services and information quickly and easily. Built AI Agent App with **Expo (React Native) & LLMs **, the app features useful tools such as emergency contacts, healthcare services, translation support, and more — all in one place.
 ## File Structure
 
+This project combines:
+-  **React Native (Expo)** for the mobile UI
+-  A **Python AI Chatbot backend** (agent + API)
+- **RAG pipeline** with a vector database (Astra DB) to retrieve relevant knowledge before generating answers
+
+---
+
+## Key Features
+
+### 🤖 AI Agent Chatbot (Backend)
+- **Agent-driven conversation flow** (tool-like logic / orchestration via `agent_model.py`)
+- **RAG-based answering**: retrieves relevant information from a vector database first, then responds
+- API-ready design to connect with the mobile app UI
+
+### 📚 RAG (Retrieval-Augmented Generation)
+- Document ingestion pipeline for building a knowledge base
+- Vector search retrieval to reduce hallucination and improve factual grounding
+- Astra DB integration for storing embeddings + retrieval
+
+### 📱 Mobile App (Frontend)
+- Clean Expo app structure (tabs + screens)
+- Built to integrate chatbot responses into the UX
+- Designed for real-world immigrant support use cases
+
+---
+
+## High-Level Architecture
+
+1) User asks a question in the app  
+2) Mobile app calls the **Python API**  
+3) API triggers the **AI Agent**  
+4) Agent uses **RAG retrieval** (Astra DB vector search)  
+5) Agent generates an answer using retrieved context  
+6) App displays the response and action based on Agent's Answers
+
+---
+
 ```
 aussist/
 ├── app/                      # Main application code (Expo Router)
@@ -26,6 +63,17 @@ aussist/
 │   ├── onboarding.tsx        # Onboarding flow
 │   ├── _layout.tsx           # Root navigation layout
 │   └── +not-found.tsx        # 404 page
+├── chatbot/ # Python AI Agent + RAG backend
+│ ├── agent_model.py # AI Agent logic (orchestration + response generation)
+│ ├── api.py # API routes / handlers (backend entrypoints)
+│ ├── app.py # Backend app runner (server start)
+│ ├── astra_db.py # Astra DB connector / DB utilities
+│ ├── ingest.py # Data ingestion pipeline → embeddings → Astra DB
+│ ├── rag_astradb.py # RAG retrieval logic (query → retrieve context)
+│ ├── requirements.txt # Python backend dependencies
+│ └── pycache/ # Python cache files
+├── .env.example # Environment variable template
+├── package.json # Frontend dependencies
 ├── assets/                   # Static assets (images, fonts)
 │   └── images/               # Image assets
 ├── babel.config.js           # Babel configuration
@@ -59,6 +107,52 @@ The app uses a library of reusable UI components inspired by Shadcn UI:
    ```
    npx expo start
    ```
+3. Backend (Python Chatbot)
+  ```
+   cd chatbot
+   python -m venv venv
+   source venv/bin/activate     # macOS / Linux
+   venv\Scripts\activate        # Windows
+   pip install -r requirements.txt
+   ```
+---
+
+### RAG Pipeline Explained (What the chatbot folder does)
+#### ingest.py — Build the knowledge base
+
+Takes documents / knowledge sources
+
+Converts them into embeddings
+
+Stores them in Astra DB as vectors for retrieval
+
+#### rag_astradb.py — Retrieve context for a question
+
+Accepts a user query
+
+Searches Astra DB vectors to find the most relevant chunks
+
+Returns contextual passages to ground the AI response
+
+#### agent_model.py — AI Agent orchestration
+
+Receives the user message
+
+Calls the retrieval module (RAG)
+
+Builds a final answer using both:
+
+user question
+
+retrieved context
+
+#### api.py / app.py — API layer
+
+Exposes chatbot endpoints
+
+Connects frontend ↔ agent ↔ database
+
+---
 
 ## Styling
 
